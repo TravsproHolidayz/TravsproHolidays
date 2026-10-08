@@ -43,45 +43,58 @@ a {
 ===================================================== */
 
 body::before {
+
     content: "";
+
     position: fixed;
+
     inset: 0;
+
     z-index: -2;
 
     background:
+
         radial-gradient(
             circle at 15% 20%,
-            rgba(0, 229, 255, .14),
+            rgba(0,229,255,.14),
             transparent 30%
         ),
+
         radial-gradient(
             circle at 85% 25%,
-            rgba(124, 77, 255, .18),
+            rgba(124,77,255,.18),
             transparent 30%
         ),
+
         radial-gradient(
             circle at 50% 90%,
-            rgba(0, 255, 170, .08),
+            rgba(0,255,170,.08),
             transparent 30%
         ),
+
         #050816;
 }
 
 
-/* Futuristic grid */
-
 body::after {
+
     content: "";
+
     position: fixed;
+
     inset: 0;
+
     z-index: -1;
+
     pointer-events: none;
 
     background-image:
+
         linear-gradient(
             rgba(255,255,255,.025) 1px,
             transparent 1px
         ),
+
         linear-gradient(
             90deg,
             rgba(255,255,255,.025) 1px,
@@ -100,13 +113,15 @@ body::after {
 
 
 /* =====================================================
-   NAVBAR
+   NAVIGATION
 ===================================================== */
 
 .navbar {
+
     position: fixed;
 
     top: 18px;
+
     left: 50%;
 
     transform: translateX(-50%);
@@ -115,29 +130,35 @@ body::after {
 
     width: min(1180px, 94%);
 
-    min-height: 72px;
+    min-height: 75px;
 
     padding: 10px 22px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
     gap: 20px;
 
-    background: rgba(7,13,32,.75);
+    background:
+        rgba(7,13,32,.75);
 
-    border: 1px solid rgba(255,255,255,.10);
+    border:
+        1px solid rgba(255,255,255,.10);
 
     border-radius: 50px;
 
     backdrop-filter: blur(20px);
+
     -webkit-backdrop-filter: blur(20px);
 
     box-shadow:
         0 12px 45px rgba(0,0,0,.35);
 
-    animation: navDrop .8s ease;
+    animation:
+        navDrop .8s ease;
 }
 
 
@@ -146,14 +167,18 @@ body::after {
 ===================================================== */
 
 .logo {
+
     display: flex;
+
     align-items: center;
 
     flex-shrink: 0;
 }
 
 .logo img {
-    width: 165px;
+
+    width: 175px;
+
     height: auto;
 
     display: block;
@@ -162,28 +187,33 @@ body::after {
 
     filter:
         drop-shadow(
-            0 0 8px rgba(0,229,255,.12)
+            0 0 10px
+            rgba(0,229,255,.15)
         );
 }
 
 .logo img:hover {
+
     transform: scale(1.05);
 
     filter:
         drop-shadow(
-            0 0 18px rgba(0,229,255,.45)
+            0 0 20px
+            rgba(0,229,255,.45)
         );
 }
 
 
 /* =====================================================
-   NAVIGATION LINKS
+   NAV LINKS
 ===================================================== */
 
 .nav-links {
+
     display: flex;
 
     align-items: center;
+
     justify-content: flex-end;
 
     gap: 4px;
@@ -192,19 +222,22 @@ body::after {
 }
 
 .nav-links li {
+
     flex-shrink: 0;
 }
 
 .nav-links a {
+
     display: block;
 
-    padding: 10px 15px;
+    padding: 10px 14px;
 
     border-radius: 30px;
 
     color: #cbd3e6;
 
     font-size: 13px;
+
     font-weight: 600;
 
     white-space: nowrap;
@@ -213,16 +246,19 @@ body::after {
 }
 
 .nav-links a:hover {
+
     color: white;
 
     background:
         rgba(0,229,255,.10);
 
     box-shadow:
-        0 0 20px rgba(0,229,255,.12);
+        0 0 20px
+        rgba(0,229,255,.12);
 }
 
 .nav-links .active {
+
     color: #00eaff;
 
     background:
@@ -235,6 +271,7 @@ body::after {
 ===================================================== */
 
 .hero {
+
     min-height: 100vh;
 
     position: relative;
@@ -242,30 +279,32 @@ body::after {
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     text-align: center;
 
     padding:
-        160px 20px 100px;
+        170px 20px 100px;
 
     overflow: hidden;
 }
 
 
-/* =====================================================
-   FLOATING ORBS
-===================================================== */
+/* FLOATING ORBS */
 
 .orb {
+
     position: absolute;
 
     width: 300px;
+
     height: 300px;
 
     border-radius: 50%;
 
     background:
+
         radial-gradient(
             circle at 30% 30%,
             #9fffff,
@@ -281,28 +320,34 @@ body::after {
     pointer-events: none;
 
     animation:
-        floatOrb 8s ease-in-out infinite;
+        floatOrb 8s
+        ease-in-out
+        infinite;
 }
 
 .orb-one {
+
     left: -150px;
+
     top: 25%;
 }
 
 .orb-two {
+
     right: -130px;
+
     bottom: 8%;
 
     animation-delay: -4s;
 }
 
 
-/* =====================================================
-   HERO CONTENT
-===================================================== */
+/* HERO CONTENT */
 
 .hero-content {
+
     position: relative;
+
     z-index: 2;
 
     max-width: 950px;
@@ -312,24 +357,28 @@ body::after {
 }
 
 
-/* Eyebrow */
+/* EYEBROW */
 
 .eyebrow {
+
     display: inline-block;
 
-    padding: 9px 18px;
+    padding:
+        9px 18px;
 
     margin-bottom: 25px;
 
     border:
-        1px solid rgba(0,229,255,.28);
+        1px solid
+        rgba(0,229,255,.28);
 
     border-radius: 50px;
 
     background:
         rgba(0,229,255,.05);
 
-    color: #00eaff;
+    color:
+        #00eaff;
 
     font-size: 12px;
 
@@ -341,9 +390,10 @@ body::after {
 }
 
 
-/* Hero title */
+/* HERO TITLE */
 
 .hero h1 {
+
     font-size:
         clamp(52px, 9vw, 115px);
 
@@ -354,6 +404,7 @@ body::after {
     font-weight: 900;
 
     background:
+
         linear-gradient(
             120deg,
             #ffffff,
@@ -366,8 +417,6 @@ body::after {
 
     -webkit-background-clip: text;
 
-    background-clip: text;
-
     color: transparent;
 
     animation:
@@ -375,20 +424,24 @@ body::after {
 }
 
 .hero h1 span {
+
     display: block;
 
     color: #00eaff;
 }
 
 
-/* Hero paragraph */
+/* HERO PARAGRAPH */
 
 .hero p {
+
     max-width: 700px;
 
-    margin: 30px auto;
+    margin:
+        30px auto;
 
-    color: #aab4c9;
+    color:
+        #aab4c9;
 
     font-size: 18px;
 
@@ -401,9 +454,11 @@ body::after {
 ===================================================== */
 
 .button-row {
+
     display: flex;
 
     justify-content: center;
+
     align-items: center;
 
     gap: 12px;
@@ -414,18 +469,22 @@ body::after {
 }
 
 .primary-btn {
+
     display: inline-flex;
 
     align-items: center;
+
     justify-content: center;
 
     gap: 10px;
 
-    padding: 15px 27px;
+    padding:
+        15px 27px;
 
     border-radius: 40px;
 
     background:
+
         linear-gradient(
             90deg,
             #00cfff,
@@ -437,36 +496,44 @@ body::after {
     font-weight: 700;
 
     box-shadow:
-        0 0 30px rgba(0,217,255,.20);
+        0 0 30px
+        rgba(0,217,255,.20);
 
     transition: .35s ease;
 }
 
 .primary-btn:hover {
+
     transform:
         translateY(-5px);
 
     box-shadow:
-        0 0 45px rgba(0,217,255,.42);
+        0 0 45px
+        rgba(0,217,255,.42);
 }
 
 .secondary-btn {
+
     display: inline-flex;
 
     align-items: center;
+
     justify-content: center;
 
-    padding: 14px 25px;
+    padding:
+        14px 25px;
 
     border-radius: 40px;
 
     border:
-        1px solid rgba(255,255,255,.15);
+        1px solid
+        rgba(255,255,255,.15);
 
     background:
         rgba(255,255,255,.04);
 
-    color: #dbe2f2;
+    color:
+        #dbe2f2;
 
     font-weight: 600;
 
@@ -474,6 +541,7 @@ body::after {
 }
 
 .secondary-btn:hover {
+
     border-color:
         rgba(0,229,255,.4);
 
@@ -490,9 +558,12 @@ body::after {
 ===================================================== */
 
 .quick-services {
-    width: min(1100px,92%);
 
-    margin: -30px auto 0;
+    width:
+        min(1100px,92%);
+
+    margin:
+        -30px auto 0;
 
     position: relative;
 
@@ -507,7 +578,9 @@ body::after {
 }
 
 .quick-card {
-    padding: 25px 18px;
+
+    padding:
+        25px 18px;
 
     text-align: center;
 
@@ -515,16 +588,19 @@ body::after {
         rgba(255,255,255,.045);
 
     border:
-        1px solid rgba(255,255,255,.08);
+        1px solid
+        rgba(255,255,255,.08);
 
     border-radius: 20px;
 
-    backdrop-filter: blur(15px);
+    backdrop-filter:
+        blur(15px);
 
     transition: .35s ease;
 }
 
 .quick-card:hover {
+
     transform:
         translateY(-7px);
 
@@ -532,23 +608,28 @@ body::after {
         rgba(0,229,255,.3);
 
     box-shadow:
-        0 15px 40px rgba(0,0,0,.25);
+        0 15px 40px
+        rgba(0,0,0,.25);
 }
 
 .quick-icon {
+
     font-size: 28px;
 
     margin-bottom: 10px;
 }
 
 .quick-card h3 {
+
     font-size: 15px;
 
     margin-bottom: 5px;
 }
 
 .quick-card p {
-    color: #7f8ba4;
+
+    color:
+        #7f8ba4;
 
     font-size: 12px;
 }
@@ -559,46 +640,62 @@ body::after {
 ===================================================== */
 
 .section {
-    width: min(1150px,92%);
+
+    width:
+        min(1150px,92%);
 
     margin: auto;
 
-    padding: 110px 0;
+    padding:
+        110px 0;
 }
 
 .section-heading {
+
     margin-bottom: 50px;
 }
 
 .section-heading small {
-    color: #00eaff;
 
-    text-transform: uppercase;
+    color:
+        #00eaff;
 
-    letter-spacing: 3px;
+    text-transform:
+        uppercase;
 
-    font-size: 12px;
+    letter-spacing:
+        3px;
 
-    font-weight: 700;
+    font-size:
+        12px;
+
+    font-weight:
+        700;
 }
 
 .section-heading h2 {
+
     margin-top: 12px;
 
     font-size:
-        clamp(38px, 5vw, 65px);
+        clamp(38px,5vw,65px);
 
     line-height: 1;
 }
 
 .section-heading p {
-    max-width: 650px;
 
-    margin-top: 18px;
+    max-width:
+        650px;
 
-    color: #929db3;
+    margin-top:
+        18px;
 
-    line-height: 1.8;
+    color:
+        #929db3;
+
+    line-height:
+        1.8;
 }
 
 
@@ -607,129 +704,160 @@ body::after {
 ===================================================== */
 
 .destinations {
+
     display: grid;
 
     grid-template-columns:
         repeat(3,1fr);
 
-    gap: 20px;
+    gap: 22px;
 }
 
 
-/*
-   No external destination images are used.
-   Each destination card has a futuristic CSS background.
-*/
-
 .destination {
+
     position: relative;
 
-    min-height: 330px;
+    height: 390px;
 
     overflow: hidden;
 
-    border-radius: 25px;
+    border-radius: 28px;
 
     border:
-        1px solid rgba(255,255,255,.08);
+        1px solid
+        rgba(255,255,255,.10);
 
     background:
-        linear-gradient(
-            145deg,
-            #071b35,
-            #12103a 50%,
-            #03151f
-        );
+        #101525;
 
-    transition: .4s ease;
+    transition:
+        transform .45s ease,
+        box-shadow .45s ease,
+        border-color .45s ease;
 }
 
-.destination:nth-child(2) {
-    background:
-        linear-gradient(
-            145deg,
-            #092c38,
-            #14244d 50%,
-            #090a27
-        );
-}
 
-.destination:nth-child(3) {
-    background:
-        linear-gradient(
-            145deg,
-            #171044,
-            #082d42 50%,
-            #03151f
-        );
-}
+.destination-image {
 
-.destination::before {
-    content: "";
-
-    position: absolute;
-
-    width: 220px;
-    height: 220px;
-
-    top: -80px;
-    right: -70px;
-
-    border-radius: 50%;
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(0,229,255,.35),
-            transparent 70%
-        );
-
-    transition: .5s ease;
-}
-
-.destination::after {
-    content: "";
-
-    position: absolute;
-
-    width: 180px;
-    height: 180px;
-
-    bottom: -80px;
-    left: -60px;
-
-    border-radius: 50%;
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(124,77,255,.35),
-            transparent 70%
-        );
-}
-
-.destination:hover {
-    transform:
-        translateY(-8px);
-
-    border-color:
-        rgba(0,229,255,.35);
-
-    box-shadow:
-        0 20px 50px rgba(0,0,0,.35);
-}
-
-.destination:hover::before {
-    transform:
-        scale(1.4);
-}
-
-.destination-content {
     position: absolute;
 
     inset: 0;
 
+    background-size: cover;
+
+    background-position: center;
+
+    transition:
+        transform .8s ease,
+        filter .6s ease;
+}
+
+
+/* =====================================================
+   DESTINATION IMAGES
+===================================================== */
+
+.india-image {
+
+    background-image:
+        url("https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1200&q=85");
+}
+
+.singapore-image {
+
+    background-image:
+        url("https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=1200&q=85");
+}
+
+.thailand-image {
+
+    background-image:
+        url("https://images.unsplash.com/photo-1504214208698-ea1916f2195a?auto=format&fit=crop&w=1200&q=85");
+}
+
+.malaysia-image {
+
+    background-image:
+        url("https://images.unsplash.com/photo-1596422846543-75c6fc197f07?auto=format&fit=crop&w=1200&q=85");
+}
+
+.dubai-image {
+
+    background-image:
+        url("https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=85");
+}
+
+.international-image {
+
+    background-image:
+        url("https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=85");
+}
+
+
+/* DARK OVERLAY */
+
+.destination::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+        linear-gradient(
+            to bottom,
+            rgba(3,7,20,.05) 15%,
+            rgba(3,7,20,.25) 40%,
+            rgba(3,7,20,.96) 100%
+        );
+
+    pointer-events: none;
+}
+
+
+/* HOVER */
+
+.destination:hover {
+
+    transform:
+        translateY(-10px);
+
+    border-color:
+        rgba(0,229,255,.40);
+
+    box-shadow:
+
+        0 25px 60px
+        rgba(0,0,0,.45),
+
+        0 0 35px
+        rgba(0,229,255,.08);
+}
+
+.destination:hover
+.destination-image {
+
+    transform:
+        scale(1.10);
+
+    filter:
+        saturate(1.15)
+        brightness(1.05);
+}
+
+
+/* DESTINATION CONTENT */
+
+.destination-overlay {
+
+    position: absolute;
+
     z-index: 2;
+
+    inset: 0;
 
     display: flex;
 
@@ -737,38 +865,104 @@ body::after {
 
     justify-content: flex-end;
 
-    padding: 28px;
+    align-items: flex-start;
+
+    padding: 30px;
+}
+
+
+/* TAG */
+
+.destination-tag {
+
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    padding:
+        6px 12px;
+
+    border-radius: 30px;
 
     background:
-        linear-gradient(
-            transparent 20%,
-            rgba(3,7,20,.92)
-        );
+        rgba(0,229,255,.10);
+
+    border:
+        1px solid
+        rgba(0,229,255,.25);
+
+    color:
+        #00eaff;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing:
+        1.5px;
 }
 
-.destination-icon {
-    font-size: 55px;
 
-    margin-bottom: auto;
+/* DESTINATION TITLE */
 
-    padding-top: 35px;
+.destination-overlay h3 {
 
-    filter:
-        drop-shadow(
-            0 0 20px rgba(0,229,255,.3)
-        );
+    font-size:
+        32px;
+
+    line-height:
+        1.1;
+
+    margin-bottom:
+        8px;
 }
 
-.destination-content h3 {
-    font-size: 28px;
 
-    margin-bottom: 7px;
+/* DESCRIPTION */
+
+.destination-overlay p {
+
+    color:
+        #b7c0d2;
+
+    font-size:
+        14px;
+
+    margin: 0;
 }
 
-.destination-content p {
-    color: #b3bdd0;
 
-    font-size: 14px;
+/* ARROW */
+
+.destination-arrow {
+
+    margin-top:
+        18px;
+
+    color:
+        #ffffff;
+
+    font-size:
+        13px;
+
+    font-weight:
+        700;
+
+    opacity:
+        .85;
+
+    transition:
+        .3s ease;
+}
+
+.destination:hover
+.destination-arrow {
+
+    color:
+        #00eaff;
+
+    transform:
+        translateX(6px);
 }
 
 
@@ -777,6 +971,7 @@ body::after {
 ===================================================== */
 
 .why-grid {
+
     display: grid;
 
     grid-template-columns:
@@ -786,6 +981,7 @@ body::after {
 }
 
 .glass-card {
+
     padding: 40px;
 
     border-radius: 25px;
@@ -794,14 +990,18 @@ body::after {
         rgba(255,255,255,.04);
 
     border:
-        1px solid rgba(255,255,255,.08);
+        1px solid
+        rgba(255,255,255,.08);
 
-    backdrop-filter: blur(15px);
+    backdrop-filter:
+        blur(15px);
 
-    transition: .35s ease;
+    transition:
+        .35s ease;
 }
 
 .glass-card:hover {
+
     transform:
         translateY(-7px);
 
@@ -810,17 +1010,24 @@ body::after {
 }
 
 .glass-card h3 {
-    font-size: 26px;
 
-    margin-bottom: 18px;
+    font-size:
+        26px;
+
+    margin-bottom:
+        18px;
 }
 
 .glass-card p {
-    color: #a1abc0;
 
-    line-height: 1.85;
+    color:
+        #a1abc0;
 
-    font-size: 15px;
+    line-height:
+        1.85;
+
+    font-size:
+        15px;
 }
 
 
@@ -829,6 +1036,7 @@ body::after {
 ===================================================== */
 
 .stats {
+
     display: grid;
 
     grid-template-columns:
@@ -840,23 +1048,31 @@ body::after {
 }
 
 .stat {
-    padding: 22px 10px;
 
-    text-align: center;
+    padding:
+        22px 10px;
 
-    border-radius: 18px;
+    text-align:
+        center;
+
+    border-radius:
+        18px;
 
     background:
         rgba(0,229,255,.035);
 
     border:
-        1px solid rgba(0,229,255,.08);
+        1px solid
+        rgba(0,229,255,.08);
 }
 
 .stat strong {
-    display: block;
 
-    font-size: 30px;
+    display:
+        block;
+
+    font-size:
+        30px;
 
     background:
         linear-gradient(
@@ -865,17 +1081,20 @@ body::after {
             #8c6cff
         );
 
-    -webkit-background-clip: text;
+    -webkit-background-clip:
+        text;
 
-    background-clip: text;
-
-    color: transparent;
+    color:
+        transparent;
 }
 
 .stat span {
-    color: #7f8ba3;
 
-    font-size: 11px;
+    color:
+        #7f8ba3;
+
+    font-size:
+        11px;
 }
 
 
@@ -884,18 +1103,24 @@ body::after {
 ===================================================== */
 
 .cta {
-    width: min(1100px,92%);
+
+    width:
+        min(1100px,92%);
 
     margin:
         0 auto 100px;
 
-    padding: 80px 25px;
+    padding:
+        80px 25px;
 
-    text-align: center;
+    text-align:
+        center;
 
-    border-radius: 35px;
+    border-radius:
+        35px;
 
     background:
+
         linear-gradient(
             135deg,
             rgba(0,229,255,.08),
@@ -903,61 +1128,79 @@ body::after {
         );
 
     border:
-        1px solid rgba(255,255,255,.09);
+        1px solid
+        rgba(255,255,255,.09);
 
-    position: relative;
+    position:
+        relative;
 
-    overflow: hidden;
+    overflow:
+        hidden;
 }
 
 .cta::before {
+
     content: "";
 
-    position: absolute;
+    position:
+        absolute;
 
-    width: 350px;
-    height: 350px;
+    width:
+        350px;
 
-    left: 50%;
-    top: 50%;
+    height:
+        350px;
+
+    left:
+        50%;
+
+    top:
+        50%;
 
     transform:
         translate(-50%,-50%);
 
-    border-radius: 50%;
-
     background:
-        rgba(0,229,255,.07);
+        #00eaff;
 
-    filter: blur(50px);
+    opacity:
+        .04;
 
-    pointer-events: none;
+    border-radius:
+        50%;
+
+    filter:
+        blur(50px);
 }
 
 .cta h2 {
-    position: relative;
+
+    position:
+        relative;
 
     font-size:
         clamp(38px,5vw,65px);
 
-    margin-bottom: 18px;
+    margin-bottom:
+        18px;
 }
 
 .cta p {
-    position: relative;
 
-    max-width: 600px;
+    position:
+        relative;
+
+    max-width:
+        600px;
 
     margin:
         auto auto 28px;
 
-    color: #9ca7bc;
+    color:
+        #9ca7bc;
 
-    line-height: 1.8;
-}
-
-.cta .primary-btn {
-    position: relative;
+    line-height:
+        1.8;
 }
 
 
@@ -966,28 +1209,37 @@ body::after {
 ===================================================== */
 
 footer {
-    padding: 45px 20px;
 
-    text-align: center;
+    padding:
+        45px 20px;
+
+    text-align:
+        center;
 
     border-top:
-        1px solid rgba(255,255,255,.06);
+        1px solid
+        rgba(255,255,255,.06);
 
-    color: #687289;
+    color:
+        #687289;
 
-    font-size: 14px;
+    font-size:
+        14px;
 }
 
 footer img {
-    width: 145px;
 
-    height: auto;
+    width:
+        165px;
 
-    margin-bottom: 15px;
+    margin-bottom:
+        15px;
 }
 
 footer strong {
-    color: #00eaff;
+
+    color:
+        #00eaff;
 }
 
 
@@ -998,6 +1250,7 @@ footer strong {
 @keyframes heroReveal {
 
     from {
+
         opacity: 0;
 
         transform:
@@ -1005,6 +1258,7 @@ footer strong {
     }
 
     to {
+
         opacity: 1;
 
         transform:
@@ -1016,6 +1270,7 @@ footer strong {
 @keyframes navDrop {
 
     from {
+
         opacity: 0;
 
         transform:
@@ -1023,6 +1278,7 @@ footer strong {
     }
 
     to {
+
         opacity: 1;
 
         transform:
@@ -1053,12 +1309,14 @@ footer strong {
 @keyframes floatOrb {
 
     0%,100% {
+
         transform:
             translate(0,0)
             scale(1);
     }
 
     50% {
+
         transform:
             translate(35px,-45px)
             scale(1.1);
@@ -1073,6 +1331,7 @@ footer strong {
 @media (max-width: 900px) {
 
     .navbar {
+
         width: 94%;
 
         padding:
@@ -1080,28 +1339,36 @@ footer strong {
     }
 
     .logo img {
-        width: 140px;
+
+        width:
+            145px;
     }
 
     .nav-links a {
-        padding:
-            9px 9px;
 
-        font-size: 11px;
+        padding:
+            9px 8px;
+
+        font-size:
+            11px;
     }
 
     .quick-services {
+
         grid-template-columns:
             repeat(2,1fr);
     }
 
     .destinations {
+
         grid-template-columns:
             repeat(2,1fr);
     }
 
     .why-grid {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+            1fr;
     }
 }
 
@@ -1112,130 +1379,170 @@ footer strong {
 
 @media (max-width: 600px) {
 
-    /* NAVBAR */
+    /* NAVIGATION */
 
     .navbar {
-        position: absolute;
 
-        top: 10px;
-        left: 3%;
+        position:
+            absolute;
 
-        transform: none;
+        top:
+            10px;
 
-        width: 94%;
+        left:
+            3%;
 
-        min-height: auto;
+        transform:
+            none;
+
+        width:
+            94%;
+
+        min-height:
+            auto;
 
         padding:
-            12px 8px;
+            12px 10px;
 
-        flex-direction: column;
+        flex-direction:
+            column;
 
-        justify-content: center;
+        justify-content:
+            center;
 
-        gap: 10px;
+        gap:
+            9px;
 
-        border-radius: 22px;
+        border-radius:
+            22px;
     }
 
 
-    /* Bigger mobile logo */
+    /* LOGO */
 
     .logo img {
-        width: 155px;
-        max-width: 100%;
+
+        width:
+            155px;
     }
 
 
-    /* Mobile navigation */
+    /* MOBILE LINKS */
 
     .nav-links {
-        width: 100%;
 
-        display: grid;
+        width:
+            100%;
 
-        grid-template-columns:
-            repeat(5, 1fr);
+        display:
+            flex;
 
-        align-items: center;
+        flex-wrap:
+            wrap;
 
-        justify-items: center;
+        justify-content:
+            center;
 
-        gap: 2px;
+        align-items:
+            center;
+
+        gap:
+            3px;
     }
 
     .nav-links li {
-        width: 100%;
 
-        text-align: center;
+        flex-shrink:
+            0;
     }
 
     .nav-links a {
-        display: block;
-
-        width: 100%;
 
         padding:
-            8px 2px;
+            7px 8px;
 
-        font-size: 9px;
+        font-size:
+            9px;
 
-        white-space: nowrap;
+        white-space:
+            nowrap;
     }
 
 
     /* HERO */
 
     .hero {
-        min-height: auto;
+
+        min-height:
+            auto;
 
         padding:
-            235px 18px 90px;
+            225px 18px 90px;
     }
 
     .hero h1 {
-        font-size:
-            clamp(48px,15vw,75px);
 
-        letter-spacing: -3px;
+        font-size:
+            clamp(
+                48px,
+                15vw,
+                75px
+            );
+
+        letter-spacing:
+            -3px;
     }
 
     .hero p {
-        font-size: 15px;
 
-        line-height: 1.7;
+        font-size:
+            15px;
+
+        line-height:
+            1.7;
 
         margin:
             25px auto;
     }
 
     .eyebrow {
-        font-size: 10px;
 
-        letter-spacing: 2px;
+        font-size:
+            10px;
+
+        letter-spacing:
+            2px;
     }
 
 
     /* BUTTONS */
 
     .button-row {
-        flex-direction: column;
 
-        width: 100%;
+        flex-direction:
+            column;
+
+        width:
+            100%;
     }
 
     .primary-btn,
     .secondary-btn {
-        width: 100%;
 
-        max-width: 280px;
+        width:
+            100%;
+
+        max-width:
+            280px;
     }
 
 
     /* QUICK SERVICES */
 
     .quick-services {
-        width: 92%;
+
+        width:
+            92%;
 
         margin:
             0 auto;
@@ -1243,10 +1550,12 @@ footer strong {
         grid-template-columns:
             repeat(2,1fr);
 
-        gap: 10px;
+        gap:
+            10px;
     }
 
     .quick-card {
+
         padding:
             20px 10px;
     }
@@ -1255,55 +1564,92 @@ footer strong {
     /* SECTIONS */
 
     .section {
-        width: 92%;
+
+        width:
+            92%;
 
         padding:
             75px 0;
     }
 
     .section-heading {
-        margin-bottom: 30px;
+
+        margin-bottom:
+            30px;
     }
 
     .section-heading h2 {
-        font-size: 40px;
+
+        font-size:
+            40px;
     }
 
 
     /* DESTINATIONS */
 
     .destinations {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            16px;
     }
 
     .destination {
-        min-height: 280px;
+
+        height:
+            350px;
+
+        border-radius:
+            22px;
+    }
+
+    .destination-overlay {
+
+        padding:
+            24px;
+    }
+
+    .destination-overlay h3 {
+
+        font-size:
+            29px;
     }
 
 
     /* WHY */
 
     .glass-card {
-        padding: 28px;
+
+        padding:
+            28px;
     }
 
     .stats {
-        grid-template-columns: 1fr;
 
-        gap: 10px;
+        grid-template-columns:
+            1fr;
+
+        gap:
+            10px;
     }
 
 
     /* CTA */
 
     .cta {
-        width: 92%;
 
-        margin-bottom: 60px;
+        width:
+            92%;
+
+        margin-bottom:
+            60px;
 
         padding:
             60px 20px;
     }
+
 }
 
 
@@ -1314,37 +1660,50 @@ footer strong {
 @media (max-width: 380px) {
 
     .navbar {
-        width: 95%;
 
-        left: 2.5%;
+        width:
+            95%;
+
+        left:
+            2.5%;
 
         padding:
-            10px 5px;
+            10px 6px;
     }
 
     .logo img {
-        width: 135px;
+
+        width:
+            140px;
     }
 
     .nav-links {
-        gap: 1px;
+
+        gap:
+            1px;
     }
 
     .nav-links a {
-        padding:
-            6px 1px;
 
-        font-size: 8px;
+        padding:
+            6px;
+
+        font-size:
+            8px;
     }
 
     .hero {
+
         padding-top:
-            220px;
+            215px;
     }
 
     .hero h1 {
-        font-size: 45px;
+
+        font-size:
+            45px;
     }
+
 }
 
 
@@ -1474,9 +1833,9 @@ footer strong {
             comfortable stays and seamless travel
             experiences with Travspro Holidays.
 
-            From flights and hotels to complete tour
-            packages, we help make your journey
-            simpler and stress-free.
+            From flights and hotels to complete
+            international tour packages, we help
+            make your journey simpler and stress-free.
 
         </p>
 
@@ -1487,17 +1846,20 @@ footer strong {
                 href="tourPackage.html"
                 class="primary-btn"
             >
+
                 Explore Tours →
+
             </a>
 
 
             <a
                 href="https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20want%20help%20planning%20my%20trip."
                 target="_blank"
-                rel="noopener"
                 class="secondary-btn"
             >
+
                 WhatsApp Us
+
             </a>
 
         </div>
@@ -1569,7 +1931,7 @@ footer strong {
     <div class="quick-card">
 
         <div class="quick-icon">
-            🏔️
+            🗺️
         </div>
 
         <h3>
@@ -1577,7 +1939,7 @@ footer strong {
         </h3>
 
         <p>
-            Explore more
+            India & International
         </p>
 
     </div>
@@ -1603,8 +1965,7 @@ footer strong {
 
         <h2>
 
-            Find Your
-            <br>
+            Find Your<br>
 
             Next Escape.
 
@@ -1613,8 +1974,8 @@ footer strong {
 
         <p>
 
-            From the mountains of Himachal to
-            unforgettable destinations across India,
+            From the mountains of India to
+            exciting international destinations,
             discover places worth experiencing.
 
         </p>
@@ -1626,26 +1987,35 @@ footer strong {
     <div class="destinations">
 
 
-        <!-- MANALI -->
+        <!-- INDIA -->
 
         <a
             href="tourPackage.html"
             class="destination"
         >
 
-            <div class="destination-content">
+            <div
+                class="destination-image india-image"
+            ></div>
 
-                <div class="destination-icon">
-                    🏔️
-                </div>
+
+            <div class="destination-overlay">
+
+                <span class="destination-tag">
+                    INDIA
+                </span>
 
                 <h3>
-                    Manali
+                    Incredible India
                 </h3>
 
                 <p>
-                    Mountains • Adventure • Snow
+                    Mountains • Beaches • Culture
                 </p>
+
+                <span class="destination-arrow">
+                    Explore →
+                </span>
 
             </div>
 
@@ -1653,26 +2023,35 @@ footer strong {
 
 
 
-        <!-- HIMACHAL -->
+        <!-- SINGAPORE -->
 
         <a
             href="tourPackage.html"
             class="destination"
         >
 
-            <div class="destination-content">
+            <div
+                class="destination-image singapore-image"
+            ></div>
 
-                <div class="destination-icon">
-                    🌲
-                </div>
+
+            <div class="destination-overlay">
+
+                <span class="destination-tag">
+                    INTERNATIONAL
+                </span>
 
                 <h3>
-                    Himachal
+                    Singapore
                 </h3>
 
                 <p>
-                    Valleys • Nature • Experiences
+                    City Lights • Marina • Adventure
                 </p>
+
+                <span class="destination-arrow">
+                    Discover →
+                </span>
 
             </div>
 
@@ -1680,26 +2059,143 @@ footer strong {
 
 
 
-        <!-- CUSTOM TRIPS -->
+        <!-- THAILAND -->
 
         <a
-            href="ourservice.html"
+            href="tourPackage.html"
             class="destination"
         >
 
-            <div class="destination-content">
+            <div
+                class="destination-image thailand-image"
+            ></div>
 
-                <div class="destination-icon">
-                    ✨
-                </div>
+
+            <div class="destination-overlay">
+
+                <span class="destination-tag">
+                    INTERNATIONAL
+                </span>
 
                 <h3>
-                    Your Next Trip
+                    Thailand
                 </h3>
 
                 <p>
-                    Customized Travel Experiences
+                    Beaches • Islands • Experiences
                 </p>
+
+                <span class="destination-arrow">
+                    Discover →
+                </span>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- MALAYSIA -->
+
+        <a
+            href="tourPackage.html"
+            class="destination"
+        >
+
+            <div
+                class="destination-image malaysia-image"
+            ></div>
+
+
+            <div class="destination-overlay">
+
+                <span class="destination-tag">
+                    INTERNATIONAL
+                </span>
+
+                <h3>
+                    Malaysia
+                </h3>
+
+                <p>
+                    Kuala Lumpur • Islands • Nature
+                </p>
+
+                <span class="destination-arrow">
+                    Discover →
+                </span>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- DUBAI -->
+
+        <a
+            href="tourPackage.html"
+            class="destination"
+        >
+
+            <div
+                class="destination-image dubai-image"
+            ></div>
+
+
+            <div class="destination-overlay">
+
+                <span class="destination-tag">
+                    INTERNATIONAL
+                </span>
+
+                <h3>
+                    Dubai
+                </h3>
+
+                <p>
+                    Luxury • Desert • Skyline
+                </p>
+
+                <span class="destination-arrow">
+                    Discover →
+                </span>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- MORE INTERNATIONAL -->
+
+        <a
+            href="tourPackage.html"
+            class="destination"
+        >
+
+            <div
+                class="destination-image international-image"
+            ></div>
+
+
+            <div class="destination-overlay">
+
+                <span class="destination-tag">
+                    WORLDWIDE
+                </span>
+
+                <h3>
+                    More Destinations
+                </h3>
+
+                <p>
+                    Your destination • Your journey
+                </p>
+
+                <span class="destination-arrow">
+                    View Tours →
+                </span>
 
             </div>
 
@@ -1728,8 +2224,7 @@ footer strong {
 
         <h2>
 
-            More Than
-            <br>
+            More Than<br>
 
             Just A Journey.
 
@@ -1742,8 +2237,6 @@ footer strong {
     <div class="why-grid">
 
 
-        <!-- LEFT CARD -->
-
         <div class="glass-card">
 
             <h3>
@@ -1753,9 +2246,9 @@ footer strong {
 
             <p>
 
-                Travspro Holidays is a travel and
-                tour service provider based in Manali,
-                Himachal Pradesh.
+                Travspro Holidays is a travel
+                and tour service provider based
+                in Manali, Himachal Pradesh.
 
                 Since 2019, we have been helping
                 travellers arrange flights, hotels,
@@ -1764,13 +2257,15 @@ footer strong {
 
                 <br><br>
 
-                Our goal is simple:
+                Whether you are planning a family
+                holiday, a romantic getaway,
+                an adventure trip or an international
+                vacation, our goal is simple:
 
                 make travel easier, more convenient
                 and more enjoyable.
 
             </p>
-
 
 
             <div class="stats">
@@ -1820,8 +2315,6 @@ footer strong {
         </div>
 
 
-
-        <!-- RIGHT CARD -->
 
         <div class="glass-card">
 
@@ -1894,7 +2387,11 @@ footer strong {
 
 
     <h2>
-        Where Will You Go Next?
+
+        Where Will You<br>
+
+        Go Next?
+
     </h2>
 
 
@@ -1912,14 +2409,12 @@ footer strong {
     <a
         href="https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20want%20to%20plan%20a%20trip."
         target="_blank"
-        rel="noopener"
         class="primary-btn"
     >
 
         Start Your Journey →
 
     </a>
-
 
 </section>
 
@@ -1949,6 +2444,7 @@ footer strong {
     <p>
 
         © 2026
+
         <strong>
             Travspro Holidays
         </strong>.
