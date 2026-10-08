@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,10 @@
   <title>About Us | Travspro Holidays</title>
 
   <style>
-    /* =========================
+
+    /* =====================================================
        GLOBAL
-    ========================== */
+    ===================================================== */
 
     * {
       margin: 0;
@@ -33,9 +35,10 @@
       color: inherit;
     }
 
-    /* =========================
+
+    /* =====================================================
        ANIMATED BACKGROUND
-    ========================== */
+    ===================================================== */
 
     body::before {
       content: "";
@@ -44,11 +47,27 @@
       z-index: -2;
 
       background:
-        radial-gradient(circle at 15% 20%, rgba(0, 229, 255, 0.15), transparent 30%),
-        radial-gradient(circle at 85% 30%, rgba(128, 0, 255, 0.18), transparent 30%),
-        radial-gradient(circle at 50% 90%, rgba(0, 255, 170, 0.10), transparent 30%),
+        radial-gradient(
+          circle at 15% 20%,
+          rgba(0, 229, 255, 0.15),
+          transparent 30%
+        ),
+
+        radial-gradient(
+          circle at 85% 30%,
+          rgba(128, 0, 255, 0.18),
+          transparent 30%
+        ),
+
+        radial-gradient(
+          circle at 50% 90%,
+          rgba(0, 255, 170, 0.10),
+          transparent 30%
+        ),
+
         #050816;
     }
+
 
     body::after {
       content: "";
@@ -58,33 +77,58 @@
       pointer-events: none;
 
       background-image:
-        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+        linear-gradient(
+          rgba(255,255,255,0.025) 1px,
+          transparent 1px
+        ),
+
+        linear-gradient(
+          90deg,
+          rgba(255,255,255,0.025) 1px,
+          transparent 1px
+        );
 
       background-size: 50px 50px;
 
-      mask-image: linear-gradient(to bottom, black, transparent);
+      mask-image:
+        linear-gradient(
+          to bottom,
+          black,
+          transparent
+        );
     }
 
-    /* =========================
+
+    /* =====================================================
        NAVBAR
-    ========================== */
+    ===================================================== */
 
     .navbar {
+
       position: fixed;
+
       top: 20px;
       left: 50%;
+
       transform: translateX(-50%);
 
-      width: min(1100px, 92%);
-      padding: 15px 25px;
+      width: min(1150px, 94%);
+
+      min-height: 76px;
+
+      padding: 8px 20px 8px 25px;
 
       display: flex;
+
       justify-content: space-between;
       align-items: center;
 
-      background: rgba(10, 15, 35, 0.65);
-      border: 1px solid rgba(255,255,255,0.1);
+      background:
+        rgba(10, 15, 35, 0.70);
+
+      border:
+        1px solid rgba(255,255,255,0.10);
+
       border-radius: 50px;
 
       backdrop-filter: blur(18px);
@@ -96,163 +140,386 @@
 
       z-index: 1000;
 
-      animation: navDrop 1s ease;
+      animation:
+        navDrop 1s ease;
     }
+
+
+    /* =====================================================
+       LOGO
+    ===================================================== */
 
     .logo {
-      font-size: 22px;
-      font-weight: 800;
-      letter-spacing: 1px;
 
-      background: linear-gradient(
-        90deg,
-        #00eaff,
-        #7c4dff,
-        #00ffc8
-      );
+      display: flex;
 
-      -webkit-background-clip: text;
-      color: transparent;
+      align-items: center;
+
+      justify-content: center;
+
+      width: 155px;
+
+      height: 60px;
+
+      flex-shrink: 0;
     }
 
+
+    .logo img {
+
+      width: 145px;
+
+      max-width: 100%;
+
+      max-height: 58px;
+
+      object-fit: contain;
+
+      display: block;
+
+      transition:
+        0.35s ease;
+
+      filter:
+        drop-shadow(
+          0 0 8px
+          rgba(0, 229, 255, 0.20)
+        );
+    }
+
+
+    .logo img:hover {
+
+      transform:
+        scale(1.07);
+
+      filter:
+        drop-shadow(
+          0 0 18px
+          rgba(0, 229, 255, 0.55)
+        );
+    }
+
+
+    /* =====================================================
+       NAV LINKS
+    ===================================================== */
+
     .nav-links {
+
       display: flex;
-      gap: 8px;
+
+      gap: 5px;
+
       list-style: none;
     }
 
+
     .nav-links a {
-      padding: 10px 18px;
-      border-radius: 30px;
 
-      font-size: 14px;
-      color: #cdd4e8;
+      display: block;
 
-      transition: 0.3s ease;
+      padding:
+        10px 17px;
+
+      border-radius:
+        30px;
+
+      font-size:
+        13px;
+
+      font-weight:
+        600;
+
+      letter-spacing:
+        0.5px;
+
+      color:
+        #cdd4e8;
+
+      transition:
+        0.3s ease;
     }
+
 
     .nav-links a:hover {
-      color: white;
-      background: rgba(0, 229, 255, 0.12);
-      box-shadow: 0 0 20px rgba(0,229,255,0.15);
+
+      color:
+        white;
+
+      background:
+        rgba(0, 229, 255, 0.12);
+
+      box-shadow:
+        0 0 20px
+        rgba(0,229,255,0.15);
     }
 
-    /* =========================
+
+    .nav-links a.active {
+
+      color:
+        #ffffff;
+
+      background:
+        rgba(0,229,255,0.10);
+
+      border:
+        1px solid
+        rgba(0,229,255,0.15);
+    }
+
+
+    /* =====================================================
        HERO
-    ========================== */
+    ===================================================== */
 
     .hero {
-      min-height: 100vh;
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      min-height:
+        100vh;
 
-      text-align: center;
-      padding: 140px 20px 80px;
+      display:
+        flex;
 
-      position: relative;
-      overflow: hidden;
+      align-items:
+        center;
+
+      justify-content:
+        center;
+
+      text-align:
+        center;
+
+      padding:
+        150px 20px 80px;
+
+      position:
+        relative;
+
+      overflow:
+        hidden;
     }
+
 
     .hero-content {
-      max-width: 950px;
-      animation: heroReveal 1.2s ease;
+
+      max-width:
+        950px;
+
+      animation:
+        heroReveal 1.2s ease;
     }
+
 
     .eyebrow {
-      display: inline-block;
 
-      padding: 8px 18px;
-      margin-bottom: 25px;
+      display:
+        inline-flex;
 
-      border: 1px solid rgba(0,229,255,0.3);
-      border-radius: 50px;
+      align-items:
+        center;
 
-      background: rgba(0,229,255,0.06);
+      gap:
+        9px;
 
-      color: #00eaff;
-      font-size: 13px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
+      padding:
+        8px 18px;
+
+      margin-bottom:
+        25px;
+
+      border:
+        1px solid
+        rgba(0,229,255,0.3);
+
+      border-radius:
+        50px;
+
+      background:
+        rgba(0,229,255,0.06);
+
+      color:
+        #00eaff;
+
+      font-size:
+        13px;
+
+      letter-spacing:
+        3px;
+
+      text-transform:
+        uppercase;
     }
+
+
+    .eyebrow::before {
+
+      content:
+        "";
+
+      width:
+        7px;
+
+      height:
+        7px;
+
+      border-radius:
+        50%;
+
+      background:
+        #00eaff;
+
+      box-shadow:
+        0 0 12px
+        #00eaff;
+
+      animation:
+        blink 1.5s infinite;
+    }
+
 
     .hero h1 {
-      font-size: clamp(55px, 9vw, 115px);
-      line-height: 0.95;
-      font-weight: 900;
-      letter-spacing: -5px;
 
-      background: linear-gradient(
-        120deg,
-        #ffffff,
-        #8befff,
-        #8f72ff,
-        #ffffff
-      );
+      font-size:
+        clamp(55px, 9vw, 115px);
 
-      background-size: 300% 300%;
+      line-height:
+        0.95;
 
-      -webkit-background-clip: text;
-      color: transparent;
+      font-weight:
+        900;
 
-      animation: gradientMove 7s ease infinite;
+      letter-spacing:
+        -5px;
+
+      background:
+        linear-gradient(
+          120deg,
+          #ffffff,
+          #8befff,
+          #8f72ff,
+          #ffffff
+        );
+
+      background-size:
+        300% 300%;
+
+      -webkit-background-clip:
+        text;
+
+      background-clip:
+        text;
+
+      color:
+        transparent;
+
+      animation:
+        gradientMove 7s ease infinite;
     }
+
 
     .hero h1 span {
-      display: block;
-      color: #00eaff;
+
+      display:
+        block;
+
+      color:
+        #00eaff;
     }
+
 
     .hero p {
-      max-width: 700px;
-      margin: 30px auto;
 
-      color: #aeb7ce;
-      font-size: 18px;
-      line-height: 1.8;
+      max-width:
+        700px;
+
+      margin:
+        30px auto;
+
+      color:
+        #aeb7ce;
+
+      font-size:
+        18px;
+
+      line-height:
+        1.8;
     }
+
+
+    /* =====================================================
+       HERO BUTTON
+    ===================================================== */
 
     .hero-button {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
 
-      padding: 15px 28px;
+      display:
+        inline-flex;
 
-      border-radius: 40px;
+      align-items:
+        center;
 
-      background: linear-gradient(
-        90deg,
-        #00d9ff,
-        #6d4aff
-      );
+      gap:
+        10px;
 
-      color: white;
-      font-weight: 700;
+      padding:
+        15px 28px;
+
+      border-radius:
+        40px;
+
+      background:
+        linear-gradient(
+          90deg,
+          #00d9ff,
+          #6d4aff
+        );
+
+      color:
+        white;
+
+      font-weight:
+        700;
 
       box-shadow:
-        0 0 30px rgba(0,217,255,0.25);
+        0 0 30px
+        rgba(0,217,255,0.25);
 
-      transition: 0.35s ease;
+      transition:
+        0.35s ease;
     }
+
 
     .hero-button:hover {
-      transform: translateY(-5px) scale(1.03);
+
+      transform:
+        translateY(-5px)
+        scale(1.03);
 
       box-shadow:
-        0 0 50px rgba(0,217,255,0.45);
+        0 0 50px
+        rgba(0,217,255,0.45);
     }
 
-    /* Floating Orb */
+
+    /* =====================================================
+       FLOATING ORBS
+    ===================================================== */
 
     .orb {
-      position: absolute;
 
-      width: 280px;
-      height: 280px;
+      position:
+        absolute;
 
-      border-radius: 50%;
+      width:
+        280px;
+
+      height:
+        280px;
+
+      border-radius:
+        50%;
 
       background:
         radial-gradient(
@@ -263,335 +530,593 @@
           transparent 72%
         );
 
-      filter: blur(1px);
-      opacity: 0.25;
+      filter:
+        blur(1px);
 
-      animation: floatOrb 8s ease-in-out infinite;
+      opacity:
+        0.25;
+
+      animation:
+        floatOrb 8s ease-in-out infinite;
     }
+
 
     .orb.one {
-      left: -120px;
-      top: 25%;
+
+      left:
+        -120px;
+
+      top:
+        25%;
     }
+
 
     .orb.two {
-      right: -100px;
-      bottom: 10%;
-      animation-delay: -4s;
+
+      right:
+        -100px;
+
+      bottom:
+        10%;
+
+      animation-delay:
+        -4s;
     }
 
-    /* =========================
-       MAIN CONTENT
-    ========================== */
+
+    /* =====================================================
+       SECTIONS
+    ===================================================== */
 
     .section {
-      width: min(1150px, 92%);
-      margin: auto;
-      padding: 110px 0;
+
+      width:
+        min(1150px, 92%);
+
+      margin:
+        auto;
+
+      padding:
+        110px 0;
     }
+
 
     .section-heading {
-      margin-bottom: 55px;
+
+      margin-bottom:
+        55px;
     }
+
 
     .section-heading small {
-      color: #00eaff;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      font-weight: 700;
+
+      color:
+        #00eaff;
+
+      text-transform:
+        uppercase;
+
+      letter-spacing:
+        3px;
+
+      font-weight:
+        700;
     }
+
 
     .section-heading h2 {
-      margin-top: 12px;
 
-      font-size: clamp(35px, 5vw, 60px);
-      line-height: 1.05;
+      margin-top:
+        12px;
+
+      font-size:
+        clamp(35px, 5vw, 60px);
+
+      line-height:
+        1.05;
     }
+
 
     .section-heading p {
-      max-width: 650px;
-      margin-top: 18px;
 
-      color: #929bb3;
-      line-height: 1.8;
+      max-width:
+        650px;
+
+      margin-top:
+        18px;
+
+      color:
+        #929bb3;
+
+      line-height:
+        1.8;
     }
 
-    /* =========================
+
+    /* =====================================================
        ABOUT GRID
-    ========================== */
+    ===================================================== */
 
     .about-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 30px;
+
+      display:
+        grid;
+
+      grid-template-columns:
+        1.2fr 0.8fr;
+
+      gap:
+        30px;
     }
+
 
     .glass-card {
-      position: relative;
 
-      padding: 40px;
+      position:
+        relative;
 
-      background: rgba(255,255,255,0.035);
+      padding:
+        40px;
 
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 25px;
+      background:
+        rgba(255,255,255,0.035);
 
-      backdrop-filter: blur(15px);
-      -webkit-backdrop-filter: blur(15px);
+      border:
+        1px solid
+        rgba(255,255,255,0.08);
 
-      overflow: hidden;
+      border-radius:
+        25px;
 
-      transition: 0.4s ease;
+      backdrop-filter:
+        blur(15px);
+
+      -webkit-backdrop-filter:
+        blur(15px);
+
+      overflow:
+        hidden;
+
+      transition:
+        0.4s ease;
     }
+
 
     .glass-card::before {
-      content: "";
 
-      position: absolute;
+      content:
+        "";
 
-      width: 180px;
-      height: 180px;
+      position:
+        absolute;
 
-      right: -80px;
-      top: -80px;
+      width:
+        180px;
 
-      background: #00eaff;
-      opacity: 0.08;
+      height:
+        180px;
 
-      border-radius: 50%;
+      right:
+        -80px;
 
-      transition: 0.5s ease;
+      top:
+        -80px;
+
+      background:
+        #00eaff;
+
+      opacity:
+        0.08;
+
+      border-radius:
+        50%;
+
+      transition:
+        0.5s ease;
     }
+
 
     .glass-card:hover {
-      transform: translateY(-8px);
 
-      border-color: rgba(0,229,255,0.3);
+      transform:
+        translateY(-8px);
+
+      border-color:
+        rgba(0,229,255,0.3);
 
       box-shadow:
-        0 20px 60px rgba(0,0,0,0.3),
-        0 0 30px rgba(0,229,255,0.08);
+        0 20px 60px
+        rgba(0,0,0,0.3),
+
+        0 0 30px
+        rgba(0,229,255,0.08);
     }
+
 
     .glass-card:hover::before {
-      transform: scale(2);
+
+      transform:
+        scale(2);
     }
+
 
     .glass-card h3 {
-      font-size: 26px;
-      margin-bottom: 20px;
+
+      font-size:
+        26px;
+
+      margin-bottom:
+        20px;
     }
+
 
     .glass-card p {
-      color: #aab3c8;
-      line-height: 1.9;
-      font-size: 16px;
+
+      color:
+        #aab3c8;
+
+      line-height:
+        1.9;
+
+      font-size:
+        16px;
     }
 
-    /* =========================
+
+    /* =====================================================
        STATS
-    ========================== */
+    ===================================================== */
 
     .stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      margin-top: 30px;
+
+      display:
+        grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap:
+        20px;
+
+      margin-top:
+        30px;
     }
+
 
     .stat {
-      padding: 30px 20px;
 
-      text-align: center;
+      padding:
+        30px 20px;
 
-      border-radius: 20px;
+      text-align:
+        center;
 
-      background: rgba(0,229,255,0.035);
-      border: 1px solid rgba(0,229,255,0.1);
+      border-radius:
+        20px;
 
-      transition: 0.3s;
+      background:
+        rgba(0,229,255,0.035);
+
+      border:
+        1px solid
+        rgba(0,229,255,0.1);
+
+      transition:
+        0.3s;
     }
+
 
     .stat:hover {
-      background: rgba(0,229,255,0.08);
-      transform: translateY(-5px);
+
+      background:
+        rgba(0,229,255,0.08);
+
+      transform:
+        translateY(-5px);
     }
+
 
     .stat strong {
-      display: block;
 
-      font-size: 38px;
+      display:
+        block;
 
-      background: linear-gradient(
-        90deg,
-        #00eaff,
-        #8c6cff
-      );
+      font-size:
+        38px;
 
-      -webkit-background-clip: text;
-      color: transparent;
+      background:
+        linear-gradient(
+          90deg,
+          #00eaff,
+          #8c6cff
+        );
+
+      -webkit-background-clip:
+        text;
+
+      background-clip:
+        text;
+
+      color:
+        transparent;
     }
+
 
     .stat span {
-      color: #8993aa;
-      font-size: 13px;
+
+      color:
+        #8993aa;
+
+      font-size:
+        13px;
     }
 
-    /* =========================
+
+    /* =====================================================
        SERVICES
-    ========================== */
+    ===================================================== */
 
     .services {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+
+      display:
+        grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap:
+        20px;
     }
+
 
     .service {
-      min-height: 220px;
 
-      padding: 30px;
+      min-height:
+        220px;
 
-      border-radius: 22px;
+      padding:
+        30px;
 
-      background: linear-gradient(
-        145deg,
-        rgba(255,255,255,0.06),
-        rgba(255,255,255,0.015)
-      );
+      border-radius:
+        22px;
 
-      border: 1px solid rgba(255,255,255,0.08);
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,0.06),
+          rgba(255,255,255,0.015)
+        );
 
-      transition: 0.4s ease;
+      border:
+        1px solid
+        rgba(255,255,255,0.08);
 
-      position: relative;
-      overflow: hidden;
+      transition:
+        0.4s ease;
+
+      position:
+        relative;
+
+      overflow:
+        hidden;
     }
+
 
     .service:hover {
-      transform: translateY(-10px);
 
-      border-color: rgba(0,229,255,0.4);
+      transform:
+        translateY(-10px);
+
+      border-color:
+        rgba(0,229,255,0.4);
 
       box-shadow:
-        0 20px 50px rgba(0,0,0,0.35),
-        0 0 30px rgba(0,229,255,0.1);
+        0 20px 50px
+        rgba(0,0,0,0.35),
+
+        0 0 30px
+        rgba(0,229,255,0.1);
     }
+
 
     .service-icon {
-      width: 55px;
-      height: 55px;
 
-      display: grid;
-      place-items: center;
+      width:
+        55px;
 
-      border-radius: 15px;
+      height:
+        55px;
 
-      background: rgba(0,229,255,0.1);
+      display:
+        grid;
 
-      color: #00eaff;
+      place-items:
+        center;
 
-      font-size: 25px;
+      border-radius:
+        15px;
 
-      margin-bottom: 25px;
+      background:
+        rgba(0,229,255,0.1);
 
-      transition: 0.4s;
+      color:
+        #00eaff;
+
+      font-size:
+        25px;
+
+      margin-bottom:
+        25px;
+
+      transition:
+        0.4s;
     }
+
 
     .service:hover .service-icon {
-      transform: rotate(8deg) scale(1.1);
 
-      background: #00eaff;
-      color: #06101d;
+      transform:
+        rotate(8deg)
+        scale(1.1);
 
-      box-shadow: 0 0 25px rgba(0,229,255,0.5);
-    }
+      background:
+        #00eaff;
 
-    .service h3 {
-      margin-bottom: 12px;
-    }
-
-    .service p {
-      color: #8993aa;
-      line-height: 1.7;
-      font-size: 14px;
-    }
-
-    /* =========================
-       TIMELINE
-    ========================== */
-
-    .timeline {
-      position: relative;
-
-      max-width: 850px;
-      margin: auto;
-    }
-
-    .timeline::before {
-      content: "";
-
-      position: absolute;
-
-      left: 20px;
-      top: 0;
-      bottom: 0;
-
-      width: 2px;
-
-      background: linear-gradient(
-        #00eaff,
-        #6f4cff,
-        transparent
-      );
-    }
-
-    .timeline-item {
-      position: relative;
-
-      padding-left: 70px;
-      margin-bottom: 50px;
-    }
-
-    .timeline-dot {
-      position: absolute;
-
-      left: 8px;
-      top: 5px;
-
-      width: 25px;
-      height: 25px;
-
-      border-radius: 50%;
-
-      background: #050816;
-
-      border: 2px solid #00eaff;
+      color:
+        #06101d;
 
       box-shadow:
-        0 0 15px #00eaff;
+        0 0 25px
+        rgba(0,229,255,0.5);
     }
+
+
+    .service h3 {
+
+      margin-bottom:
+        12px;
+    }
+
+
+    .service p {
+
+      color:
+        #8993aa;
+
+      line-height:
+        1.7;
+
+      font-size:
+        14px;
+    }
+
+
+    /* =====================================================
+       TIMELINE
+    ===================================================== */
+
+    .timeline {
+
+      position:
+        relative;
+
+      max-width:
+        850px;
+
+      margin:
+        auto;
+    }
+
+
+    .timeline::before {
+
+      content:
+        "";
+
+      position:
+        absolute;
+
+      left:
+        20px;
+
+      top:
+        0;
+
+      bottom:
+        0;
+
+      width:
+        2px;
+
+      background:
+        linear-gradient(
+          #00eaff,
+          #6f4cff,
+          transparent
+        );
+    }
+
+
+    .timeline-item {
+
+      position:
+        relative;
+
+      padding-left:
+        70px;
+
+      margin-bottom:
+        50px;
+    }
+
+
+    .timeline-dot {
+
+      position:
+        absolute;
+
+      left:
+        8px;
+
+      top:
+        5px;
+
+      width:
+        25px;
+
+      height:
+        25px;
+
+      border-radius:
+        50%;
+
+      background:
+        #050816;
+
+      border:
+        2px solid
+        #00eaff;
+
+      box-shadow:
+        0 0 15px
+        #00eaff;
+    }
+
 
     .timeline-item h3 {
-      color: #00eaff;
-      margin-bottom: 10px;
+
+      color:
+        #00eaff;
+
+      margin-bottom:
+        10px;
     }
+
 
     .timeline-item p {
-      color: #929bb3;
-      line-height: 1.8;
+
+      color:
+        #929bb3;
+
+      line-height:
+        1.8;
     }
 
-    /* =========================
+
+    /* =====================================================
        CTA
-    ========================== */
+    ===================================================== */
 
     .cta {
-      text-align: center;
 
-      padding: 100px 30px;
+      text-align:
+        center;
 
-      border-radius: 35px;
+      padding:
+        100px 30px;
+
+      border-radius:
+        35px;
 
       background:
         linear-gradient(
@@ -600,92 +1125,152 @@
           rgba(100,50,255,0.1)
         );
 
-      border: 1px solid rgba(255,255,255,0.1);
+      border:
+        1px solid
+        rgba(255,255,255,0.1);
 
-      position: relative;
-      overflow: hidden;
+      position:
+        relative;
+
+      overflow:
+        hidden;
     }
+
 
     .cta::before {
-      content: "";
 
-      position: absolute;
+      content:
+        "";
 
-      width: 400px;
-      height: 400px;
+      position:
+        absolute;
 
-      left: 50%;
-      top: 50%;
+      width:
+        400px;
 
-      transform: translate(-50%, -50%);
+      height:
+        400px;
 
-      background: #00eaff;
-      opacity: 0.05;
+      left:
+        50%;
 
-      border-radius: 50%;
+      top:
+        50%;
 
-      filter: blur(50px);
+      transform:
+        translate(-50%, -50%);
+
+      background:
+        #00eaff;
+
+      opacity:
+        0.05;
+
+      border-radius:
+        50%;
+
+      filter:
+        blur(50px);
     }
+
 
     .cta h2 {
-      position: relative;
 
-      font-size: clamp(35px, 5vw, 65px);
-      margin-bottom: 20px;
+      position:
+        relative;
+
+      font-size:
+        clamp(35px, 5vw, 65px);
+
+      margin-bottom:
+        20px;
     }
+
 
     .cta p {
-      position: relative;
 
-      max-width: 600px;
-      margin: auto auto 30px;
+      position:
+        relative;
 
-      color: #a3adc3;
-      line-height: 1.8;
+      max-width:
+        600px;
+
+      margin:
+        auto auto 30px;
+
+      color:
+        #a3adc3;
+
+      line-height:
+        1.8;
     }
 
-    /* =========================
+
+    /* =====================================================
        FOOTER
-    ========================== */
+    ===================================================== */
 
     footer {
-      padding: 50px 20px;
 
-      text-align: center;
+      padding:
+        50px 20px;
 
-      border-top: 1px solid rgba(255,255,255,0.06);
+      text-align:
+        center;
 
-      color: #687289;
-      font-size: 14px;
+      border-top:
+        1px solid
+        rgba(255,255,255,0.06);
+
+      color:
+        #687289;
+
+      font-size:
+        14px;
     }
+
 
     footer strong {
-      color: #00eaff;
+
+      color:
+        #00eaff;
     }
 
-    /* =========================
+
+    /* =====================================================
        SCROLL REVEAL
-    ========================== */
+    ===================================================== */
 
     .reveal {
-      opacity: 0;
-      transform: translateY(50px);
+
+      opacity:
+        0;
+
+      transform:
+        translateY(50px);
 
       transition:
         opacity 0.8s ease,
         transform 0.8s ease;
     }
 
+
     .reveal.active {
-      opacity: 1;
-      transform: translateY(0);
+
+      opacity:
+        1;
+
+      transform:
+        translateY(0);
     }
 
-    /* =========================
+
+    /* =====================================================
        ANIMATIONS
-    ========================== */
+    ===================================================== */
 
     @keyframes heroReveal {
+
       from {
         opacity: 0;
         transform: translateY(40px);
@@ -697,158 +1282,318 @@
       }
     }
 
+
     @keyframes navDrop {
+
       from {
         opacity: 0;
-        transform: translate(-50%, -30px);
+        transform:
+          translate(-50%, -30px);
       }
 
       to {
         opacity: 1;
-        transform: translate(-50%, 0);
+        transform:
+          translate(-50%, 0);
       }
     }
 
+
     @keyframes gradientMove {
+
       0% {
-        background-position: 0% 50%;
+        background-position:
+          0% 50%;
       }
 
       50% {
-        background-position: 100% 50%;
+        background-position:
+          100% 50%;
       }
 
       100% {
-        background-position: 0% 50%;
+        background-position:
+          0% 50%;
       }
     }
 
+
     @keyframes floatOrb {
+
       0%, 100% {
-        transform: translate(0, 0) scale(1);
+        transform:
+          translate(0, 0)
+          scale(1);
       }
 
       50% {
-        transform: translate(40px, -50px) scale(1.1);
+        transform:
+          translate(40px, -50px)
+          scale(1.1);
       }
     }
 
-    /* =========================
-       MOBILE
-    ========================== */
+
+    @keyframes blink {
+
+      0%, 100% {
+        opacity:
+          1;
+      }
+
+      50% {
+        opacity:
+          0.3;
+      }
+    }
+
+
+    /* =====================================================
+       TABLET
+    ===================================================== */
 
     @media (max-width: 800px) {
 
       .navbar {
-        padding: 12px 18px;
+
+        padding:
+          8px 15px;
       }
+
 
       .logo {
-        font-size: 18px;
+
+        width:
+          125px;
       }
+
+
+      .logo img {
+
+        width:
+          120px;
+
+        max-height:
+          52px;
+      }
+
 
       .nav-links {
-        gap: 0;
+
+        gap:
+          0;
       }
+
 
       .nav-links a {
-        padding: 8px;
-        font-size: 11px;
+
+        padding:
+          8px 9px;
+
+        font-size:
+          11px;
       }
+
 
       .about-grid {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+          1fr;
       }
+
 
       .services {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+          1fr;
       }
+
 
       .stats {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+          1fr;
       }
+
 
       .hero h1 {
-        letter-spacing: -3px;
+
+        letter-spacing:
+          -3px;
       }
 
+
       .glass-card {
-        padding: 28px;
+
+        padding:
+          28px;
       }
+
     }
+
+
+    /* =====================================================
+       MOBILE
+    ===================================================== */
 
     @media (max-width: 500px) {
 
       .navbar {
-        width: 95%;
+
+        width:
+          96%;
+
+        min-height:
+          65px;
+
+        padding:
+          6px 10px;
       }
+
 
       .logo {
-        display: none;
+
+        width:
+          90px;
       }
+
+
+      .logo img {
+
+        width:
+          88px;
+
+        max-height:
+          45px;
+      }
+
 
       .nav-links {
-        width: 100%;
-        justify-content: space-around;
+
+        flex:
+          1;
+
+        justify-content:
+          flex-end;
       }
+
 
       .nav-links a {
-        font-size: 10px;
+
+        padding:
+          8px 6px;
+
+        font-size:
+          9px;
       }
+
 
       .hero {
-        padding-top: 130px;
+
+        padding-top:
+          130px;
       }
 
+
       .hero p {
-        font-size: 15px;
+
+        font-size:
+          15px;
       }
+
+
+      .hero h1 {
+
+        font-size:
+          clamp(50px, 15vw, 75px);
+      }
+
+
+      .orb {
+
+        width:
+          190px;
+
+        height:
+          190px;
+      }
+
     }
 
   </style>
 </head>
 
+
 <body>
 
-  <!-- =========================
+
+  <!-- =====================================================
        NAVIGATION
-  ========================== -->
+  ===================================================== -->
 
   <nav class="navbar">
 
-    <a href="./index.html" class="logo">
-  <img src="./ohom.png" alt="Travspro Holidays">
-</a>
+
+    <!-- YOUR LOGO -->
+
+    <a
+      href="./index.html"
+      class="logo"
+    >
+
+      <img
+        src="ohom.png"
+        alt="Travspro Holidays Logo"
+      >
+
+    </a>
+
 
     <ul class="nav-links">
+
       <li>
-        <a href="./index.html">HOME</a>
+        <a href="./index.html">
+          HOME
+        </a>
       </li>
 
       <li>
-        <a href="./tourPackage.html">TOURS</a>
+        <a href="./tourPackage.html">
+          TOURS
+        </a>
       </li>
 
       <li>
-        <a href="./about.html">ABOUT</a>
+        <a
+          href="./about.html"
+          class="active"
+        >
+          ABOUT
+        </a>
       </li>
 
       <li>
-        <a href="./contactus.html">CONTACT</a>
+        <a href="./contactus.html">
+          CONTACT
+        </a>
       </li>
+
     </ul>
 
   </nav>
 
 
-  <!-- =========================
+
+  <!-- =====================================================
        HERO
-  ========================== -->
+  ===================================================== -->
 
   <section class="hero">
 
     <div class="orb one"></div>
+
     <div class="orb two"></div>
+
 
     <div class="hero-content">
 
@@ -856,21 +1601,40 @@
         Since 2019 • Explore Beyond
       </div>
 
+
       <h1>
+
         Travel
-        <span>Without Limits.</span>
+
+        <span>
+          Without Limits.
+        </span>
+
       </h1>
 
+
       <p>
-        Travspro Holidays transforms journeys into unforgettable
-        experiences. From flights and hotels to complete tour
-        experiences, we make every part of your journey simpler,
-        smarter and stress-free.
+
+        Travspro Holidays transforms journeys
+        into unforgettable experiences. From
+        flights and hotels to complete tour
+        experiences, we make every part of your
+        journey simpler, smarter and stress-free.
+
       </p>
 
-      <a href="./tourPackage.html" class="hero-button">
+
+      <a
+        href="./tourPackage.html"
+        class="hero-button"
+      >
+
         Explore Our Tours
-        <span>→</span>
+
+        <span>
+          →
+        </span>
+
       </a>
 
     </div>
@@ -878,31 +1642,44 @@
   </section>
 
 
-  <!-- =========================
+
+  <!-- =====================================================
        ABOUT
-  ========================== -->
+  ===================================================== -->
 
   <section class="section">
 
     <div class="section-heading reveal">
 
-      <small>Who We Are</small>
+      <small>
+        Who We Are
+      </small>
+
 
       <h2>
+
         Your journey.<br>
         Our expertise.
+
       </h2>
 
+
       <p>
-        We believe travel should feel exciting, not complicated.
-        Our team combines experience, technology and personalized
-        service to create smoother travel experiences.
+
+        We believe travel should feel exciting,
+        not complicated. Our team combines
+        experience, technology and personalized
+        service to create smoother travel
+        experiences.
+
       </p>
 
     </div>
 
 
+
     <div class="about-grid">
+
 
       <div class="glass-card reveal">
 
@@ -910,24 +1687,38 @@
           More Than A Travel Agency
         </h3>
 
+
         <p>
-          Travspro Holidays is a trusted tour and travel service
-          provider based in Manali, Himachal Pradesh. Since our
-          establishment in 2019, we have focused on delivering
-          reliable and convenient travel solutions for individuals,
-          families, businesses and organizations.
+
+          Travspro Holidays is a trusted tour
+          and travel service provider based in
+          Manali, Himachal Pradesh.
+
+          Since our establishment in 2019,
+          we have focused on delivering
+          reliable and convenient travel
+          solutions for individuals, families,
+          businesses and organizations.
+
         </p>
+
 
         <br>
 
+
         <p>
-          From booking your first ticket to arranging hotels,
-          vehicles and complete travel packages, our goal is simple:
-          remove the stress from travel so you can focus on the
+
+          From booking your first ticket to
+          arranging hotels, vehicles and
+          complete travel packages, our goal
+          is simple: remove the stress from
+          travel so you can focus on the
           experience itself.
+
         </p>
 
       </div>
+
 
 
       <div class="glass-card reveal">
@@ -936,29 +1727,62 @@
           Built For Modern Travelers
         </h3>
 
+
         <p>
-          Travel is evolving. We are evolving with it.
-          Our approach combines personalized human support with
-          modern travel solutions to help you plan, book and enjoy
-          your journey with confidence.
+
+          Travel is evolving.
+          We are evolving with it.
+
+          Our approach combines personalized
+          human support with modern travel
+          solutions to help you plan, book and
+          enjoy your journey with confidence.
+
         </p>
+
+
 
         <div class="stats">
 
-          <div class="stat">
-            <strong>2019</strong>
-            <span>Established</span>
-          </div>
 
           <div class="stat">
-            <strong>∞</strong>
-            <span>Journeys</span>
+
+            <strong>
+              2019
+            </strong>
+
+            <span>
+              Established
+            </span>
+
           </div>
 
+
           <div class="stat">
-            <strong>24/7</strong>
-            <span>Travel Dreams</span>
+
+            <strong>
+              ∞
+            </strong>
+
+            <span>
+              Journeys
+            </span>
+
           </div>
+
+
+          <div class="stat">
+
+            <strong>
+              24/7
+            </strong>
+
+            <span>
+              Travel Dreams
+            </span>
+
+          </div>
+
 
         </div>
 
@@ -969,25 +1793,34 @@
   </section>
 
 
-  <!-- =========================
+
+  <!-- =====================================================
        SERVICES
-  ========================== -->
+  ===================================================== -->
 
   <section class="section">
 
+
     <div class="section-heading reveal">
 
-      <small>What We Do</small>
+      <small>
+        What We Do
+      </small>
+
 
       <h2>
+
         Everything you need<br>
         to go further.
+
       </h2>
 
     </div>
 
 
+
     <div class="services">
+
 
       <div class="service reveal">
 
@@ -995,14 +1828,20 @@
           ✈
         </div>
 
-        <h3>Flight Booking</h3>
+        <h3>
+          Flight Booking
+        </h3>
 
         <p>
-          Find and arrange flight bookings for your domestic
-          and international travel requirements.
+
+          Find and arrange flight bookings
+          for your domestic and international
+          travel requirements.
+
         </p>
 
       </div>
+
 
 
       <div class="service reveal">
@@ -1011,14 +1850,20 @@
           ◈
         </div>
 
-        <h3>Tour Packages</h3>
+        <h3>
+          Tour Packages
+        </h3>
 
         <p>
-          Discover carefully planned travel experiences designed
-          for memorable adventures.
+
+          Discover carefully planned travel
+          experiences designed for memorable
+          adventures.
+
         </p>
 
       </div>
+
 
 
       <div class="service reveal">
@@ -1027,14 +1872,20 @@
           ◆
         </div>
 
-        <h3>Hotel Booking</h3>
+        <h3>
+          Hotel Booking
+        </h3>
 
         <p>
-          Comfortable stays and accommodation arrangements
-          tailored to your travel plans.
+
+          Comfortable stays and accommodation
+          arrangements tailored to your travel
+          plans.
+
         </p>
 
       </div>
+
 
 
       <div class="service reveal">
@@ -1043,14 +1894,19 @@
           🚗
         </div>
 
-        <h3>Car & Coach Rental</h3>
+        <h3>
+          Car & Coach Rental
+        </h3>
 
         <p>
-          Convenient transportation options for individuals,
-          families and groups.
+
+          Convenient transportation options
+          for individuals, families and groups.
+
         </p>
 
       </div>
+
 
 
       <div class="service reveal">
@@ -1059,14 +1915,19 @@
           ◎
         </div>
 
-        <h3>Visa & Passport</h3>
+        <h3>
+          Visa & Passport
+        </h3>
 
         <p>
-          Assistance with travel documentation and related
-          passport and visa services.
+
+          Assistance with travel documentation
+          and related passport and visa services.
+
         </p>
 
       </div>
+
 
 
       <div class="service reveal">
@@ -1075,11 +1936,16 @@
           🛡
         </div>
 
-        <h3>Travel Insurance</h3>
+        <h3>
+          Travel Insurance
+        </h3>
 
         <p>
-          Travel insurance assistance to help you travel with
-          greater confidence and peace of mind.
+
+          Travel insurance assistance to help
+          you travel with greater confidence
+          and peace of mind.
+
         </p>
 
       </div>
@@ -1089,119 +1955,168 @@
   </section>
 
 
-  <!-- =========================
+
+  <!-- =====================================================
        OUR STORY
-  ========================== -->
+  ===================================================== -->
 
   <section class="section">
 
+
     <div class="section-heading reveal">
 
-      <small>Our Journey</small>
+      <small>
+        Our Journey
+      </small>
+
 
       <h2>
+
         From a vision<br>
         to every destination.
+
       </h2>
 
     </div>
+
 
 
     <div class="timeline">
 
+
       <div class="timeline-item reveal">
 
         <div class="timeline-dot"></div>
 
-        <h3>2019 — The Beginning</h3>
+        <h3>
+          2019 — The Beginning
+        </h3>
 
         <p>
-          Travspro Holidays began its journey with a vision to
-          simplify travel and provide reliable travel services
-          from Manali, Himachal Pradesh.
+
+          Travspro Holidays began its journey
+          with a vision to simplify travel and
+          provide reliable travel services from
+          Manali, Himachal Pradesh.
+
         </p>
 
       </div>
 
 
+
       <div class="timeline-item reveal">
 
         <div class="timeline-dot"></div>
 
-        <h3>Growing With Travelers</h3>
+        <h3>
+          Growing With Travelers
+        </h3>
 
         <p>
-          Our services expanded across travel bookings,
-          accommodation, transportation, tour packages and
+
+          Our services expanded across travel
+          bookings, accommodation,
+          transportation, tour packages and
           travel assistance.
+
         </p>
 
       </div>
+
 
 
       <div class="timeline-item reveal">
 
         <div class="timeline-dot"></div>
 
-        <h3>Today — Going Further</h3>
+        <h3>
+          Today — Going Further
+        </h3>
 
         <p>
-          Today, our focus remains on combining dependable
-          service with modern travel solutions and creating
-          better experiences for every traveler.
+
+          Today, our focus remains on combining
+          dependable service with modern travel
+          solutions and creating better
+          experiences for every traveler.
+
         </p>
 
       </div>
+
 
     </div>
 
   </section>
 
 
-  <!-- =========================
+
+  <!-- =====================================================
        CTA
-  ========================== -->
+  ===================================================== -->
 
   <section class="section">
 
+
     <div class="cta reveal">
 
+
       <h2>
+
         Where will you<br>
         go next?
+
       </h2>
 
+
       <p>
-        Your next adventure is closer than you think.
-        Let Travspro Holidays help you turn your travel
-        plans into reality.
+
+        Your next adventure is closer than
+        you think. Let Travspro Holidays
+        help you turn your travel plans
+        into reality.
+
       </p>
 
-      <a href="./contactus.html" class="hero-button">
+
+      <a
+        href="./contactus.html"
+        class="hero-button"
+      >
+
         Start Your Journey →
+
       </a>
+
 
     </div>
 
   </section>
 
 
-  <!-- =========================
+
+  <!-- =====================================================
        FOOTER
-  ========================== -->
+  ===================================================== -->
 
   <footer>
 
     © 2026
-    <strong>Travspro Holidays</strong>.
-    All rights reserved.
+
+    <strong>
+      Travspro Holidays
+    </strong>
+
+    — Travel Solution Provider
 
   </footer>
 
 
-  <!-- =========================
+
+  <!-- =====================================================
        JAVASCRIPT
-  ========================== -->
+  ===================================================== -->
 
   <script>
 
@@ -1212,24 +2127,31 @@
     const revealElements =
       document.querySelectorAll(".reveal");
 
-    const observer = new IntersectionObserver(
-      (entries) => {
 
-        entries.forEach((entry) => {
+    const observer =
+      new IntersectionObserver(
 
-          if (entry.isIntersecting) {
+        (entries) => {
 
-            entry.target.classList.add("active");
+          entries.forEach((entry) => {
 
-          }
+            if (entry.isIntersecting) {
 
-        });
+              entry.target
+                .classList
+                .add("active");
 
-      },
-      {
-        threshold: 0.15
-      }
-    );
+            }
+
+          });
+
+        },
+
+        {
+          threshold: 0.15
+        }
+
+      );
 
 
     revealElements.forEach((element) => {
@@ -1239,30 +2161,53 @@
     });
 
 
+
     /*
-      Subtle mouse movement for futuristic effect
+      Subtle mouse movement
+      for futuristic background
     */
 
-    document.addEventListener("mousemove", (event) => {
+    document.addEventListener(
+      "mousemove",
+      (event) => {
 
-      const x =
-        (event.clientX / window.innerWidth - 0.5) * 10;
+        const x =
+          (
+            event.clientX /
+            window.innerWidth -
+            0.5
+          ) * 10;
 
-      const y =
-        (event.clientY / window.innerHeight - 0.5) * 10;
 
-      document.querySelectorAll(".orb").forEach((orb, index) => {
+        const y =
+          (
+            event.clientY /
+            window.innerHeight -
+            0.5
+          ) * 10;
 
-        const multiplier = index === 0 ? 1 : -1;
 
-        orb.style.transform =
-          `translate(${x * multiplier}px, ${y * multiplier}px)`;
+        document
+          .querySelectorAll(".orb")
+          .forEach((orb, index) => {
 
-      });
+            const multiplier =
+              index === 0 ? 1 : -1;
 
-    });
+
+            orb.style.transform =
+              `translate(
+                ${x * multiplier}px,
+                ${y * multiplier}px
+              )`;
+
+          });
+
+      }
+    );
 
   </script>
 
 </body>
+
 </html>
