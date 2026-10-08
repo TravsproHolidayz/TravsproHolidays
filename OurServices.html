@@ -8,7 +8,7 @@
 
 <style>
 
-/* ========================================= GLOBAL ========================================= */
+/* ===================================================== GLOBAL ===================================================== */
 
 *{ margin:0; padding:0; box-sizing:border-box; }
 
@@ -18,15 +18,15 @@ body{ font-family:"Segoe UI",Arial,sans-serif; background:#050816; color:#fff; o
 
 a{ text-decoration:none; color:inherit; }
 
-/* ========================================= FUTURISTIC BACKGROUND ========================================= */
+/* ===================================================== FUTURISTIC BACKGROUND ===================================================== */
 
 body::before{ content:""; position:fixed; inset:0; z-index:-2;
 
-background: radial-gradient( circle at 15% 20%, rgba(0,229,255,.16), transparent 30% ),
+background: radial-gradient( circle at 10% 15%, rgba(0,229,255,.14), transparent 28% ),
 
-radial-gradient( circle at 85% 30%, rgba(128,0,255,.18), transparent 30% ),
+radial-gradient( circle at 90% 25%, rgba(124,77,255,.18), transparent 30% ),
 
-radial-gradient( circle at 50% 90%, rgba(0,255,170,.10), transparent 30% ),
+radial-gradient( circle at 50% 90%, rgba(0,255,180,.08), transparent 30% ),
 
 #050816; }
 
@@ -40,51 +40,51 @@ background-size:50px 50px;
 
 mask-image: linear-gradient( to bottom, black, transparent ); }
 
-/* ========================================= NAVBAR ========================================= */
+/* ===================================================== NAVIGATION ===================================================== */
 
 .navbar{
 
 position:fixed;
 
-top:20px; left:50%;
+top:18px; left:50%;
 
 transform:translateX(-50%);
 
-width:min(1200px,94%);
+width:min(1220px,94%);
 
-padding:10px 24px;
+padding:8px 22px;
 
 display:flex;
 
 justify-content:space-between; align-items:center;
 
-background:rgba(10,15,35,.72);
+background: rgba(10,15,35,.78);
 
 border: 1px solid rgba(255,255,255,.12);
 
 border-radius:50px;
 
-backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px);
+backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px);
 
-box-shadow: 0 10px 40px rgba(0,0,0,.35), inset 0 0 20px rgba(255,255,255,.02);
+box-shadow: 0 12px 45px rgba(0,0,0,.4);
 
 z-index:1000;
 
 animation:navDrop 1s ease; }
 
-/* ========================================= BIGGER LOGO ========================================= */
+/* BIG LOGO */
 
 .nav-logo img{
 
-width:180px; height:65px;
+width:180px; height:68px;
 
 object-fit:contain;
 
 display:block;
 
-transition:.4s ease;
+filter: drop-shadow( 0 0 12px rgba(0,229,255,.18) );
 
-filter: drop-shadow( 0 0 12px rgba(0,229,255,.18) ); }
+transition:.4s ease; }
 
 .nav-logo img:hover{
 
@@ -92,7 +92,7 @@ transform:scale(1.05);
 
 filter: drop-shadow( 0 0 25px rgba(0,229,255,.55) ); }
 
-/* ========================================= NAV LINKS ========================================= */
+/* NAV LINKS */
 
 .nav-links{
 
@@ -116,11 +116,11 @@ font-size:12px;
 
 font-weight:600;
 
-transition:.3s ease;
+white-space:nowrap;
 
-white-space:nowrap; }
+transition:.3s ease; }
 
-.nav-links a:hover{
+.nav-links a:hover, .nav-links .active a{
 
 color:white;
 
@@ -128,19 +128,21 @@ background: rgba(0,229,255,.12);
 
 box-shadow: 0 0 20px rgba(0,229,255,.15); }
 
-/* ========================================= HERO ========================================= */
+/* ===================================================== HERO ===================================================== */
 
 .hero{
 
-min-height:75vh;
+min-height:70vh;
 
 display:flex;
 
-justify-content:center; align-items:center;
+justify-content:center;
+
+align-items:center;
 
 text-align:center;
 
-padding: 180px 20px 90px;
+padding: 175px 20px 80px;
 
 position:relative;
 
@@ -148,7 +150,7 @@ overflow:hidden; }
 
 .hero-content{
 
-max-width:900px;
+max-width:950px;
 
 animation: heroReveal 1.2s ease; }
 
@@ -156,7 +158,7 @@ animation: heroReveal 1.2s ease; }
 
 display:inline-block;
 
-padding:8px 18px;
+padding:8px 20px;
 
 margin-bottom:25px;
 
@@ -202,7 +204,7 @@ color:#00eaff; }
 
 .hero p{
 
-max-width:700px;
+max-width:750px;
 
 margin:30px auto;
 
@@ -212,13 +214,13 @@ font-size:18px;
 
 line-height:1.8; }
 
-/* ========================================= FLOATING ORBS ========================================= */
+/* ===================================================== FLOATING ORBS ===================================================== */
 
 .orb{
 
 position:absolute;
 
-width:300px; height:300px;
+width:310px; height:310px;
 
 border-radius:50%;
 
@@ -232,19 +234,19 @@ animation: floatOrb 8s ease-in-out infinite; }
 
 .orb.one{
 
-left:-140px; top:20%; }
+left:-150px; top:18%; }
 
 .orb.two{
 
-right:-130px; bottom:5%;
+right:-140px; bottom:5%;
 
 animation-delay:-4s; }
 
-/* ========================================= SERVICES SECTION ========================================= */
+/* ===================================================== SERVICES SECTION ===================================================== */
 
 .services-section{
 
-width:min(1150px,92%);
+width:min(1180px,92%);
 
 margin:auto;
 
@@ -254,7 +256,7 @@ padding: 70px 0 120px; }
 
 text-align:center;
 
-margin-bottom:65px; }
+margin-bottom:70px; }
 
 .section-heading small{
 
@@ -270,7 +272,7 @@ font-weight:700; }
 
 .section-heading h2{
 
-margin-top:12px;
+margin-top:14px;
 
 font-size: clamp(38px,5vw,65px);
 
@@ -278,9 +280,9 @@ line-height:1.05; }
 
 .section-heading p{
 
-max-width:700px;
+max-width:720px;
 
-margin:20px auto 0;
+margin:22px auto 0;
 
 color:#929bb3;
 
@@ -288,35 +290,35 @@ line-height:1.8;
 
 font-size:16px; }
 
-/* ========================================= SERVICE GRID ========================================= */
+/* ===================================================== SERVICE GRID ===================================================== */
 
 .services-grid{
 
 display:grid;
 
-grid-template-columns: repeat(3,1fr);
+grid-template-columns: repeat(2,1fr);
 
-gap:22px; }
+gap:25px; }
 
-/* ========================================= SERVICE CARD ========================================= */
+/* ===================================================== SERVICE BOX ===================================================== */
 
-.service-card{
+.service-box{
 
 position:relative;
 
-min-height:320px;
+min-height:330px;
 
-padding:35px;
+padding:40px;
 
-border-radius:25px;
+border-radius:28px;
 
 overflow:hidden;
 
-background: linear-gradient( 145deg, rgba(255,255,255,.065), rgba(255,255,255,.015) );
+background: linear-gradient( 145deg, rgba(255,255,255,.065), rgba(255,255,255,.018) );
 
 border: 1px solid rgba(255,255,255,.09);
 
-backdrop-filter:blur(15px);
+backdrop-filter:blur(18px);
 
 transition: transform .45s ease, border-color .45s ease, box-shadow .45s ease;
 
@@ -324,7 +326,7 @@ opacity:0;
 
 transform: translateY(50px); }
 
-.service-card.active{
+.service-box.active{
 
 opacity:1;
 
@@ -332,67 +334,69 @@ transform: translateY(0); }
 
 /* Glow */
 
-.service-card::before{
+.service-box::before{
 
 content:"";
 
 position:absolute;
 
-width:200px; height:200px;
+width:240px; height:240px;
 
-right:-100px; top:-100px;
+right:-120px; top:-120px;
 
 border-radius:50%;
 
 background:#00eaff;
 
-opacity:.06;
+opacity:.055;
 
 transition:.5s ease; }
 
-.service-card::after{
+.service-box::after{
 
 content:"";
 
 position:absolute;
 
-left:-100%;
+left:-120%;
 
 top:0;
 
-width:50%;
+width:60%;
 
 height:100%;
 
-background: linear-gradient( 90deg, transparent, rgba(255,255,255,.08), transparent );
+background: linear-gradient( 90deg, transparent, rgba(255,255,255,.07), transparent );
 
 transform:skewX(-20deg);
 
-transition:.7s ease; }
+transition:.8s ease; }
 
-.service-card:hover{
+.service-box:hover{
 
 transform: translateY(-12px);
 
 border-color: rgba(0,229,255,.35);
 
-box-shadow: 0 25px 60px rgba(0,0,0,.35),
+box-shadow:
+
+0 25px 65px rgba(0,0,0,.38),
 
 0 0 35px rgba(0,229,255,.10); }
 
-.service-card:hover::before{
+.service-box:hover::before{
 
 transform:scale(2); }
 
-.service-card:hover::after{
+.service-box:hover::after{
 
 left:150%; }
 
-/* ========================================= SERVICE ICON ========================================= */
+/* ===================================================== ICON ===================================================== */
 
 .service-icon{
 
-width:70px; height:70px;
+width:72px; height:72px;
 
 display:grid;
 
@@ -402,35 +406,37 @@ border-radius:20px;
 
 background: rgba(0,229,255,.09);
 
-border: 1px solid rgba(0,229,255,.12);
+border: 1px solid rgba(0,229,255,.14);
 
 color:#00eaff;
 
-font-size:32px;
+font-size:34px;
 
-margin-bottom:28px;
+margin-bottom:27px;
 
 transition:.4s ease; }
 
-.service-card:hover .service-icon{
+.service-box:hover .service-icon{
 
 background:#00eaff;
 
 color:#06101d;
 
-transform: rotate(7deg) scale(1.08);
+transform: rotate(7deg) scale(1.1);
 
 box-shadow: 0 0 30px rgba(0,229,255,.5); }
 
-/* ========================================= SERVICE TEXT ========================================= */
+/* ===================================================== SERVICE CONTENT ===================================================== */
 
-.service-card h3{
+.service-box h3{
 
-font-size:24px;
+font-size:26px;
 
 margin-bottom:14px; }
 
-.service-card p{
+.service-box p{
+
+max-width:600px;
 
 color:#929bb3;
 
@@ -438,25 +444,31 @@ font-size:15px;
 
 line-height:1.8; }
 
-/* Number */
+/* ===================================================== SERVICE TAG ===================================================== */
 
-.service-number{
+.service-tag{
 
-position:absolute;
+display:inline-block;
 
-right:25px;
+margin-top:18px;
 
-bottom:20px;
+padding:6px 12px;
 
-color: rgba(255,255,255,.06);
+border-radius:20px;
 
-font-size:55px;
+color:#00eaff;
 
-font-weight:900;
+background: rgba(0,229,255,.07);
 
-line-height:1; }
+border: 1px solid rgba(0,229,255,.12);
 
-/* ========================================= WHATSAPP BUTTON ========================================= */
+font-size:11px;
+
+text-transform:uppercase;
+
+letter-spacing:1px; }
+
+/* ===================================================== WHATSAPP SERVICE BUTTON ===================================================== */
 
 .service-button{
 
@@ -466,9 +478,9 @@ align-items:center;
 
 gap:8px;
 
-margin-top:20px;
+margin-top:22px;
 
-padding:10px 18px;
+padding:11px 20px;
 
 border-radius:30px;
 
@@ -476,7 +488,7 @@ background: rgba(37,211,102,.12);
 
 border: 1px solid rgba(37,211,102,.25);
 
-color:#55e98b;
+color:#5bea8e;
 
 font-size:13px;
 
@@ -494,43 +506,157 @@ transform: translateY(-3px);
 
 box-shadow: 0 0 25px rgba(37,211,102,.3); }
 
-/* ========================================= FEATURE STRIP ========================================= */
+/* ===================================================== SERVICE NUMBER ===================================================== */
 
-.feature-strip{
+.service-number{
 
-margin-top:30px;
+position:absolute;
 
-padding:55px 40px;
+right:30px; bottom:20px;
 
-display:grid;
+color: rgba(255,255,255,.045);
 
-grid-template-columns: repeat(3,1fr);
+font-size:90px;
 
-gap:30px;
+font-weight:900;
+
+line-height:1; }
+
+/* ===================================================== QUICK SERVICES ===================================================== */
+
+.quick-title{
 
 text-align:center;
 
-border-radius:28px;
+margin: 100px 0 35px; }
+
+.quick-title small{
+
+color:#00eaff;
+
+letter-spacing:3px;
+
+text-transform:uppercase;
+
+font-size:12px; }
+
+.quick-title h2{
+
+margin-top:10px;
+
+font-size:38px; }
+
+.quick-grid{
+
+display:grid;
+
+grid-template-columns: repeat(4,1fr);
+
+gap:15px; }
+
+.quick-box{
+
+padding:25px 15px;
+
+text-align:center;
+
+border-radius:18px;
+
+background: rgba(255,255,255,.035);
+
+border: 1px solid rgba(255,255,255,.07);
+
+transition:.3s ease; }
+
+.quick-box:hover{
+
+transform: translateY(-6px);
+
+border-color: rgba(0,229,255,.3);
+
+background: rgba(0,229,255,.06); }
+
+.quick-box span{
+
+display:block;
+
+font-size:27px;
+
+margin-bottom:10px; }
+
+.quick-box strong{
+
+font-size:14px; }
+
+/* ===================================================== WHY CHOOSE US ===================================================== */
+
+.why-section{
+
+margin-top:100px;
+
+padding:70px 45px;
+
+border-radius:30px;
 
 background: linear-gradient( 135deg, rgba(0,229,255,.08), rgba(100,50,255,.08) );
 
 border: 1px solid rgba(255,255,255,.09); }
 
-.feature h3{
+.why-heading{
 
-font-size:30px;
+text-align:center;
+
+margin-bottom:45px; }
+
+.why-heading small{
 
 color:#00eaff;
 
-margin-bottom:8px; }
+text-transform:uppercase;
 
-.feature p{
+letter-spacing:3px;
+
+font-size:12px; }
+
+.why-heading h2{
+
+font-size: clamp(32px,4vw,50px);
+
+margin-top:10px; }
+
+.why-grid{
+
+display:grid;
+
+grid-template-columns: repeat(3,1fr);
+
+gap:25px; }
+
+.why-item{
+
+text-align:center;
+
+padding:20px; }
+
+.why-icon{
+
+font-size:35px;
+
+margin-bottom:15px; }
+
+.why-item h3{
+
+margin-bottom:10px; }
+
+.why-item p{
 
 color:#8993aa;
 
-font-size:14px; }
+font-size:14px;
 
-/* ========================================= CTA ========================================= */
+line-height:1.7; }
+
+/* ===================================================== CTA ===================================================== */
 
 .cta{
 
@@ -600,13 +726,11 @@ align-items:center;
 
 gap:10px;
 
-padding:15px 28px;
+padding:15px 30px;
 
 border-radius:40px;
 
 background: linear-gradient( 90deg, #00d9ff, #6d4aff );
-
-color:white;
 
 font-weight:700;
 
@@ -620,7 +744,7 @@ transform: translateY(-5px) scale(1.03);
 
 box-shadow: 0 0 50px rgba(0,217,255,.45); }
 
-/* ========================================= FOOTER ========================================= */
+/* ===================================================== FOOTER ===================================================== */
 
 footer{
 
@@ -640,15 +764,13 @@ width:160px; height:65px;
 
 object-fit:contain;
 
-margin-bottom:15px;
-
-opacity:.9; }
+margin-bottom:15px; }
 
 footer strong{
 
 color:#00eaff; }
 
-/* ========================================= FLOATING WHATSAPP ========================================= */
+/* ===================================================== FLOATING WHATSAPP ===================================================== */
 
 .whatsapp-float{
 
@@ -684,35 +806,19 @@ transform:scale(1.12);
 
 box-shadow: 0 0 35px rgba(37,211,102,.6); }
 
-/* ========================================= ANIMATIONS ========================================= */
+/* ===================================================== ANIMATIONS ===================================================== */
 
 @keyframes heroReveal{
 
-from{
+from{ opacity:0; transform:translateY(40px); }
 
-opacity:0;
-
-transform: translateY(40px); }
-
-to{
-
-opacity:1;
-
-transform: translateY(0); } }
+to{ opacity:1; transform:translateY(0); } }
 
 @keyframes navDrop{
 
-from{
+from{ opacity:0; transform: translate(-50%,-30px); }
 
-opacity:0;
-
-transform: translate(-50%,-30px); }
-
-to{
-
-opacity:1;
-
-transform: translate(-50%,0); } }
+to{ opacity:1; transform: translate(-50%,0); } }
 
 @keyframes gradientMove{
 
@@ -724,65 +830,53 @@ transform: translate(-50%,0); } }
 
 @keyframes floatOrb{
 
-0%,100%{
+0%,100%{ transform: translate(0,0) scale(1); }
 
-transform: translate(0,0) scale(1); }
-
-50%{
-
-transform: translate(40px,-50px) scale(1.1); } }
+50%{ transform: translate(40px,-50px) scale(1.1); } }
 
 @keyframes whatsappPulse{
 
-0%{
+0%{ box-shadow: 0 0 0 0 rgba(37,211,102,.5); }
 
-box-shadow: 0 0 0 0 rgba(37,211,102,.5); }
+70%{ box-shadow: 0 0 0 18px rgba(37,211,102,0); }
 
-70%{
+100%{ box-shadow: 0 0 0 0 rgba(37,211,102,0); } }
 
-box-shadow: 0 0 0 18px rgba(37,211,102,0); }
-
-100%{
-
-box-shadow: 0 0 0 0 rgba(37,211,102,0); } }
-
-/* ========================================= TABLET ========================================= */
+/* ===================================================== TABLET ===================================================== */
 
 @media(max-width:950px){
 
 .nav-logo img{
 
-width:150px;
-
-height:58px; }
+width:150px; height:60px; }
 
 .nav-links a{
 
-padding: 9px 10px;
+padding: 9px 9px;
 
-font-size:11px; }
+font-size:10px; }
 
-.services-grid{
+.quick-grid{
 
 grid-template-columns: repeat(2,1fr); }
 
-}
+.why-grid{
 
-/* ========================================= MOBILE ========================================= */
+grid-template-columns: repeat(2,1fr); } }
 
-@media(max-width:700px){
+/* ===================================================== MOBILE ===================================================== */
+
+@media(max-width:750px){
 
 .navbar{
 
 width:96%;
 
-padding: 8px 14px; }
+padding: 7px 12px; }
 
 .nav-logo img{
 
-width:125px;
-
-height:52px; }
+width:120px; height:52px; }
 
 .nav-links{
 
@@ -790,7 +884,7 @@ gap:0; }
 
 .nav-links a{
 
-padding: 8px 7px;
+padding: 8px 6px;
 
 font-size:9px; }
 
@@ -798,11 +892,17 @@ font-size:9px; }
 
 grid-template-columns:1fr; }
 
-.feature-strip{
+.quick-grid{
 
-grid-template-columns:1fr;
+grid-template-columns: repeat(2,1fr); }
 
-padding:35px 25px; }
+.why-grid{
+
+grid-template-columns:1fr; }
+
+.why-section{
+
+padding: 50px 20px; }
 
 .hero h1{
 
@@ -812,13 +912,13 @@ letter-spacing:-3px; }
 
 font-size:15px; }
 
-.service-card{
+.service-box{
 
-min-height:280px; }
+min-height:310px;
 
-}
+padding:30px; } }
 
-/* ========================================= SMALL MOBILE ========================================= */
+/* ===================================================== SMALL MOBILE ===================================================== */
 
 @media(max-width:500px){
 
@@ -828,9 +928,7 @@ width:96%; }
 
 .nav-logo img{
 
-width:105px;
-
-height:48px; }
+width:105px; height:48px; }
 
 .nav-links{
 
@@ -840,7 +938,7 @@ justify-content: space-around; }
 
 .nav-links a{
 
-padding: 7px 5px;
+padding: 7px 4px;
 
 font-size:8px; }
 
@@ -850,23 +948,21 @@ padding-top:145px; }
 
 .hero h1{
 
-font-size:52px; }
+font-size:50px; }
 
-.services-section{
+.quick-grid{
 
-width:92%; }
+grid-template-columns:1fr; }
 
-.service-card{
+.service-box h3{
 
-padding:28px; }
+font-size:23px; }
 
 .whatsapp-float{
 
 width:55px; height:55px;
 
-right:15px; bottom:15px; }
-
-}
+right:15px; bottom:15px; } }
 
 </style>
 
@@ -874,7 +970,7 @@ right:15px; bottom:15px; }
 
 <body>
 
-<!-- ========================================= NAVIGATION ========================================= -->
+<!-- ===================================================== NAVIGATION ===================================================== -->
 
 <nav class="navbar">
 
@@ -890,7 +986,7 @@ right:15px; bottom:15px; }
 
 <li> <a href="tourPackage.html"> TOURS </a> </li>
 
-<li> <a href="services.html"> SERVICES </a> </li>
+<li class="active"> <a href="services.html"> SERVICES </a> </li>
 
 <li> <a href="about.html"> ABOUT </a> </li>
 
@@ -900,7 +996,7 @@ right:15px; bottom:15px; }
 
 </nav>
 
-<!-- ========================================= HERO ========================================= -->
+<!-- ===================================================== HERO ===================================================== -->
 
 <section class="hero">
 
@@ -910,17 +1006,17 @@ right:15px; bottom:15px; }
 
 <div class="hero-content">
 
-<div class="eyebrow"> Travspro Holidays • Travel Made Simple </div>
+<div class="eyebrow"> Travspro Holidays • Travel Solutions </div>
 
 <h1>
 
-Everything You Need <span>To Travel.</span>
+Services That Make <span>Travel Easier.</span>
 
 </h1>
 
 <p>
 
-From flights and hotels to complete tour experiences, Travspro Holidays provides convenient travel solutions designed around your journey.
+From finding the best flight deals to arranging trains, Volvo buses, hotels and complete holidays, Travspro Holidays brings your travel requirements together in one place.
 
 </p>
 
@@ -928,19 +1024,19 @@ From flights and hotels to complete tour experiences, Travspro Holidays provides
 
 </section>
 
-<!-- ========================================= SERVICES ========================================= -->
+<!-- ===================================================== MAIN SERVICES ===================================================== -->
 
 <section class="services-section">
 
 <div class="section-heading">
 
-<small> What We Offer </small>
+<small> Our Services </small>
 
-<h2> Travel Services<br> Without The Stress. </h2>
+<h2> Everything For<br> Your Journey. </h2>
 
 <p>
 
-Whether you are planning a weekend escape, a family holiday or a completely customized adventure, our services are designed to make your travel experience smoother and easier.
+Tell us what you need and where you want to go. Our team can help arrange the essential parts of your journey and build a travel experience around your requirements.
 
 </p>
 
@@ -948,23 +1044,27 @@ Whether you are planning a weekend escape, a family holiday or a completely cust
 
 <div class="services-grid">
 
-<!-- SERVICE 01 -->
+<!-- ================================================= FLIGHT BOOKING ================================================== -->
 
-<div class="service-card reveal">
+<div class="service-box reveal">
 
 <div class="service-icon"> ✈️ </div>
 
-<h3> Flight Booking </h3>
+<h3> Flight Tickets </h3>
 
 <p>
 
-Plan your journey with convenient flight booking assistance for domestic and international travel.
+Looking for the best available flight options? We assist with flight ticket bookings for domestic and international travel, helping you compare suitable options for your journey.
 
 </p>
 
-<a href="https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20would%20like%20information%20about%20Flight%20Booking." target="_blank" class="service-button" >
+<span class="service-tag"> Best Deals • Domestic • International </span>
 
-💬 Enquire Now →
+<br>
+
+<a href="https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20am%20looking%20for%20the%20best%20flight%20ticket%20deals." target="_blank" class="service-button" >
+
+💬 Request Flight Rates →
 
 </a>
 
@@ -972,23 +1072,27 @@ Plan your journey with convenient flight booking assistance for domestic and int
 
 </div>
 
-<!-- SERVICE 02 -->
+<!-- ================================================= TRAIN ================================================== -->
 
-<div class="service-card reveal">
+<div class="service-box reveal">
 
-<div class="service-icon"> 🏨 </div>
+<div class="service-icon"> 🚆 </div>
 
-<h3> Hotel Booking </h3>
+<h3> Train Tickets </h3>
 
 <p>
 
-Find comfortable accommodation options suited to your destination, travel plans and preferences.
+Planning to travel by train? Get assistance with railway ticket arrangements for your planned journey, route and travel dates.
 
 </p>
 
-<a href="https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20would%20like%20information%20about%20Hotel%20Booking." target="_blank" class="service-button" >
+<span class="service-tag"> Railway • Long Distance • Travel Assistance </span>
 
-💬 Enquire Now →
+<br>
+
+<a href="https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20need%20help%20with%20train%20ticket%20booking." target="_blank" class="service-button" >
+
+💬 Enquire For Train →
 
 </a>
 
@@ -996,23 +1100,27 @@ Find comfortable accommodation options suited to your destination, travel plans 
 
 </div>
 
-<!-- SERVICE 03 -->
+<!-- ================================================= VOLVO / BUS ================================================== -->
 
-<div class="service-card reveal">
+<div class="service-box reveal">
 
-<div class="service-icon"> 🛡️ </div>
+<div class="service-icon"> 🚌 </div>
 
-<h3> Travel Insurance </h3>
+<h3> Volvo & Bus Tickets </h3>
 
 <p>
 
-Travel with greater confidence with assistance for travel insurance and related requirements.
+Comfortable road travel made easier. We assist with Volvo and bus ticket bookings for popular routes and holiday destinations.
 
 </p>
 
-<a href="https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20would%20like%20information%20about%20Travel%20Insurance." target="_blank" class="service-button" >
+<span class="service-tag"> Volvo • AC Buses • Intercity </span>
 
-💬 Enquire Now →
+<br>
+
+<a href="https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20need%20Volvo%20or%20bus%20ticket%20booking." target="_blank" class="service-button" >
+
+💬 Check Bus Rates →
 
 </a>
 
@@ -1020,23 +1128,27 @@ Travel with greater confidence with assistance for travel insurance and related 
 
 </div>
 
-<!-- SERVICE 04 -->
+<!-- ================================================= HOTEL ================================================== -->
 
-<div class="service-card reveal">
+<div class="service-box reveal">
 
-<div class="service-icon"> 🚆 </div>
+<div class="service-icon"> 🏨 </div>
 
-<h3> Railway Ticket Booking </h3>
+<h3> Hotel Booking </h3>
 
 <p>
 
-Get assistance with railway travel arrangements for convenient journeys across destinations.
+Find accommodation according to your destination, budget and travel plans. From comfortable stays to premium hotels, we help make your stay arrangements simple.
 
 </p>
 
-<a href="https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20would%20like%20information%20about%20Railway%20Ticket%20Booking." target="_blank" class="service-button" >
+<span class="service-tag"> Hotels • Resorts • Accommodation </span>
 
-💬 Enquire Now →
+<br>
+
+<a href="https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20need%20help%20with%20hotel%20booking." target="_blank" class="service-button" >
+
+💬 Get Hotel Options →
 
 </a>
 
@@ -1044,9 +1156,9 @@ Get assistance with railway travel arrangements for convenient journeys across d
 
 </div>
 
-<!-- SERVICE 05 -->
+<!-- ================================================= TOUR PACKAGES ================================================== -->
 
-<div class="service-card reveal">
+<div class="service-box reveal">
 
 <div class="service-icon"> 🗺️ </div>
 
@@ -1054,13 +1166,17 @@ Get assistance with railway travel arrangements for convenient journeys across d
 
 <p>
 
-Explore thoughtfully planned tour packages created for families, couples, groups and adventure seekers.
+Discover complete holiday packages covering destinations, hotels, transportation and sightseeing. Choose from our packages or discuss your requirements with our team.
 
 </p>
 
+<span class="service-tag"> Family • Couple • Group • Adventure </span>
+
+<br>
+
 <a href="tourPackage.html" class="service-button" >
 
-Explore Tours →
+Explore Tour Packages →
 
 </a>
 
@@ -1068,9 +1184,9 @@ Explore Tours →
 
 </div>
 
-<!-- SERVICE 06 -->
+<!-- ================================================= CUSTOMIZED TRIPS ================================================== -->
 
-<div class="service-card reveal">
+<div class="service-box reveal">
 
 <div class="service-icon"> 🏔️ </div>
 
@@ -1078,11 +1194,15 @@ Explore Tours →
 
 <p>
 
-Have something unique in mind? We can help create a travel plan around your destination, schedule and requirements.
+Don't want a standard package? Tell us your destination, dates, budget and preferences and we can help create a trip designed around your requirements.
 
 </p>
 
-<a href="https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20would%20like%20to%20plan%20a%20Customized%20Trip." target="_blank" class="service-button" >
+<span class="service-tag"> Personalized • Flexible • Your Way </span>
+
+<br>
+
+<a href="https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20want%20to%20plan%20a%20customized%20trip." target="_blank" class="service-button" >
 
 💬 Plan My Trip →
 
@@ -1092,57 +1212,217 @@ Have something unique in mind? We can help create a travel plan around your dest
 
 </div>
 
-</div>
+<!-- ================================================= TRAVEL INSURANCE ================================================== -->
 
-<!-- ===================================== FEATURE STRIP ====================================== -->
+<div class="service-box reveal">
 
-<div class="feature-strip reveal">
+<div class="service-icon"> 🛡️ </div>
 
-<div class="feature">
-
-<h3> 2019 </h3>
-
-<p> Serving Travelers Since </p>
-
-</div>
-
-<div class="feature">
-
-<h3> 6+ </h3>
-
-<p> Travel Services </p>
-
-</div>
-
-<div class="feature">
-
-<h3> ∞ </h3>
-
-<p> Destinations & Possibilities </p>
-
-</div>
-
-</div>
-
-<!-- ===================================== CTA ====================================== -->
-
-<div class="cta reveal">
-
-<h2>
-
-Tell Us Where<br> You Want To Go.
-
-</h2>
+<h3> Travel Insurance </h3>
 
 <p>
 
-Not sure which service is right for you? Simply tell us your destination, dates and requirements. Our team will help you plan your journey.
+Travel with greater confidence with assistance for travel insurance requirements. Ask our team about suitable options for your journey.
 
 </p>
 
-<a href="https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20would%20like%20help%20planning%20my%20trip." target="_blank" class="cta-button" >
+<span class="service-tag"> Travel Protection • Assistance </span>
 
-Start Planning →
+<br>
+
+<a href="https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20need%20information%20about%20travel%20insurance." target="_blank" class="service-button" >
+
+💬 Ask About Insurance →
+
+</a>
+
+<div class="service-number"> 07 </div>
+
+</div>
+
+<!-- ================================================= TRAVEL ASSISTANCE ================================================== -->
+
+<div class="service-box reveal">
+
+<div class="service-icon"> 🌍 </div>
+
+<h3> Complete Travel Assistance </h3>
+
+<p>
+
+Need several services together? We can help coordinate your travel requirements including tickets, hotels, transportation, tours and other travel arrangements.
+
+</p>
+
+<span class="service-tag"> One Trip • Multiple Services </span>
+
+<br>
+
+<a href="https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20need%20complete%20travel%20assistance." target="_blank" class="service-button" >
+
+💬 Talk To Our Team →
+
+</a>
+
+<div class="service-number"> 08 </div>
+
+</div>
+
+</div>
+
+<!-- ===================================================== QUICK SERVICES ====================================================== -->
+
+<div class="quick-title">
+
+<small> More Travel Assistance </small>
+
+<h2> We Can Help With </h2>
+
+</div>
+
+<div class="quick-grid">
+
+<div class="quick-box">
+
+<span>🎫</span>
+
+<strong> Ticket Booking </strong>
+
+</div>
+
+<div class="quick-box">
+
+<span>🏨</span>
+
+<strong> Hotel Reservations </strong>
+
+</div>
+
+<div class="quick-box">
+
+<span>🚗</span>
+
+<strong> Car Rental </strong>
+
+</div>
+
+<div class="quick-box">
+
+<span>🚐</span>
+
+<strong> Coach Rental </strong>
+
+</div>
+
+<div class="quick-box">
+
+<span>🛂</span>
+
+<strong> Passport & Visa </strong>
+
+</div>
+
+<div class="quick-box">
+
+<span>🛡️</span>
+
+<strong> Travel Insurance </strong>
+
+</div>
+
+<div class="quick-box">
+
+<span>🏔️</span>
+
+<strong> Himachal Tours </strong>
+
+</div>
+
+<div class="quick-box">
+
+<span>🌍</span>
+
+<strong> Customized Holidays </strong>
+
+</div>
+
+</div>
+
+<!-- ===================================================== WHY CHOOSE US ====================================================== -->
+
+<div class="why-section">
+
+<div class="why-heading">
+
+<small> Why Travspro? </small>
+
+<h2> One Place For Your Travel Needs. </h2>
+
+</div>
+
+<div class="why-grid">
+
+<div class="why-item">
+
+<div class="why-icon"> 💎 </div>
+
+<h3> Personalized Service </h3>
+
+<p>
+
+We understand that every traveller has different requirements. We listen first and then help you plan.
+
+</p>
+
+</div>
+
+<div class="why-item">
+
+<div class="why-icon"> ⚡ </div>
+
+<h3> Easy Enquiry </h3>
+
+<p>
+
+Send your requirements through WhatsApp and connect with our travel team quickly.
+
+</p>
+
+</div>
+
+<div class="why-item">
+
+<div class="why-icon"> 🌍 </div>
+
+<h3> Complete Solutions </h3>
+
+<p>
+
+Tickets, hotels, buses, tours and customized travel — bring your requirements together in one place.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ===================================================== CTA ====================================================== -->
+
+<div class="cta">
+
+<h2> Tell Us What<br> You Need. </h2>
+
+<p>
+
+Flight tickets? Train? Volvo bus? Hotel? Complete tour package? Simply send us your travel requirements and let our team help you.
+
+</p>
+
+<a href="https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20would%20like%20to%20know%20about%20your%20travel%20services." target="_blank" class="cta-button" >
+
+💬 WhatsApp Travspro →
 
 </a>
 
@@ -1150,7 +1430,7 @@ Start Planning →
 
 </section>
 
-<!-- ========================================= FOOTER ========================================= -->
+<!-- ===================================================== FOOTER ===================================================== -->
 
 <footer>
 
@@ -1168,7 +1448,7 @@ Start Planning →
 
 </footer>
 
-<!-- ========================================= FLOATING WHATSAPP ========================================= -->
+<!-- ===================================================== FLOATING WHATSAPP ===================================================== -->
 
 <a href="https://wa.me/918278735460?text=Hello%20Travspro%20Holidays" target="_blank" class="whatsapp-float" aria-label="Contact Travspro Holidays on WhatsApp"
 
@@ -1176,7 +1456,7 @@ Start Planning →
 
 </a>
 
-<!-- ========================================= JAVASCRIPT ========================================= -->
+<!-- ===================================================== JAVASCRIPT ===================================================== -->
 
 <script>
 
@@ -1210,7 +1490,7 @@ observer.observe(element);
 
 } );
 
-/* ========================================= MOUSE MOVEMENT EFFECT ========================================= */
+/* ========================================= MOUSE PARALLAX ========================================= */
 
 document.addEventListener( "mousemove", (event) => {
 
