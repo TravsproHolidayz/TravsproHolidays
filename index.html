@@ -1,97 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Column Layout Methods</title>
-  <style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travspro Holidays</title>
 
-    li {
-      list-style: none;
-    }
-    h1 {
-  text-align: center;
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
 }
 
-    .container {
-      padding: 10px;
-      background-color: gold;
-      display: flex;
-      gap: 10px;
-    }
-  </style>
+body{
+    background:#f4f8ff;
+    color:#333;
+}
+
+/* Navigation */
+.navbar{
+    background:linear-gradient(90deg,#003b95,#00b4ff);
+    padding:15px 30px;
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    position:sticky;
+    top:0;
+}
+
+.navbar a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.navbar a:hover{
+    color:#ffd700;
+}
+
+/* Hero Section */
+.hero{
+    background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url('whtbck.jpg');
+    background-size:cover;
+    background-position:center;
+    height:500px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:20px;
+}
+
+.btn{
+    margin-top:20px;
+    background:#ff9800;
+    color:white;
+    padding:14px 30px;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#ff5722;
+}
+
+/* About Section */
+.about{
+    max-width:1200px;
+    margin:auto;
+    padding:60px 20px;
+}
+
+.about h2{
+    text-align:center;
+    color:#003b95;
+    margin-bottom:25px;
+}
+
+.about p{
+    line-height:1.8;
+    margin-bottom:15px;
+}
+
+/* Services */
+.services{
+    background:white;
+    padding:60px 20px;
+}
+
+.services h2{
+    text-align:center;
+    color:#003b95;
+    margin-bottom:40px;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    max-width:1200px;
+    margin:auto;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    color:#003b95;
+    margin-bottom:10px;
+}
+
+/* Why Choose Us */
+.why{
+    padding:60px 20px;
+    background:#eaf4ff;
+}
+
+.why h2{
+    text-align:center;
+    color:#003b95;
+    margin-bottom:30px;
+}
+
+.why ul{
+    max-width:900px;
+    margin:auto;
+}
+
+.why li{
+    margin-bottom:12px;
+    font-size:18px;
+}
+
+/* WhatsApp Button */
+.whatsapp{
+    text-align:center;
+    padding:40px;
+}
+
+.whatsapp a{
+    background:#25D366;
+    color:white;
+    text-decoration:none;
+    padding:15px 30px;
+    border-radius:30px;
+    font-weight:bold;
+}
+
+/* Footer */
+footer{
+    background:#001b44;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:30px;
+}
+
+.logo{
+    display:block;
+    margin:20px auto;
+    width:250px;
+}
+
+</style>
 </head>
 
 <body>
-  <div class="container">
 
-    <li><a href="./index.html">HOME</a></li>
-    <li><a href="./tourPackage.html">Tour Packages</a></li>
-    <li><a href="./contactus.html">Contact Us</a></li>
-    <li><a href="./about.html">About Us</a></li>
-  </div>
-</body>
+<nav class="navbar">
+<a href="index.html">HOME</a>
+<a href="tourPackage.html">TOUR PACKAGES</a>
+<a href="contactus.html">CONTACT US</a>
+<a href="about.html">ABOUT US</a>
+</nav>
 
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travspro Holidays</title>
-  
-</head>
-<body>
-  <a href="./index.html"><img src="Logo.png"/></a>
-  <hr>
-<img src="whtbck.jpg"style="width:300px;height:200px;"/>
-   
-    <p>Travspro Holidays is a well-known tour and travelling service provider. We are mostly involved in making your travelling journey completely relaxed and stress-free. The important objective of our organization is to create all your travelling experiences calm and trouble-free as much as possible starting from booking the tickets and vehicles and also providing special booking services.
- 
-<br/>
-        Our numerous ranges of services counting all the booking and hiring services start from tickets, hotels and cars as well. Ready with many important and luxurious facilities these units are made formed on calm lifestyles.
-        
-         
-        <br/>
-        <br/>Our establishment
-        <br/>
-        
-        Since our start in 2019, we have been thriving with all-embracing consultancy and link services in a reliable and advanced manner. We ease services from the state of Manali in Himachal Pradesh. Structure an extreme deal of planned linking with the government agencies. Our services appeal to expert business deals and foster lovely relations among corporate, foundations, voluntary organizations and the government.
-        
-         
-        <br/>
-        <br/>Our services
-        <br/>
-    
-        As a reliable name in this business dome we are providing the services like Tour Operators, Passport & Visa Services, Hotel Booking, Travel Insurance Services and Flight Booking, Car & Coach Rental, Railway Ticket Booking, Hotel Booking,.
-        <br/>
-      
-        <br/>
-        <br/><h3>Why us?</h3>
-        <br/>
-        <br/>
-        <ol>
-          <li>-Prepared with huge knowledge and experienced staff</li>
-        
-        <li>-Set-top dreams of ability for yourself and your anticipation.</li>
-        
-        <li>-To design the travel necessities as per your compulsion</li>
-        
-        <li>-Volumes operational with unusually skilled and trained staff</li>
-        
-        <li>-Make sure your confidential details are safe and secure</li>
-        
-        <li>-Equipped with an acceptable amount of staff to serve your</li>
-        </ol>
-        
-        <br/>
-  
-https://images.unsplash.com/photo-1507525428034-b723cf961d3e https://images.unsplash.com/photo-1436491865332-7a61a109cc05 https://images.unsplash.com/photo-1488646953014-85cb44e25828
-  
-  <li><a href="https://wa.me/+918278735460?text=Hello"><img src="bknow.jpg"style="width:300px;height:190px;"/></a></li>
-    <br/>
-     <img src="tps.jpg"style="width:400px;height:150px;"/>
-      <br/>
-  <p>© 2024 Travspro Holidays - Travel Solution Provider </p>
+<img class="logo" src="Logo.png" alt="Travspro Holidays LogoTravspro Holidays</h1>
+<p>Your Trusted Travel Partner Since 2019</p>
+<a href="tourPackage.html" class="btn">Explore Packages</a>
+</section>
+
+<section class="about">
+<h2>About Travspro Holidays</h2>
+
+<p>
+Travspro Holidays is a trusted travel and tour service provider dedicated to making every journey comfortable, enjoyable and stress-free. From flight bookings and hotel reservations to complete holiday packages, we handle every detail of your trip.
+</p>
+
+<p>
+Established in 2019, we have built strong relationships with tourism partners, hotels and transport providers to deliver quality travel experiences to our customers.
+</p>
+
+</section>
+
+<section class="services">
+
+<h2>Our Services</h2>
+
+<div class="service-grid">
+
+<div class="card">
+<h3>✈ Flight Booking</h3>
+<p>Best airfare deals and hassle-free bookings.</p>
+</div>
+
+<div class="card">
+<h3>🏨 Hotel Booking</h3>
+<p>Comfortable stays at the best destinations.</p>
+</div>
+
+<div class="card">
+<h3>🚗 Car Rental</h3>
+<p>Reliable transportation wherever you travel.</p>
+</div>
+
+<div class="card">
+<h3>🛂 Visa Assistance</h3>
+<p>Professional passport and visa support.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="why">
+
+<h2>Why Choose Us?</h2>
+
+<ul>
+<li>✅ Experienced travel experts</li>
+<li>✅ Customised holiday packages</li>
+<li>✅ Competitive pricing</li>
+<li>✅ Trusted customer support</li>
+<li>✅ Safe and secure booking process</li>
+<li>✅ Dedicated service team</li>
+</ul>
+
+</section>
+
+<section class="whatsapp">
+<a href="https918278735460?text=Hello
+Chat With Us On WhatsApp
+</a>
+</section>
+
+<footer>
+<h3>Travspro Holidays</h3>
+<p>© 2024 Travspro Holidays - Travel Solution Provider</p>
+</footer>
+
 </body>
-</html> 
+</html>
