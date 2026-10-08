@@ -1,277 +1,2393 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Travspro Holidays</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
+  <title>Travspro Holidays | Travel Beyond</title>
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Segoe UI',sans-serif;
-}
+  <style>
 
-body{
-    background:#f4f8ff;
-    color:#333;
-}
+    /* =====================================================
+       RESET
+    ===================================================== */
 
-/* Navigation */
-.navbar{
-    background:linear-gradient(90deg,#003b95,#00b4ff);
-    padding:15px 30px;
-    display:flex;
-    justify-content:center;
-    gap:40px;
-    position:sticky;
-    top:0;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-.navbar a{
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
-    transition:.3s;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-.navbar a:hover{
-    color:#ffd700;
-}
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #050816;
+      color: #fff;
+      overflow-x: hidden;
+    }
 
-/* Hero Section */
-.hero{
-    background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url('whtbck.jpg');
-    background-size:cover;
-    background-position:center;
-    height:500px;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    color:white;
-}
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-.hero h1{
-    font-size:55px;
-    margin-bottom:15px;
-}
 
-.hero p{
-    font-size:20px;
-}
+    /* =====================================================
+       FUTURISTIC BACKGROUND
+    ===================================================== */
 
-.btn{
-    margin-top:20px;
-    background:#ff9800;
-    color:white;
-    padding:14px 30px;
-    text-decoration:none;
-    border-radius:30px;
-    font-weight:bold;
-    transition:.3s;
-}
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -3;
 
-.btn:hover{
-    background:#ff5722;
-}
+      background:
+        radial-gradient(
+          circle at 10% 15%,
+          rgba(0, 225, 255, 0.14),
+          transparent 28%
+        ),
 
-/* About Section */
-.about{
-    max-width:1200px;
-    margin:auto;
-    padding:60px 20px;
-}
+        radial-gradient(
+          circle at 90% 20%,
+          rgba(120, 70, 255, 0.16),
+          transparent 30%
+        ),
 
-.about h2{
-    text-align:center;
-    color:#003b95;
-    margin-bottom:25px;
-}
+        radial-gradient(
+          circle at 50% 90%,
+          rgba(0, 255, 180, 0.08),
+          transparent 30%
+        ),
 
-.about p{
-    line-height:1.8;
-    margin-bottom:15px;
-}
+        #050816;
+    }
 
-/* Services */
-.services{
-    background:white;
-    padding:60px 20px;
-}
 
-.services h2{
-    text-align:center;
-    color:#003b95;
-    margin-bottom:40px;
-}
+    body::after {
+      content: "";
 
-.service-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-    max-width:1200px;
-    margin:auto;
-}
+      position: fixed;
+      inset: 0;
 
-.card{
-    background:white;
-    border-radius:15px;
-    padding:25px;
-    text-align:center;
-    box-shadow:0 8px 25px rgba(0,0,0,.1);
-    transition:.3s;
-}
+      z-index: -2;
+      pointer-events: none;
 
-.card:hover{
-    transform:translateY(-8px);
-}
+      background-image:
+        linear-gradient(
+          rgba(255,255,255,0.025) 1px,
+          transparent 1px
+        ),
 
-.card h3{
-    color:#003b95;
-    margin-bottom:10px;
-}
+        linear-gradient(
+          90deg,
+          rgba(255,255,255,0.025) 1px,
+          transparent 1px
+        );
 
-/* Why Choose Us */
-.why{
-    padding:60px 20px;
-    background:#eaf4ff;
-}
+      background-size: 55px 55px;
 
-.why h2{
-    text-align:center;
-    color:#003b95;
-    margin-bottom:30px;
-}
+      mask-image: linear-gradient(
+        to bottom,
+        black,
+        transparent
+      );
+    }
 
-.why ul{
-    max-width:900px;
-    margin:auto;
-}
 
-.why li{
-    margin-bottom:12px;
-    font-size:18px;
-}
+    /* =====================================================
+       NAVBAR
+    ===================================================== */
 
-/* WhatsApp Button */
-.whatsapp{
-    text-align:center;
-    padding:40px;
-}
+    .navbar {
 
-.whatsapp a{
-    background:#25D366;
-    color:white;
-    text-decoration:none;
-    padding:15px 30px;
-    border-radius:30px;
-    font-weight:bold;
-}
+      position: fixed;
 
-/* Footer */
-footer{
-    background:#001b44;
-    color:white;
-    text-align:center;
-    padding:25px;
-    margin-top:30px;
-}
+      top: 18px;
+      left: 50%;
 
-.logo{
-    display:block;
-    margin:20px auto;
-    width:250px;
-}
+      transform: translateX(-50%);
 
-</style>
+      width: min(1180px, 94%);
+
+      height: 75px;
+
+      padding: 10px 24px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: space-between;
+
+      background:
+        rgba(7, 12, 30, 0.70);
+
+      border:
+        1px solid rgba(255,255,255,0.10);
+
+      border-radius: 50px;
+
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+
+      box-shadow:
+        0 15px 50px rgba(0,0,0,0.35),
+        inset 0 0 25px rgba(255,255,255,0.02);
+
+      z-index: 999;
+
+      animation:
+        navbarIn 1s ease;
+    }
+
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+
+    .logo img {
+
+      width: 145px;
+
+      max-height: 58px;
+
+      object-fit: contain;
+
+      display: block;
+
+      transition: 0.4s ease;
+
+      filter:
+        drop-shadow(
+          0 0 8px
+          rgba(0, 230, 255, 0.25)
+        );
+    }
+
+
+    .logo img:hover {
+
+      transform:
+        scale(1.06);
+
+      filter:
+        drop-shadow(
+          0 0 18px
+          rgba(0, 230, 255, 0.55)
+        );
+    }
+
+
+    .nav-links {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 5px;
+
+      list-style: none;
+    }
+
+
+    .nav-links a {
+
+      display: block;
+
+      padding:
+        11px 18px;
+
+      color: #c8d0e5;
+
+      font-size: 13px;
+
+      font-weight: 600;
+
+      letter-spacing: 0.5px;
+
+      border-radius: 30px;
+
+      transition: 0.3s ease;
+    }
+
+
+    .nav-links a:hover,
+    .nav-links .active {
+
+      color: #fff;
+
+      background:
+        rgba(0, 225, 255, 0.10);
+
+      box-shadow:
+        0 0 25px
+        rgba(0,225,255,0.12);
+    }
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .hero {
+
+      min-height: 100vh;
+
+      position: relative;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      overflow: hidden;
+
+      padding:
+        150px 20px
+        90px;
+    }
+
+
+    /* Hero image */
+
+    .hero-image {
+
+      position: absolute;
+
+      inset: 0;
+
+      z-index: -1;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(5,8,22,0.95) 0%,
+          rgba(5,8,22,0.72) 45%,
+          rgba(5,8,22,0.55) 100%
+        ),
+
+        linear-gradient(
+          180deg,
+          rgba(5,8,22,0.25),
+          #050816
+        ),
+
+        url("whtbck.jpg");
+
+      background-size: cover;
+
+      background-position: center;
+
+      filter:
+        saturate(1.2)
+        contrast(1.05);
+
+      animation:
+        heroZoom 12s ease-in-out infinite alternate;
+    }
+
+
+    /* glowing overlay */
+
+    .hero::after {
+
+      content: "";
+
+      position: absolute;
+
+      width: 650px;
+      height: 650px;
+
+      right: -250px;
+      top: 10%;
+
+      border-radius: 50%;
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(0,225,255,0.22),
+          transparent 65%
+        );
+
+      filter:
+        blur(20px);
+
+      animation:
+        pulseGlow 5s ease-in-out infinite;
+
+      pointer-events: none;
+    }
+
+
+    .hero-content {
+
+      width: min(1150px, 94%);
+
+      position: relative;
+
+      animation:
+        heroReveal 1.2s ease;
+    }
+
+
+    .hero-text {
+
+      max-width: 780px;
+    }
+
+
+    .eyebrow {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+      padding:
+        9px 18px;
+
+      margin-bottom: 25px;
+
+      border:
+        1px solid
+        rgba(0,225,255,0.30);
+
+      border-radius: 50px;
+
+      background:
+        rgba(0,225,255,0.06);
+
+      color:
+        #00eaff;
+
+      font-size: 12px;
+
+      font-weight: 700;
+
+      letter-spacing: 3px;
+
+      text-transform:
+        uppercase;
+    }
+
+
+    .eyebrow::before {
+
+      content: "";
+
+      width: 7px;
+      height: 7px;
+
+      border-radius: 50%;
+
+      background:
+        #00eaff;
+
+      box-shadow:
+        0 0 12px #00eaff;
+
+      animation:
+        blink 1.5s infinite;
+    }
+
+
+    .hero h1 {
+
+      font-size:
+        clamp(52px, 8vw, 105px);
+
+      line-height:
+        0.93;
+
+      letter-spacing:
+        -5px;
+
+      font-weight:
+        900;
+    }
+
+
+    .hero h1 .white {
+
+      color: #fff;
+    }
+
+
+    .hero h1 .gradient {
+
+      background:
+        linear-gradient(
+          100deg,
+          #00eaff,
+          #7c5cff,
+          #00ffc8,
+          #00eaff
+        );
+
+      background-size:
+        300% 300%;
+
+      -webkit-background-clip:
+        text;
+
+      background-clip:
+        text;
+
+      color:
+        transparent;
+
+      animation:
+        gradientMove 6s ease infinite;
+    }
+
+
+    .hero-description {
+
+      max-width: 650px;
+
+      margin:
+        30px 0;
+
+      color:
+        #b2bbd0;
+
+      font-size:
+        18px;
+
+      line-height:
+        1.8;
+    }
+
+
+    /* =====================================================
+       BUTTONS
+    ===================================================== */
+
+    .buttons {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 15px;
+
+      margin-top: 30px;
+    }
+
+
+    .btn {
+
+      display:
+        inline-flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        center;
+
+      gap: 10px;
+
+      padding:
+        15px 26px;
+
+      border-radius:
+        50px;
+
+      font-weight:
+        700;
+
+      font-size:
+        14px;
+
+      transition:
+        0.35s ease;
+    }
+
+
+    .btn-primary {
+
+      background:
+        linear-gradient(
+          90deg,
+          #00d9ff,
+          #634dff
+        );
+
+      box-shadow:
+        0 0 30px
+        rgba(0,217,255,0.25);
+    }
+
+
+    .btn-primary:hover {
+
+      transform:
+        translateY(-5px)
+        scale(1.03);
+
+      box-shadow:
+        0 0 45px
+        rgba(0,217,255,0.45);
+    }
+
+
+    .btn-outline {
+
+      border:
+        1px solid
+        rgba(255,255,255,0.18);
+
+      background:
+        rgba(255,255,255,0.04);
+
+      color:
+        #dbe3f4;
+    }
+
+
+    .btn-outline:hover {
+
+      background:
+        rgba(255,255,255,0.09);
+
+      border-color:
+        rgba(0,225,255,0.35);
+
+      transform:
+        translateY(-4px);
+    }
+
+
+    /* =====================================================
+       FLOATING HERO CARD
+    ===================================================== */
+
+    .floating-card {
+
+      position: absolute;
+
+      right: 2%;
+
+      bottom: 8%;
+
+      width: 270px;
+
+      padding: 20px;
+
+      border:
+        1px solid
+        rgba(255,255,255,0.12);
+
+      border-radius: 22px;
+
+      background:
+        rgba(8,13,31,0.70);
+
+      backdrop-filter:
+        blur(18px);
+
+      box-shadow:
+        0 25px 70px
+        rgba(0,0,0,0.4);
+
+      animation:
+        floating 5s ease-in-out infinite;
+    }
+
+
+    .floating-card small {
+
+      display: block;
+
+      color:
+        #00eaff;
+
+      font-size:
+        11px;
+
+      letter-spacing:
+        2px;
+
+      text-transform:
+        uppercase;
+
+      margin-bottom:
+        8px;
+    }
+
+
+    .floating-card strong {
+
+      display: block;
+
+      font-size:
+        21px;
+
+      margin-bottom:
+        8px;
+    }
+
+
+    .floating-card p {
+
+      color:
+        #8993aa;
+
+      font-size:
+        13px;
+
+      line-height:
+        1.6;
+    }
+
+
+    /* =====================================================
+       SECTION
+    ===================================================== */
+
+    .section {
+
+      width:
+        min(1150px, 92%);
+
+      margin:
+        auto;
+
+      padding:
+        115px 0;
+    }
+
+
+    .section-heading {
+
+      margin-bottom:
+        55px;
+    }
+
+
+    .section-heading small {
+
+      color:
+        #00eaff;
+
+      font-weight:
+        700;
+
+      letter-spacing:
+        3px;
+
+      text-transform:
+        uppercase;
+    }
+
+
+    .section-heading h2 {
+
+      margin-top:
+        12px;
+
+      font-size:
+        clamp(38px, 5vw, 62px);
+
+      line-height:
+        1.05;
+
+      letter-spacing:
+        -2px;
+    }
+
+
+    .section-heading p {
+
+      max-width:
+        650px;
+
+      margin-top:
+        20px;
+
+      color:
+        #8993aa;
+
+      line-height:
+        1.8;
+    }
+
+
+    /* =====================================================
+       EXPERIENCE CARDS
+    ===================================================== */
+
+    .experience-grid {
+
+      display:
+        grid;
+
+      grid-template-columns:
+        1.2fr 0.8fr;
+
+      gap:
+        25px;
+    }
+
+
+    .experience-main {
+
+      min-height:
+        420px;
+
+      position:
+        relative;
+
+      padding:
+        40px;
+
+      display:
+        flex;
+
+      align-items:
+        flex-end;
+
+      border-radius:
+        28px;
+
+      overflow:
+        hidden;
+
+      background:
+        linear-gradient(
+          180deg,
+          transparent 20%,
+          rgba(0,0,0,0.85)
+        ),
+
+        url("whtbck.jpg");
+
+      background-size:
+        cover;
+
+      background-position:
+        center;
+
+      border:
+        1px solid
+        rgba(255,255,255,0.1);
+
+      transition:
+        0.5s ease;
+    }
+
+
+    .experience-main:hover {
+
+      transform:
+        scale(1.01);
+
+      box-shadow:
+        0 25px 70px
+        rgba(0,0,0,0.4);
+    }
+
+
+    .experience-content {
+
+      position:
+        relative;
+
+      z-index:
+        2;
+    }
+
+
+    .experience-content h3 {
+
+      font-size:
+        35px;
+
+      margin-bottom:
+        12px;
+    }
+
+
+    .experience-content p {
+
+      color:
+        #c1c8d7;
+
+      line-height:
+        1.7;
+    }
+
+
+    .experience-side {
+
+      display:
+        grid;
+
+      gap:
+        25px;
+    }
+
+
+    .mini-card {
+
+      padding:
+        32px;
+
+      border-radius:
+        25px;
+
+      background:
+        rgba(255,255,255,0.035);
+
+      border:
+        1px solid
+        rgba(255,255,255,0.08);
+
+      backdrop-filter:
+        blur(15px);
+
+      transition:
+        0.4s ease;
+    }
+
+
+    .mini-card:hover {
+
+      transform:
+        translateY(-7px);
+
+      border-color:
+        rgba(0,225,255,0.3);
+
+      box-shadow:
+        0 20px 50px
+        rgba(0,0,0,0.3);
+    }
+
+
+    .mini-icon {
+
+      width:
+        52px;
+
+      height:
+        52px;
+
+      display:
+        grid;
+
+      place-items:
+        center;
+
+      border-radius:
+        15px;
+
+      margin-bottom:
+        20px;
+
+      background:
+        rgba(0,225,255,0.08);
+
+      color:
+        #00eaff;
+
+      font-size:
+        22px;
+    }
+
+
+    .mini-card h3 {
+
+      margin-bottom:
+        10px;
+    }
+
+
+    .mini-card p {
+
+      color:
+        #8993aa;
+
+      font-size:
+        14px;
+
+      line-height:
+        1.7;
+    }
+
+
+    /* =====================================================
+       SERVICES
+    ===================================================== */
+
+    .services {
+
+      display:
+        grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap:
+        20px;
+    }
+
+
+    .service {
+
+      padding:
+        30px;
+
+      min-height:
+        210px;
+
+      border-radius:
+        22px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,0.055),
+          rgba(255,255,255,0.015)
+        );
+
+      border:
+        1px solid
+        rgba(255,255,255,0.08);
+
+      transition:
+        0.4s ease;
+
+      position:
+        relative;
+
+      overflow:
+        hidden;
+    }
+
+
+    .service::after {
+
+      content:
+        "";
+
+      position:
+        absolute;
+
+      width:
+        150px;
+
+      height:
+        150px;
+
+      right:
+        -100px;
+
+      bottom:
+        -100px;
+
+      border-radius:
+        50%;
+
+      background:
+        #00eaff;
+
+      opacity:
+        0.07;
+
+      transition:
+        0.5s ease;
+    }
+
+
+    .service:hover {
+
+      transform:
+        translateY(-9px);
+
+      border-color:
+        rgba(0,225,255,0.35);
+
+      box-shadow:
+        0 20px 50px
+        rgba(0,0,0,0.35);
+    }
+
+
+    .service:hover::after {
+
+      transform:
+        scale(2.5);
+    }
+
+
+    .service-icon {
+
+      width:
+        55px;
+
+      height:
+        55px;
+
+      display:
+        grid;
+
+      place-items:
+        center;
+
+      border-radius:
+        16px;
+
+      background:
+        rgba(0,225,255,0.09);
+
+      color:
+        #00eaff;
+
+      font-size:
+        23px;
+
+      margin-bottom:
+        23px;
+
+      transition:
+        0.4s ease;
+    }
+
+
+    .service:hover .service-icon {
+
+      background:
+        #00eaff;
+
+      color:
+        #04101c;
+
+      transform:
+        rotate(8deg)
+        scale(1.08);
+
+      box-shadow:
+        0 0 25px
+        rgba(0,225,255,0.45);
+    }
+
+
+    .service h3 {
+
+      margin-bottom:
+        10px;
+    }
+
+
+    .service p {
+
+      color:
+        #8993aa;
+
+      font-size:
+        14px;
+
+      line-height:
+        1.7;
+    }
+
+
+    /* =====================================================
+       WHY US
+    ===================================================== */
+
+    .why-grid {
+
+      display:
+        grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap:
+        15px;
+    }
+
+
+    .why-item {
+
+      display:
+        flex;
+
+      gap:
+        18px;
+
+      padding:
+        24px;
+
+      border-radius:
+        18px;
+
+      background:
+        rgba(255,255,255,0.025);
+
+      border:
+        1px solid
+        rgba(255,255,255,0.06);
+
+      transition:
+        0.3s ease;
+    }
+
+
+    .why-item:hover {
+
+      background:
+        rgba(0,225,255,0.05);
+
+      border-color:
+        rgba(0,225,255,0.2);
+
+      transform:
+        translateX(5px);
+    }
+
+
+    .check {
+
+      min-width:
+        34px;
+
+      height:
+        34px;
+
+      display:
+        grid;
+
+      place-items:
+        center;
+
+      border-radius:
+        50%;
+
+      color:
+        #00eaff;
+
+      background:
+        rgba(0,225,255,0.1);
+    }
+
+
+    .why-item h3 {
+
+      margin-bottom:
+        5px;
+
+      font-size:
+        16px;
+    }
+
+
+    .why-item p {
+
+      color:
+        #7f899f;
+
+      font-size:
+        13px;
+
+      line-height:
+        1.6;
+    }
+
+
+    /* =====================================================
+       WHATSAPP CTA
+    ===================================================== */
+
+    .cta {
+
+      position:
+        relative;
+
+      padding:
+        90px 35px;
+
+      text-align:
+        center;
+
+      border-radius:
+        35px;
+
+      overflow:
+        hidden;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(0,225,255,0.10),
+          rgba(105,55,255,0.12)
+        );
+
+      border:
+        1px solid
+        rgba(255,255,255,0.1);
+    }
+
+
+    .cta::before {
+
+      content:
+        "";
+
+      position:
+        absolute;
+
+      width:
+        500px;
+
+      height:
+        500px;
+
+      left:
+        50%;
+
+      top:
+        50%;
+
+      transform:
+        translate(-50%, -50%);
+
+      border-radius:
+        50%;
+
+      background:
+        #00eaff;
+
+      opacity:
+        0.05;
+
+      filter:
+        blur(60px);
+    }
+
+
+    .cta h2 {
+
+      position:
+        relative;
+
+      font-size:
+        clamp(38px, 5vw, 65px);
+
+      line-height:
+        1;
+
+      margin-bottom:
+        20px;
+    }
+
+
+    .cta p {
+
+      position:
+        relative;
+
+      max-width:
+        650px;
+
+      margin:
+        0 auto 30px;
+
+      color:
+        #9ba5bb;
+
+      line-height:
+        1.8;
+    }
+
+
+    .whatsapp {
+
+      background:
+        linear-gradient(
+          90deg,
+          #00d98b,
+          #00a96b
+        );
+
+      box-shadow:
+        0 0 30px
+        rgba(0,217,139,0.20);
+    }
+
+
+    .whatsapp:hover {
+
+      box-shadow:
+        0 0 45px
+        rgba(0,217,139,0.40);
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    footer {
+
+      padding:
+        45px 20px;
+
+      text-align:
+        center;
+
+      border-top:
+        1px solid
+        rgba(255,255,255,0.06);
+
+      color:
+        #687289;
+
+      font-size:
+        13px;
+    }
+
+
+    footer strong {
+
+      color:
+        #00eaff;
+    }
+
+
+    /* =====================================================
+       SCROLL ANIMATION
+    ===================================================== */
+
+    .reveal {
+
+      opacity:
+        0;
+
+      transform:
+        translateY(45px);
+
+      transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+    }
+
+
+    .reveal.active {
+
+      opacity:
+        1;
+
+      transform:
+        translateY(0);
+    }
+
+
+    /* =====================================================
+       ANIMATIONS
+    ===================================================== */
+
+    @keyframes navbarIn {
+
+      from {
+        opacity: 0;
+        transform:
+          translate(-50%, -30px);
+      }
+
+      to {
+        opacity: 1;
+        transform:
+          translate(-50%, 0);
+      }
+    }
+
+
+    @keyframes heroReveal {
+
+      from {
+        opacity: 0;
+        transform:
+          translateY(45px);
+      }
+
+      to {
+        opacity: 1;
+        transform:
+          translateY(0);
+      }
+    }
+
+
+    @keyframes heroZoom {
+
+      from {
+        transform:
+          scale(1);
+      }
+
+      to {
+        transform:
+          scale(1.08);
+      }
+    }
+
+
+    @keyframes gradientMove {
+
+      0% {
+        background-position:
+          0% 50%;
+      }
+
+      50% {
+        background-position:
+          100% 50%;
+      }
+
+      100% {
+        background-position:
+          0% 50%;
+      }
+    }
+
+
+    @keyframes floating {
+
+      0%, 100% {
+        transform:
+          translateY(0);
+      }
+
+      50% {
+        transform:
+          translateY(-15px);
+      }
+    }
+
+
+    @keyframes pulseGlow {
+
+      0%, 100% {
+        opacity:
+          0.4;
+
+        transform:
+          scale(1);
+      }
+
+      50% {
+        opacity:
+          0.8;
+
+        transform:
+          scale(1.15);
+      }
+    }
+
+
+    @keyframes blink {
+
+      0%, 100% {
+        opacity:
+          1;
+      }
+
+      50% {
+        opacity:
+          0.3;
+      }
+    }
+
+
+    /* =====================================================
+       TABLET
+    ===================================================== */
+
+    @media (max-width: 850px) {
+
+      .floating-card {
+        display:
+          none;
+      }
+
+
+      .experience-grid {
+        grid-template-columns:
+          1fr;
+      }
+
+
+      .services {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+
+      .why-grid {
+        grid-template-columns:
+          1fr;
+      }
+
+    }
+
+
+    /* =====================================================
+       MOBILE
+    ===================================================== */
+
+    @media (max-width: 600px) {
+
+      .navbar {
+
+        height:
+          65px;
+
+        padding:
+          8px 14px;
+      }
+
+
+      .logo img {
+
+        width:
+          115px;
+
+        max-height:
+          48px;
+      }
+
+
+      .nav-links {
+
+        gap:
+          0;
+      }
+
+
+      .nav-links a {
+
+        padding:
+          8px 7px;
+
+        font-size:
+          9px;
+
+        letter-spacing:
+          0;
+      }
+
+
+      .hero {
+
+        min-height:
+          100svh;
+
+        padding:
+          130px 20px
+          70px;
+      }
+
+
+      .hero h1 {
+
+        font-size:
+          clamp(47px, 14vw, 75px);
+
+        letter-spacing:
+          -3px;
+      }
+
+
+      .hero-description {
+
+        font-size:
+          15px;
+      }
+
+
+      .buttons {
+
+        flex-direction:
+          column;
+
+        align-items:
+          stretch;
+      }
+
+
+      .btn {
+
+        width:
+          100%;
+      }
+
+
+      .section {
+
+        padding:
+          80px 0;
+      }
+
+
+      .experience-main {
+
+        min-height:
+          350px;
+
+        padding:
+          28px;
+      }
+
+
+      .experience-content h3 {
+
+        font-size:
+          28px;
+      }
+
+
+      .services {
+
+        grid-template-columns:
+          1fr;
+      }
+
+
+      .cta {
+
+        padding:
+          70px 20px;
+      }
+
+    }
+
+  </style>
 </head>
+
 
 <body>
 
-<nav class="navbar">
-<a href="index.html">HOME</a>
-<a href="tourPackage.html">TOUR PACKAGES</a>
-<a href="contactus.html">CONTACT US</a>
-<a href="about.html">ABOUT US</a>
-</nav>
 
-<img class="logo" src="ohom.png" alt="Travspro Holidays LogoTravspro Holidays</h1>
-<p>Your Trusted Travel Partner Since 2019</p>
+  <!-- =====================================================
+       NAVIGATION
+  ===================================================== -->
+
+  <nav class="navbar">
+
+    <a
+      href="./index.html"
+      class="logo"
+    >
+      <img
+        src="ohom.png"
+        alt="Travspro Holidays Logo"
+      >
+    </a>
+
+
+    <ul class="nav-links">
+
+      <li>
+        <a
+          href="./index.html"
+          class="active"
+        >
+          HOME
+        </a>
+      </li>
+
+      <li>
+        <a href="./tourPackage.html">
+          TOURS
+        </a>
+      </li>
+
+      <li>
+        <a href="./about.html">
+          ABOUT
+        </a>
+      </li>
+
+      <li>
+        <a href="./contactus.html">
+          CONTACT
+        </a>
+      </li>
+
+    </ul>
+
+  </nav>
 
 
 
-<section class="about">
-<h2>About Travspro Holidays</h2>
+  <!-- =====================================================
+       HERO
+  ===================================================== -->
 
-<p>
-Travspro Holidays is a trusted travel and tour service provider dedicated to making every journey comfortable, enjoyable and stress-free. From flight bookings and hotel reservations to complete holiday packages, we handle every detail of your trip.
-</p>
+  <section class="hero">
 
-<p>
-Established in 2019, we have built strong relationships with tourism partners, hotels and transport providers to deliver quality travel experiences to our customers.
-</p>
+    <div class="hero-image"></div>
 
-</section>
 
-<section class="services">
+    <div class="hero-content">
 
-<h2>Our Services</h2>
+      <div class="hero-text">
 
-<div class="service-grid">
+        <div class="eyebrow">
+          Travel Beyond Ordinary
+        </div>
 
-<div class="card">
-<h3>✈ Flight Booking</h3>
-<p>Best airfare deals and hassle-free bookings.</p>
-</div>
 
-<div class="card">
-<h3>🏨 Hotel Booking</h3>
-<p>Comfortable stays at the best destinations.</p>
-</div>
+        <h1>
 
-<div class="card">
-<h3>🚗 Car Rental</h3>
-<p>Reliable transportation wherever you travel.</p>
-</div>
+          <span class="white">
+            Your Journey.
+          </span>
 
-<div class="card">
-<h3>🛂 Visa Assistance</h3>
-<p>Professional passport and visa support.</p>
-</div>
+          <br>
 
-</div>
+          <span class="gradient">
+            Our World.
+          </span>
 
-</section>
+        </h1>
 
-<section class="why">
 
-<h2>Why Choose Us?</h2>
+        <p class="hero-description">
 
-<ul>
-<li>✅ Experienced travel experts</li>
-<li>✅ Customised holiday packages</li>
-<li>✅ Competitive pricing</li>
-<li>✅ Trusted customer support</li>
-<li>✅ Safe and secure booking process</li>
-<li>✅ Dedicated service team</li>
-</ul>
+          Discover unforgettable journeys with
+          <strong>Travspro Holidays</strong> —
+          your trusted travel partner for flights,
+          hotels, tours, transportation and
+          complete travel solutions.
 
-</section>
+        </p>
 
-<section class="whatsapp">
-<a href="https918278735460?text=Hello
-Chat With Us On WhatsApp
-</a>
-</section>
 
-<footer>
-<h3>Travspro Holidays</h3>
-<p>© 2024 Travspro Holidays - Travel Solution Provider</p>
-</footer>
+        <div class="buttons">
+
+          <a
+            href="./tourPackage.html"
+            class="btn btn-primary"
+          >
+            Explore Tours
+            <span>→</span>
+          </a>
+
+
+          <a
+            href="./contactus.html"
+            class="btn btn-outline"
+          >
+            Plan My Journey
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- Floating information card -->
+
+    <div class="floating-card">
+
+      <small>
+        Based in
+      </small>
+
+      <strong>
+        Manali, Himachal Pradesh
+      </strong>
+
+      <p>
+        Creating memorable travel experiences
+        since 2019.
+      </p>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       INTRODUCTION
+  ===================================================== -->
+
+  <section class="section">
+
+    <div class="section-heading reveal">
+
+      <small>
+        Welcome to Travspro
+      </small>
+
+      <h2>
+        Travel should feel<br>
+        extraordinary.
+      </h2>
+
+      <p>
+        We believe your journey should be exciting
+        from the moment you start planning.
+        Travspro Holidays brings together travel
+        expertise, reliable service and carefully
+        arranged travel solutions to make your
+        experience relaxed and stress-free.
+      </p>
+
+    </div>
+
+
+    <div class="experience-grid">
+
+
+      <div class="experience-main reveal">
+
+        <div class="experience-content">
+
+          <h3>
+            Beyond Booking.
+            <br>
+            Into Experience.
+          </h3>
+
+          <p>
+            From your first flight booking to
+            comfortable accommodation and
+            transportation, we're here to make
+            every part of your journey simpler.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="experience-side">
+
+
+        <div class="mini-card reveal">
+
+          <div class="mini-icon">
+            ✦
+          </div>
+
+          <h3>
+            Since 2019
+          </h3>
+
+          <p>
+            Built with experience, dedication
+            and a passion for helping people
+            discover new destinations.
+          </p>
+
+        </div>
+
+
+        <div class="mini-card reveal">
+
+          <div class="mini-icon">
+            ◈
+          </div>
+
+          <h3>
+            One Travel Partner
+          </h3>
+
+          <p>
+            Flights, hotels, tours, vehicles,
+            travel insurance and more —
+            all under one roof.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       SERVICES
+  ===================================================== -->
+
+  <section class="section">
+
+    <div class="section-heading reveal">
+
+      <small>
+        Our Services
+      </small>
+
+      <h2>
+        Everything for<br>
+        your next adventure.
+      </h2>
+
+      <p>
+        From planning to arrival, our travel
+        services are designed around your needs.
+      </p>
+
+    </div>
+
+
+    <div class="services">
+
+
+      <div class="service reveal">
+
+        <div class="service-icon">
+          ✈
+        </div>
+
+        <h3>
+          Flight Booking
+        </h3>
+
+        <p>
+          Convenient flight booking solutions
+          for domestic and international travel.
+        </p>
+
+      </div>
+
+
+      <div class="service reveal">
+
+        <div class="service-icon">
+          ◇
+        </div>
+
+        <h3>
+          Tour Packages
+        </h3>
+
+        <p>
+          Discover memorable destinations
+          through thoughtfully planned tour
+          experiences.
+        </p>
+
+      </div>
+
+
+      <div class="service reveal">
+
+        <div class="service-icon">
+          ◆
+        </div>
+
+        <h3>
+          Hotel Booking
+        </h3>
+
+        <p>
+          Comfortable accommodation options
+          selected around your travel plans.
+        </p>
+
+      </div>
+
+
+      <div class="service reveal">
+
+        <div class="service-icon">
+          🚗
+        </div>
+
+        <h3>
+          Car & Coach Rental
+        </h3>
+
+        <p>
+          Reliable transportation for individuals,
+          families and groups.
+        </p>
+
+      </div>
+
+
+      <div class="service reveal">
+
+        <div class="service-icon">
+          ◎
+        </div>
+
+        <h3>
+          Visa & Passport
+        </h3>
+
+        <p>
+          Assistance with travel documentation,
+          passport and visa-related services.
+        </p>
+
+      </div>
+
+
+      <div class="service reveal">
+
+        <div class="service-icon">
+          🛡
+        </div>
+
+        <h3>
+          Travel Insurance
+        </h3>
+
+        <p>
+          Travel insurance assistance for
+          additional confidence while travelling.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       WHY US
+  ===================================================== -->
+
+  <section class="section">
+
+    <div class="section-heading reveal">
+
+      <small>
+        Why Travspro
+      </small>
+
+      <h2>
+        Built around<br>
+        your journey.
+      </h2>
+
+    </div>
+
+
+    <div class="why-grid">
+
+
+      <div class="why-item reveal">
+
+        <div class="check">
+          ✓
+        </div>
+
+        <div>
+
+          <h3>
+            Experienced Team
+          </h3>
+
+          <p>
+            Knowledgeable and experienced
+            staff ready to assist you.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="why-item reveal">
+
+        <div class="check">
+          ✓
+        </div>
+
+        <div>
+
+          <h3>
+            Personalized Planning
+          </h3>
+
+          <p>
+            Travel solutions designed around
+            your requirements.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="why-item reveal">
+
+        <div class="check">
+          ✓
+        </div>
+
+        <div>
+
+          <h3>
+            Reliable Service
+          </h3>
+
+          <p>
+            We focus on dependable service
+            throughout your journey.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="why-item reveal">
+
+        <div class="check">
+          ✓
+        </div>
+
+        <div>
+
+          <h3>
+            Privacy & Security
+          </h3>
+
+          <p>
+            Your personal travel information
+            is handled with care.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="why-item reveal">
+
+        <div class="check">
+          ✓
+        </div>
+
+        <div>
+
+          <h3>
+            Complete Travel Solutions
+          </h3>
+
+          <p>
+            Multiple travel services available
+            through one trusted partner.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="why-item reveal">
+
+        <div class="check">
+          ✓
+        </div>
+
+        <div>
+
+          <h3>
+            Stress-Free Travel
+          </h3>
+
+          <p>
+            We take care of the details so
+            you can enjoy the journey.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       CTA
+  ===================================================== -->
+
+  <section class="section">
+
+    <div class="cta reveal">
+
+      <h2>
+        Ready to<br>
+        explore?
+      </h2>
+
+      <p>
+        Tell us where you want to go.
+        We'll help turn your travel plans
+        into an unforgettable journey.
+      </p>
+
+
+      <div class="buttons"
+        style="
+          justify-content:center;
+          position:relative;
+        ">
+
+        <a
+          href="./tourPackage.html"
+          class="btn btn-primary"
+        >
+          Discover Tours →
+        </a>
+
+
+        <a
+          href="https://wa.me/918278735460?text=Hello%20Travspro%20Holidays"
+          class="btn whatsapp"
+          target="_blank"
+        >
+          WhatsApp Us
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       FOOTER
+  ===================================================== -->
+
+  <footer>
+
+    © 2026
+    <strong>
+      Travspro Holidays
+    </strong>
+
+    — Travel Solution Provider
+
+  </footer>
+
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+  ===================================================== -->
+
+  <script>
+
+    /*
+      Scroll Reveal
+    */
+
+    const revealElements =
+      document.querySelectorAll(".reveal");
+
+
+    const observer =
+      new IntersectionObserver(
+
+        (entries) => {
+
+          entries.forEach(
+            (entry) => {
+
+              if (
+                entry.isIntersecting
+              ) {
+
+                entry.target
+                  .classList
+                  .add("active");
+
+              }
+
+            }
+          );
+
+        },
+
+        {
+          threshold: 0.12
+        }
+
+      );
+
+
+    revealElements.forEach(
+      (element) => {
+
+        observer.observe(element);
+
+      }
+    );
+
+
+    /*
+      Subtle mouse movement
+      for futuristic atmosphere
+    */
+
+    document.addEventListener(
+      "mousemove",
+      (event) => {
+
+        const x =
+          (event.clientX /
+            window.innerWidth - 0.5) * 12;
+
+        const y =
+          (event.clientY /
+            window.innerHeight - 0.5) * 12;
+
+
+        const hero =
+          document.querySelector(
+            ".hero-image"
+          );
+
+
+        if (hero) {
+
+          hero.style.transform =
+            `scale(1.05)
+             translate(${x * 0.15}px,
+                       ${y * 0.15}px)`;
+
+        }
+
+      }
+    );
+
+  </script>
+
 
 </body>
 </html>
