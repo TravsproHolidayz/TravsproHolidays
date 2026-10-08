@@ -1,1418 +1,1965 @@
-<!DOCTYPE html> <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
 
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0"
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
+<title>Travspro Holidays | Travel Without Limits</title>
 
 <style>
 
-/* ===================================================== GLOBAL ===================================================== */
+/* =====================================================
+   GLOBAL
+===================================================== */
 
-{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-margin: 0; padding: 0; box-sizing: border-box; }
-
-html { scroll-behavior: smooth; }
+html {
+    scroll-behavior: smooth;
+}
 
 body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #050816;
+    color: white;
+    overflow-x: hidden;
+}
 
-font-family: "Segoe UI", Arial, sans-serif;
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
-background: #050816;
 
-color: white;
-
-overflow-x: hidden; }
-
-a { text-decoration: none; color: inherit; }
-
-/* ===================================================== BACKGROUND ===================================================== */
+/* =====================================================
+   BACKGROUND
+===================================================== */
 
 body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -2;
 
-content: "";
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(0, 229, 255, .14),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 25%,
+            rgba(124, 77, 255, .18),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 50% 90%,
+            rgba(0, 255, 170, .08),
+            transparent 30%
+        ),
+        #050816;
+}
 
-position: fixed;
 
-inset: 0;
-
-z-index: -2;
-
-background:
-
-radial-gradient( circle at 15% 20%, rgba(0,229,255,.14), transparent 30% ),
-
-radial-gradient( circle at 85% 25%, rgba(124,77,255,.18), transparent 30% ),
-
-radial-gradient( circle at 50% 90%, rgba(0,255,170,.08), transparent 30% ),
-
-#050816; }
-
-/* futuristic grid */
+/* Futuristic grid */
 
 body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
 
-content: "";
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.025) 1px,
+            transparent 1px
+        );
 
-position: fixed;
+    background-size: 50px 50px;
 
-inset: 0;
+    mask-image:
+        linear-gradient(
+            to bottom,
+            black,
+            transparent
+        );
+}
 
-z-index: -1;
 
-pointer-events: none;
-
-background-image:
-
-linear-gradient( rgba(255,255,255,.025) 1px, transparent 1px ),
-
-linear-gradient( 90deg, rgba(255,255,255,.025) 1px, transparent 1px );
-
-background-size: 50px 50px;
-
-mask-image: linear-gradient( to bottom, black, transparent ); }
-
-/* ===================================================== NAVBAR ===================================================== */
+/* =====================================================
+   NAVBAR
+===================================================== */
 
 .navbar {
+    position: fixed;
 
-position: fixed;
+    top: 18px;
+    left: 50%;
 
-top: 18px;
+    transform: translateX(-50%);
 
-left: 50%;
+    z-index: 1000;
 
-transform: translateX(-50%);
+    width: min(1180px, 94%);
 
-z-index: 1000;
+    min-height: 72px;
 
-width: min(1180px, 94%);
+    padding: 10px 22px;
 
-min-height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-padding: 10px 22px;
+    gap: 20px;
 
-display: flex;
+    background: rgba(7,13,32,.75);
 
-align-items: center;
+    border: 1px solid rgba(255,255,255,.10);
 
-justify-content: space-between;
+    border-radius: 50px;
 
-gap: 20px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 
-background: rgba(7,13,32,.72);
+    box-shadow:
+        0 12px 45px rgba(0,0,0,.35);
 
-border: 1px solid rgba(255,255,255,.10);
+    animation: navDrop .8s ease;
+}
 
-border-radius: 50px;
 
-backdrop-filter: blur(20px);
-
--webkit-backdrop-filter: blur(20px);
-
-box-shadow: 0 12px 45px rgba(0,0,0,.35);
-
-animation: navDrop .8s ease; }
-
-/* ===================================================== LOGO ===================================================== */
+/* =====================================================
+   LOGO
+===================================================== */
 
 .logo {
+    display: flex;
+    align-items: center;
 
-display: flex;
-
-align-items: center;
-
-flex-shrink: 0; }
+    flex-shrink: 0;
+}
 
 .logo img {
+    width: 165px;
+    height: auto;
 
-width: 165px;
+    display: block;
 
-height: auto;
+    transition: .35s ease;
 
-display: block;
-
-transition: .35s ease;
-
-filter: drop-shadow( 0 0 8px rgba(0,229,255,.12) ); }
+    filter:
+        drop-shadow(
+            0 0 8px rgba(0,229,255,.12)
+        );
+}
 
 .logo img:hover {
+    transform: scale(1.05);
 
-transform: scale(1.05);
+    filter:
+        drop-shadow(
+            0 0 18px rgba(0,229,255,.45)
+        );
+}
 
-filter: drop-shadow( 0 0 18px rgba(0,229,255,.45) ); }
 
-/* ===================================================== NAV LINKS ===================================================== */
+/* =====================================================
+   NAVIGATION LINKS
+===================================================== */
 
 .nav-links {
+    display: flex;
 
-display: flex;
+    align-items: center;
+    justify-content: flex-end;
 
-align-items: center;
+    gap: 4px;
 
-justify-content: flex-end;
+    list-style: none;
+}
 
-gap: 4px;
-
-list-style: none; }
-
-.nav-links li { flex-shrink: 0; }
+.nav-links li {
+    flex-shrink: 0;
+}
 
 .nav-links a {
+    display: block;
 
-display: block;
+    padding: 10px 15px;
 
-padding: 10px 15px;
+    border-radius: 30px;
 
-border-radius: 30px;
+    color: #cbd3e6;
 
-color: #cbd3e6;
+    font-size: 13px;
+    font-weight: 600;
 
-font-size: 13px;
+    white-space: nowrap;
 
-font-weight: 600;
-
-white-space: nowrap;
-
-transition: .3s ease; }
+    transition: .3s ease;
+}
 
 .nav-links a:hover {
+    color: white;
 
-color: white;
+    background:
+        rgba(0,229,255,.10);
 
-background: rgba(0,229,255,.10);
-
-box-shadow: 0 0 20px rgba(0,229,255,.12); }
+    box-shadow:
+        0 0 20px rgba(0,229,255,.12);
+}
 
 .nav-links .active {
+    color: #00eaff;
 
-color: #00eaff;
+    background:
+        rgba(0,229,255,.08);
+}
 
-background: rgba(0,229,255,.08); }
 
-/* ===================================================== HERO ===================================================== */
+/* =====================================================
+   HERO
+===================================================== */
 
 .hero {
+    min-height: 100vh;
 
-min-height: 100vh;
+    position: relative;
 
-position: relative;
+    display: flex;
 
-display: flex;
+    align-items: center;
+    justify-content: center;
 
-align-items: center;
+    text-align: center;
 
-justify-content: center;
+    padding:
+        160px 20px 100px;
 
-text-align: center;
+    overflow: hidden;
+}
 
-padding: 160px 20px 100px;
 
-overflow: hidden; }
-
-/* floating orbs */
+/* =====================================================
+   FLOATING ORBS
+===================================================== */
 
 .orb {
+    position: absolute;
 
-position: absolute;
+    width: 300px;
+    height: 300px;
 
-width: 300px;
+    border-radius: 50%;
 
-height: 300px;
+    background:
+        radial-gradient(
+            circle at 30% 30%,
+            #9fffff,
+            #0077ff 35%,
+            #3500a8 70%,
+            transparent 72%
+        );
 
-border-radius: 50%;
+    opacity: .22;
 
-background:
+    filter: blur(2px);
 
-radial-gradient( circle at 30% 30%, #9fffff, #0077ff 35%, #3500a8 70%, transparent 72% );
+    pointer-events: none;
 
-opacity: .22;
-
-filter: blur(2px);
-
-pointer-events: none;
-
-animation: floatOrb 8s ease-in-out infinite; }
+    animation:
+        floatOrb 8s ease-in-out infinite;
+}
 
 .orb-one {
-
-left: -150px;
-
-top: 25%; }
+    left: -150px;
+    top: 25%;
+}
 
 .orb-two {
+    right: -130px;
+    bottom: 8%;
 
-right: -130px;
+    animation-delay: -4s;
+}
 
-bottom: 8%;
 
-animation-delay: -4s; }
-
-/* hero content */
+/* =====================================================
+   HERO CONTENT
+===================================================== */
 
 .hero-content {
+    position: relative;
+    z-index: 2;
 
-position: relative;
+    max-width: 950px;
 
-z-index: 2;
+    animation:
+        heroReveal 1.1s ease;
+}
 
-max-width: 950px;
 
-animation: heroReveal 1.1s ease; }
-
-/* eyebrow */
+/* Eyebrow */
 
 .eyebrow {
+    display: inline-block;
 
-display: inline-block;
+    padding: 9px 18px;
 
-padding: 9px 18px;
+    margin-bottom: 25px;
 
-margin-bottom: 25px;
+    border:
+        1px solid rgba(0,229,255,.28);
 
-border: 1px solid rgba(0,229,255,.28);
+    border-radius: 50px;
 
-border-radius: 50px;
+    background:
+        rgba(0,229,255,.05);
 
-background: rgba(0,229,255,.05);
+    color: #00eaff;
 
-color: #00eaff;
+    font-size: 12px;
 
-font-size: 12px;
+    font-weight: 700;
 
-font-weight: 700;
+    letter-spacing: 3px;
 
-letter-spacing: 3px;
+    text-transform: uppercase;
+}
 
-text-transform: uppercase; }
 
-/* hero title */
+/* Hero title */
 
 .hero h1 {
+    font-size:
+        clamp(52px, 9vw, 115px);
 
-font-size: clamp( 52px, 9vw, 115px );
+    line-height: .92;
 
-line-height: .92;
+    letter-spacing: -5px;
 
-letter-spacing: -5px;
+    font-weight: 900;
 
-font-weight: 900;
+    background:
+        linear-gradient(
+            120deg,
+            #ffffff,
+            #8befff,
+            #8c6cff,
+            #ffffff
+        );
 
-background:
+    background-size: 300% 300%;
 
-linear-gradient( 120deg, #ffffff, #8befff, #8c6cff, #ffffff );
+    -webkit-background-clip: text;
 
-background-size: 300% 300%;
+    background-clip: text;
 
--webkit-background-clip: text;
+    color: transparent;
 
-color: transparent;
-
-animation: gradientMove 7s ease infinite; }
+    animation:
+        gradientMove 7s ease infinite;
+}
 
 .hero h1 span {
+    display: block;
 
-display: block;
+    color: #00eaff;
+}
 
-color: #00eaff; }
 
-/* hero paragraph */
+/* Hero paragraph */
 
 .hero p {
+    max-width: 700px;
 
-max-width: 700px;
+    margin: 30px auto;
 
-margin: 30px auto;
+    color: #aab4c9;
 
-color: #aab4c9;
+    font-size: 18px;
 
-font-size: 18px;
+    line-height: 1.8;
+}
 
-line-height: 1.8; }
 
-/* ===================================================== BUTTONS ===================================================== */
+/* =====================================================
+   BUTTONS
+===================================================== */
 
 .button-row {
+    display: flex;
 
-display: flex;
+    justify-content: center;
+    align-items: center;
 
-justify-content: center;
+    gap: 12px;
 
-align-items: center;
+    flex-wrap: wrap;
 
-gap: 12px;
-
-flex-wrap: wrap;
-
-margin-top: 30px; }
+    margin-top: 30px;
+}
 
 .primary-btn {
+    display: inline-flex;
 
-display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
-align-items: center;
+    gap: 10px;
 
-justify-content: center;
+    padding: 15px 27px;
 
-gap: 10px;
+    border-radius: 40px;
 
-padding: 15px 27px;
+    background:
+        linear-gradient(
+            90deg,
+            #00cfff,
+            #6848ff
+        );
 
-border-radius: 40px;
+    color: white;
 
-background:
+    font-weight: 700;
 
-linear-gradient( 90deg, #00cfff, #6848ff );
+    box-shadow:
+        0 0 30px rgba(0,217,255,.20);
 
-color: white;
-
-font-weight: 700;
-
-box-shadow: 0 0 30px rgba(0,217,255,.20);
-
-transition: .35s ease; }
+    transition: .35s ease;
+}
 
 .primary-btn:hover {
+    transform:
+        translateY(-5px);
 
-transform: translateY(-5px);
-
-box-shadow: 0 0 45px rgba(0,217,255,.42); }
+    box-shadow:
+        0 0 45px rgba(0,217,255,.42);
+}
 
 .secondary-btn {
+    display: inline-flex;
 
-display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
-align-items: center;
+    padding: 14px 25px;
 
-justify-content: center;
+    border-radius: 40px;
 
-padding: 14px 25px;
+    border:
+        1px solid rgba(255,255,255,.15);
 
-border-radius: 40px;
+    background:
+        rgba(255,255,255,.04);
 
-border: 1px solid rgba(255,255,255,.15);
+    color: #dbe2f2;
 
-background: rgba(255,255,255,.04);
+    font-weight: 600;
 
-color: #dbe2f2;
-
-font-weight: 600;
-
-transition: .35s ease; }
+    transition: .35s ease;
+}
 
 .secondary-btn:hover {
+    border-color:
+        rgba(0,229,255,.4);
 
-border-color: rgba(0,229,255,.4);
+    background:
+        rgba(0,229,255,.08);
 
-background: rgba(0,229,255,.08);
+    transform:
+        translateY(-4px);
+}
 
-transform: translateY(-4px); }
 
-/* ===================================================== QUICK SERVICES ===================================================== */
+/* =====================================================
+   QUICK SERVICES
+===================================================== */
 
 .quick-services {
+    width: min(1100px,92%);
 
-width: min(1100px,92%);
+    margin: -30px auto 0;
 
-margin: -30px auto 0;
+    position: relative;
 
-position: relative;
+    z-index: 5;
 
-z-index: 5;
+    display: grid;
 
-display: grid;
+    grid-template-columns:
+        repeat(4,1fr);
 
-grid-template-columns: repeat(4,1fr);
-
-gap: 15px; }
+    gap: 15px;
+}
 
 .quick-card {
+    padding: 25px 18px;
 
-padding: 25px 18px;
+    text-align: center;
 
-text-align: center;
+    background:
+        rgba(255,255,255,.045);
 
-background: rgba(255,255,255,.045);
+    border:
+        1px solid rgba(255,255,255,.08);
 
-border: 1px solid rgba(255,255,255,.08);
+    border-radius: 20px;
 
-border-radius: 20px;
+    backdrop-filter: blur(15px);
 
-backdrop-filter: blur(15px);
-
-transition: .35s ease; }
+    transition: .35s ease;
+}
 
 .quick-card:hover {
+    transform:
+        translateY(-7px);
 
-transform: translateY(-7px);
+    border-color:
+        rgba(0,229,255,.3);
 
-border-color: rgba(0,229,255,.3);
-
-box-shadow: 0 15px 40px rgba(0,0,0,.25); }
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.25);
+}
 
 .quick-icon {
+    font-size: 28px;
 
-font-size: 28px;
-
-margin-bottom: 10px; }
+    margin-bottom: 10px;
+}
 
 .quick-card h3 {
+    font-size: 15px;
 
-font-size: 15px;
-
-margin-bottom: 5px; }
+    margin-bottom: 5px;
+}
 
 .quick-card p {
+    color: #7f8ba4;
 
-color: #7f8ba4;
+    font-size: 12px;
+}
 
-font-size: 12px; }
 
-/* ===================================================== GENERAL SECTION ===================================================== */
+/* =====================================================
+   GENERAL SECTION
+===================================================== */
 
 .section {
+    width: min(1150px,92%);
 
-width: min(1150px,92%);
+    margin: auto;
 
-margin: auto;
-
-padding: 110px 0; }
+    padding: 110px 0;
+}
 
 .section-heading {
-
-margin-bottom: 50px; }
+    margin-bottom: 50px;
+}
 
 .section-heading small {
+    color: #00eaff;
 
-color: #00eaff;
+    text-transform: uppercase;
 
-text-transform: uppercase;
+    letter-spacing: 3px;
 
-letter-spacing: 3px;
+    font-size: 12px;
 
-font-size: 12px;
-
-font-weight: 700; }
+    font-weight: 700;
+}
 
 .section-heading h2 {
+    margin-top: 12px;
 
-margin-top: 12px;
+    font-size:
+        clamp(38px, 5vw, 65px);
 
-font-size: clamp( 38px, 5vw, 65px );
-
-line-height: 1; }
+    line-height: 1;
+}
 
 .section-heading p {
+    max-width: 650px;
 
-max-width: 650px;
+    margin-top: 18px;
 
-margin-top: 18px;
+    color: #929db3;
 
-color: #929db3;
+    line-height: 1.8;
+}
 
-line-height: 1.8; }
 
-/* ===================================================== DESTINATIONS ===================================================== */
+/* =====================================================
+   DESTINATIONS
+===================================================== */
 
 .destinations {
+    display: grid;
 
-display: grid;
+    grid-template-columns:
+        repeat(3,1fr);
 
-grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
 
-gap: 20px; }
+
+/*
+   No external destination images are used.
+   Each destination card has a futuristic CSS background.
+*/
 
 .destination {
+    position: relative;
 
-position: relative;
+    min-height: 330px;
 
-height: 330px;
+    overflow: hidden;
 
-overflow: hidden;
+    border-radius: 25px;
 
-border-radius: 25px;
+    border:
+        1px solid rgba(255,255,255,.08);
 
-border: 1px solid rgba(255,255,255,.08);
+    background:
+        linear-gradient(
+            145deg,
+            #071b35,
+            #12103a 50%,
+            #03151f
+        );
 
-background: #101525;
+    transition: .4s ease;
+}
 
-transition: .4s ease; }
+.destination:nth-child(2) {
+    background:
+        linear-gradient(
+            145deg,
+            #092c38,
+            #14244d 50%,
+            #090a27
+        );
+}
+
+.destination:nth-child(3) {
+    background:
+        linear-gradient(
+            145deg,
+            #171044,
+            #082d42 50%,
+            #03151f
+        );
+}
+
+.destination::before {
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    top: -80px;
+    right: -70px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(0,229,255,.35),
+            transparent 70%
+        );
+
+    transition: .5s ease;
+}
+
+.destination::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    bottom: -80px;
+    left: -60px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(124,77,255,.35),
+            transparent 70%
+        );
+}
 
 .destination:hover {
+    transform:
+        translateY(-8px);
 
-transform: translateY(-8px);
+    border-color:
+        rgba(0,229,255,.35);
 
-border-color: rgba(0,229,255,.35);
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.35);
+}
 
-box-shadow: 0 20px 50px rgba(0,0,0,.35); }
+.destination:hover::before {
+    transform:
+        scale(1.4);
+}
 
-.destination img {
+.destination-content {
+    position: absolute;
 
-width: 100%;
+    inset: 0;
 
-height: 100%;
+    z-index: 2;
 
-object-fit: cover;
+    display: flex;
 
-opacity: .65;
+    flex-direction: column;
 
-transition: transform .6s ease, opacity .6s ease; }
+    justify-content: flex-end;
 
-.destination:hover img {
+    padding: 28px;
 
-transform: scale(1.08);
+    background:
+        linear-gradient(
+            transparent 20%,
+            rgba(3,7,20,.92)
+        );
+}
 
-opacity: .8; }
+.destination-icon {
+    font-size: 55px;
 
-.destination-overlay {
+    margin-bottom: auto;
 
-position: absolute;
+    padding-top: 35px;
 
-inset: 0;
+    filter:
+        drop-shadow(
+            0 0 20px rgba(0,229,255,.3)
+        );
+}
 
-display: flex;
+.destination-content h3 {
+    font-size: 28px;
 
-flex-direction: column;
+    margin-bottom: 7px;
+}
 
-justify-content: flex-end;
+.destination-content p {
+    color: #b3bdd0;
 
-padding: 28px;
+    font-size: 14px;
+}
 
-background: linear-gradient( transparent 25%, rgba(3,7,20,.95) ); }
 
-.destination-overlay h3 {
-
-font-size: 28px;
-
-margin-bottom: 7px; }
-
-.destination-overlay p {
-
-color: #b3bdd0;
-
-font-size: 14px; }
-
-/* ===================================================== WHY TRAVSPRO ===================================================== */
+/* =====================================================
+   WHY TRAVSPRO
+===================================================== */
 
 .why-grid {
+    display: grid;
 
-display: grid;
+    grid-template-columns:
+        1.2fr .8fr;
 
-grid-template-columns: 1.2fr .8fr;
-
-gap: 25px; }
+    gap: 25px;
+}
 
 .glass-card {
+    padding: 40px;
 
-padding: 40px;
+    border-radius: 25px;
 
-border-radius: 25px;
+    background:
+        rgba(255,255,255,.04);
 
-background: rgba(255,255,255,.04);
+    border:
+        1px solid rgba(255,255,255,.08);
 
-border: 1px solid rgba(255,255,255,.08);
+    backdrop-filter: blur(15px);
 
-backdrop-filter: blur(15px);
-
-transition: .35s ease; }
+    transition: .35s ease;
+}
 
 .glass-card:hover {
+    transform:
+        translateY(-7px);
 
-transform: translateY(-7px);
-
-border-color: rgba(0,229,255,.25); }
+    border-color:
+        rgba(0,229,255,.25);
+}
 
 .glass-card h3 {
+    font-size: 26px;
 
-font-size: 26px;
-
-margin-bottom: 18px; }
+    margin-bottom: 18px;
+}
 
 .glass-card p {
+    color: #a1abc0;
 
-color: #a1abc0;
+    line-height: 1.85;
 
-line-height: 1.85;
+    font-size: 15px;
+}
 
-font-size: 15px; }
 
-/* stats */
+/* =====================================================
+   STATS
+===================================================== */
 
 .stats {
+    display: grid;
 
-display: grid;
+    grid-template-columns:
+        repeat(3,1fr);
 
-grid-template-columns: repeat(3,1fr);
+    gap: 12px;
 
-gap: 12px;
-
-margin-top: 30px; }
+    margin-top: 30px;
+}
 
 .stat {
+    padding: 22px 10px;
 
-padding: 22px 10px;
+    text-align: center;
 
-text-align: center;
+    border-radius: 18px;
 
-border-radius: 18px;
+    background:
+        rgba(0,229,255,.035);
 
-background: rgba(0,229,255,.035);
-
-border: 1px solid rgba(0,229,255,.08); }
+    border:
+        1px solid rgba(0,229,255,.08);
+}
 
 .stat strong {
+    display: block;
 
-display: block;
+    font-size: 30px;
 
-font-size: 30px;
+    background:
+        linear-gradient(
+            90deg,
+            #00eaff,
+            #8c6cff
+        );
 
-background:
+    -webkit-background-clip: text;
 
-linear-gradient( 90deg, #00eaff, #8c6cff );
+    background-clip: text;
 
--webkit-background-clip: text;
-
-color: transparent; }
+    color: transparent;
+}
 
 .stat span {
+    color: #7f8ba3;
 
-color: #7f8ba3;
+    font-size: 11px;
+}
 
-font-size: 11px; }
 
-/* ===================================================== CTA ===================================================== */
+/* =====================================================
+   CTA
+===================================================== */
 
 .cta {
+    width: min(1100px,92%);
 
-width: min(1100px,92%);
+    margin:
+        0 auto 100px;
 
-margin: 0 auto 100px;
+    padding: 80px 25px;
 
-padding: 80px 25px;
+    text-align: center;
 
-text-align: center;
+    border-radius: 35px;
 
-border-radius: 35px;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0,229,255,.08),
+            rgba(100,60,255,.10)
+        );
 
-background:
+    border:
+        1px solid rgba(255,255,255,.09);
 
-linear-gradient( 135deg, rgba(0,229,255,.08), rgba(100,60,255,.10) );
+    position: relative;
 
-border: 1px solid rgba(255,255,255,.09);
+    overflow: hidden;
+}
 
-position: relative;
+.cta::before {
+    content: "";
 
-overflow: hidden; }
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%,-50%);
+
+    border-radius: 50%;
+
+    background:
+        rgba(0,229,255,.07);
+
+    filter: blur(50px);
+
+    pointer-events: none;
+}
 
 .cta h2 {
+    position: relative;
 
-font-size: clamp( 38px, 5vw, 65px );
+    font-size:
+        clamp(38px,5vw,65px);
 
-margin-bottom: 18px; }
+    margin-bottom: 18px;
+}
 
 .cta p {
+    position: relative;
 
-max-width: 600px;
+    max-width: 600px;
 
-margin: auto auto 28px;
+    margin:
+        auto auto 28px;
 
-color: #9ca7bc;
+    color: #9ca7bc;
 
-line-height: 1.8; }
+    line-height: 1.8;
+}
 
-/* ===================================================== FOOTER ===================================================== */
+.cta .primary-btn {
+    position: relative;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
 
 footer {
+    padding: 45px 20px;
 
-padding: 45px 20px;
+    text-align: center;
 
-text-align: center;
+    border-top:
+        1px solid rgba(255,255,255,.06);
 
-border-top: 1px solid rgba(255,255,255,.06);
+    color: #687289;
 
-color: #687289;
-
-font-size: 14px; }
+    font-size: 14px;
+}
 
 footer img {
+    width: 145px;
 
-width: 145px;
+    height: auto;
 
-margin-bottom: 15px; }
+    margin-bottom: 15px;
+}
 
 footer strong {
+    color: #00eaff;
+}
 
-color: #00eaff; }
 
-/* ===================================================== ANIMATIONS ===================================================== */
+/* =====================================================
+   ANIMATIONS
+===================================================== */
 
 @keyframes heroReveal {
 
-from {
+    from {
+        opacity: 0;
 
-opacity: 0;
+        transform:
+            translateY(40px);
+    }
 
-transform: translateY(40px); }
+    to {
+        opacity: 1;
 
-to {
+        transform:
+            translateY(0);
+    }
+}
 
-opacity: 1;
-
-transform: translateY(0); } }
 
 @keyframes navDrop {
 
-from {
+    from {
+        opacity: 0;
 
-opacity: 0;
+        transform:
+            translate(-50%,-25px);
+    }
 
-transform: translate(-50%,-25px); }
+    to {
+        opacity: 1;
 
-to {
+        transform:
+            translate(-50%,0);
+    }
+}
 
-opacity: 1;
-
-transform: translate(-50%,0); } }
 
 @keyframes gradientMove {
 
-0% { background-position: 0% 50%; }
+    0% {
+        background-position:
+            0% 50%;
+    }
 
-50% { background-position: 100% 50%; }
+    50% {
+        background-position:
+            100% 50%;
+    }
 
-100% { background-position: 0% 50%; } }
+    100% {
+        background-position:
+            0% 50%;
+    }
+}
+
 
 @keyframes floatOrb {
 
-0%,100% {
+    0%,100% {
+        transform:
+            translate(0,0)
+            scale(1);
+    }
 
-transform: translate(0,0) scale(1); }
+    50% {
+        transform:
+            translate(35px,-45px)
+            scale(1.1);
+    }
+}
 
-50% {
 
-transform: translate(35px,-45px) scale(1.1); } }
-
-/* ===================================================== TABLET ===================================================== */
+/* =====================================================
+   TABLET
+===================================================== */
 
 @media (max-width: 900px) {
 
-.navbar {
+    .navbar {
+        width: 94%;
 
-width: 94%;
+        padding:
+            10px 16px;
+    }
 
-padding: 10px 16px; }
+    .logo img {
+        width: 140px;
+    }
 
-.logo img {
+    .nav-links a {
+        padding:
+            9px 9px;
 
-width: 140px; }
+        font-size: 11px;
+    }
 
-.nav-links a {
+    .quick-services {
+        grid-template-columns:
+            repeat(2,1fr);
+    }
 
-padding: 9px 9px;
+    .destinations {
+        grid-template-columns:
+            repeat(2,1fr);
+    }
 
-font-size: 11px; }
-
-.quick-services {
-
-grid-template-columns: repeat(2,1fr); }
-
-.destinations {
-
-grid-template-columns: repeat(2,1fr); }
-
-.why-grid {
-
-grid-template-columns: 1fr; }
-
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
-/* ===================================================== MOBILE ===================================================== */
+
+/* =====================================================
+   MOBILE
+===================================================== */
 
 @media (max-width: 600px) {
 
-/* NAVBAR */
+    /* NAVBAR */
 
-.navbar {
+    .navbar {
+        position: absolute;
 
-position: absolute;
+        top: 10px;
+        left: 3%;
 
-top: 10px;
+        transform: none;
 
-left: 3%;
+        width: 94%;
 
-transform: none;
+        min-height: auto;
 
-width: 94%;
+        padding:
+            12px 8px;
 
-min-height: auto;
+        flex-direction: column;
 
-padding: 12px 10px;
+        justify-content: center;
 
-flex-direction: column;
+        gap: 10px;
 
-justify-content: center;
+        border-radius: 22px;
+    }
 
-gap: 9px;
 
-border-radius: 22px; }
+    /* Bigger mobile logo */
 
-/* BIGGER LOGO */
+    .logo img {
+        width: 155px;
+        max-width: 100%;
+    }
 
-.logo img {
 
-width: 145px;
+    /* Mobile navigation */
 
-max-width: 100%; }
+    .nav-links {
+        width: 100%;
 
-/* MOBILE NAV */
+        display: grid;
 
-.nav-links {
+        grid-template-columns:
+            repeat(5, 1fr);
 
-width: 100%;
+        align-items: center;
 
-display: flex;
+        justify-items: center;
 
-flex-wrap: wrap;
+        gap: 2px;
+    }
 
-justify-content: center;
+    .nav-links li {
+        width: 100%;
 
-align-items: center;
+        text-align: center;
+    }
 
-gap: 3px; }
+    .nav-links a {
+        display: block;
 
-.nav-links li {
+        width: 100%;
 
-flex-shrink: 0; }
+        padding:
+            8px 2px;
 
-.nav-links a {
+        font-size: 9px;
 
-padding: 7px 8px;
+        white-space: nowrap;
+    }
 
-font-size: 9px;
 
-white-space: nowrap; }
+    /* HERO */
 
-/* HERO */
+    .hero {
+        min-height: auto;
 
-.hero {
+        padding:
+            235px 18px 90px;
+    }
 
-min-height: auto;
+    .hero h1 {
+        font-size:
+            clamp(48px,15vw,75px);
 
-padding: 220px 18px 90px; }
+        letter-spacing: -3px;
+    }
 
-.hero h1 {
+    .hero p {
+        font-size: 15px;
 
-font-size: clamp( 48px, 15vw, 75px );
+        line-height: 1.7;
 
-letter-spacing: -3px; }
+        margin:
+            25px auto;
+    }
 
-.hero p {
+    .eyebrow {
+        font-size: 10px;
 
-font-size: 15px;
+        letter-spacing: 2px;
+    }
 
-line-height: 1.7;
 
-margin: 25px auto; }
+    /* BUTTONS */
 
-.eyebrow {
+    .button-row {
+        flex-direction: column;
 
-font-size: 10px;
+        width: 100%;
+    }
 
-letter-spacing: 2px; }
+    .primary-btn,
+    .secondary-btn {
+        width: 100%;
 
-/* BUTTONS */
+        max-width: 280px;
+    }
 
-.button-row {
 
-flex-direction: column;
+    /* QUICK SERVICES */
 
-width: 100%; }
+    .quick-services {
+        width: 92%;
 
-.primary-btn, .secondary-btn {
+        margin:
+            0 auto;
 
-width: 100%;
+        grid-template-columns:
+            repeat(2,1fr);
 
-max-width: 280px; }
+        gap: 10px;
+    }
 
-/* QUICK SERVICES */
+    .quick-card {
+        padding:
+            20px 10px;
+    }
 
-.quick-services {
 
-width: 92%;
+    /* SECTIONS */
 
-margin: 0 auto;
+    .section {
+        width: 92%;
 
-grid-template-columns: repeat(2,1fr);
+        padding:
+            75px 0;
+    }
 
-gap: 10px; }
+    .section-heading {
+        margin-bottom: 30px;
+    }
 
-.quick-card {
+    .section-heading h2 {
+        font-size: 40px;
+    }
 
-padding: 20px 10px; }
 
-/* SECTIONS */
+    /* DESTINATIONS */
 
-.section {
+    .destinations {
+        grid-template-columns: 1fr;
+    }
 
-width: 92%;
+    .destination {
+        min-height: 280px;
+    }
 
-padding: 75px 0; }
 
-.section-heading {
+    /* WHY */
 
-margin-bottom: 30px; }
+    .glass-card {
+        padding: 28px;
+    }
 
-.section-heading h2 {
+    .stats {
+        grid-template-columns: 1fr;
 
-font-size: 40px; }
+        gap: 10px;
+    }
 
-/* DESTINATIONS */
 
-.destinations {
+    /* CTA */
 
-grid-template-columns: 1fr; }
+    .cta {
+        width: 92%;
 
-.destination {
+        margin-bottom: 60px;
 
-height: 300px; }
-
-/* WHY */
-
-.glass-card {
-
-padding: 28px; }
-
-.stats {
-
-grid-template-columns: 1fr;
-
-gap: 10px; }
-
-/* CTA */
-
-.cta {
-
-width: 92%;
-
-margin-bottom: 60px;
-
-padding: 60px 20px; }
-
+        padding:
+            60px 20px;
+    }
 }
 
-/* ===================================================== SMALL PHONES ===================================================== */
+
+/* =====================================================
+   SMALL PHONES
+===================================================== */
 
 @media (max-width: 380px) {
 
-.navbar {
+    .navbar {
+        width: 95%;
 
-width: 95%;
+        left: 2.5%;
 
-left: 2.5%;
+        padding:
+            10px 5px;
+    }
 
-padding: 10px 6px; }
+    .logo img {
+        width: 135px;
+    }
 
-.logo img {
+    .nav-links {
+        gap: 1px;
+    }
 
-width: 130px; }
+    .nav-links a {
+        padding:
+            6px 1px;
 
-.nav-links {
+        font-size: 8px;
+    }
 
-gap: 1px; }
+    .hero {
+        padding-top:
+            220px;
+    }
 
-.nav-links a {
-
-padding: 6px 6px;
-
-font-size: 8px; }
-
-.hero {
-
-padding-top: 210px; }
-
-.hero h1 {
-
-font-size: 45px; }
-
+    .hero h1 {
+        font-size: 45px;
+    }
 }
 
-/* ===================================================== REDUCED MOTION ===================================================== */
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
 
 @media (prefers-reduced-motion: reduce) {
 
-, ::before, *::after {
+    *,
+    *::before,
+    *::after {
 
-animation-duration: 0.01ms !important;
+        animation-duration:
+            0.01ms !important;
 
-animation-iteration-count: 1 !important;
+        animation-iteration-count:
+            1 !important;
 
-scroll-behavior: auto !important;
+        scroll-behavior:
+            auto !important;
 
-transition-duration: 0.01ms !important; }
-
+        transition-duration:
+            0.01ms !important;
+    }
 }
 
 </style>
 
 </head>
 
+
 <body>
 
-<!-- ===================================================== NAVIGATION ===================================================== -->
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
 
 <nav class="navbar">
 
-<a href="index.html" class="logo">
+    <a href="index.html" class="logo">
 
-<img src="ohom.png" alt="Travspro Holidays Logo" >
+        <img
+            src="ohom.png"
+            alt="Travspro Holidays Logo"
+        >
 
-</a>
+    </a>
 
-<ul class="nav-links">
 
-<li> <a href="index.html" class="active"> HOME </a> </li>
+    <ul class="nav-links">
 
-<li> <a href="tourPackage.html"> TOURS </a> </li>
+        <li>
+            <a
+                href="index.html"
+                class="active"
+            >
+                HOME
+            </a>
+        </li>
 
-<li> <a href="ourservice.html"> SERVICES </a> </li>
+        <li>
+            <a href="tourPackage.html">
+                TOURS
+            </a>
+        </li>
 
-<li> <a href="about.html"> ABOUT </a> </li>
+        <li>
+            <a href="ourservice.html">
+                SERVICES
+            </a>
+        </li>
 
-<li> <a href="contactus.html"> CONTACT </a> </li>
+        <li>
+            <a href="about.html">
+                ABOUT
+            </a>
+        </li>
 
-</ul>
+        <li>
+            <a href="contactus.html">
+                CONTACT
+            </a>
+        </li>
+
+    </ul>
 
 </nav>
 
-<!-- ===================================================== HERO ===================================================== -->
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
 
 <section class="hero">
 
-<div class="orb orb-one"></div>
+    <div class="orb orb-one"></div>
 
-<div class="orb orb-two"></div>
+    <div class="orb orb-two"></div>
 
-<div class="hero-content">
 
-<div class="eyebrow">
+    <div class="hero-content">
 
-TRAVSPRO HOLIDAYS • SINCE 2019
+        <div class="eyebrow">
 
-</div>
+            TRAVSPRO HOLIDAYS • SINCE 2019
 
-<h1>
+        </div>
 
-Travel
 
-<span> Without Limits. </span>
+        <h1>
 
-</h1>
+            Travel
 
-<p>
+            <span>
+                Without Limits.
+            </span>
 
-Discover unforgettable destinations, comfortable stays and seamless travel experiences with Travspro Holidays.
+        </h1>
 
-From flights and hotels to complete tour packages, we help make your journey simpler and stress-free.
 
-</p>
+        <p>
 
-<div class="button-row">
+            Discover unforgettable destinations,
+            comfortable stays and seamless travel
+            experiences with Travspro Holidays.
 
-<a href="tourPackage.html" class="primary-btn">
+            From flights and hotels to complete tour
+            packages, we help make your journey
+            simpler and stress-free.
 
-Explore Tours →
+        </p>
 
-</a>
 
-<a href="https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20want%20help%20planning%20my%20trip." target="_blank" class="secondary-btn">
+        <div class="button-row">
 
-WhatsApp Us
+            <a
+                href="tourPackage.html"
+                class="primary-btn"
+            >
+                Explore Tours →
+            </a>
 
-</a>
 
-</div>
+            <a
+                href="https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20want%20help%20planning%20my%20trip."
+                target="_blank"
+                rel="noopener"
+                class="secondary-btn"
+            >
+                WhatsApp Us
+            </a>
 
-</div>
+        </div>
+
+    </div>
 
 </section>
 
-<!-- ===================================================== QUICK SERVICES ===================================================== -->
+
+
+<!-- =====================================================
+     QUICK SERVICES
+===================================================== -->
 
 <section class="quick-services">
 
-<div class="quick-card">
 
-<div class="quick-icon"> ✈️ </div>
+    <div class="quick-card">
 
-<h3> Flight Tickets </h3>
+        <div class="quick-icon">
+            ✈️
+        </div>
 
-<p> Best deals </p>
+        <h3>
+            Flight Tickets
+        </h3>
 
-</div>
+        <p>
+            Best deals
+        </p>
 
-<div class="quick-card">
+    </div>
 
-<div class="quick-icon"> 🏨 </div>
 
-<h3> Hotels </h3>
+    <div class="quick-card">
 
-<p> Comfortable stays </p>
+        <div class="quick-icon">
+            🏨
+        </div>
 
-</div>
+        <h3>
+            Hotels
+        </h3>
 
-<div class="quick-card">
+        <p>
+            Comfortable stays
+        </p>
 
-<div class="quick-icon"> 🚆 </div>
+    </div>
 
-<h3> Railway </h3>
 
-<p> Easy booking </p>
+    <div class="quick-card">
 
-</div>
+        <div class="quick-icon">
+            🚆
+        </div>
 
-<div class="quick-card">
+        <h3>
+            Railway
+        </h3>
 
-<div class="quick-icon"> 🏔️ </div>
+        <p>
+            Easy booking
+        </p>
 
-<h3> Tour Packages </h3>
+    </div>
 
-<p> Explore more </p>
 
-</div>
+    <div class="quick-card">
+
+        <div class="quick-icon">
+            🏔️
+        </div>
+
+        <h3>
+            Tour Packages
+        </h3>
+
+        <p>
+            Explore more
+        </p>
+
+    </div>
+
 
 </section>
 
-<!-- ===================================================== DESTINATIONS ===================================================== -->
+
+
+<!-- =====================================================
+     DESTINATIONS
+===================================================== -->
 
 <section class="section">
 
-<div class="section-heading">
 
-<small> Explore </small>
+    <div class="section-heading">
 
-<h2> Find Your<br> Next Escape. </h2>
+        <small>
+            Explore
+        </small>
 
-<p>
 
-From the mountains of Himachal to unforgettable destinations across India, discover places worth experiencing.
+        <h2>
 
-</p>
+            Find Your
+            <br>
 
-</div>
+            Next Escape.
 
-<div class="destinations">
+        </h2>
 
-<!-- MANALI -->
 
-<a href="tourPackage.html" class="destination">
+        <p>
 
-<img src="ktk.jpg" alt="Manali" >
+            From the mountains of Himachal to
+            unforgettable destinations across India,
+            discover places worth experiencing.
 
-<div class="destination-overlay">
+        </p>
 
-<h3> Manali </h3>
+    </div>
 
-<p> Mountains • Adventure • Snow </p>
 
-</div>
 
-</a>
+    <div class="destinations">
 
-<!-- HIMACHAL -->
 
-<a href="tourPackage.html" class="destination">
+        <!-- MANALI -->
 
-<img src="whtbck.jpg" alt="Himachal Pradesh" >
+        <a
+            href="tourPackage.html"
+            class="destination"
+        >
 
-<div class="destination-overlay">
+            <div class="destination-content">
 
-<h3> Himachal </h3>
+                <div class="destination-icon">
+                    🏔️
+                </div>
 
-<p> Valleys • Nature • Experiences </p>
+                <h3>
+                    Manali
+                </h3>
 
-</div>
+                <p>
+                    Mountains • Adventure • Snow
+                </p>
 
-</a>
+            </div>
 
-<!-- CUSTOM -->
+        </a>
 
-<a href="ourservice.html" class="destination">
 
-<img src="tps.jpg" alt="Travel Experiences" >
 
-<div class="destination-overlay">
+        <!-- HIMACHAL -->
 
-<h3> Your Next Trip </h3>
+        <a
+            href="tourPackage.html"
+            class="destination"
+        >
 
-<p> Customized Travel Experiences </p>
+            <div class="destination-content">
 
-</div>
+                <div class="destination-icon">
+                    🌲
+                </div>
 
-</a>
+                <h3>
+                    Himachal
+                </h3>
 
-</div>
+                <p>
+                    Valleys • Nature • Experiences
+                </p>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- CUSTOM TRIPS -->
+
+        <a
+            href="ourservice.html"
+            class="destination"
+        >
+
+            <div class="destination-content">
+
+                <div class="destination-icon">
+                    ✨
+                </div>
+
+                <h3>
+                    Your Next Trip
+                </h3>
+
+                <p>
+                    Customized Travel Experiences
+                </p>
+
+            </div>
+
+        </a>
+
+
+    </div>
 
 </section>
 
-<!-- ===================================================== WHY TRAVSPRO ===================================================== -->
+
+
+<!-- =====================================================
+     WHY TRAVSPRO
+===================================================== -->
 
 <section class="section">
 
-<div class="section-heading">
 
-<small> Why Travspro </small>
+    <div class="section-heading">
 
-<h2> More Than<br> Just A Journey. </h2>
+        <small>
+            Why Travspro
+        </small>
 
-</div>
 
-<div class="why-grid">
+        <h2>
 
-<div class="glass-card">
+            More Than
+            <br>
 
-<h3> Your Journey. Our Expertise. </h3>
+            Just A Journey.
 
-<p>
+        </h2>
 
-Travspro Holidays is a travel and tour service provider based in Manali, Himachal Pradesh.
+    </div>
 
-Since 2019, we have been helping travellers arrange flights, hotels, transportation, tour packages and other travel requirements.
 
-<br><br>
 
-Our goal is simple:
+    <div class="why-grid">
 
-make travel easier, more convenient and more enjoyable.
 
-</p>
+        <!-- LEFT CARD -->
 
-<div class="stats">
+        <div class="glass-card">
 
-<div class="stat">
+            <h3>
+                Your Journey. Our Expertise.
+            </h3>
 
-<strong> 2019 </strong>
 
-<span> Established </span>
+            <p>
 
-</div>
+                Travspro Holidays is a travel and
+                tour service provider based in Manali,
+                Himachal Pradesh.
 
-<div class="stat">
+                Since 2019, we have been helping
+                travellers arrange flights, hotels,
+                transportation, tour packages and
+                other travel requirements.
 
-<strong> ∞ </strong>
+                <br><br>
 
-<span> Journeys </span>
+                Our goal is simple:
 
-</div>
+                make travel easier, more convenient
+                and more enjoyable.
 
-<div class="stat">
+            </p>
 
-<strong> 24/7 </strong>
 
-<span> Travel Dreams </span>
 
-</div>
+            <div class="stats">
 
-</div>
 
-</div>
+                <div class="stat">
 
-<div class="glass-card">
+                    <strong>
+                        2019
+                    </strong>
 
-<h3> Everything You Need </h3>
+                    <span>
+                        Established
+                    </span>
 
-<p>
+                </div>
 
-✈️ Flight Booking
 
-<br><br>
+                <div class="stat">
 
-🏨 Hotel Booking
+                    <strong>
+                        ∞
+                    </strong>
 
-<br><br>
+                    <span>
+                        Journeys
+                    </span>
 
-🚆 Railway Tickets
+                </div>
 
-<br><br>
 
-🚌 Volvo & Bus Booking
+                <div class="stat">
 
-<br><br>
+                    <strong>
+                        24/7
+                    </strong>
 
-🗺️ Tour Packages
+                    <span>
+                        Travel Dreams
+                    </span>
 
-<br><br>
+                </div>
 
-🏔️ Customized Trips
 
-<br><br>
+            </div>
 
-🚗 Car & Coach Rental
+        </div>
 
-<br><br>
 
-🛡️ Travel Insurance
 
-</p>
+        <!-- RIGHT CARD -->
 
-<br>
+        <div class="glass-card">
 
-<a href="ourservice.html" class="primary-btn">
+            <h3>
+                Everything You Need
+            </h3>
 
-View All Services →
 
-</a>
+            <p>
 
-</div>
+                ✈️ Flight Booking
 
-</div>
+                <br><br>
+
+                🏨 Hotel Booking
+
+                <br><br>
+
+                🚆 Railway Tickets
+
+                <br><br>
+
+                🚌 Volvo & Bus Booking
+
+                <br><br>
+
+                🗺️ Tour Packages
+
+                <br><br>
+
+                🏔️ Customized Trips
+
+                <br><br>
+
+                🚗 Car & Coach Rental
+
+                <br><br>
+
+                🛡️ Travel Insurance
+
+            </p>
+
+
+            <br>
+
+
+            <a
+                href="ourservice.html"
+                class="primary-btn"
+            >
+
+                View All Services →
+
+            </a>
+
+        </div>
+
+
+    </div>
 
 </section>
 
-<!-- ===================================================== CTA ===================================================== -->
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
 
 <section class="cta">
 
-<h2> Where Will You Go Next? </h2>
 
-<p>
+    <h2>
+        Where Will You Go Next?
+    </h2>
 
-Have a destination in mind?
 
-Tell us what you need and let Travspro Holidays help you plan your next journey.
+    <p>
 
-</p>
+        Have a destination in mind?
 
-<a href="https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20want%20to%20plan%20a%20trip." target="_blank" class="primary-btn">
+        Tell us what you need and let
+        Travspro Holidays help you plan
+        your next journey.
 
-Start Your Journey →
+    </p>
 
-</a>
+
+    <a
+        href="https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20want%20to%20plan%20a%20trip."
+        target="_blank"
+        rel="noopener"
+        class="primary-btn"
+    >
+
+        Start Your Journey →
+
+    </a>
+
 
 </section>
 
-<!-- ===================================================== FOOTER ===================================================== -->
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer>
 
-<img src="ohom.png" alt="Travspro Holidays Logo"
 
-<p> Your Trusted Travel Partner </p>
+    <img
+        src="ohom.png"
+        alt="Travspro Holidays Logo"
+    >
 
-<br>
 
-<p>
+    <p>
+        Your Trusted Travel Partner
+    </p>
 
-© 2026 <strong> Travspro Holidays </strong>.
 
-All rights reserved.
+    <br>
 
-</p>
+
+    <p>
+
+        © 2026
+        <strong>
+            Travspro Holidays
+        </strong>.
+
+        All rights reserved.
+
+    </p>
+
 
 </footer>
+
 
 </body>
 
