@@ -1,0 +1,1501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Malaysia Tour Package | Travspro Holidays</title>
+
+<meta name="description" content="Explore Malaysia with Travspro Holidays. Discover Kuala Lumpur, Petronas Twin Towers, Genting Highlands, Batu Caves, Langkawi and customised Malaysia holiday packages.">
+
+<style>
+
+/* ========================= GLOBAL ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 110px;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #050816;
+    color: white;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ========================= FUTURISTIC BACKGROUND ========================= */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(0, 229, 255, 0.14),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 30%,
+            rgba(124, 77, 255, 0.17),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 50% 90%,
+            rgba(0, 255, 170, 0.08),
+            transparent 30%
+        ),
+        #050816;
+}
+
+/* GRID BACKGROUND */
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,0.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.025) 1px,
+            transparent 1px
+        );
+
+    background-size: 50px 50px;
+
+    mask-image: linear-gradient(
+        to bottom,
+        black,
+        transparent
+    );
+}
+
+/* ========================= NAVBAR ========================= */
+
+.navbar {
+    position: sticky;
+    top: 15px;
+    z-index: 1000;
+
+    width: min(1150px, 94%);
+    margin: 15px auto 0;
+    padding: 12px 22px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(8, 14, 35, 0.72);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 50px;
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+
+    animation: navDrop 0.8s ease;
+}
+
+/* LOGO */
+
+.logo img {
+    width: 120px;
+    height: auto;
+    display: block;
+    transition: 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.06);
+    filter: drop-shadow(
+        0 0 15px rgba(0,229,255,.5)
+    );
+}
+
+/* NAV LINKS */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    list-style: none;
+}
+
+.nav-links a {
+    display: block;
+    padding: 10px 16px;
+    border-radius: 30px;
+
+    color: #cbd3e6;
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: white;
+    background: rgba(0,229,255,.10);
+    box-shadow: 0 0 20px rgba(0,229,255,.10);
+}
+
+.nav-links .active {
+    color: #00eaff;
+    background: rgba(0,229,255,.08);
+}
+
+/* ========================= MALAYSIA HEADER ========================= */
+
+.malaysia-header {
+    width: min(1100px, 92%);
+    margin: auto;
+    padding: 75px 0 45px;
+    text-align: center;
+
+    animation: fadeUp 1s ease;
+}
+
+.eyebrow {
+    display: inline-block;
+    margin-bottom: 18px;
+    padding: 8px 18px;
+
+    border: 1px solid rgba(0,229,255,.25);
+    border-radius: 30px;
+
+    color: #00eaff;
+    background: rgba(0,229,255,.05);
+
+    font-size: 12px;
+    letter-spacing: 4px;
+    font-weight: 700;
+}
+
+.malaysia-header h1 {
+    font-size: clamp(48px, 7vw, 85px);
+    line-height: 0.98;
+    letter-spacing: -4px;
+    margin-bottom: 25px;
+
+    background: linear-gradient(
+        120deg,
+        #ffffff,
+        #8befff,
+        #8d72ff,
+        #ffffff
+    );
+
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    animation: gradientMove 7s ease infinite;
+}
+
+.malaysia-header h1 span {
+    display: block;
+    color: #00eaff;
+    -webkit-text-fill-color: #00eaff;
+}
+
+.malaysia-header p {
+    max-width: 720px;
+    margin: auto;
+
+    color: #9da7bd;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* ========================= HERO IMAGE ========================= */
+
+.hero-image-section {
+    width: min(1150px, 92%);
+    margin: 0 auto 65px;
+    position: relative;
+
+    animation: fadeUp 1.2s ease;
+}
+
+.hero-image {
+    width: 100%;
+    height: 470px;
+    object-fit: cover;
+    display: block;
+
+    border-radius: 28px;
+    border: 1px solid rgba(255,255,255,.15);
+
+    box-shadow: 0 25px 80px rgba(0,0,0,.35);
+}
+
+.image-overlay {
+    position: absolute;
+    inset: 0;
+
+    border-radius: 28px;
+
+    background: linear-gradient(
+        to top,
+        rgba(5,8,22,.95),
+        rgba(5,8,22,.05) 65%
+    );
+
+    pointer-events: none;
+}
+
+.image-caption {
+    position: absolute;
+    left: 35px;
+    right: 35px;
+    bottom: 30px;
+
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.image-caption h2 {
+    font-size: clamp(24px, 4vw, 40px);
+    margin-bottom: 5px;
+}
+
+.image-caption p {
+    color: #c0cbe0;
+    font-size: 14px;
+}
+
+.caption-tag {
+    padding: 9px 16px;
+
+    border: 1px solid rgba(255,255,255,.2);
+    background: rgba(255,255,255,.09);
+
+    backdrop-filter: blur(15px);
+    border-radius: 30px;
+
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+/* ========================= HIGHLIGHTS ========================= */
+
+.highlights {
+    width: min(1100px, 92%);
+    margin: 0 auto 80px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.highlight-card {
+    padding: 22px 15px;
+    text-align: center;
+
+    background: linear-gradient(
+        145deg,
+        rgba(255,255,255,.065),
+        rgba(255,255,255,.018)
+    );
+
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 20px;
+
+    backdrop-filter: blur(15px);
+    transition: .3s ease;
+}
+
+.highlight-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0,229,255,.35);
+}
+
+.highlight-icon {
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.highlight-card h3 {
+    color: #00eaff;
+    font-size: 17px;
+    margin-bottom: 4px;
+}
+
+.highlight-card p {
+    color: #929db3;
+    font-size: 12px;
+}
+
+/* ========================= SECTION HEADINGS ========================= */
+
+.section-heading {
+    width: min(1100px, 92%);
+    margin: 0 auto 35px;
+}
+
+.section-heading .eyebrow {
+    margin-bottom: 15px;
+}
+
+.section-heading h2 {
+    font-size: clamp(35px, 5vw, 58px);
+    line-height: 1.05;
+    letter-spacing: -2px;
+    margin-bottom: 18px;
+
+    background: linear-gradient(
+        120deg,
+        #ffffff,
+        #8befff,
+        #a18bff
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.section-heading p {
+    max-width: 700px;
+    color: #9da7bd;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* ========================= ITINERARY ========================= */
+
+.itinerary-section {
+    width: min(1150px, 92%);
+    margin: auto;
+    padding-bottom: 100px;
+}
+
+.itinerary-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.day-card {
+    position: relative;
+    padding: 30px;
+    overflow: hidden;
+
+    background: linear-gradient(
+        145deg,
+        rgba(255,255,255,.065),
+        rgba(255,255,255,.018)
+    );
+
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 25px;
+
+    backdrop-filter: blur(15px);
+
+    transition:
+        transform .4s ease,
+        border-color .4s ease,
+        box-shadow .4s ease;
+
+    opacity: 0;
+    transform: translateY(35px);
+
+    animation: cardReveal .8s ease forwards;
+}
+
+.day-card:nth-child(1) { animation-delay: .10s; }
+.day-card:nth-child(2) { animation-delay: .18s; }
+.day-card:nth-child(3) { animation-delay: .26s; }
+.day-card:nth-child(4) { animation-delay: .34s; }
+.day-card:nth-child(5) { animation-delay: .42s; }
+.day-card:nth-child(6) { animation-delay: .50s; }
+
+.day-card::before {
+    content: "";
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    right: -100px;
+    top: -100px;
+
+    border-radius: 50%;
+    background: #00eaff;
+    opacity: .05;
+
+    transition: .5s ease;
+}
+
+.day-card:hover::before {
+    transform: scale(2);
+    opacity: .10;
+}
+
+.day-card:hover {
+    transform: translateY(-8px);
+
+    border-color: rgba(0,229,255,.35);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.35),
+        0 0 30px rgba(0,229,255,.08);
+}
+
+.day-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.day-number {
+    color: #00eaff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.day-icon {
+    width: 55px;
+    height: 55px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 17px;
+
+    background: rgba(0,229,255,.08);
+    border: 1px solid rgba(0,229,255,.15);
+
+    font-size: 27px;
+}
+
+.day-card h3 {
+    font-size: 23px;
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.day-card p {
+    color: #929db3;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.activity-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    position: relative;
+}
+
+.activity-tags span {
+    display: inline-block;
+    padding: 6px 11px;
+
+    border-radius: 20px;
+
+    background: rgba(0,229,255,.06);
+    border: 1px solid rgba(0,229,255,.12);
+
+    color: #b7eaff;
+    font-size: 11px;
+}
+
+/* ========================= DESTINATIONS ========================= */
+
+.destinations-section {
+    width: min(1150px, 92%);
+    margin: auto;
+    padding-bottom: 100px;
+}
+
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.destination-card {
+    overflow: hidden;
+
+    border-radius: 24px;
+
+    background: linear-gradient(
+        145deg,
+        rgba(255,255,255,.065),
+        rgba(255,255,255,.018)
+    );
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    transition: .4s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(0,229,255,.35);
+
+    box-shadow: 0 20px 50px rgba(0,0,0,.3);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+
+    transition: transform .5s ease;
+}
+
+.destination-card:hover img {
+    transform: scale(1.05);
+}
+
+.destination-content {
+    padding: 23px;
+}
+
+.destination-content h3 {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.destination-content p {
+    color: #929db3;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* ========================= PACKAGE FEATURES ========================= */
+
+.features-section {
+    width: min(1150px, 92%);
+    margin: auto;
+    padding-bottom: 100px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.feature-card {
+    padding: 28px;
+
+    background: linear-gradient(
+        145deg,
+        rgba(255,255,255,.065),
+        rgba(255,255,255,.018)
+    );
+
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 23px;
+
+    transition: .3s ease;
+}
+
+.feature-card:hover {
+    border-color: rgba(0,229,255,.35);
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 18px;
+
+    background: rgba(0,229,255,.08);
+    border: 1px solid rgba(0,229,255,.12);
+
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: #929db3;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* ========================= WHATSAPP BUTTON ========================= */
+
+.whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 13px 22px;
+    border-radius: 30px;
+
+    background: linear-gradient(
+        90deg,
+        #16c96b,
+        #25D366
+    );
+
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+
+    transition: .3s ease;
+}
+
+.whatsapp-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 25px rgba(37,211,102,.4);
+}
+
+/* ========================= CTA ========================= */
+
+.cta {
+    width: min(1100px, 92%);
+    margin: 0 auto 100px;
+    padding: 70px 30px;
+
+    text-align: center;
+
+    border-radius: 30px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(0,229,255,.08),
+        rgba(105,70,255,.10)
+    );
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    position: relative;
+    overflow: hidden;
+}
+
+.cta::before {
+    content: "";
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%,-50%);
+
+    border-radius: 50%;
+    background: #00eaff;
+    opacity: .05;
+    filter: blur(50px);
+}
+
+.cta h2 {
+    position: relative;
+    font-size: clamp(35px, 5vw, 60px);
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    position: relative;
+
+    max-width: 650px;
+    margin: auto auto 28px;
+
+    color: #9da7bd;
+    line-height: 1.8;
+}
+
+.cta .whatsapp-btn {
+    position: relative;
+    padding: 15px 28px;
+}
+
+/* ========================= FOOTER ========================= */
+
+footer {
+    padding: 40px 20px;
+    text-align: center;
+
+    border-top: 1px solid rgba(255,255,255,.06);
+
+    color: #687289;
+    font-size: 14px;
+}
+
+footer img {
+    width: 130px;
+    margin-bottom: 15px;
+}
+
+footer strong {
+    color: #00eaff;
+}
+
+/* ========================= FLOATING WHATSAPP ========================= */
+
+.floating-whatsapp {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 14px 20px;
+    border-radius: 40px;
+
+    background: linear-gradient(
+        90deg,
+        #16c96b,
+        #25D366
+    );
+
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+
+    box-shadow: 0 10px 35px rgba(0,0,0,.35);
+
+    transition: .3s ease;
+}
+
+.floating-whatsapp:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(37,211,102,.35);
+}
+
+/* ========================= ANIMATIONS ========================= */
+
+@keyframes navDrop {
+    from {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes cardReveal {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ========================= ACCESSIBILITY ========================= */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .day-card {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* ========================= TABLET ========================= */
+
+@media (max-width: 850px) {
+    .navbar {
+        width: 95%;
+        padding: 10px 15px;
+    }
+
+    .logo img {
+        width: 90px;
+    }
+
+    .nav-links a {
+        padding: 8px 9px;
+        font-size: 10px;
+    }
+
+    .itinerary-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .destinations-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-image {
+        height: 380px;
+    }
+}
+
+/* ========================= MOBILE ========================= */
+
+@media (max-width: 600px) {
+    .navbar {
+        border-radius: 20px;
+        flex-direction: column;
+        gap: 8px;
+        padding: 12px;
+    }
+
+    .logo img {
+        width: 110px;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .nav-links a {
+        font-size: 10px;
+        padding: 7px 9px;
+    }
+
+    .malaysia-header {
+        padding: 60px 0 35px;
+    }
+
+    .malaysia-header h1 {
+        letter-spacing: -2px;
+    }
+
+    .malaysia-header p {
+        font-size: 14px;
+    }
+
+    .hero-image-section {
+        margin-bottom: 40px;
+    }
+
+    .hero-image {
+        height: 320px;
+        border-radius: 20px;
+    }
+
+    .image-overlay {
+        border-radius: 20px;
+    }
+
+    .image-caption {
+        left: 18px;
+        right: 18px;
+        bottom: 20px;
+
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .image-caption p {
+        font-size: 12px;
+    }
+
+    .caption-tag {
+        font-size: 10px;
+    }
+
+    .highlights {
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 55px;
+    }
+
+    .itinerary-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .destinations-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .day-card {
+        padding: 25px;
+    }
+
+    .day-card h3 {
+        font-size: 21px;
+    }
+
+    .cta {
+        margin-bottom: 60px;
+        padding: 55px 20px;
+    }
+
+    .floating-whatsapp {
+        right: 12px;
+        bottom: 12px;
+        padding: 12px 16px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ========================= NAVIGATION ========================= -->
+
+<nav class="navbar">
+
+    <a href="index.html" class="logo">
+        <img src="ohom.png" alt="Travspro Holidays Logo">
+    </a>
+
+    <ul class="nav-links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="tourPackage.html" class="active">TOURS</a></li>
+        <li><a href="ourservice.html">SERVICES</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="contactus.html">CONTACT</a></li>
+    </ul>
+
+</nav>
+
+<!-- ========================= MALAYSIA HEADER ========================= -->
+
+<section class="malaysia-header">
+
+    <div class="eyebrow">TRAVSPRO HOLIDAYS</div>
+
+    <h1>
+        Discover <span>Malaysia.</span>
+    </h1>
+
+    <p>
+        From Kuala Lumpur's futuristic skyline to the cool
+        mountain air of Genting Highlands and the tropical
+        beauty of Langkawi, discover Malaysia's remarkable
+        blend of modern cities, rich culture, natural beauty
+        and unforgettable adventures.
+    </p>
+
+</section>
+
+<!-- ========================= HERO IMAGE ========================= -->
+
+<section class="hero-image-section">
+
+    <img
+        class="hero-image"
+        src="https://images.unsplash.com/photo-1596422846543-75c6fc197f07?auto=format&fit=crop&w=1800&q=85"
+        alt="Malaysia city skyline and tropical travel destination"
+        fetchpriority="high"
+    >
+
+    <div class="image-overlay"></div>
+
+    <div class="image-caption">
+
+        <div>
+            <h2>Your Malaysia Escape</h2>
+            <p>Modern skylines. Tropical islands. Extraordinary memories.</p>
+        </div>
+
+        <span class="caption-tag">
+            EXPLORE MALAYSIA
+        </span>
+
+    </div>
+
+</section>
+
+<!-- ========================= TRIP HIGHLIGHTS ========================= -->
+
+<section class="highlights">
+
+    <div class="highlight-card">
+        <div class="highlight-icon">🏙️</div>
+        <h3>City Life</h3>
+        <p>Iconic towers & shopping</p>
+    </div>
+
+    <div class="highlight-card">
+        <div class="highlight-icon">⛰️</div>
+        <h3>Highlands</h3>
+        <p>Mountain views & attractions</p>
+    </div>
+
+    <div class="highlight-card">
+        <div class="highlight-icon">🏝️</div>
+        <h3>Tropical Islands</h3>
+        <p>Beaches & island escapes</p>
+    </div>
+
+    <div class="highlight-card">
+        <div class="highlight-icon">🍜</div>
+        <h3>Local Flavours</h3>
+        <p>Culture & Malaysian cuisine</p>
+    </div>
+
+</section>
+
+<!-- ========================= MALAYSIA ITINERARY ========================= -->
+
+<section class="itinerary-section" id="itinerary">
+
+    <div class="section-heading">
+
+        <div class="eyebrow">YOUR JOURNEY</div>
+
+        <h2>Malaysia, Day by Day.</h2>
+
+        <p>
+            Explore Malaysia with this suggested five-day itinerary.
+            Experience Kuala Lumpur's landmarks, discover Genting
+            Highlands and enjoy shopping, local cuisine and cultural
+            attractions. The itinerary can be customised to match
+            your preferred destinations and travel dates.
+        </p>
+
+    </div>
+
+    <div class="itinerary-grid">
+
+        <!-- DAY 01 -->
+
+        <div class="day-card">
+
+            <div class="day-top">
+                <span class="day-number">DAY 01 / ARRIVAL</span>
+                <div class="day-icon">✈️</div>
+            </div>
+
+            <h3>Welcome to Malaysia</h3>
+
+            <p>
+                Arrive at Kuala Lumpur International Airport
+                and transfer to your hotel. Complete check-in,
+                relax after your journey and explore nearby
+                restaurants or shopping areas if time permits.
+            </p>
+
+            <div class="activity-tags">
+                <span>Airport Transfer</span>
+                <span>Hotel Check-in</span>
+                <span>Leisure Time</span>
+            </div>
+
+        </div>
+
+        <!-- DAY 02 -->
+
+        <div class="day-card">
+
+            <div class="day-top">
+                <span class="day-number">DAY 02 / CITY EXPLORATION</span>
+                <div class="day-icon">🏙️</div>
+            </div>
+
+            <h3>Discover Kuala Lumpur</h3>
+
+            <p>
+                Explore Malaysia's vibrant capital. Admire the
+                Petronas Twin Towers, visit KLCC Park, discover
+                Merdeka Square and enjoy the city's famous
+                shopping and dining destinations.
+            </p>
+
+            <div class="activity-tags">
+                <span>Petronas Towers</span>
+                <span>KLCC Park</span>
+                <span>City Sightseeing</span>
+            </div>
+
+        </div>
+
+        <!-- DAY 03 -->
+
+        <div class="day-card">
+
+            <div class="day-top">
+                <span class="day-number">DAY 03 / HIGHLANDS</span>
+                <div class="day-icon">⛰️</div>
+            </div>
+
+            <h3>Genting Highlands Adventure</h3>
+
+            <p>
+                Enjoy a trip to Genting Highlands for cooler
+                mountain scenery, panoramic views and shopping.
+                Consider a cable car ride or selected
+                entertainment attractions, subject to availability.
+            </p>
+
+            <div class="activity-tags">
+                <span>Genting Highlands</span>
+                <span>Cable Car</span>
+                <span>Mountain Views</span>
+            </div>
+
+        </div>
+
+        <!-- DAY 04 -->
+
+        <div class="day-card">
+
+            <div class="day-top">
+                <span class="day-number">DAY 04 / CULTURE & SHOPPING</span>
+                <div class="day-icon">🛍️</div>
+            </div>
+
+            <h3>Batu Caves & Local Experiences</h3>
+
+            <p>
+                Visit the colourful Batu Caves, discover
+                Malaysian cultural heritage and explore
+                local markets. Spend time shopping for
+                souvenirs and tasting authentic Malaysian food.
+            </p>
+
+            <div class="activity-tags">
+                <span>Batu Caves</span>
+                <span>Local Markets</span>
+                <span>Malaysian Cuisine</span>
+            </div>
+
+        </div>
+
+        <!-- DAY 05 -->
+
+        <div class="day-card">
+
+            <div class="day-top">
+                <span class="day-number">DAY 05 / DEPARTURE</span>
+                <div class="day-icon">🌏</div>
+            </div>
+
+            <h3>Farewell to Malaysia</h3>
+
+            <p>
+                Enjoy breakfast and some leisure time before
+                checking out. Depending on your flight schedule,
+                enjoy some last-minute shopping before your
+                transfer to the airport for your return journey.
+            </p>
+
+            <div class="activity-tags">
+                <span>Breakfast</span>
+                <span>Shopping</span>
+                <span>Airport Transfer</span>
+            </div>
+
+        </div>
+
+        <!-- CUSTOM PACKAGE -->
+
+        <div class="day-card">
+
+            <div class="day-top">
+                <span class="day-number">YOUR JOURNEY / YOUR WAY</span>
+                <div class="day-icon">✨</div>
+            </div>
+
+            <h3>Customise Your Malaysia Holiday</h3>
+
+            <p>
+                Want more beach time in Langkawi, family fun
+                at LEGOLAND Malaysia, or extra days in Kuala
+                Lumpur? Ask our team about a personalised
+                itinerary based on your interests.
+            </p>
+
+            <div class="activity-tags">
+                <span>Langkawi</span>
+                <span>Family Holidays</span>
+                <span>Custom Packages</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================= TOP DESTINATIONS ========================= -->
+
+<section class="destinations-section" id="destinations">
+
+    <div class="section-heading">
+
+        <div class="eyebrow">EXPLORE MALAYSIA</div>
+
+        <h2>Three Ways to Experience Malaysia.</h2>
+
+        <p>
+            From impressive city architecture to cool mountain
+            retreats and beautiful island escapes, choose the
+            experiences that make your holiday special.
+        </p>
+
+    </div>
+
+    <div class="destinations-grid">
+
+        <!-- KUALA LUMPUR -->
+
+        <div class="destination-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1596422846543-75c6fc197f07?auto=format&fit=crop&w=900&q=80"
+                alt="Kuala Lumpur city skyline"
+                loading="lazy"
+            >
+
+            <div class="destination-content">
+                <h3>🏙️ Kuala Lumpur</h3>
+
+                <p>
+                    Explore the Petronas Twin Towers, city
+                    viewpoints, shopping malls, cultural
+                    attractions and a diverse food scene.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- GENTING HIGHLANDS -->
+
+        <div class="destination-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80"
+                alt="Mountain landscape representing a highland escape"
+                loading="lazy"
+            >
+
+            <div class="destination-content">
+                <h3>⛰️ Genting Highlands</h3>
+
+                <p>
+                    Enjoy mountain scenery, cool weather,
+                    shopping, entertainment and optional
+                    cable car experiences.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- LANGKAWI -->
+
+        <div class="destination-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=900&q=80"
+                alt="Beautiful tropical ocean and beach"
+                loading="lazy"
+            >
+
+            <div class="destination-content">
+                <h3>🏝️ Langkawi</h3>
+
+                <p>
+                    Discover tropical beaches, island
+                    scenery, boat excursions and relaxing
+                    coastal experiences.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================= PACKAGE BENEFITS ========================= -->
+
+<section class="features-section">
+
+    <div class="section-heading">
+
+        <div class="eyebrow">TRAVEL YOUR WAY</div>
+
+        <h2>A Holiday Designed Around You.</h2>
+
+        <p>
+            Travspro Holidays can help you enquire about a
+            Malaysia package based on your preferred dates,
+            accommodation, sightseeing and travel budget.
+        </p>
+
+    </div>
+
+    <div class="features-grid">
+
+        <div class="feature-card">
+
+            <div class="feature-icon">🏨</div>
+
+            <h3>Hotel Accommodation</h3>
+
+            <p>
+                Explore accommodation options for couples,
+                families and groups, depending on your
+                selected package and availability.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <div class="feature-icon">🚐</div>
+
+            <h3>Transfers & Sightseeing</h3>
+
+            <p>
+                Ask about airport transfers, local
+                transportation, city tours and highland
+                excursions for a convenient holiday.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <div class="feature-icon">💎</div>
+
+            <h3>Customised Packages</h3>
+
+            <p>
+                Choose your destinations, hotel preferences,
+                holiday duration and activities to create
+                a trip that suits your requirements.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================= BOOKING CTA ========================= -->
+
+<section class="cta" id="booking">
+
+    <div class="eyebrow">YOUR MALAYSIA STORY STARTS HERE</div>
+
+    <h2>Ready to Explore<br>Malaysia?</h2>
+
+    <p>
+        Tell us your preferred travel dates, number of travellers,
+        departure city and approximate budget. Contact Travspro
+        Holidays on WhatsApp to enquire about your Malaysia
+        tour package and receive further details.
+    </p>
+
+    <a
+        href="https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20want%20to%20enquire%20about%20the%20Malaysia%20Tour%20Package.%0A%0APreferred%20travel%20dates%3A%20%0ANumber%20of%20travellers%3A%20%0ADuration%3A%20%0ADeparture%20city%3A%20%0ABudget%3A%20"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="whatsapp-btn"
+    >
+        💬 Enquire on WhatsApp →
+    </a>
+
+</section>
+
+<!-- ========================= FOOTER ========================= -->
+
+<footer>
+
+    <img src="ohom.png" alt="Travspro Holidays Logo">
+
+    <p>
+        Your Trusted Travel Partner
+    </p>
+
+    <br>
+
+    <p>
+        © 2026 <strong>Travspro Holidays</strong>.
+        All rights reserved.
+    </p>
+
+</footer>
+
+<!-- ========================= FLOATING WHATSAPP ========================= -->
+
+<a
+    href="https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20am%20interested%20in%20your%20Malaysia%20Tour%20Package."
+    target="_blank"
+    rel="noopener noreferrer"
+    class="floating-whatsapp"
+    aria-label="Enquire about Malaysia tour packages on WhatsApp"
+>
+    💬 WhatsApp Us
+</a>
+
+</body>
+</html>
