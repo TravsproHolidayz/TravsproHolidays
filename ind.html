@@ -1,0 +1,1848 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>India Tour Packages | Travspro Holidays</title>
+
+<meta name="description" content="Explore India with Travspro Holidays. Discover Ladakh, Manali, Delhi, Agra, Rajasthan, Goa, Kerala, Kashmir and more with customised India tour packages.">
+
+<style>
+
+/* ========================= GLOBAL ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 110px;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #050816;
+    color: white;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ========================= FUTURISTIC BACKGROUND ========================= */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(0, 229, 255, 0.14),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 30%,
+            rgba(124, 77, 255, 0.17),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 50% 90%,
+            rgba(0, 255, 170, 0.08),
+            transparent 30%
+        ),
+        #050816;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,0.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.025) 1px,
+            transparent 1px
+        );
+
+    background-size: 50px 50px;
+
+    mask-image: linear-gradient(
+        to bottom,
+        black,
+        transparent
+    );
+}
+
+/* ========================= NAVBAR ========================= */
+
+.navbar {
+    position: sticky;
+    top: 15px;
+    z-index: 1000;
+
+    width: min(1150px, 94%);
+    margin: 15px auto 0;
+    padding: 12px 22px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(8, 14, 35, 0.72);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 50px;
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+
+    animation: navDrop 0.8s ease;
+}
+
+.logo img {
+    width: 120px;
+    height: auto;
+    display: block;
+    transition: 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.06);
+    filter: drop-shadow(
+        0 0 15px rgba(0,229,255,.5)
+    );
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    list-style: none;
+}
+
+.nav-links a {
+    display: block;
+    padding: 10px 16px;
+    border-radius: 30px;
+
+    color: #cbd3e6;
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: white;
+    background: rgba(0,229,255,.10);
+    box-shadow: 0 0 20px rgba(0,229,255,.10);
+}
+
+.nav-links .active {
+    color: #00eaff;
+    background: rgba(0,229,255,.08);
+}
+
+/* ========================= HERO HEADER ========================= */
+
+.india-header {
+    width: min(1100px, 92%);
+    margin: auto;
+    padding: 80px 0 45px;
+    text-align: center;
+
+    animation: fadeUp 1s ease;
+}
+
+.eyebrow {
+    display: inline-block;
+    margin-bottom: 18px;
+    padding: 8px 18px;
+
+    border: 1px solid rgba(0,229,255,.25);
+    border-radius: 30px;
+
+    color: #00eaff;
+    background: rgba(0,229,255,.05);
+
+    font-size: 12px;
+    letter-spacing: 4px;
+    font-weight: 700;
+}
+
+.india-header h1 {
+    font-size: clamp(48px, 7vw, 85px);
+    line-height: .98;
+    letter-spacing: -4px;
+    margin-bottom: 25px;
+
+    background: linear-gradient(
+        120deg,
+        #ffffff,
+        #8befff,
+        #8d72ff,
+        #ffffff
+    );
+
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    animation: gradientMove 7s ease infinite;
+}
+
+.india-header h1 span {
+    display: block;
+    color: #00eaff;
+    -webkit-text-fill-color: #00eaff;
+}
+
+.india-header p {
+    max-width: 760px;
+    margin: auto;
+
+    color: #9da7bd;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* ========================= HERO IMAGE ========================= */
+
+.hero-image-section {
+    width: min(1150px, 92%);
+    margin: 0 auto 65px;
+    position: relative;
+
+    animation: fadeUp 1.2s ease;
+}
+
+.hero-image {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    display: block;
+
+    border-radius: 28px;
+    border: 1px solid rgba(255,255,255,.15);
+
+    box-shadow: 0 25px 80px rgba(0,0,0,.35);
+}
+
+.image-overlay {
+    position: absolute;
+    inset: 0;
+    border-radius: 28px;
+
+    background: linear-gradient(
+        to top,
+        rgba(5,8,22,.95),
+        rgba(5,8,22,.02) 70%
+    );
+
+    pointer-events: none;
+}
+
+.image-caption {
+    position: absolute;
+    left: 35px;
+    right: 35px;
+    bottom: 30px;
+
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.image-caption h2 {
+    font-size: clamp(25px, 4vw, 42px);
+    margin-bottom: 8px;
+}
+
+.image-caption p {
+    color: #c0cbe0;
+    font-size: 14px;
+}
+
+.caption-tag {
+    padding: 9px 16px;
+
+    border: 1px solid rgba(255,255,255,.2);
+    background: rgba(255,255,255,.09);
+
+    backdrop-filter: blur(15px);
+    border-radius: 30px;
+
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+/* ========================= HIGHLIGHTS ========================= */
+
+.highlights {
+    width: min(1100px, 92%);
+    margin: 0 auto 85px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.highlight-card {
+    padding: 23px 15px;
+    text-align: center;
+
+    background: linear-gradient(
+        145deg,
+        rgba(255,255,255,.065),
+        rgba(255,255,255,.018)
+    );
+
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 20px;
+
+    backdrop-filter: blur(15px);
+    transition: .3s ease;
+}
+
+.highlight-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0,229,255,.35);
+}
+
+.highlight-icon {
+    font-size: 27px;
+    margin-bottom: 10px;
+}
+
+.highlight-card h3 {
+    color: #00eaff;
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.highlight-card p {
+    color: #929db3;
+    font-size: 12px;
+}
+
+/* ========================= SECTION HEADINGS ========================= */
+
+.section-heading {
+    width: min(1100px, 92%);
+    margin: 0 auto 35px;
+}
+
+.section-heading .eyebrow {
+    margin-bottom: 15px;
+}
+
+.section-heading h2 {
+    font-size: clamp(35px, 5vw, 58px);
+    line-height: 1.08;
+    letter-spacing: -2px;
+    margin-bottom: 18px;
+
+    background: linear-gradient(
+        120deg,
+        #ffffff,
+        #8befff,
+        #a18bff
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.section-heading p {
+    max-width: 760px;
+    color: #9da7bd;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* ========================= DESTINATION GRID ========================= */
+
+.destinations-section {
+    width: min(1150px, 92%);
+    margin: auto;
+    padding-bottom: 100px;
+}
+
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.destination-card {
+    overflow: hidden;
+    position: relative;
+
+    border-radius: 24px;
+
+    background: linear-gradient(
+        145deg,
+        rgba(255,255,255,.065),
+        rgba(255,255,255,.018)
+    );
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    backdrop-filter: blur(15px);
+    transition: .4s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(0,229,255,.35);
+
+    box-shadow: 0 20px 50px rgba(0,0,0,.3);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+
+    transition: transform .5s ease;
+}
+
+.destination-card:hover img {
+    transform: scale(1.05);
+}
+
+.destination-content {
+    padding: 24px;
+}
+
+.destination-label {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 6px 11px;
+
+    border-radius: 20px;
+    background: rgba(0,229,255,.07);
+    border: 1px solid rgba(0,229,255,.12);
+
+    color: #00eaff;
+    font-size: 10px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.destination-content h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.destination-content p {
+    color: #929db3;
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.destination-link {
+    display: inline-block;
+    color: #00eaff;
+    font-size: 13px;
+    font-weight: 700;
+    transition: .3s ease;
+}
+
+.destination-link:hover {
+    transform: translateX(5px);
+    color: white;
+}
+
+/* ========================= ITINERARY ========================= */
+
+.itinerary-section {
+    width: min(1150px, 92%);
+    margin: auto;
+    padding-bottom: 100px;
+}
+
+.itinerary-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.day-card {
+    position: relative;
+    padding: 30px;
+    overflow: hidden;
+
+    background: linear-gradient(
+        145deg,
+        rgba(255,255,255,.065),
+        rgba(255,255,255,.018)
+    );
+
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 25px;
+
+    backdrop-filter: blur(15px);
+    transition: .4s ease;
+
+    animation: fadeUp .8s ease both;
+}
+
+.day-card:nth-child(2) { animation-delay: .08s; }
+.day-card:nth-child(3) { animation-delay: .16s; }
+.day-card:nth-child(4) { animation-delay: .24s; }
+.day-card:nth-child(5) { animation-delay: .32s; }
+
+.day-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(0,229,255,.35);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.35),
+        0 0 30px rgba(0,229,255,.08);
+}
+
+.day-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.day-number {
+    color: #00eaff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.day-icon {
+    width: 55px;
+    height: 55px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 17px;
+    background: rgba(0,229,255,.08);
+    border: 1px solid rgba(0,229,255,.15);
+
+    font-size: 27px;
+}
+
+.day-card h3 {
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.day-card p {
+    color: #929db3;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.activity-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.activity-tags span {
+    padding: 6px 11px;
+    border-radius: 20px;
+
+    background: rgba(0,229,255,.06);
+    border: 1px solid rgba(0,229,255,.12);
+
+    color: #b7eaff;
+    font-size: 11px;
+}
+
+/* ========================= TRAVEL STYLES ========================= */
+
+.styles-section {
+    width: min(1150px, 92%);
+    margin: auto;
+    padding-bottom: 100px;
+}
+
+.styles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.style-card {
+    padding: 28px;
+
+    background: linear-gradient(
+        145deg,
+        rgba(255,255,255,.065),
+        rgba(255,255,255,.018)
+    );
+
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 23px;
+
+    transition: .3s ease;
+}
+
+.style-card:hover {
+    border-color: rgba(0,229,255,.35);
+    transform: translateY(-5px);
+}
+
+.style-icon {
+    width: 60px;
+    height: 60px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 18px;
+
+    background: rgba(0,229,255,.08);
+    border: 1px solid rgba(0,229,255,.12);
+
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.style-card h3 {
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.style-card p {
+    color: #929db3;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* ========================= WHATSAPP BUTTON ========================= */
+
+.whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 13px 22px;
+    border-radius: 30px;
+
+    background: linear-gradient(
+        90deg,
+        #16c96b,
+        #25D366
+    );
+
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+
+    transition: .3s ease;
+}
+
+.whatsapp-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 25px rgba(37,211,102,.4);
+}
+
+/* ========================= CTA ========================= */
+
+.cta {
+    width: min(1100px, 92%);
+    margin: 0 auto 100px;
+    padding: 70px 30px;
+
+    text-align: center;
+    border-radius: 30px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(0,229,255,.08),
+        rgba(105,70,255,.10)
+    );
+
+    border: 1px solid rgba(255,255,255,.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta::before {
+    content: "";
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%,-50%);
+
+    border-radius: 50%;
+    background: #00eaff;
+    opacity: .05;
+    filter: blur(50px);
+}
+
+.cta h2 {
+    position: relative;
+    font-size: clamp(35px, 5vw, 60px);
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    position: relative;
+
+    max-width: 680px;
+    margin: auto auto 28px;
+
+    color: #9da7bd;
+    line-height: 1.8;
+}
+
+.cta .whatsapp-btn {
+    position: relative;
+    padding: 15px 28px;
+}
+
+/* ========================= FOOTER ========================= */
+
+footer {
+    padding: 40px 20px;
+    text-align: center;
+
+    border-top: 1px solid rgba(255,255,255,.06);
+
+    color: #687289;
+    font-size: 14px;
+}
+
+footer img {
+    width: 130px;
+    margin-bottom: 15px;
+}
+
+footer strong {
+    color: #00eaff;
+}
+
+/* ========================= FLOATING WHATSAPP ========================= */
+
+.floating-whatsapp {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 14px 20px;
+    border-radius: 40px;
+
+    background: linear-gradient(
+        90deg,
+        #16c96b,
+        #25D366
+    );
+
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+
+    box-shadow: 0 10px 35px rgba(0,0,0,.35);
+    transition: .3s ease;
+}
+
+.floating-whatsapp:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(37,211,102,.35);
+}
+
+/* ========================= ANIMATIONS ========================= */
+
+@keyframes navDrop {
+    from {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ========================= ACCESSIBILITY ========================= */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ========================= TABLET ========================= */
+
+@media (max-width: 850px) {
+    .navbar {
+        width: 95%;
+        padding: 10px 15px;
+    }
+
+    .logo img {
+        width: 90px;
+    }
+
+    .nav-links a {
+        padding: 8px 9px;
+        font-size: 10px;
+    }
+
+    .destinations-grid,
+    .styles-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-image {
+        height: 380px;
+    }
+}
+
+/* ========================= MOBILE ========================= */
+
+@media (max-width: 600px) {
+    .navbar {
+        border-radius: 20px;
+        flex-direction: column;
+        gap: 8px;
+        padding: 12px;
+    }
+
+    .logo img {
+        width: 110px;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .nav-links a {
+        font-size: 10px;
+        padding: 7px 9px;
+    }
+
+    .india-header {
+        padding: 60px 0 35px;
+    }
+
+    .india-header h1 {
+        letter-spacing: -2px;
+    }
+
+    .india-header p {
+        font-size: 14px;
+    }
+
+    .hero-image {
+        height: 320px;
+        border-radius: 20px;
+    }
+
+    .image-overlay {
+        border-radius: 20px;
+    }
+
+    .image-caption {
+        left: 18px;
+        right: 18px;
+        bottom: 20px;
+
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .image-caption p {
+        font-size: 12px;
+    }
+
+    .caption-tag {
+        font-size: 10px;
+    }
+
+    .highlights {
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 55px;
+    }
+
+    .destinations-grid,
+    .itinerary-grid,
+    .styles-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .day-card {
+        padding: 25px;
+    }
+
+    .day-card h3 {
+        font-size: 21px;
+    }
+
+    .cta {
+        margin-bottom: 60px;
+        padding: 55px 20px;
+    }
+
+    .floating-whatsapp {
+        right: 12px;
+        bottom: 12px;
+        padding: 12px 16px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ========================= NAVIGATION ========================= -->
+
+<nav class="navbar">
+
+    <a href="index.html" class="logo">
+        <img src="ohom.png" alt="Travspro Holidays Logo">
+    </a>
+
+    <ul class="nav-links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="tourPackage.html" class="active">TOURS</a></li>
+        <li><a href="ourservice.html">SERVICES</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="contactus.html">CONTACT</a></li>
+    </ul>
+
+</nav>
+
+<!-- ========================= INDIA HEADER ========================= -->
+
+<section class="india-header">
+
+    <div class="eyebrow">TRAVSPRO HOLIDAYS</div>
+
+    <h1>
+        Incredible <span>India.</span>
+    </h1>
+
+    <p>
+        From the snow-capped Himalayas and the breathtaking
+        landscapes of Ladakh to royal Rajasthan, the beaches
+        of Goa and the peaceful backwaters of Kerala, discover
+        India's extraordinary diversity with Travspro Holidays.
+        Find your perfect holiday, from mountain adventures
+        to cultural escapes and relaxing beach retreats.
+    </p>
+
+</section>
+
+<!-- ========================= HERO IMAGE ========================= -->
+
+<section class="hero-image-section">
+
+    <img
+        class="hero-image"
+        src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1800&q=85"
+        alt="The Taj Mahal, one of India's most iconic landmarks"
+        fetchpriority="high"
+    >
+
+    <div class="image-overlay"></div>
+
+    <div class="image-caption">
+
+        <div>
+            <h2>One Country. A Thousand Journeys.</h2>
+            <p>Mountains, heritage, beaches, culture and unforgettable experiences.</p>
+        </div>
+
+        <span class="caption-tag">
+            EXPLORE INDIA
+        </span>
+
+    </div>
+
+</section>
+
+<!-- ========================= HIGHLIGHTS ========================= -->
+
+<section class="highlights">
+
+    <div class="highlight-card">
+        <div class="highlight-icon">🏔️</div>
+        <h3>Mountains</h3>
+        <p>Ladakh & Manali</p>
+    </div>
+
+    <div class="highlight-card">
+        <div class="highlight-icon">🏰</div>
+        <h3>Heritage</h3>
+        <p>Delhi, Agra & Rajasthan</p>
+    </div>
+
+    <div class="highlight-card">
+        <div class="highlight-icon">🏖️</div>
+        <h3>Beaches</h3>
+        <p>Goa & coastal escapes</p>
+    </div>
+
+    <div class="highlight-card">
+        <div class="highlight-icon">🌴</div>
+        <h3>Nature</h3>
+        <p>Kerala & green landscapes</p>
+    </div>
+
+</section>
+
+<!-- ========================= DESTINATIONS ========================= -->
+
+<section class="destinations-section" id="destinations">
+
+    <div class="section-heading">
+
+        <div class="eyebrow">DISCOVER INDIA</div>
+
+        <h2>Find Your Kind of India.</h2>
+
+        <p>
+            Explore some of India's most loved destinations.
+            Choose a mountain escape, a cultural journey,
+            a royal holiday or a tropical retreat. Our team
+            can help you plan a trip around your travel dates,
+            interests and budget.
+        </p>
+
+    </div>
+
+    <div class="destinations-grid">
+
+        <!-- LADAKH -->
+
+        <div class="destination-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=900&q=80"
+                alt="Dramatic mountain landscapes"
+                loading="lazy"
+            >
+
+            <div class="destination-content">
+
+                <span class="destination-label">Mountain Adventure</span>
+
+                <h3>🏔️ Ladakh</h3>
+
+                <p>
+                    Discover dramatic Himalayan landscapes,
+                    high-altitude mountain passes, monasteries,
+                    Pangong Lake and the spectacular scenery
+                    of the Leh region.
+                </p>
+
+                <a
+                    class="destination-link"
+                    href="https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20want%20to%20enquire%20about%20a%20Ladakh%20tour%20package."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Explore Ladakh →
+                </a>
+
+            </div>
+        </div>
+
+        <!-- MANALI -->
+
+        <div class="destination-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=900&q=80"
+                alt="Mountain scenery in the Himalayas"
+                loading="lazy"
+            >
+
+            <div class="destination-content">
+
+                <span class="destination-label">Himalayan Escape</span>
+
+                <h3>❄️ Manali</h3>
+
+                <p>
+                    Enjoy mountain views, pine forests,
+                    scenic valleys, riverside stays and
+                    seasonal snow experiences in one of
+                    Himachal Pradesh's favourite destinations.
+                </p>
+
+                <a
+                    class="destination-link"
+                    href="https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20want%20to%20enquire%20about%20a%20Manali%20tour%20package."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Explore Manali →
+                </a>
+
+            </div>
+        </div>
+
+        <!-- DELHI -->
+
+        <div class="destination-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=900&q=80"
+                alt="Historic architecture in Delhi"
+                loading="lazy"
+            >
+
+            <div class="destination-content">
+
+                <span class="destination-label">Capital & Culture</span>
+
+                <h3>🏛️ Delhi</h3>
+
+                <p>
+                    Explore the Red Fort, India Gate,
+                    Qutub Minar, historic neighbourhoods,
+                    lively markets and the capital's
+                    celebrated food culture.
+                </p>
+
+                <a
+                    class="destination-link"
+                    href="https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20want%20to%20enquire%20about%20a%20Delhi%20tour%20package."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Explore Delhi →
+                </a>
+
+            </div>
+        </div>
+
+        <!-- AGRA -->
+
+        <div class="destination-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=900&q=80"
+                alt="Taj Mahal in Agra"
+                loading="lazy"
+            >
+
+            <div class="destination-content">
+
+                <span class="destination-label">World Heritage</span>
+
+                <h3>🤍 Agra</h3>
+
+                <p>
+                    Experience the beauty of the Taj Mahal,
+                    explore Agra Fort and discover the
+                    remarkable Mughal architecture and
+                    history of this historic city.
+                </p>
+
+                <a
+                    class="destination-link"
+                    href="https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20want%20to%20enquire%20about%20an%20Agra%20tour%20package."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Explore Agra →
+                </a>
+
+            </div>
+        </div>
+
+        <!-- RAJASTHAN -->
+
+        <div class="destination-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=900&q=80"
+                alt="Colourful historic architecture in Rajasthan"
+                loading="lazy"
+            >
+
+            <div class="destination-content">
+
+                <span class="destination-label">Royal Heritage</span>
+
+                <h3>👑 Rajasthan</h3>
+
+                <p>
+                    Discover Jaipur's forts and palaces,
+                    Udaipur's romantic lakes, Jodhpur's
+                    blue streets and the desert charm
+                    of Jaisalmer.
+                </p>
+
+                <a
+                    class="destination-link"
+                    href="https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20want%20to%20enquire%20about%20a%20Rajasthan%20tour%20package."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Explore Rajasthan →
+                </a>
+
+            </div>
+        </div>
+
+        <!-- GOA -->
+
+        <div class="destination-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=900&q=80"
+                alt="Tropical beach in Goa"
+                loading="lazy"
+            >
+
+            <div class="destination-content">
+
+                <span class="destination-label">Beach Holiday</span>
+
+                <h3>🏖️ Goa</h3>
+
+                <p>
+                    Relax on beautiful beaches, discover
+                    Portuguese-influenced architecture,
+                    enjoy coastal dining and experience
+                    Goa's laid-back holiday atmosphere.
+                </p>
+
+                <a
+                    class="destination-link"
+                    href="https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20want%20to%20enquire%20about%20a%20Goa%20tour%20package."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Explore Goa →
+                </a>
+
+            </div>
+        </div>
+
+        <!-- KERALA -->
+
+        <div class="destination-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=900&q=80"
+                alt="Green landscapes and waterways in Kerala"
+                loading="lazy"
+            >
+
+            <div class="destination-content">
+
+                <span class="destination-label">Tropical Serenity</span>
+
+                <h3>🌴 Kerala</h3>
+
+                <p>
+                    Experience the backwaters of Alleppey,
+                    Munnar's tea plantations, lush landscapes,
+                    wildlife and peaceful stays surrounded
+                    by tropical greenery.
+                </p>
+
+                <a
+                    class="destination-link"
+                    href="https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20want%20to%20enquire%20about%20a%20Kerala%20tour%20package."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Explore Kerala →
+                </a>
+
+            </div>
+        </div>
+
+        <!-- KASHMIR -->
+
+        <div class="destination-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&w=900&q=80"
+                alt="Scenic Himalayan landscape"
+                loading="lazy"
+            >
+
+            <div class="destination-content">
+
+                <span class="destination-label">Scenic Retreat</span>
+
+                <h3>🏞️ Kashmir</h3>
+
+                <p>
+                    Discover Srinagar's lakes and gardens,
+                    enjoy mountain scenery, experience a
+                    traditional houseboat stay and explore
+                    beautiful valleys around Kashmir.
+                </p>
+
+                <a
+                    class="destination-link"
+                    href="https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20want%20to%20enquire%20about%20a%20Kashmir%20tour%20package."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Explore Kashmir →
+                </a>
+
+            </div>
+        </div>
+
+        <!-- HIMACHAL -->
+
+        <div class="destination-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1626014303757-3a1d0a5b7a9e?auto=format&fit=crop&w=900&q=80"
+                alt="Mountain scenery in Himachal Pradesh"
+                loading="lazy"
+            >
+
+            <div class="destination-content">
+
+                <span class="destination-label">Mountain Getaway</span>
+
+                <h3>🌲 Himachal Pradesh</h3>
+
+                <p>
+                    Plan a mountain escape across Shimla,
+                    Manali, Dharamshala and Dalhousie,
+                    with scenic drives, nature walks
+                    and relaxed hill-station stays.
+                </p>
+
+                <a
+                    class="destination-link"
+                    href="https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20want%20to%20enquire%20about%20a%20Himachal%20Pradesh%20tour%20package."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Explore Himachal →
+                </a>
+
+            </div>
+        </div>
+
+        <!-- ANDAMAN -->
+
+        <div class="destination-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=900&q=80"
+                alt="Tropical island and turquoise sea"
+                loading="lazy"
+            >
+
+            <div class="destination-content">
+
+                <span class="destination-label">Island Escape</span>
+
+                <h3>🌊 Andaman Islands</h3>
+
+                <p>
+                    Discover island beaches, clear waters,
+                    tropical scenery and optional snorkelling
+                    and water activities around selected
+                    Andaman destinations.
+                </p>
+
+                <a
+                    class="destination-link"
+                    href="https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20want%20to%20enquire%20about%20an%20Andaman%20tour%20package."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Explore Andaman →
+                </a>
+
+            </div>
+        </div>
+
+        <!-- SIKKIM -->
+
+        <div class="destination-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=900&q=80"
+                alt="Mountain landscape in the Indian Himalayas"
+                loading="lazy"
+            >
+
+            <div class="destination-content">
+
+                <span class="destination-label">Eastern Himalayas</span>
+
+                <h3>⛰️ Sikkim</h3>
+
+                <p>
+                    Explore mountain viewpoints, peaceful
+                    monasteries, colourful local culture
+                    and the scenic surroundings of
+                    Gangtok and nearby destinations.
+                </p>
+
+                <a
+                    class="destination-link"
+                    href="https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20want%20to%20enquire%20about%20a%20Sikkim%20tour%20package."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Explore Sikkim →
+                </a>
+
+            </div>
+        </div>
+
+        <!-- VARANASI -->
+
+        <div class="destination-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&fit=crop&w=900&q=80"
+                alt="Historic Indian riverside architecture"
+                loading="lazy"
+            >
+
+            <div class="destination-content">
+
+                <span class="destination-label">Spiritual Journey</span>
+
+                <h3>🪔 Varanasi</h3>
+
+                <p>
+                    Experience the historic ghats of the
+                    Ganges, ancient temples, cultural
+                    traditions and the remarkable atmosphere
+                    of one of India's oldest cities.
+                </p>
+
+                <a
+                    class="destination-link"
+                    href="https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20want%20to%20enquire%20about%20a%20Varanasi%20tour%20package."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Explore Varanasi →
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================= SUGGESTED ITINERARY ========================= -->
+
+<section class="itinerary-section" id="itinerary">
+
+    <div class="section-heading">
+
+        <div class="eyebrow">SUGGESTED TOUR PLAN</div>
+
+        <h2>Discover India in 10 Days.</h2>
+
+        <p>
+            This suggested North India itinerary combines
+            Delhi, Agra, Jaipur and the Himalayan region.
+            Because India's destinations are spread across
+            a vast area, Ladakh, Goa and Kerala are generally
+            better planned as separate trips or extensions.
+            Ask us for an itinerary tailored to your dates.
+        </p>
+
+    </div>
+
+    <div class="itinerary-grid">
+
+        <div class="day-card">
+
+            <div class="day-top">
+                <span class="day-number">DAYS 01–02</span>
+                <div class="day-icon">🏛️</div>
+            </div>
+
+            <h3>Delhi — Capital Highlights</h3>
+
+            <p>
+                Arrive in Delhi and explore selected
+                highlights such as India Gate, Qutub Minar,
+                Humayun's Tomb, the Red Fort area and
+                the city's famous markets.
+            </p>
+
+            <div class="activity-tags">
+                <span>Heritage</span>
+                <span>City Tour</span>
+                <span>Local Cuisine</span>
+            </div>
+
+        </div>
+
+        <div class="day-card">
+
+            <div class="day-top">
+                <span class="day-number">DAY 03</span>
+                <div class="day-icon">🤍</div>
+            </div>
+
+            <h3>Agra — The Taj Mahal</h3>
+
+            <p>
+                Travel to Agra and visit the magnificent
+                Taj Mahal and Agra Fort. Enjoy the city's
+                Mughal heritage before continuing your
+                journey towards Rajasthan.
+            </p>
+
+            <div class="activity-tags">
+                <span>Taj Mahal</span>
+                <span>Agra Fort</span>
+                <span>Architecture</span>
+            </div>
+
+        </div>
+
+        <div class="day-card">
+
+            <div class="day-top">
+                <span class="day-number">DAYS 04–05</span>
+                <div class="day-icon">👑</div>
+            </div>
+
+            <h3>Jaipur — Royal Rajasthan</h3>
+
+            <p>
+                Discover Jaipur's royal heritage through
+                Amber Fort, Hawa Mahal, City Palace and
+                colourful bazaars. Enjoy local cuisine
+                and the distinctive architecture of the
+                Pink City.
+            </p>
+
+            <div class="activity-tags">
+                <span>Amber Fort</span>
+                <span>Hawa Mahal</span>
+                <span>Shopping</span>
+            </div>
+
+        </div>
+
+        <div class="day-card">
+
+            <div class="day-top">
+                <span class="day-number">DAYS 06–07</span>
+                <div class="day-icon">🌲</div>
+            </div>
+
+            <h3>Manali — Mountain Escape</h3>
+
+            <p>
+                Travel to the Himalayan region according
+                to your selected transport arrangements.
+                Enjoy Manali's mountain scenery, local
+                markets, riverside landscapes and nearby
+                attractions, subject to season and weather.
+            </p>
+
+            <div class="activity-tags">
+                <span>Mountains</span>
+                <span>Nature</span>
+                <span>Hill Station</span>
+            </div>
+
+        </div>
+
+        <div class="day-card">
+
+            <div class="day-top">
+                <span class="day-number">DAYS 08–10</span>
+                <div class="day-icon">✨</div>
+            </div>
+
+            <h3>Flexible Travel & Departure</h3>
+
+            <p>
+                Use your remaining days for additional
+                sightseeing, leisure time or a convenient
+                return journey. Depending on your departure
+                city, travel time and preferences, the route
+                can be redesigned for a more comfortable trip.
+            </p>
+
+            <div class="activity-tags">
+                <span>Leisure</span>
+                <span>Shopping</span>
+                <span>Departure</span>
+            </div>
+
+        </div>
+
+        <div class="day-card">
+
+            <div class="day-top">
+                <span class="day-number">ALTERNATIVE HOLIDAYS</span>
+                <div class="day-icon">🌴</div>
+            </div>
+
+            <h3>Goa, Kerala & Ladakh</h3>
+
+            <p>
+                Prefer beaches, backwaters or high-altitude
+                adventures? Choose a dedicated Goa beach
+                holiday, a Kerala nature tour or a Ladakh
+                road trip. Each can be planned separately
+                to allow enough time at your destination.
+            </p>
+
+            <div class="activity-tags">
+                <span>Beach Holiday</span>
+                <span>Backwaters</span>
+                <span>Adventure</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================= HOLIDAY STYLES ========================= -->
+
+<section class="styles-section">
+
+    <div class="section-heading">
+
+        <div class="eyebrow">TRAVEL YOUR WAY</div>
+
+        <h2>One Country. Endless Possibilities.</h2>
+
+        <p>
+            Whether you are travelling as a couple,
+            with family or with a group, we can help
+            you explore India in a way that suits your
+            interests, trip duration and budget.
+        </p>
+
+    </div>
+
+    <div class="styles-grid">
+
+        <div class="style-card">
+
+            <div class="style-icon">👨‍👩‍👧‍👦</div>
+
+            <h3>Family Holidays</h3>
+
+            <p>
+                Plan family-friendly sightseeing,
+                comfortable stays, convenient transfers
+                and activities suitable for your group.
+            </p>
+
+        </div>
+
+        <div class="style-card">
+
+            <div class="style-icon">❤️</div>
+
+            <h3>Honeymoon Packages</h3>
+
+            <p>
+                Explore romantic mountain escapes,
+                peaceful backwater stays, beach retreats
+                and memorable experiences for two.
+            </p>
+
+        </div>
+
+        <div class="style-card">
+
+            <div class="style-icon">🧭</div>
+
+            <h3>Adventure Tours</h3>
+
+            <p>
+                Enquire about Himalayan road trips,
+                trekking experiences, scenic routes
+                and outdoor adventures where available.
+            </p>
+
+        </div>
+
+        <div class="style-card">
+
+            <div class="style-icon">🏰</div>
+
+            <h3>Heritage Tours</h3>
+
+            <p>
+                Explore historic forts, palaces,
+                monuments, cultural landmarks and
+                traditional markets across India.
+            </p>
+
+        </div>
+
+        <div class="style-card">
+
+            <div class="style-icon">🏖️</div>
+
+            <h3>Beach & Nature Holidays</h3>
+
+            <p>
+                Enjoy Goa's beaches, Kerala's backwaters,
+                tropical landscapes and relaxing
+                destinations away from busy cities.
+            </p>
+
+        </div>
+
+        <div class="style-card">
+
+            <div class="style-icon">🚐</div>
+
+            <h3>Group & Custom Tours</h3>
+
+            <p>
+                Discuss customised itineraries,
+                group transportation, hotel options
+                and sightseeing plans with our team.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================= BOOKING CTA ========================= -->
+
+<section class="cta" id="booking">
+
+    <div class="eyebrow">YOUR INDIA JOURNEY STARTS HERE</div>
+
+    <h2>Ready to Explore<br>Incredible India?</h2>
+
+    <p>
+        Tell us which destinations you want to visit,
+        your preferred travel dates, number of travellers,
+        departure city and approximate budget. Travspro
+        Holidays can help you enquire about suitable
+        Indian tour packages and customised itineraries.
+    </p>
+
+    <a
+        href="https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20want%20to%20enquire%20about%20India%20tour%20packages.%0A%0APreferred%20destination%3A%20%0ATravel%20dates%3A%20%0ANumber%20of%20travellers%3A%20%0ADuration%3A%20%0ADeparture%20city%3A%20%0ABudget%3A%20"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="whatsapp-btn"
+    >
+        💬 Enquire on WhatsApp →
+    </a>
+
+</section>
+
+<!-- ========================= FOOTER ========================= -->
+
+<footer>
+
+    <img src="ohom.png" alt="Travspro Holidays Logo">
+
+    <p>Your Trusted Travel Partner</p>
+
+    <br>
+
+    <p>
+        © 2026 <strong>Travspro Holidays</strong>.
+        All rights reserved.
+    </p>
+
+</footer>
+
+<!-- ========================= FLOATING WHATSAPP ========================= -->
+
+<a
+    href="https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20am%20interested%20in%20your%20India%20tour%20packages."
+    target="_blank"
+    rel="noopener noreferrer"
+    class="floating-whatsapp"
+    aria-label="Enquire about India tour packages on WhatsApp"
+>
+    💬 WhatsApp Us
+</a>
+
+</body>
+</html>
