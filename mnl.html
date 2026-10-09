@@ -3,462 +3,431 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#050816">
-  <meta name="description" content="Explore the Manali Mountain Holiday by Volvo with Travspro Holidays. View the Delhi–Manali itinerary, hotel options, inclusions and request a personalized quote.">
-  <title>Manali Tour Package by Volvo | Travspro Holidays</title>
+  <title>Manali Tour Package | Travspro Holidays</title>
 
   <style>
-    /* Save as manali-tour-package.html beside your index.html.
-       Existing image paths are preserved: ohom.png and whtbck.jpg.
-       Prices and final booking policies must be confirmed before publication. */
+    /* Keep this file beside index.html, ohom.png and whtbck.jpg.
+       Corrected links, contained logo, and simplified background layers. */
 
     :root {
-      --bg: #050816;
-      --panel: #0d1429;
-      --text: #f4f7ff;
-      --muted: #b5bfd5;
+      --background: #050816;
+      --panel: #10182c;
+      --text: #f5f7ff;
+      --muted: #bcc7dc;
       --cyan: #00eaff;
-      --purple: #7c5cff;
-      --green: #00ffc8;
-      --border: rgba(255,255,255,.12);
-      --radius: 24px;
+      --border: rgba(255,255,255,.13);
     }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: 125px; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
     body {
       font-family: "Segoe UI", Arial, sans-serif;
-      background: var(--bg);
+      background: var(--background);
       color: var(--text);
-      line-height: 1.7;
-      overflow-x: hidden;
-      isolation: isolate;
-    }
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      z-index: -2;
-      pointer-events: none;
-      background:
-        radial-gradient(circle at 10% 15%, rgba(0,225,255,.14), transparent 28%),
-        radial-gradient(circle at 90% 20%, rgba(120,70,255,.16), transparent 30%),
-        radial-gradient(circle at 50% 90%, rgba(0,255,180,.08), transparent 30%),
-        #050816;
-    }
-    body::after {
-      content: "";
-      position: fixed;
-      inset: 0;
-      z-index: -1;
-      pointer-events: none;
-      background-image:
-        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
-      background-size: 55px 55px;
+      line-height: 1.75;
     }
 
     a { color: inherit; text-decoration: none; }
     button, input, select, textarea { font: inherit; }
     button { cursor: pointer; }
-    img { max-width: 100%; }
-    :focus-visible { outline: 3px solid var(--cyan); outline-offset: 5px; }
-    .container { width: min(1150px, 92%); margin: auto; }
-    .muted { color: var(--muted); }
-    .small { font-size: 13px; }
-    .accent { color: var(--cyan); }
+    img { display: block; max-width: 100%; }
+    :focus-visible { outline: 3px solid var(--cyan); outline-offset: 4px; }
 
-    /* Navigation */
+    .container {
+      width: min(1150px, 92%);
+      margin-inline: auto;
+    }
+
+    /* No fixed logo, oversized logo, background pseudo-elements,
+       floating glow overlays or negative background z-index. */
+
     .navbar {
-      position: fixed;
-      top: 18px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: min(1180px, 94%);
-      min-height: 75px;
-      padding: 10px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: #080e20;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      min-height: 78px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 20px;
-      background: rgba(7,12,30,.92);
-      border: 1px solid var(--border);
-      border-radius: 50px;
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      box-shadow: 0 15px 50px rgba(0,0,0,.35);
-      z-index: 100;
+      padding-block: 10px;
     }
-    .logo { display: flex; align-items: center; }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+      width: 185px;
+      height: 54px;
+      overflow: hidden;
+    }
+
     .logo img {
-      width: 250px;
-      max-height: 90px;
+      width: 100%;
+      height: 100%;
       object-fit: contain;
-      display: block;
-      filter: drop-shadow(0 0 8px rgba(0,230,255,.25));
+      filter: none;
+      transform: none;
     }
+
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 4px;
+      gap: 6px;
       list-style: none;
     }
+
     .nav-links a {
       display: block;
-      padding: 10px 14px;
-      color: #d2dbef;
+      padding: 9px 13px;
+      border-radius: 25px;
       font-size: 12px;
       font-weight: 700;
-      border-radius: 30px;
-      transition: .25s;
+      color: #d5def0;
     }
-    .nav-links a:hover, .nav-links .active {
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      background: rgba(0,234,255,.09);
       color: var(--cyan);
-      background: rgba(0,225,255,.1);
     }
-    .menu-toggle {
+
+    .menu-button {
       display: none;
-      background: transparent;
-      color: white;
-      border: 1px solid var(--border);
-      border-radius: 12px;
       padding: 7px 12px;
+      background: #121d35;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      color: white;
       font-size: 22px;
     }
 
-    /* Hero */
+    /* The overlay is confined to the hero background only. */
     .hero {
-      position: relative;
-      overflow: hidden;
-      padding: 175px 0 80px;
-      min-height: 690px;
+      padding: 65px 0 75px;
+      background-color: #0a1225;
+      background-image:
+        linear-gradient(90deg, rgba(5,8,22,.91), rgba(5,8,22,.58)),
+        url("whtbck.jpg");
+      background-size: cover;
+      background-position: center;
+      border-bottom: 1px solid var(--border);
     }
-    .hero-image {
-      position: absolute;
-      inset: 0;
-      z-index: -1;
-      background:
-        linear-gradient(90deg, rgba(5,8,22,.96), rgba(5,8,22,.68)),
-        linear-gradient(180deg, rgba(5,8,22,.1), #050816),
-        url("whtbck.jpg") center / cover no-repeat;
-      animation: heroZoom 14s ease-in-out infinite alternate;
-    }
-    .hero::after {
-      content: "";
-      position: absolute;
-      right: -220px;
-      top: 80px;
-      width: 650px;
-      height: 650px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(0,225,255,.18), transparent 65%);
-      pointer-events: none;
-      z-index: -1;
-    }
+
     .breadcrumbs {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      color: #c4cee3;
+      margin-bottom: 25px;
       font-size: 13px;
-      margin-bottom: 30px;
+      color: #d1daec;
     }
-    .breadcrumbs a:hover { color: var(--cyan); }
+
     .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 8px 17px;
+      display: inline-block;
+      padding: 7px 15px;
       margin-bottom: 20px;
-      border: 1px solid rgba(0,225,255,.3);
-      border-radius: 50px;
-      background: rgba(0,225,255,.06);
+      border: 1px solid rgba(0,234,255,.3);
+      border-radius: 30px;
       color: var(--cyan);
+      background: #0b1c30;
       font-size: 11px;
       font-weight: 700;
       letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-    .eyebrow::before {
-      content: "";
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--cyan);
-      box-shadow: 0 0 12px var(--cyan);
-    }
-    .hero h1 {
-      font-size: clamp(48px, 7.5vw, 92px);
-      line-height: 1.04;
-      letter-spacing: -3px;
-      font-weight: 900;
-      max-width: 850px;
-    }
-    .gradient {
-      background: linear-gradient(100deg, #00eaff, #9b83ff, #00ffc8, #00eaff);
-      background-size: 300% 300%;
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      animation: gradientMove 7s ease infinite;
-    }
-    .hero-description {
-      max-width: 690px;
-      margin: 24px 0;
-      color: #d0d8ea;
-      font-size: 17px;
-    }
-    .trip-tags { display: flex; flex-wrap: wrap; gap: 10px; margin: 25px 0; }
-    .tag {
-      padding: 8px 14px;
-      background: rgba(10,17,38,.85);
-      border: 1px solid var(--border);
-      border-radius: 50px;
-      color: #e1e8f7;
-      font-size: 13px;
     }
 
-    /* Buttons */
-    .buttons { display: flex; flex-wrap: wrap; gap: 12px; }
+    h1 {
+      font-size: clamp(43px, 7vw, 82px);
+      line-height: 1.08;
+      letter-spacing: -2px;
+      max-width: 850px;
+    }
+
+    .gradient {
+      color: var(--cyan);
+      background: linear-gradient(100deg, #00eaff, #b29aff, #00ffc8);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-description {
+      max-width: 700px;
+      margin: 24px 0;
+      font-size: 17px;
+      color: #e0e7f5;
+    }
+
+    .tags, .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .tags { margin-bottom: 28px; }
+
+    .tag {
+      padding: 7px 13px;
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      background: #0c1528;
+      font-size: 12px;
+      color: #e1e8f7;
+    }
+
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 9px;
       padding: 13px 22px;
       border: 1px solid transparent;
-      border-radius: 50px;
+      border-radius: 30px;
       color: white;
       font-size: 14px;
       font-weight: 700;
-      line-height: 1.5;
-      transition: transform .25s, box-shadow .25s, background .25s;
       text-align: center;
-    }
-    .btn:hover { transform: translateY(-3px); }
-    .btn-primary {
-      background: linear-gradient(90deg, #007eac, #634dff);
-      box-shadow: 0 0 28px rgba(0,217,255,.2);
-    }
-    .btn-primary:hover { box-shadow: 0 0 40px rgba(0,217,255,.35); }
-    .btn-outline {
-      background: rgba(255,255,255,.045);
-      border-color: rgba(255,255,255,.2);
-      color: #e4ebfb;
-    }
-    .btn-outline:hover { background: rgba(0,225,255,.1); border-color: var(--cyan); }
-    .whatsapp {
-      background: linear-gradient(90deg, #087b51, #006b49);
-      box-shadow: 0 0 25px rgba(0,217,139,.15);
+      transition: transform .2s, border-color .2s;
     }
 
-    /* Package layout */
-    .quick-strip {
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: linear-gradient(90deg, #007ba6, #634dff); }
+    .btn-outline { background: #121c32; border-color: #40516d; }
+    .btn-outline:hover { border-color: var(--cyan); }
+    .btn-whatsapp { background: #087b51; }
+
+    .quick-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 15px;
-      margin: 0 auto 40px;
+      margin: 30px 0;
     }
-    .quick-item {
+
+    .quick-card {
       display: flex;
       align-items: center;
-      gap: 14px;
-      padding: 22px;
-      background: linear-gradient(145deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      gap: 12px;
+      padding: 20px;
+      background: var(--panel);
       border: 1px solid var(--border);
-      border-radius: 20px;
+      border-radius: 18px;
     }
-    .quick-icon {
-      width: 46px;
-      height: 46px;
-      flex-shrink: 0;
-      display: grid;
-      place-items: center;
-      background: rgba(0,225,255,.09);
-      border-radius: 14px;
-      font-size: 22px;
-    }
-    .quick-item strong { display: block; }
-    .quick-item small { color: var(--muted); }
+
+    .quick-icon { font-size: 25px; }
+    .quick-card strong { display: block; }
+    .quick-card small { color: var(--muted); }
 
     .section-nav {
       display: flex;
       gap: 8px;
       overflow-x: auto;
       padding: 12px;
-      margin-bottom: 35px;
+      margin-bottom: 30px;
       border: 1px solid var(--border);
-      border-radius: 18px;
-      background: #0a1022;
+      border-radius: 16px;
+      background: #0c1325;
     }
+
     .section-nav a {
+      padding: 8px 14px;
       white-space: nowrap;
-      padding: 9px 16px;
-      border-radius: 30px;
       font-size: 13px;
-      font-weight: 600;
-      color: #c9d3e8;
+      color: #d4dff2;
+      border-radius: 25px;
     }
-    .section-nav a:hover { background: rgba(0,225,255,.1); color: var(--cyan); }
+
+    .section-nav a:hover { color: var(--cyan); background: #14243b; }
+
     .layout {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 330px;
+      grid-template-columns: minmax(0, 1fr) 315px;
       align-items: start;
-      gap: 28px;
-      padding-bottom: 75px;
+      gap: 25px;
+      padding-bottom: 55px;
     }
+
     .main-content { min-width: 0; }
+
     .panel {
-      padding: 30px;
-      margin-bottom: 25px;
-      background: linear-gradient(145deg, rgba(17,26,51,.96), rgba(8,14,31,.96));
+      padding: 28px;
+      margin-bottom: 24px;
+      background: var(--panel);
       border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: 0 15px 45px rgba(0,0,0,.15);
+      border-radius: 22px;
     }
+
     .section-label {
       display: block;
+      margin-bottom: 8px;
       color: var(--cyan);
       font-size: 11px;
-      letter-spacing: 2px;
       font-weight: 700;
+      letter-spacing: 2px;
       text-transform: uppercase;
-      margin-bottom: 8px;
     }
-    h2 { font-size: clamp(25px, 3vw, 35px); line-height: 1.2; margin-bottom: 20px; }
-    h3 { font-size: 19px; line-height: 1.4; margin-bottom: 10px; }
-    .panel p { color: var(--muted); margin-bottom: 14px; }
-    .panel p:last-child { margin-bottom: 0; }
-    .note {
-      padding: 15px 18px;
-      border-left: 3px solid var(--cyan);
-      border-radius: 0 12px 12px 0;
-      background: rgba(0,225,255,.06);
-      color: #d3e0f5;
-      font-size: 13px;
-      margin-top: 18px;
-    }
-    .highlights { display: grid; gap: 12px; list-style: none; }
-    .highlights li { display: flex; gap: 12px; color: #cbd5e9; }
-    .highlights li::before { content: "✦"; color: var(--cyan); flex-shrink: 0; }
 
-    /* Itinerary */
+    h2 {
+      margin-bottom: 20px;
+      font-size: clamp(25px, 3vw, 34px);
+      line-height: 1.25;
+    }
+
+    h3 { margin-bottom: 10px; font-size: 18px; }
+    p { color: var(--muted); margin-bottom: 15px; }
+    p:last-child { margin-bottom: 0; }
+
+    .list {
+      padding-left: 22px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .list li { margin-bottom: 10px; }
+    .list li::marker { color: var(--cyan); }
+    .exclusions li::marker { color: #ff9ca9; }
+
+    .note {
+      padding: 15px;
+      margin-top: 18px;
+      background: #12283b;
+      border-left: 3px solid var(--cyan);
+      border-radius: 8px;
+      color: #d8e6f6;
+      font-size: 13px;
+    }
+
     .section-top {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 15px;
-      margin-bottom: 22px;
+      margin-bottom: 20px;
     }
+
     .section-top h2 { margin: 0; }
-    .text-button {
-      background: rgba(0,225,255,.08);
-      border: 1px solid rgba(0,225,255,.25);
-      border-radius: 30px;
+
+    .small-button {
+      padding: 8px 13px;
+      border: 1px solid #38536c;
+      border-radius: 25px;
+      background: #13243b;
       color: var(--cyan);
-      padding: 8px 14px;
       font-size: 12px;
       white-space: nowrap;
     }
+
     details.day {
-      margin-bottom: 15px;
+      margin-bottom: 14px;
       border: 1px solid var(--border);
-      border-radius: 18px;
+      border-radius: 16px;
+      background: #0b1325;
       overflow: hidden;
-      background: rgba(255,255,255,.02);
     }
-    details.day:last-of-type { margin-bottom: 0; }
+
     summary { cursor: pointer; }
+    summary::-webkit-details-marker { display: none; }
+
     .day summary {
-      list-style: none;
       display: flex;
       align-items: center;
-      gap: 16px;
-      padding: 20px;
+      gap: 14px;
+      padding: 18px;
+      list-style: none;
     }
-    summary::-webkit-details-marker { display: none; }
+
     .day-number {
-      flex-shrink: 0;
-      width: 54px;
-      height: 54px;
       display: grid;
       place-items: center;
-      border-radius: 16px;
-      background: linear-gradient(135deg, rgba(0,225,255,.18), rgba(124,92,255,.22));
-      border: 1px solid rgba(0,225,255,.22);
+      width: 52px;
+      height: 52px;
+      flex-shrink: 0;
+      border-radius: 14px;
+      background: #142e44;
       color: var(--cyan);
+      font-size: 12px;
       font-weight: 800;
-      font-size: 14px;
     }
+
     .day-title { flex: 1; }
-    .day-title small { display: block; color: #9faec9; font-size: 11px; margin-bottom: 3px; }
-    .day-title strong { display: block; font-size: 16px; line-height: 1.5; }
-    .day summary::after { content: "+"; font-size: 24px; color: var(--cyan); }
+    .day-title small { display: block; color: #b6c4dc; font-size: 11px; }
+    .day-title strong { display: block; font-size: 15px; line-height: 1.5; }
+
+    .day summary::after { content: "+"; color: var(--cyan); font-size: 24px; }
     .day[open] summary::after { content: "−"; }
     .day[open] summary { border-bottom: 1px solid var(--border); }
-    .day-body { padding: 22px; }
-    .day-body p { font-size: 14px; }
-    .day-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
-    .day-meta span {
-      padding: 6px 11px;
-      border-radius: 30px;
-      font-size: 11px;
-      background: rgba(0,255,200,.06);
-      border: 1px solid rgba(0,255,200,.16);
-      color: #a8efdb;
+
+    .day-body { padding: 20px; font-size: 14px; }
+
+    .meal-tag {
+      display: inline-block;
+      padding: 6px 12px;
+      margin-top: 8px;
+      border-radius: 25px;
+      background: #10312c;
+      color: #b9f4df;
+      font-size: 12px;
     }
 
-    /* Inclusions and hotels */
-    .list { padding-left: 20px; color: var(--muted); }
-    .list li { margin-bottom: 10px; padding-left: 3px; font-size: 14px; }
-    .list li::marker { color: var(--cyan); }
-    .excluded li::marker { color: #ff9ca9; }
-    .hotel-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
-    .hotel-card {
-      padding: 22px;
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      background: rgba(255,255,255,.025);
-      transition: .3s;
+    .hotel-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
     }
-    .hotel-card:hover { transform: translateY(-4px); border-color: rgba(0,225,255,.4); }
+
+    .hotel-card {
+      padding: 20px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: #0b1325;
+    }
+
     .hotel-card small { color: var(--cyan); font-weight: 700; }
-    .hotel-card h3 { font-size: 16px; margin: 10px 0; }
-    .hotel-card p { font-size: 12px; }
+    .hotel-card h3 { margin-top: 10px; font-size: 16px; }
+    .hotel-card p { font-size: 13px; }
     .hotel-card .btn { padding: 8px 13px; font-size: 12px; margin-top: 15px; }
 
-    .policy {
-      border-bottom: 1px solid var(--border);
-      padding: 17px 0;
-    }
-    .policy:last-child { border-bottom: 0; padding-bottom: 0; }
+    .policy { padding: 17px 0; border-bottom: 1px solid var(--border); }
+    .policy:last-child { border-bottom: none; }
+
     .policy summary {
-      list-style: none;
       display: flex;
       justify-content: space-between;
-      align-items: center;
       gap: 15px;
+      list-style: none;
       font-weight: 700;
-      color: #e3ebfa;
     }
-    .policy summary::after { content: "+"; color: var(--cyan); font-size: 22px; }
+
+    .policy summary::after { content: "+"; color: var(--cyan); }
     .policy[open] summary::after { content: "−"; }
     .policy-body { padding-top: 18px; }
-    .policy-body h3 { font-size: 15px; margin-top: 18px; }
 
-    /* Booking sidebar */
-    .sidebar { position: sticky; top: 115px; }
+    .sidebar { position: sticky; top: 100px; }
+
     .booking-card {
-      padding: 28px;
-      border: 1px solid rgba(0,225,255,.25);
-      border-radius: 26px;
-      background: linear-gradient(145deg, #101a35, #0b1024);
-      box-shadow: 0 20px 60px rgba(0,0,0,.35), 0 0 35px rgba(0,225,255,.05);
+      padding: 25px;
+      border: 1px solid #2a526c;
+      border-radius: 22px;
+      background: #101a30;
     }
-    .price-label { font-size: 11px; color: var(--cyan); letter-spacing: 2px; text-transform: uppercase; }
-    .price { font-size: 31px; font-weight: 900; line-height: 1.2; margin: 12px 0; }
-    .booking-card p { color: var(--muted); font-size: 13px; }
-    .booking-facts { margin: 22px 0; }
+
+    .price { margin: 10px 0; font-size: 30px; font-weight: 800; }
+    .booking-card p { font-size: 13px; }
+
+    .booking-facts { margin: 20px 0; }
+
     .booking-facts div {
       display: flex;
       justify-content: space-between;
@@ -467,256 +436,218 @@
       border-bottom: 1px solid var(--border);
       font-size: 13px;
     }
+
     .booking-facts dt { color: var(--muted); }
-    .booking-facts dd { text-align: right; font-weight: 600; }
+    .booking-facts dd { text-align: right; }
+
     .booking-actions { display: grid; gap: 11px; }
     .booking-actions .btn { width: 100%; }
+
     .utility-actions {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 10px;
-      margin-top: 20px;
-    }
-    .utility-actions button {
-      border: 0;
-      background: transparent;
-      color: #c4d0e6;
-      font-size: 12px;
-      padding: 6px;
-    }
-    .utility-actions button:hover { color: var(--cyan); }
-    .sidebar-note {
+      gap: 12px;
       margin-top: 18px;
-      padding: 18px;
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      color: var(--muted);
-      font-size: 12px;
-      background: rgba(255,255,255,.025);
     }
 
-    /* CTA and footer */
-    .cta {
-      padding: 65px 30px;
-      text-align: center;
-      border: 1px solid var(--border);
-      border-radius: 30px;
-      background: linear-gradient(135deg, rgba(0,225,255,.1), rgba(105,55,255,.14));
-      margin-bottom: 70px;
+    .utility-actions button {
+      padding: 5px;
+      border: none;
+      background: transparent;
+      color: #d5def0;
+      font-size: 12px;
     }
-    .cta h2 { font-size: clamp(30px, 5vw, 52px); }
-    .cta p { color: var(--muted); max-width: 650px; margin: 0 auto 25px; }
+
+    .sidebar-note {
+      padding: 18px;
+      margin-top: 16px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: #0c1427;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .cta {
+      padding: 55px 25px;
+      margin-bottom: 55px;
+      border: 1px solid var(--border);
+      border-radius: 25px;
+      background: linear-gradient(135deg, #10273c, #201638);
+      text-align: center;
+    }
+
     .cta .buttons { justify-content: center; }
-    footer { border-top: 1px solid var(--border); padding: 40px 0 25px; }
+
+    footer {
+      padding: 35px 0;
+      background: #080e1d;
+      border-top: 1px solid var(--border);
+    }
+
     .footer-grid {
       display: grid;
       grid-template-columns: 1.5fr 1fr 1fr;
-      gap: 35px;
-      margin-bottom: 30px;
-    }
-    .footer-grid h3 { font-size: 16px; }
-    .footer-grid p, .footer-grid a { color: var(--muted); font-size: 13px; }
-    .footer-links { display: grid; gap: 8px; }
-    .footer-links a:hover { color: var(--cyan); }
-    .copyright { border-top: 1px solid var(--border); padding-top: 22px; text-align: center; color: #a6b2ca; font-size: 12px; }
-    .floating-whatsapp {
-      position: fixed;
-      bottom: 22px;
-      right: 22px;
-      z-index: 90;
-      padding: 13px 19px;
-      border-radius: 50px;
-      background: #087b51;
-      color: white;
-      font-weight: 700;
-      font-size: 13px;
-      box-shadow: 0 8px 30px rgba(0,0,0,.4);
-      border: 1px solid rgba(255,255,255,.2);
+      gap: 30px;
+      margin-bottom: 25px;
     }
 
-    /* Enquiry dialog */
+    .footer-grid p, .footer-grid a { font-size: 13px; color: var(--muted); }
+    .footer-links { display: grid; gap: 8px; }
+    .copyright { padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--muted); }
+
+    /* Modal backdrop exists only while the enquiry dialog is open. */
     dialog {
-      width: min(540px, 92%);
-      max-height: 90vh;
+      width: min(520px, 92%);
+      max-height: 88vh;
       margin: auto;
-      padding: 30px;
-      border: 1px solid rgba(0,225,255,.3);
-      border-radius: 24px;
-      background: #0d1429;
-      color: var(--text);
-      overflow-y: auto;
-      box-shadow: 0 30px 100px rgba(0,0,0,.6);
-    }
-    dialog::backdrop { background: rgba(0,0,0,.8); backdrop-filter: blur(6px); }
-    .dialog-header { display: flex; align-items: start; justify-content: space-between; gap: 15px; }
-    .close-dialog {
-      background: rgba(255,255,255,.06);
+      padding: 25px;
+      border: 1px solid #355a74;
+      border-radius: 20px;
+      background: #10182c;
       color: white;
+      overflow-y: auto;
+    }
+
+    dialog::backdrop { background: rgba(0,0,0,.65); }
+
+    .dialog-header {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      gap: 15px;
+    }
+
+    .close-button {
+      width: 35px;
+      height: 35px;
+      flex-shrink: 0;
       border: 1px solid var(--border);
       border-radius: 50%;
-      width: 36px;
-      height: 36px;
-      flex-shrink: 0;
+      background: #1c2942;
+      color: white;
       font-size: 22px;
     }
-    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 22px; }
-    .field { display: grid; gap: 6px; }
-    .field.full { grid-column: 1 / -1; }
-    .field label { color: #d6e0f4; font-size: 13px; }
+
+    .field { display: grid; gap: 6px; margin-bottom: 14px; }
+    .field label { font-size: 13px; color: #d7e2f5; }
+
     .field input, .field select, .field textarea {
       width: 100%;
-      min-width: 0;
-      padding: 11px 12px;
-      border: 1px solid rgba(255,255,255,.2);
-      border-radius: 10px;
-      background: #070d1d;
+      padding: 11px;
+      border: 1px solid #3c4d68;
+      border-radius: 9px;
+      background: #080f20;
       color: white;
       color-scheme: dark;
     }
-    .field textarea { min-height: 90px; resize: vertical; }
-    .form-note { color: var(--muted); font-size: 12px; margin: 17px 0; }
-    .toast {
-      position: fixed;
-      left: 50%;
-      bottom: 25px;
-      transform: translateX(-50%);
-      background: #172342;
-      color: white;
-      padding: 12px 20px;
-      border: 1px solid var(--cyan);
-      border-radius: 12px;
-      z-index: 200;
-      width: max-content;
-      max-width: 85%;
-      font-size: 13px;
-    }
-    .toast[hidden] { display: none; }
 
-    /* Content stays visible even if JavaScript is unavailable. */
-    @keyframes heroZoom { from { transform: scale(1); } to { transform: scale(1.06); } }
-    @keyframes gradientMove {
-      0%, 100% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-    }
+    .field textarea { min-height: 85px; resize: vertical; }
 
-    @media (max-width: 1000px) {
-      .logo img { width: 190px; }
-      .nav-links a { padding: 9px 10px; font-size: 11px; }
-      .layout { grid-template-columns: minmax(0,1fr) 290px; gap: 20px; }
-      .booking-card { padding: 22px; }
-      .quick-item { padding: 16px; gap: 10px; }
-    }
-    @media (max-width: 800px) {
+    @media (max-width: 850px) {
       .layout { grid-template-columns: 1fr; }
       .sidebar { position: static; }
-      .quick-strip { grid-template-columns: repeat(2,1fr); }
-      .menu-toggle { display: block; }
-      .navbar { min-height: 65px; padding: 9px 18px; }
-      .logo img { width: 180px; max-height: 65px; }
+      .quick-grid { grid-template-columns: repeat(2, 1fr); }
+      .menu-button { display: block; }
+      .nav-inner { position: relative; }
       .nav-links {
         display: none;
         position: absolute;
-        top: calc(100% + 12px);
+        top: 100%;
         left: 0;
         right: 0;
         padding: 15px;
-        background: #0b1228;
         border: 1px solid var(--border);
-        border-radius: 20px;
+        border-radius: 0 0 16px 16px;
+        background: #080e20;
         flex-direction: column;
         align-items: stretch;
       }
       .nav-links.open { display: flex; }
-      .nav-links a { font-size: 13px; padding: 12px 16px; }
-      .hero { padding-top: 145px; min-height: auto; }
       .footer-grid { grid-template-columns: 1fr 1fr; }
       .footer-brand { grid-column: 1 / -1; }
     }
+
     @media (max-width: 500px) {
-      .hero { padding-bottom: 50px; }
-      .hero h1 { font-size: 49px; letter-spacing: -2px; }
+      .logo { width: 155px; height: 45px; }
+      .nav-inner { min-height: 66px; }
+      .hero { padding: 40px 0 50px; }
+      h1 { font-size: 44px; }
       .hero-description { font-size: 15px; }
-      .hero .buttons, .cta .buttons { flex-direction: column; }
-      .quick-item { padding: 14px 10px; gap: 8px; }
-      .quick-icon { width: 34px; height: 38px; font-size: 18px; }
-      .quick-item strong { font-size: 13px; }
-      .quick-item small { font-size: 11px; }
-      .panel { padding: 22px 18px; }
-      .section-top { align-items: start; flex-direction: column; }
-      .day summary { padding: 16px 12px; gap: 10px; }
-      .day-number { width: 43px; height: 46px; font-size: 12px; }
+      .buttons { flex-direction: column; }
+      .quick-card { padding: 14px 10px; gap: 8px; }
+      .quick-card strong { font-size: 13px; }
+      .quick-card small { font-size: 11px; }
+      .quick-icon { font-size: 20px; }
+      .panel { padding: 22px 17px; }
+      .section-top { flex-direction: column; align-items: start; }
+      .hotel-grid, .footer-grid { grid-template-columns: 1fr; }
+      .day summary { padding: 15px 12px; gap: 10px; }
+      .day-number { width: 43px; height: 46px; }
       .day-title strong { font-size: 14px; }
-      .day-body { padding: 18px 15px; }
-      .hotel-grid, .form-grid { grid-template-columns: 1fr; }
-      .field.full { grid-column: auto; }
-      .footer-grid { grid-template-columns: 1fr; gap: 25px; }
-      .floating-whatsapp { right: 14px; bottom: 14px; font-size: 12px; }
-      dialog { padding: 23px 18px; }
     }
+
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
-      *, *::before, *::after { animation: none !important; transition: none !important; }
+      .btn { transition: none; }
     }
+
     @media print {
       body { background: white; color: black; }
-      body::before, body::after, .navbar, .hero-image, .hero::after,
-      .sidebar, .section-nav, .buttons, .floating-whatsapp, .utility-actions,
-      .text-button, .cta, footer, dialog, .toast, .hotel-card .btn { display: none !important; }
-      .hero { padding: 20px 0; min-height: auto; }
-      .gradient { background: none; color: black; }
-      .hero h1 { font-size: 38px; }
+      .navbar, .section-nav, .sidebar, .buttons, .small-button,
+      .hotel-card .btn, .cta, footer, dialog { display: none !important; }
+      .hero { background: white; padding: 20px 0; }
+      h1 { font-size: 36px; }
+      .gradient { background: none; -webkit-text-fill-color: black; color: black; }
       .layout { display: block; }
-      .panel, .quick-item, .hotel-card, details.day {
-        background: white; color: black; box-shadow: none; border-color: #ccc;
-      }
-      .panel p, .list, .hero-description, .highlights li, .policy summary,
-      .day-title small, .quick-item small { color: #222; }
+      .panel, .quick-card, .hotel-card, details.day { background: white; border-color: #ccc; }
+      p, .list, .hero-description, .policy summary, .quick-card small { color: #222; }
+      .note, .tag, .meal-tag, .day-number { background: #eee; color: black; }
       .day-body, .policy-body { display: block !important; }
-      .note { color: black; background: #eee; }
-      .day-meta span, .tag { color: black; background: white; border-color: #ccc; }
-      .panel { break-inside: auto; }
-      .day, .hotel-card { break-inside: avoid; }
     }
   </style>
 </head>
 
 <body>
   <nav class="navbar" aria-label="Main navigation">
-    ./index.html
-      <img src="ohom.png" alt="Travspro Holidays Logo">
-    </a>
-    <button class="menu-toggle" type="button" aria-label="Open navigation"
-      aria-controls="navigationLinks" aria-expanded="false">☰</button>
-    <ul class="nav-links" id="navigationLinks">
-      <li>./index.htmlHOME</a></li>
-      <li>./tourPackage.htmlTOURS</a></li>
-      <li>./OurServices.htmlOUR SERVICES</a></li>
-      <li>./about.htmlABOUT</a></li>
-      <li>./contactus.htmlCONTACT</a></li>
-    </ul>
+    <div class="container nav-inner">
+      ./index.html
+        <img src="ohom.png" alt="Travspro Holidays Logo">
+      </a>
+
+      <button class="menu-button" id="menuButton" type="button"
+        aria-label="Toggle navigation" aria-expanded="false"
+        aria-controls="navLinks">☰</button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="./index.html">HOME</a></li>
+>./tourPackage.htmlTOURS</a></li>
+        <li><a href="./OurServices.html">OUR SERVICES</a></lili><a href="./about.html">ABOUT</a></li>
+><a href="./contactus.html">CONTACT     </ul>
+    </div>
   </nav>
 
   <header class="hero">
-    <div class="hero-image" aria-hidden="true"></div>
     <div class="container">
       <nav class="breadcrumbs" aria-label="Breadcrumb">
         ./index.htmlHome</a>
-        <span aria-hidden="true">›</span>
+        <span>›</span>
         ./tourPackage.htmlTour Packages</a>
-        <span aria-hidden="true">›</span>
-        <span aria-current="page">Manali Mountain Holiday</span>
+        <span>›</span>
+        <span aria-current="page">Manali</span>
       </nav>
 
-      <div class="eyebrow">Himachal Pradesh • Volvo Holiday</div>
+      <span class="eyebrow">HIMACHAL PRADESH • VOLVO HOLIDAY</span>
       <h1>Mountains Calling.<br><span class="gradient">Manali Awaits.</span></h1>
+
       <p class="hero-description">
-        Escape Delhi for a thoughtfully planned mountain holiday.
-        Discover Manali, explore Solang Valley and experience Kullu–Naggar,
-        with comfortable hotel stays and overnight Volvo travel.
+        Discover Manali, Solang Valley and Kullu–Naggar with a thoughtfully
+        planned mountain holiday, comfortable hotel stays and round-trip
+        overnight Volvo travel from Delhi.
       </p>
 
-      <div class="trip-tags">
+      <div class="tags">
         <span class="tag">5-day itinerary</span>
         <span class="tag">3 hotel nights</span>
         <span class="tag">2 overnight coach journeys</span>
@@ -725,27 +656,30 @@
 
       <div class="buttons">
         #itineraryExplore Itinerary ↓</a>
-        <button type="button" class="btn btn-outline" data-enquiry="Get a Free Quote">Get a Free Quote</button>
-        <a class="btn whatsapp"
-          href="https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20am%20interested%20in%20the%20Manali%20Volvo%20tour%20package."
-          target="_blank" rel="noopener noreferrer">Live WhatsApp Chat ↗</a>
+        <button type="button" class="btn btn-outline"
+          data-enquiry="Get a Free Quote">Get a Free Quote</button>
+        <a href="https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20am%20interested%20in%20the%20Manali%package.
+          WhatsApp Us ↗
+        </a>
       </div>
     </div>
   </header>
 
   <main class="container">
-    <section class="quick-strip" aria-label="Tour includes">
-      <div class="quick-item">
+    <section class="quick-grid" aria-label="Tour includes">
+      <div class="quick-card">
         <span class="quick-icon" aria-hidden="true">🍽</span>
         <div><strong>Meals</strong><small>Breakfast & dinner</small></div>
-">🚗</span>
+      </div>
+      <div class="quick-card">
+        <span class="quick-icon" aria-hidden="true">🚗</span>
         <div><strong>Transfers</strong><small>Volvo & local cab</small></div>
       </div>
-      <div class="quick-item">
+      <div class="quick-card">
         <span class="quick-icon" aria-hidden="true">🏔</span>
         <div><strong>Sightseeing</strong><small>As per itinerary</small></div>
       </div>
-      <div class="quick-item">
+      <div class="quick-card">
         <span class="quick-icon" aria-hidden="true">🏨</span>
         <div><strong>Hotel</strong><small>3 nights in Manali</small></div>
       </div>
@@ -754,9 +688,11 @@
     <nav class="section-nav" aria-label="Package sections">
       #overviewOverview</a>
       #highlightsHighlights</a>
-      <a href="#itinerary">Itinerary<a href="#inclusions">Inclusions</ahref="#exclusions">Exclusions</a>
-ef="#hotels">Hotels</a>
-ciesPolicies</a>
+      #itineraryItinerary</a>
+      #inclusionsInclusions</a>
+      #exclusionsExclusions</a>
+      #hotelsHotels</a>
+      #policiesPolicies</a>
     </nav>
 
     <div class="layout">
@@ -766,35 +702,34 @@ ciesPolicies</a>
           <h2>Manali Mountain Holiday by Volvo</h2>
           <p>
             Make your holiday from Delhi to Manali special with a well-planned
-            combination of mountain scenery, sightseeing and leisure time.
-            This itinerary includes an overnight Volvo journey from Delhi,
-            three nights in Manali and an overnight return coach journey.
+            blend of mountain scenery, sightseeing and leisure time.
+            Start with an overnight Volvo journey and enjoy three hotel
+            nights in Manali before your overnight return to Delhi.
           </p>
           <p>
-            Explore Manali’s local landmarks, enjoy the landscapes of Solang
-            Valley and discover the culture, handicrafts and heritage of
-            Kullu and Naggar. Optional adventure activities can be arranged
-            at additional cost, subject to weather and applicable regulations.
+            Explore Manali’s local landmarks, experience Solang Valley and
+            discover the culture, handicrafts and heritage of Kullu and Naggar.
+            Optional adventure activities are available at additional cost,
+            subject to weather and applicable regulations.
           </p>
           <div class="note">
-            <strong>Duration clarification:</strong> Departure from Manali is
-            on the evening of Day 5. Arrival in Delhi is normally the following
-            morning, subject to the coach schedule and road conditions.
-            Accommodation includes three hotel nights, not five.
+            <strong>Duration:</strong> The itinerary runs from Day 1 to Day 5.
+            The return coach departs Manali on Day 5, with Delhi arrival
+            normally the following morning. Three hotel nights are included.
           </div>
         </section>
 
         <section class="panel" id="highlights">
-          <span class="section-label">Experiences to look forward to</span>
+          <span class="section-label">Holiday experiences</span>
           <h2>Tour Highlights</h2>
-          <ul class="highlights">
-            <li>Round-trip overnight Volvo coach travel between Delhi and Manali.</li>
+          <ul class="list">
+            <li>Comfortable overnight Volvo journeys between Delhi and Manali.</li>
             <li>Manali temples, Tibetan Monastery, Vashisht hot springs and Mall Road.</li>
-            <li>Solang Valley excursion with scenic Himalayan surroundings.</li>
-            <li>Kullu culture, local handicrafts and shawl showrooms.</li>
-            <li>Naggar Castle and the surrounding Himalayan landscapes.</li>
-            <li>Nicholas Roerich Art Gallery and Tripura Sundari Temple visit.</li>
-            <li>Optional paragliding, river rafting, zorbing, ATV rides and horse riding at additional cost.</li>
+            <li>Solang Valley sightseeing and optional adventure activities.</li>
+            <li>Kullu culture, handicrafts and shawl showrooms.</li>
+            <li>Naggar Castle and scenic Himalayan surroundings.</li>
+            <li>Nicholas Roerich Art Gallery and Tripura Sundari Temple.</li>
+            <li>Optional paragliding, river rafting, zorbing, ATV rides and horse riding.</li>
           </ul>
         </section>
 
@@ -802,31 +737,28 @@ ciesPolicies</a>
           <span class="section-label">Day by day</span>
           <div class="section-top">
             <h2>Your Manali Itinerary</h2>
-            <button class="text-button" type="button" id="toggleDays">View all days</button>
+            <button class="small-button" id="toggleDays" type="button">View all days</button>
           </div>
 
           <details class="day" open>
             <summary>
               <span class="day-number">DAY 01</span>
               <span class="day-title">
-                <small>DELHI • OVERNIGHT COACH</small>
+                <small>DELHI • OVERNIGHT VOLVO</small>
                 <strong>Delhi → Manali</strong>
               </span>
             </summary>
             <div class="day-body">
               <p>
-                Report at the designated Volvo boarding point in Delhi at the
-                scheduled departure time and board your coach for Manali.
-                Begin your journey towards the mountains of Himachal Pradesh.
+                Report at the designated Volvo boarding point in Delhi at
+                the scheduled departure time. Board your coach and begin
+                your journey towards the mountains of Himachal Pradesh.
               </p>
               <p>
-                Enjoy the overnight journey as the route takes you from the
-                plains towards the Himalayan foothills.
+                Enjoy the overnight journey as the landscape changes from
+                the plains towards the Himalayan foothills.
               </p>
-              <div class="day-meta">
-                <span>Overnight Volvo journey</span>
-                <span>Boarding point confirmed before travel</span>
-              </div>
+              <span class="meal-tag">Overnight coach journey • No hotel stay</span>
             </div>
           </details>
 
@@ -841,29 +773,24 @@ ciesPolicies</a>
             <div class="day-body">
               <p>
                 Arrive at the Manali Volvo stop, meet the representative and
-                transfer to your hotel. Standard check-in is 12:00 noon.
-                Early check-in is subject to availability and may attract
-                additional charges.
+                transfer to your hotel. Standard check-in time is 12:00 noon.
+                Early check-in depends on availability and may cost extra.
               </p>
               <p>
-                After freshening up, visit Hadimba Devi Temple and the nearby
-                Ghatotkacha Temple. Continue to the Club House, where optional
-                indoor recreational activities are available.
+                After freshening up, visit Hadimba Devi Temple and nearby
+                Ghatotkacha Temple. Continue to the Club House for optional
+                indoor recreational activities.
               </p>
               <p>
-                Visit the Tibetan Monastery, followed by Vashisht Village
-                and its hot springs. Explore the surrounding temples dedicated
-                to Lord Shiva and Lord Rama. Enjoy evening leisure time at
+                Visit the Tibetan Monastery, Vashisht Village and its hot
+                springs, along with the surrounding temples dedicated to
+                Lord Shiva and Lord Rama. Enjoy evening leisure time at
                 Mall Road for shopping and local food.
               </p>
-              <div class="day-meta">
-                <span>Hotel accommodation</span>
-                <span>Dinner under MAP plan</span>
-                <span>Private local sightseeing</span>
-              </div>
+              <span class="meal-tag">Hotel stay • Dinner under MAP plan</span>
               <div class="note">
-                Arrival-day breakfast is not assumed to be included.
-                Meal availability follows the final booking voucher.
+                Arrival-day breakfast is subject to the confirmed meal
+                schedule and is not assumed to be included.
               </div>
             </div>
           </details>
@@ -882,17 +809,12 @@ ciesPolicies</a>
                 spectacular Himalayan landscapes.
               </p>
               <p>
-                Choose optional activities such as paragliding, zorbing,
-                ATV rides, horse riding and trail rides at your own expense.
-                Activities depend on weather, operational availability and
-                applicable government regulations.
+                Optional paragliding, zorbing, ATV rides, horse riding and
+                trail rides are available at your own expense, subject to
+                weather, operational availability and government regulations.
               </p>
               <p>Return to Manali for dinner and your overnight hotel stay.</p>
-              <div class="day-meta">
-                <span>Breakfast & dinner</span>
-                <span>Hotel accommodation</span>
-                <span>Solang Valley excursion</span>
-              </div>
+              <span class="meal-tag">Hotel stay • Breakfast & dinner</span>
             </div>
           </details>
 
@@ -906,29 +828,25 @@ ciesPolicies</a>
             </summary>
             <div class="day-body">
               <p>
-                After breakfast, depart for an excursion to Kullu and Naggar.
-                En route, visit Devlok Cultural Theme Park and explore local
-                Kullu shawl and handicraft showrooms.
+                After breakfast, depart for Kullu and Naggar. En route,
+                visit Devlok Cultural Theme Park and local Kullu shawl
+                and handicraft showrooms.
               </p>
               <p>
                 Optional river rafting and paragliding are available at
                 additional cost, subject to weather and government regulations.
               </p>
               <p>
-                Continue to Naggar and visit Naggar Castle. Later, visit the
-                Nicholas Roerich Art Gallery and admire Tripura Sundari Temple
-                en route. Return to Manali in the evening.
+                Continue to Naggar Castle, followed by the Nicholas Roerich
+                Art Gallery. Admire Tripura Sundari Temple en route and
+                return to Manali in the evening.
               </p>
-              <div class="day-meta">
-                <span>Breakfast & dinner</span>
-                <span>Hotel accommodation</span>
-                <span>Kullu–Naggar excursion</span>
-              </div>
+              <span class="meal-tag">Hotel stay • Breakfast & dinner</span>
               <div class="note">
-                The supplied itinerary notes that the Roerich Art Gallery
-                is closed on Mondays. The visit remains subject to its
-                operating schedule. Kullu–Manikaran may be selected instead
-                of Kullu–Naggar when confirmed in your quote.
+                The supplied itinerary lists the Roerich Art Gallery as
+                closed on Mondays. Visits depend on its operating schedule.
+                Kullu–Manikaran can replace Kullu–Naggar if selected and
+                confirmed in your booking.
               </div>
             </div>
           </details>
@@ -937,162 +855,150 @@ ciesPolicies</a>
             <summary>
               <span class="day-number">DAY 05</span>
               <span class="day-title">
-                <small>MANALI • OVERNIGHT RETURN COACH</small>
+                <small>MANALI • OVERNIGHT RETURN VOLVO</small>
                 <strong>Leisure Time & Departure to Delhi</strong>
               </span>
             </summary>
             <div class="day-body">
               <p>
-                After breakfast, check out according to the hotel’s scheduled
-                check-out time. Proceed by cab towards the Mall Road area.
-                Luggage storage at a designated cloakroom is subject to
-                availability and applicable terms.
+                After breakfast, check out according to hotel policy and
+                proceed by cab towards the Mall Road area. Cloakroom luggage
+                storage is subject to availability and applicable terms.
               </p>
               <p>
-                Enjoy free time for shopping and leisure. A visit to Van Vihar
-                may be possible, depending on the time available.
+                Enjoy free time for shopping and leisure. A visit to Van
+                Vihar may be possible depending on the available time.
               </p>
               <p>
-                Collect your luggage and proceed to the Volvo boarding point
-                at the scheduled time. Board your pre-booked coach for the
-                overnight return journey to Delhi.
+                Collect your luggage and proceed to the Volvo boarding
+                point at the scheduled time. Board your pre-booked coach
+                for the overnight return journey to Delhi.
               </p>
-              <div class="day-meta">
-                <span>Breakfast</span>
-                <span>Hotel check-out</span>
-                <span>Overnight Volvo to Delhi</span>
-              </div>
+              <span class="meal-tag">Breakfast • Hotel check-out • Overnight coach</span>
               <div class="note">
-                No hotel night is included on Day 5. Delhi arrival is expected
-                the following morning, subject to the coach schedule.
+                No hotel night is included on Day 5. Arrival in Delhi is
+                normally the following morning, subject to the coach schedule.
               </div>
             </div>
           </details>
         </section>
 
         <section class="panel" id="inclusions">
-          <span class="section-label">Included in your holiday</span>
+          <span class="section-label">Included services</span>
           <h2>Package Inclusions</h2>
           <ul class="list">
-            <li>Round-trip AC Volvo coach tickets between Delhi and Manali.</li>
-            <li>Pickup from the Manali Volvo stop and transfer to the hotel on arrival.</li>
-            <li>Departure transfer from the hotel or arranged point to the Manali Volvo boarding point.</li>
-            <li>Three nights’ accommodation in Manali on double occupancy for two adults.</li>
+            <li>Round-trip AC Volvo tickets between Delhi and Manali.</li>
+            <li>Arrival pickup from Manali Volvo stop to the hotel.</li>
+            <li>Departure transfer from the hotel or arranged point to the Volvo boarding point.</li>
+            <li>Three nights in Manali on double occupancy for two adults.</li>
             <li>MAP meal plan: breakfast and dinner as specified in the confirmed itinerary.</li>
             <li>Breakfast on the final day and dinner on applicable hotel nights.</li>
-            <li>Private AC/non-AC sedan for the included transfers and sightseeing, subject to local/NGT regulations.</li>
+            <li>Private AC/non-AC sedan for included transfers and sightseeing, subject to local/NGT regulations.</li>
             <li>Manali local sightseeing by private vehicle.</li>
             <li>Solang Valley excursion by private vehicle.</li>
-            <li>Kullu–Naggar excursion OR Kullu–Manikaran excursion, as selected and confirmed.</li>
-            <li>Driver allowance, fuel charges, parking and applicable road taxes for included vehicle services.</li>
+            <li>Kullu–Naggar OR Kullu–Manikaran excursion, as selected and confirmed.</li>
+            <li>Driver allowance, fuel, parking and applicable road taxes for included vehicle services.</li>
             <li>Transfer and sightseeing services specifically listed in the confirmed itinerary.</li>
           </ul>
         </section>
 
         <section class="panel" id="exclusions">
-          <span class="section-label">Please budget separately</span>
+          <span class="section-label">Additional expenses</span>
           <h2>Package Exclusions</h2>
-          <ul class="list excluded">
-            <li>Flights, trains, ferries or transportation not specifically included.</li>
+          <ul class="list exclusions">
+            <li>Flights, trains, ferries and transport not specifically included.</li>
             <li>Monument, museum, park and attraction entrance fees.</li>
-            <li>Camera and video charges, where applicable.</li>
-            <li>Laundry, telephone calls, room service, shopping, tips, beverages and other personal expenses.</li>
-            <li>Adventure activities including paragliding, river rafting, ATV rides, horse riding, zorbing and zip-lining.</li>
+            <li>Camera/video charges, where applicable.</li>
+            <li>Laundry, calls, room service, shopping, tips, beverages and personal expenses.</li>
+            <li>Paragliding, rafting, ATV rides, horse riding, zorbing, zip-lining and other adventure activities.</li>
             <li>Optional Atal Tunnel excursion.</li>
             <li>4×4 jeep charges during snowfall or difficult road conditions.</li>
-            <li>Volvo luggage charges, if applicable.</li>
-            <li>Heater charges, where applicable.</li>
-            <li>Meals not specifically included under the MAP meal plan.</li>
-            <li>Additional sightseeing, vehicle usage or services beyond the agreed itinerary.</li>
+            <li>Volvo luggage charges and hotel heater charges, where applicable.</li>
+            <li>Meals not specifically included under the MAP plan.</li>
+            <li>Extra sightseeing, vehicle usage and services beyond the agreed itinerary.</li>
             <li>Additional costs due to road closures, landslides, snowfall, weather, natural calamities or unforeseen circumstances.</li>
-            <li>Additional costs arising from government regulations or local transport restrictions.</li>
+            <li>Costs arising from changes in government regulations or local transport restrictions.</li>
             <li>Travel insurance.</li>
             <li>Any service not specifically mentioned under inclusions.</li>
-            <li>GST/applicable taxes unless included in the quote. The supplied package details specify 5% GST; the final applicable tax must be confirmed in the quotation.</li>
+            <li>Applicable GST/taxes unless included in the quote. The supplied package lists 5% GST; final tax treatment must be confirmed in the quotation.</li>
           </ul>
         </section>
 
         <section class="panel" id="hotels">
-          <span class="section-label">Choose your comfort</span>
+          <span class="section-label">Your stay in Manali</span>
           <h2>Accommodation Options</h2>
 
           <div class="hotel-grid">
             <article class="hotel-card">
               <small>DELUXE</small>
               <h3>Hotel Niyati Cottage</h3>
-              <p>Manali • Or similar, subject to availability and written confirmation.</p>
+              <p>Or similar, subject to availability and confirmation.</p>
               <button class="btn btn-outline" type="button"
-                data-enquiry="Deluxe Hotel Quote" data-category="Deluxe">Request Quote →</button>
+                data-enquiry="Deluxe Hotel Quote" data-category="Deluxe">Request Quote</button>
             </article>
 
             <article class="hotel-card">
               <small>SUPER DELUXE</small>
               <h3>Hotel Kullu Manali Inn</h3>
-              <p>Manali • Or similar, subject to availability and written confirmation.</p>
+              <p>Or similar, subject to availability and confirmation.</p>
               <button class="btn btn-outline" type="button"
-                data-enquiry="Super Deluxe Hotel Quote" data-category="Super Deluxe">Request Quote →</button>
+                data-enquiry="Super Deluxe Hotel Quote" data-category="Super Deluxe">Request Quote</button>
             </article>
 
             <article class="hotel-card">
               <small>LUXURY</small>
               <h3>Hotel Tanwar Villas</h3>
-              <p>Manali • Or similar, subject to availability and written confirmation.</p>
+              <p>Or similar, subject to availability and confirmation.</p>
               <button class="btn btn-outline" type="button"
-                data-enquiry="Luxury Hotel Quote" data-category="Luxury">Request Quote →</button>
+                data-enquiry="Luxury Hotel Quote" data-category="Luxury">Request Quote</button>
             </article>
 
             <article class="hotel-card">
               <small>LUXURY PLUS</small>
               <h3>Hotel Details on Request</h3>
-              <p>Hotel selection and pricing will be shared with your personalized quotation.</p>
+              <p>Hotel selection and pricing shared with your quotation.</p>
               <button class="btn btn-outline" type="button"
-                data-enquiry="Luxury Plus Hotel Quote" data-category="Luxury Plus">Request Quote →</button>
+                data-enquiry="Luxury Plus Hotel Quote" data-category="Luxury Plus">Request Quote</button>
             </article>
           </div>
 
           <div class="note">
-            Hotel categories are package labels, not verified star ratings.
-            The exact hotel, room category and meal plan will be confirmed
-            in writing before booking.
+            Categories are package labels, not verified star ratings.
+            Exact hotels, room categories and meal plans require written confirmation.
           </div>
         </section>
 
         <section class="panel" id="policies">
-          <span class="section-label">Before you book</span>
+          <span class="section-label">Before booking</span>
           <h2>Booking Information & Policies</h2>
 
           <div class="note">
-            <strong>Policy confirmation required:</strong> The policy text
-            supplied for this package refers to Bharat Booking Holidays.
-            It is summarized below as supplier reference information,
-            not as a confirmed Travspro Holidays policy. Your written quote
-            and booking confirmation must identify the applicable provider
-            and final terms before payment.
+            The supplied policies refer to Bharat Booking Holidays.
+            The following is supplier reference information, not a confirmed
+            Travspro Holidays policy. Confirm the applicable provider and
+            final written terms before payment.
           </div>
 
           <details class="policy" open>
             <summary>Payment Policy</summary>
             <div class="policy-body">
               <ul class="list">
-                <li>For Himachal packages, the supplied policy requires 50% advance payment to confirm the package and the remaining 50% on arrival.</li>
-                <li>For destinations outside Himachal, the supplied policy states 75% advance and 25% on the first day of the tour.</li>
-                <li>Certain higher-category hotels, international packages, Andaman & Nicobar packages, train and flight bookings may require 100% advance payment.</li>
-                <li>The payment schedule applicable to this booking must be confirmed in writing.</li>
+                <li>Supplied Himachal policy: 50% advance to confirm and 50% on arrival.</li>
+                <li>For other destinations, the supplied policy states 75% advance and 25% on the first tour day.</li>
+                <li>Certain higher-category hotels, international packages, Andaman & Nicobar packages, flights and trains may require 100% advance.</li>
+                <li>The schedule applicable to your booking must be confirmed in writing.</li>
               </ul>
             </div>
           </details>
 
           <details class="policy">
-            <summary>Process of Making Advance Payment</summary>
+            <summary>Advance Payment Process</summary>
             <div class="policy-body">
               <p>
-                Request the final written quotation, payment schedule and
-                verified company payment details from Travspro Holidays.
-                No bank account or payment gateway has been provided on this page.
-              </p>
-              <p>
-                Confirm the hotel, travel dates, inclusions, taxes and
-                cancellation terms before making payment.
+                Request your final quotation and verified company payment
+                details. Confirm travel dates, hotel, inclusions, taxes and
+                cancellation terms before paying. No payment gateway or
+                bank details are provided on this page.
               </p>
             </div>
           </details>
@@ -1101,13 +1007,13 @@ ciesPolicies</a>
             <summary>Cancellation Policy</summary>
             <div class="policy-body">
               <ul class="list">
-                <li>Cancellation requests must be communicated in writing.</li>
+                <li>All cancellations must be communicated in writing.</li>
                 <li>The supplied supplier policy describes the token amount as non-refundable.</li>
-                <li>It states cancellation charges of 25%–50% for cancellations before the 15-day window and 100% retention within 15 days of travel or for no-shows.</li>
-                <li>The original wording around the 15-day cutoff is ambiguous. Exact date bands and charges must be clarified in writing before booking.</li>
-                <li>No refund is specified for missed or unused services, including transport, hotels, meals, sightseeing, transfers, entry tickets and permits.</li>
-                <li>The supplied supplier policy reserves cancellation rights where the required advance payment is insufficient.</li>
-                <li>It also includes service-termination and refund-withholding provisions relating to suspected illegal activity or violent behaviour. Obtain the complete applicable terms before booking.</li>
+                <li>It lists cancellation charges of 25%–50% before the 15-day window and 100% retention within 15 days or for no-shows.</li>
+                <li>The supplied wording around the cutoff is ambiguous; obtain exact date bands and charges before booking.</li>
+                <li>No refund is specified for missed or unused transport, hotels, meals, sightseeing, transfers, tickets or permits.</li>
+                <li>The supplied policy allows cancellation where the required advance is insufficient.</li>
+                <li>It includes service-termination and refund-withholding provisions concerning suspected illegal activity or violent behaviour. Obtain the complete applicable terms.</li>
               </ul>
             </div>
           </details>
@@ -1116,17 +1022,17 @@ ciesPolicies</a>
             <summary>General Terms & Conditions</summary>
             <div class="policy-body">
               <ul class="list">
-                <li>Packages may be customized, except fixed-departure tours with preset itineraries and dates.</li>
-                <li>Requests for changes, additions or modifications must be communicated in writing to the applicable booking provider.</li>
-                <li>Services are provided as listed in the booking confirmation voucher.</li>
-                <li>Hotel check-in and check-out follow individual hotel policies and availability.</li>
+                <li>Packages may be customized except fixed-departure tours.</li>
+                <li>Changes and additions must be requested in writing.</li>
+                <li>Services follow the booking confirmation voucher.</li>
+                <li>Hotel check-in/check-out follow individual hotel policies and availability.</li>
                 <li>Base-category rooms apply unless an upgrade is confirmed in writing.</li>
-                <li>Meals, transfers and sightseeing operate according to the confirmed schedule.</li>
-                <li>Transport, sightseeing and adventure activities depend on weather and operational feasibility.</li>
+                <li>Meals, transfers and sightseeing follow the confirmed schedule.</li>
+                <li>Transport, sightseeing and activities depend on weather and operational feasibility.</li>
                 <li>Complimentary services are non-transferable and cannot be exchanged for cash.</li>
                 <li>The supplied policy excludes refunds for unused services.</li>
-                <li>The supplied policy limits responsibility for disruptions caused by traffic, weather, strikes, natural calamities and circumstances beyond the provider’s reasonable control.</li>
-                <li>The supplied policy requires service complaints to be submitted in writing within seven days of tour completion.</li>
+                <li>The supplied policy limits responsibility for disruptions beyond the provider’s reasonable control.</li>
+                <li>The supplied policy requires written service complaints within seven days of tour completion.</li>
               </ul>
             </div>
           </details>
@@ -1135,21 +1041,21 @@ ciesPolicies</a>
             <summary>Documents Required</summary>
             <div class="policy-body">
               <ul class="list">
-                <li>A valid government-issued photo identity card.</li>
-                <li>The booking confirmation voucher issued by the confirmed booking provider.</li>
-                <li>Flight/train tickets, permits and passport/visa where applicable.</li>
-                <li>Adventure activity providers may require an indemnity form before participation.</li>
+                <li>Valid government-issued photo identity card.</li>
+                <li>Booking confirmation voucher from the confirmed provider.</li>
+                <li>Tickets, permits and passport/visa where applicable.</li>
+                <li>Adventure providers may require an indemnity form.</li>
               </ul>
             </div>
           </details>
 
           <details class="policy">
-            <summary>Amendment Policy: Prepone / Postpone</summary>
+            <summary>Amendments: Prepone / Postpone</summary>
             <div class="policy-body">
               <ul class="list">
-                <li>The supplied policy requires written date-change requests at least 15 days before departure.</li>
-                <li>Changes depend on availability and applicable seasonal price differences.</li>
-                <li>The supplied policy states that postponed packages remain valid for one year from the original booking date.</li>
+                <li>The supplied policy requires written requests at least 15 days before departure.</li>
+                <li>Date changes depend on availability and seasonal price differences.</li>
+                <li>The supplied policy states postponed packages remain valid for one year from the original booking date.</li>
                 <li>Transfer to a friend or family member is subject to applicable terms and confirmation.</li>
               </ul>
             </div>
@@ -1159,45 +1065,46 @@ ciesPolicies</a>
 
       <aside class="sidebar" aria-label="Package enquiry">
         <div class="booking-card">
-          <span class="price-label">Your personalized holiday</span>
+          <span class="section-label">Plan your holiday</span>
           <div class="price">Price on Request</div>
-          <p>Per person on twin sharing. Final cost depends on travel dates, hotel category and availability.</p>
+          <p>Per person on twin sharing. Final price depends on dates, hotel category and availability.</p>
 
           <dl class="booking-facts">
             <div><dt>Itinerary</dt><dd>5 days</dd></div>
             <div><dt>Hotel stay</dt><dd>3 nights</dd></div>
-            <div><dt>Coach travel</dt><dd>2 overnight journeys</dd></div>
+            <div><dt>Coach journeys</dt><dd>2 overnight</dd></div>
             <div><dt>Starting point</dt><dd>Delhi</dd></div>
-            <div><dt>Meals</dt><dd>MAP plan</dd></div>
-            <div><dt>Occupancy</dt><dd>Twin sharing</dd></div>
+            <div><dt>Meal plan</dt><dd>MAP</dd></div>
           </dl>
 
           <div class="booking-actions">
-            <button class="btn btn-primary" type="button" data-enquiry="Get a Free Quote">Get a Free Quote →</button>
-            <button class="btn btn-outline" type="button" data-enquiry="Request Call Back">Request Call Back</button>
-            <button class="btn btn-outline" type="button" data-enquiry="Customize My Trip">Customize My Trip</button>
-            https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20please%20share%20a%20quote%20for%20the%20Manali%20Volvo%20package.Live WhatsApp Chat ↗</a>
+            <button class="btn btn-primary" type="button"
+              data-enquiry="Get a Free Quote">Get a Free Quote →</button>
+            <button class="btn btn-outline" type="button"
+              data-enquiry="Request Call Back">Request Call Back</button>
+            <button class="btn btn-outline" type="button"
+              data-enquiry="Customize My Trip">Customize My Trip</button>
+            https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20please%20share%20a%20Manali%20package%20quote.
+              Live WhatsApp Chat ↗
+            </a>
           </div>
 
           <div class="utility-actions">
-            <button type="button" id="downloadItinerary">↓ Download</button>
-            <button type="button" id="printItinerary">Print</button>
-            <button type="button" id="emailPackage">Email</button>
-            <button type="button" id="sharePackage">Share</button>
+            <button id="downloadButton" type="button">Download</button>
+            <button id="printButton" type="button">Print</button>
+            <button id="emailButton" type="button">Email</button>
+            <button id="shareButton" type="button">Share</button>
           </div>
         </div>
 
         <div class="sidebar-note">
-          <strong class="accent">Good to know</strong><br>
-          Adventure activities, entrance fees and optional excursions are
-          charged separately. Confirm applicable taxes and all booking
-          terms in your final quotation.
+          Adventure activities, entrance fees and optional excursions
+          are charged separately. Confirm taxes and final booking terms
+          in your quotation.
         </div>
 
         <div class="sidebar-note">
-          https://www.google.com/maps/dir/Delhi/Manali/
-            View Delhi–Manali road route ↗
-          </a>
+          https://www.google.com/maps/dir/Delhi/Manali/View Delhi–Manali road route ↗</a>
           <br><br>
           ./tourPackage.htmlBrowse other tour packages →</a>
         </div>
@@ -1205,15 +1112,15 @@ ciesPolicies</a>
     </div>
 
     <section class="cta">
-      <span class="section-label">Make it your kind of holiday</span>
+      <span class="section-label">Your next adventure</span>
       <h2>Your Manali Escape Starts Here.</h2>
-      <p>
-        Tell us your dates, preferred hotel category and travel requirements.
-        We’ll help you plan your mountain holiday.
-      </p>
+      <p>Share your dates, hotel preferences and travel requirements.</p>
       <div class="buttons">
-        <button class="btn btn-primary" type="button" data-enquiry="Customize My Trip">Customize My Trip →</button>
-        https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20would%20like%20to%20plan%20a%20Manali%20holiday.Chat on WhatsApp ↗</a>
+        <button class="btn btn-primary" type="button"
+          data-enquiry="Customize My Trip">Customize My Trip →</button>
+        https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20would%20like%20to%20plan%20a%20Manali%20holiday.
+          Chat on WhatsApp ↗
+        </a>
       </div>
     </section>
   </main>
@@ -1222,7 +1129,7 @@ ciesPolicies</a>
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <h3 class="accent">Travspro Holidays</h3>
+          <h3>Travspro Holidays</h3>
           <p>Travel Beyond Ordinary.</p>
           <p>Flights, hotels, tours, transportation and complete travel solutions.</p>
         </div>
@@ -1231,302 +1138,4 @@ ciesPolicies</a>
           <div class="footer-links">
             ./index.htmlHome</a>
             ./tourPackage.htmlTour Packages</a>
-            ./OurServices.htmlOur Services</a>
-            ./about.htmlAbout Us</a>
-          </div>
-        </div>
-        <div>
-          <h3>Let’s Plan Your Trip</h3>
-          <div class="footer-links">
-            ./contactus.htmlContact Us</a>
-            tel:+918278735460+91 82787 35460</a>
-            <a href="https://wa.me/918278735460?text=Hello%20Travspro%20Holidays"
-              target="_blank" rel="noopener noreferrer">WhatsApp Us ↗</a>
-          </div>
-        </div>
-      </div>
-      <div class="copyright">
-        © <span id="year">2026</span> <strong class="accent">Travspro Holidays</strong> • Travel Solution Provider
-      </div>
-    </div>
-  </footer>
-
-  <a class="floating-whatsapp"
-    href="https://wa.me/918278735460?text=Hello%20Travspro%20Holidays">
-    WhatsApp ↗
-  </a>
-
-  <dialog id="enquiryDialog" aria-labelledby="enquiryTitle">
-    <div class="dialog-header">
-      <div>
-        <span class="section-label">Manali Mountain Holiday</span>
-        <h2 id="enquiryTitle">Get a Free Quote</h2>
-      </div>
-      <button class="close-dialog" type="button" aria-label="Close enquiry">×</button>
-    </div>
-
-    <p class="muted small">Add your travel preferences and continue to WhatsApp.</p>
-
-    <form id="enquiryForm">
-      <div class="form-grid">
-        <div class="field">
-          <label for="guestName">Your name *</label>
-          <input id="guestName" name="name" autocomplete="name" maxlength="80" required>
-        </div>
-        <div class="field">
-          <label for="guestPhone">Contact number *</label>
-          <input id="guestPhone" name="phone" type="tel" autocomplete="tel" maxlength="25" required>
-        </div>
-        <div class="field">
-          <label for="travelDate">Preferred departure date</label>
-          <input id="travelDate" name="date" type="date">
-        </div>
-        <div class="field">
-          <label for="travellers">Number of travellers *</label>
-          <input id="travellers" name="travellers" type="number" min="1" max="100" value="2" required>
-        </div>
-        <div class="field full">
-          <label for="hotelCategory">Hotel category</label>
-          <select id="hotelCategory" name="category">
-            <option value="Please recommend">Please recommend</option>
-            <option>Deluxe</option>
-            <option>Super Deluxe</option>
-            <option>Luxury</option>
-            <option>Luxury Plus</option>
-          </select>
-        </div>
-        <div class="field full">
-          <label for="guestMessage">Preferences / callback time</label>
-          <textarea id="guestMessage" name="message" maxlength="1500"
-            placeholder="Children’s ages, room requirements, preferred callback time or itinerary changes"></textarea>
-        </div>
-      </div>
-
-      <p class="form-note">
-        This form opens WhatsApp with your enquiry. Review the message and
-        press Send there. It does not submit a booking or collect payment.
-      </p>
-      <button class="btn whatsapp" type="submit" style="width:100%">Continue to WhatsApp →</button>
-    </form>
-  </dialog>
-
-  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
-
-  <script>
-    (() => {
-      "use strict";
-
-      const WHATSAPP_NUMBER = "918278735460";
-      const PACKAGE_NAME = "Manali Mountain Holiday by Volvo";
-      const dialog = document.getElementById("enquiryDialog");
-      const form = document.getElementById("enquiryForm");
-      const toast = document.getElementById("toast");
-      let enquiryType = "Get a Free Quote";
-      let toastTimer;
-
-      document.getElementById("year").textContent = new Date().getFullYear();
-
-      const today = new Date();
-      const localDate = [
-        today.getFullYear(),
-        String(today.getMonth() + 1).padStart(2, "0"),
-        String(today.getDate()).padStart(2, "0")
-      ].join("-");
-      document.getElementById("travelDate").min = localDate;
-
-      function showToast(message) {
-        clearTimeout(toastTimer);
-        toast.textContent = message;
-        toast.hidden = false;
-        toastTimer = setTimeout(() => { toast.hidden = true; }, 4500);
-      }
-
-      const menuButton = document.querySelector(".menu-toggle");
-      const navigation = document.getElementById("navigationLinks");
-
-      menuButton.addEventListener("click", () => {
-        const isOpen = navigation.classList.toggle("open");
-        menuButton.setAttribute("aria-expanded", String(isOpen));
-        menuButton.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
-        menuButton.textContent = isOpen ? "×" : "☰";
-      });
-
-      navigation.querySelectorAll("a").forEach(link => {
-        link.addEventListener("click", () => {
-          navigation.classList.remove("open");
-          menuButton.setAttribute("aria-expanded", "false");
-          menuButton.setAttribute("aria-label", "Open navigation");
-          menuButton.textContent = "☰";
-        });
-      });
-
-      document.querySelectorAll("[data-enquiry]").forEach(button => {
-        button.addEventListener("click", () => {
-          enquiryType = button.dataset.enquiry;
-          document.getElementById("enquiryTitle").textContent = enquiryType;
-
-          if (button.dataset.category) {
-            document.getElementById("hotelCategory").value = button.dataset.category;
-          }
-
-          if (typeof dialog.showModal === "function") {
-            dialog.showModal();
-          } else {
-            window.location.href =
-              "https://wa.me/" + WHATSAPP_NUMBER + "?text=" +
-              encodeURIComponent("Hello Travspro Holidays, " + enquiryType + " for " + PACKAGE_NAME + ".");
-          }
-        });
-      });
-
-      document.querySelector(".close-dialog").addEventListener("click", () => dialog.close());
-
-      dialog.addEventListener("click", event => {
-        if (event.target !== dialog) return;
-        const bounds = dialog.getBoundingClientRect();
-        const outside =
-          event.clientX < bounds.left || event.clientX > bounds.right ||
-          event.clientY < bounds.top || event.clientY > bounds.bottom;
-        if (outside) dialog.close();
-      });
-
-      form.addEventListener("submit", event => {
-        event.preventDefault();
-        if (!form.reportValidity()) return;
-
-        const data = new FormData(form);
-        const message = [
-          "Hello Travspro Holidays,",
-          "",
-          "Enquiry: " + enquiryType,
-          "Package: " + PACKAGE_NAME,
-          "Name: " + String(data.get("name")).trim(),
-          "Contact: " + String(data.get("phone")).trim(),
-          "Departure date: " + (data.get("date") || "To be decided"),
-          "Travellers: " + data.get("travellers"),
-          "Hotel category: " + data.get("category"),
-          "Preferences: " + (String(data.get("message")).trim() || "Please share package details."),
-          "",
-          "Please confirm pricing, availability, inclusions, taxes and booking policies."
-        ].join("\n");
-
-        window.location.href =
-          "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message);
-      });
-
-      const days = Array.from(document.querySelectorAll("details.day"));
-      const toggleDays = document.getElementById("toggleDays");
-
-      function updateDayButton() {
-        toggleDays.textContent = days.every(day => day.open) ? "Collapse all days" : "View all days";
-      }
-
-      toggleDays.addEventListener("click", () => {
-        const shouldOpen = !days.every(day => day.open);
-        days.forEach(day => { day.open = shouldOpen; });
-        updateDayButton();
-      });
-      days.forEach(day => day.addEventListener("toggle", updateDayButton));
-
-      function getPackageText() {
-        const sections = [
-          PACKAGE_NAME,
-          "Travspro Holidays",
-          "",
-          "5-day itinerary | 3 hotel nights | 2 overnight coach journeys",
-          "Return arrival in Delhi is normally the morning after Day 5.",
-          "Price: On request, per person on twin sharing.",
-          ""
-        ];
-
-        document.querySelectorAll(".main-content > section").forEach(section => {
-          sections.push(section.textContent.replace(/[ \t]+/g, " ").replace(/\n\s*\n/g, "\n").trim());
-          sections.push("");
-        });
-
-        sections.push("Enquiries: +91 82787 35460");
-        return sections.join("\n");
-      }
-
-      document.getElementById("downloadItinerary").addEventListener("click", () => {
-        const blob = new Blob([getPackageText()], { type: "text/plain;charset=utf-8" });
-        const url = URL.createObjectURL(blob);
-        const link = document.createElement("a");
-        link.href = url;
-        link.download = "Travspro-Manali-Tour-Itinerary.txt";
-        document.body.appendChild(link);
-        link.click();
-        link.remove();
-        setTimeout(() => URL.revokeObjectURL(url), 1000);
-        showToast("Itinerary downloaded as a text file.");
-      });
-
-      let printState = [];
-      function preparePrint() {
-        printState = Array.from(document.querySelectorAll("details")).map(element => ({
-          element,
-          open: element.open
-        }));
-        printState.forEach(item => { item.element.open = true; });
-      }
-      function restorePrint() {
-        printState.forEach(item => { item.element.open = item.open; });
-        printState = [];
-        updateDayButton();
-      }
-
-      window.addEventListener("beforeprint", preparePrint);
-      window.addEventListener("afterprint", restorePrint);
-
-      document.getElementById("printItinerary").addEventListener("click", () => {
-        window.print();
-      });
-
-      function getPublicUrl() {
-        return /^https?:$/.test(window.location.protocol) ? window.location.href : "";
-      }
-
-      document.getElementById("emailPackage").addEventListener("click", () => {
-        const url = getPublicUrl();
-        const body = [
-          "Hello,",
-          "",
-          "Please find the Manali Mountain Holiday by Volvo package from Travspro Holidays.",
-          "",
-          "5-day itinerary, 3 hotel nights and round-trip overnight Volvo travel.",
-          "Price and final booking terms are available on request.",
-          url ? "\nPackage details: " + url : "",
-          "",
-          "Enquiries: +91 82787 35460"
-        ].join("\n");
-
-        window.location.href =
-          "mailto:?subject=" + encodeURIComponent(PACKAGE_NAME + " | Travspro Holidays") +
-          "&body=" + encodeURIComponent(body);
-      });
-
-      document.getElementById("sharePackage").addEventListener("click", async () => {
-        const url = getPublicUrl();
-        const text = PACKAGE_NAME + " | Travspro Holidays | Enquiries: +91 82787 35460";
-
-        try {
-          if (navigator.share) {
-            const shareData = { title: PACKAGE_NAME, text };
-            if (url) shareData.url = url;
-            await navigator.share(shareData);
-          } else if (navigator.clipboard && window.isSecureContext) {
-            await navigator.clipboard.writeText(url || text);
-            showToast(url ? "Package link copied." : "Package details copied.");
-          } else {
-            window.prompt("Copy these package details:", url || text);
-          }
-        } catch (error) {
-          if (error.name !== "AbortError") {
-            showToast("Sharing was unavailable. Use WhatsApp or Email instead.");
-          }
-        }
-      });
-    })();
-  </script>
-</body>
-</html>
+            
