@@ -3,10 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Manali Tour Package | Travspro Holidays</title>
 
   <style>
+    /* =====================================================
+       GLOBAL
+    ===================================================== */
+
     * {
+      margin: 0;
+      padding: 0;
       box-sizing: border-box;
     }
 
@@ -15,202 +22,64 @@
     }
 
     body {
-      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
       background: #050816;
-      color: #f5f7ff;
-      font-family: Arial, sans-serif;
+      color: #ffffff;
       line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+
+      background:
+        radial-gradient(
+          circle at 15% 20%,
+          rgba(0, 229, 255, 0.15),
+          transparent 30%
+        ),
+        radial-gradient(
+          circle at 85% 30%,
+          rgba(128, 0, 255, 0.18),
+          transparent 30%
+        ),
+        radial-gradient(
+          circle at 50% 90%,
+          rgba(0, 255, 170, 0.10),
+          transparent 30%
+        ),
+        #050816;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+
+      background-image:
+        linear-gradient(
+          rgba(255, 255, 255, 0.025) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0.025) 1px,
+          transparent 1px
+        );
+
+      background-size: 50px 50px;
+      mask-image: linear-gradient(to bottom, black, transparent);
+      -webkit-mask-image: linear-gradient(to bottom, black, transparent);
     }
 
     a {
-      color: #70edff;
+      color: inherit;
       text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .container {
-      width: min(1120px, 92%);
-      margin: 0 auto;
-    }
-
-    /* Normal navigation. No logo or floating elements. */
-    header {
-      background: #10182c;
-      border-bottom: 1px solid #33415c;
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 12px 24px;
-      padding: 20px 0;
-    }
-
-    nav a {
-      color: #ffffff;
-      font-size: 13px;
-      font-weight: bold;
-    }
-
-    .hero {
-      padding: 55px 0;
-      background: #111d35;
-      border-bottom: 1px solid #33415c;
-    }
-
-    .eyebrow {
-      color: #70edff;
-      font-size: 12px;
-      font-weight: bold;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    h1 {
-      margin: 15px 0 20px;
-      font-size: clamp(38px, 6vw, 72px);
-      line-height: 1.1;
-    }
-
-    h1 span {
-      color: #70edff;
-    }
-
-    .hero p {
-      max-width: 760px;
-      color: #d5e0f3;
-      font-size: 17px;
-    }
-
-    .tags,
-    .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 24px;
-    }
-
-    .tag {
-      padding: 7px 14px;
-      background: #1b2b47;
-      border: 1px solid #465c7b;
-      border-radius: 25px;
-      font-size: 13px;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 12px 20px;
-      background: #5945d6;
-      border: 1px solid #8c7df1;
-      border-radius: 25px;
-      color: #ffffff;
-      font-size: 14px;
-      font-weight: bold;
-      text-align: center;
-    }
-
-    .button:hover {
-      background: #6a55e8;
-      text-decoration: none;
-    }
-
-    .whatsapp {
-      background: #087b51;
-      border-color: #31ae7e;
-    }
-
-    .whatsapp:hover {
-      background: #096b48;
-    }
-
-    .outline {
-      background: #1a2942;
-      border-color: #526887;
-    }
-
-    .features {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 15px;
-      margin: 30px 0;
-    }
-
-    .feature {
-      padding: 20px;
-      background: #10182c;
-      border: 1px solid #33415c;
-      border-radius: 16px;
-    }
-
-    .feature strong {
-      display: block;
-      color: #70edff;
-      font-size: 17px;
-    }
-
-    .feature small {
-      color: #cbd8ed;
-    }
-
-    .section-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px 20px;
-      padding: 18px;
-      margin-bottom: 25px;
-      background: #10182c;
-      border: 1px solid #33415c;
-      border-radius: 15px;
-    }
-
-    .section-links a {
-      font-size: 13px;
-    }
-
-    .layout {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) 300px;
-      gap: 25px;
-      align-items: start;
-    }
-
-    .content {
-      min-width: 0;
-    }
-
-    .panel {
-      padding: 26px;
-      margin-bottom: 25px;
-      background: #10182c;
-      border: 1px solid #33415c;
-      border-radius: 20px;
-    }
-
-    h2 {
-      margin: 0 0 20px;
-      font-size: 28px;
-      line-height: 1.3;
-    }
-
-    h3 {
-      margin: 0 0 12px;
-      font-size: 18px;
-      line-height: 1.4;
-    }
-
-    p,
-    li {
-      color: #d0dbed;
-    }
-
-    .panel p,
-    .panel li {
-      font-size: 14px;
     }
 
     ul {
@@ -221,162 +90,1151 @@
       margin-bottom: 10px;
     }
 
+    .container {
+      width: min(1150px, 92%);
+      margin: 0 auto;
+    }
+
+    :focus-visible {
+      outline: 3px solid #00eaff;
+      outline-offset: 4px;
+    }
+
+    /* =====================================================
+       NAVBAR
+    ===================================================== */
+
+    .navbar {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      width: min(1150px, 94%);
+      min-height: 76px;
+      padding: 8px 20px 8px 25px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      background: rgba(10, 15, 35, 0.78);
+      border: 1px solid rgba(255, 255, 255, 0.10);
+      border-radius: 50px;
+
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+
+      box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.35),
+        inset 0 0 20px rgba(255, 255, 255, 0.02);
+
+      z-index: 1000;
+      animation: navDrop 1s ease;
+    }
+
+    /* =====================================================
+       LOGO
+    ===================================================== */
+
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 180px;
+      height: 80px;
+      flex-shrink: 0;
+    }
+
+    .logo img {
+      width: 250px;
+      max-width: 200%;
+      max-height: 120px;
+      object-fit: contain;
+      display: block;
+
+      transition: 0.35s ease;
+
+      filter:
+        drop-shadow(
+          0 0 8px
+          rgba(0, 229, 255, 0.20)
+        );
+    }
+
+    .logo img:hover {
+      transform: scale(1.07);
+
+      filter:
+        drop-shadow(
+          0 0 18px
+          rgba(0, 229, 255, 0.55)
+        );
+    }
+
+    /* =====================================================
+       NAVIGATION LINKS
+    ===================================================== */
+
+    .nav-links {
+      display: flex;
+      gap: 5px;
+      list-style: none;
+      padding: 0;
+    }
+
+    .nav-links li {
+      margin: 0;
+    }
+
+    .nav-links a {
+      display: block;
+      padding: 10px 17px;
+      border-radius: 30px;
+
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      color: #cdd4e8;
+
+      transition: 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #ffffff;
+      background: rgba(0, 229, 255, 0.12);
+
+      box-shadow:
+        0 0 20px
+        rgba(0, 229, 255, 0.15);
+    }
+
+    .nav-links a.active {
+      color: #ffffff;
+      background: rgba(0, 229, 255, 0.10);
+
+      border:
+        1px solid
+        rgba(0, 229, 255, 0.20);
+    }
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .hero {
+      min-height: 100vh;
+      padding: 170px 20px 90px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1000px;
+      margin: auto;
+
+      animation:
+        heroReveal 1.2s ease;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+
+      padding: 8px 18px;
+      margin-bottom: 25px;
+
+      border:
+        1px solid
+        rgba(0, 229, 255, 0.30);
+
+      border-radius: 50px;
+      background: rgba(0, 229, 255, 0.06);
+
+      color: #00eaff;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+
+      border-radius: 50%;
+      background: #00eaff;
+      box-shadow: 0 0 12px #00eaff;
+
+      animation: blink 1.5s infinite;
+    }
+
+    .hero h1 {
+      font-size: clamp(54px, 8vw, 105px);
+      line-height: 0.98;
+      font-weight: 900;
+      letter-spacing: -5px;
+
+      background:
+        linear-gradient(
+          120deg,
+          #ffffff,
+          #8befff,
+          #8f72ff,
+          #ffffff
+        );
+
+      background-size: 300% 300%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+
+      animation:
+        gradientMove 7s ease infinite;
+    }
+
+    .hero h1 span {
+      display: block;
+      color: #00eaff;
+    }
+
+    .hero-description {
+      max-width: 760px;
+      margin: 30px auto;
+
+      color: #aeb7ce;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+
+      margin-top: 28px;
+    }
+
+    .tag {
+      padding: 8px 15px;
+
+      background: rgba(255, 255, 255, 0.04);
+
+      border:
+        1px solid
+        rgba(0, 229, 255, 0.16);
+
+      border-radius: 30px;
+
+      color: #d7e4f8;
+      font-size: 13px;
+
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+
+      margin-top: 34px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+
+      padding: 14px 26px;
+      border-radius: 40px;
+
+      background:
+        linear-gradient(
+          90deg,
+          #00d9ff,
+          #6d4aff
+        );
+
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 700;
+
+      box-shadow:
+        0 0 30px
+        rgba(0, 217, 255, 0.24);
+
+      transition: 0.35s ease;
+    }
+
+    .button:hover {
+      transform:
+        translateY(-5px)
+        scale(1.03);
+
+      box-shadow:
+        0 0 50px
+        rgba(0, 217, 255, 0.45);
+    }
+
+    .button.whatsapp {
+      background:
+        linear-gradient(
+          90deg,
+          #00a66a,
+          #24d366
+        );
+
+      box-shadow:
+        0 0 30px
+        rgba(37, 211, 102, 0.22);
+    }
+
+    .button.outline {
+      background: rgba(255, 255, 255, 0.04);
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.16);
+
+      box-shadow: none;
+    }
+
+    /* =====================================================
+       FLOATING ORBS
+    ===================================================== */
+
+    .orb {
+      position: absolute;
+      width: 280px;
+      height: 280px;
+
+      border-radius: 50%;
+
+      background:
+        radial-gradient(
+          circle at 30% 30%,
+          #8fffff,
+          #0077ff 35%,
+          #3500a8 70%,
+          transparent 72%
+        );
+
+      opacity: 0.25;
+      filter: blur(1px);
+
+      animation:
+        floatOrb 8s ease-in-out infinite;
+    }
+
+    .orb.one {
+      left: -120px;
+      top: 25%;
+    }
+
+    .orb.two {
+      right: -100px;
+      bottom: 10%;
+      animation-delay: -4s;
+    }
+
+    /* =====================================================
+       FEATURE CARDS
+    ===================================================== */
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+
+      margin: -55px auto 30px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .feature {
+      padding: 25px 20px;
+      text-align: center;
+
+      background: rgba(255, 255, 255, 0.045);
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.09);
+
+      border-radius: 20px;
+
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+
+      transition: 0.35s ease;
+    }
+
+    .feature:hover {
+      transform: translateY(-7px);
+
+      border-color:
+        rgba(0, 229, 255, 0.35);
+
+      box-shadow:
+        0 15px 40px
+        rgba(0, 0, 0, 0.30),
+        0 0 25px
+        rgba(0, 229, 255, 0.08);
+    }
+
+    .feature-icon {
+      display: grid;
+      place-items: center;
+
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 14px;
+
+      border-radius: 14px;
+      background: rgba(0, 229, 255, 0.09);
+
+      color: #00eaff;
+      font-size: 23px;
+    }
+
+    .feature strong {
+      display: block;
+      color: #ffffff;
+      font-size: 17px;
+    }
+
+    .feature small {
+      color: #9ea8be;
+    }
+
+    /* =====================================================
+       SECTION NAVIGATION
+    ===================================================== */
+
+    .section-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+
+      margin: 35px 0;
+      padding: 18px;
+
+      position: sticky;
+      top: 115px;
+      z-index: 100;
+
+      background: rgba(10, 15, 35, 0.82);
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.09);
+
+      border-radius: 18px;
+
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .section-links a {
+      padding: 7px 13px;
+      border-radius: 20px;
+
+      color: #aeb7ce;
+      font-size: 12px;
+      font-weight: 600;
+
+      transition: 0.3s ease;
+    }
+
+    .section-links a:hover {
+      color: #ffffff;
+      background: rgba(0, 229, 255, 0.11);
+    }
+
+    /* =====================================================
+       MAIN LAYOUT
+    ===================================================== */
+
+    main {
+      padding-bottom: 80px;
+    }
+
+    .layout {
+      display: grid;
+
+      grid-template-columns:
+        minmax(0, 1fr)
+        320px;
+
+      gap: 28px;
+      align-items: start;
+    }
+
+    .content {
+      min-width: 0;
+    }
+
+    .panel {
+      position: relative;
+      overflow: hidden;
+
+      padding: 32px;
+      margin-bottom: 28px;
+
+      background: rgba(255, 255, 255, 0.035);
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+      border-radius: 24px;
+
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+
+      transition: 0.4s ease;
+    }
+
+    .panel::before {
+      content: "";
+      position: absolute;
+
+      width: 190px;
+      height: 190px;
+      right: -110px;
+      top: -110px;
+
+      border-radius: 50%;
+      background: #00eaff;
+      opacity: 0.05;
+
+      transition: 0.5s ease;
+    }
+
+    .panel:hover {
+      transform: translateY(-5px);
+
+      border-color:
+        rgba(0, 229, 255, 0.25);
+
+      box-shadow:
+        0 20px 60px
+        rgba(0, 0, 0, 0.25),
+        0 0 30px
+        rgba(0, 229, 255, 0.06);
+    }
+
+    .panel:hover::before {
+      transform: scale(1.8);
+    }
+
+    .panel h2 {
+      position: relative;
+
+      margin-bottom: 22px;
+
+      color: #ffffff;
+      font-size: clamp(27px, 4vw, 38px);
+      line-height: 1.25;
+    }
+
+    .panel h3 {
+      position: relative;
+
+      margin-bottom: 12px;
+      color: #ffffff;
+      font-size: 19px;
+    }
+
+    .panel p,
+    .panel li {
+      position: relative;
+
+      color: #aab3c8;
+      font-size: 14px;
+    }
+
+    .panel p {
+      margin-bottom: 15px;
+    }
+
+    /* =====================================================
+       NOTES
+    ===================================================== */
+
     .note {
-      padding: 15px;
+      position: relative;
+
+      padding: 16px 18px;
       margin-top: 18px;
-      background: #183047;
-      border-left: 3px solid #70edff;
-      border-radius: 8px;
-      color: #e3edfb;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(0, 229, 255, 0.09),
+          rgba(109, 74, 255, 0.06)
+        );
+
+      border-left: 3px solid #00eaff;
+      border-radius: 10px;
+
+      color: #dce7f8;
       font-size: 13px;
     }
 
+    /* =====================================================
+       ITINERARY
+    ===================================================== */
+
     .day {
-      padding: 20px;
-      margin-bottom: 16px;
-      background: #0b1325;
-      border: 1px solid #33415c;
-      border-radius: 15px;
+      position: relative;
+
+      padding: 24px;
+      margin-bottom: 18px;
+
+      background: rgba(5, 8, 22, 0.58);
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+      border-radius: 18px;
+
+      transition: 0.35s ease;
     }
 
     .day:last-child {
       margin-bottom: 0;
     }
 
+    .day:hover {
+      transform: translateX(5px);
+
+      border-color:
+        rgba(0, 229, 255, 0.30);
+    }
+
     .day-label {
       display: inline-block;
-      padding: 5px 12px;
-      margin-bottom: 12px;
-      background: #19334a;
-      color: #70edff;
+
+      padding: 5px 13px;
+      margin-bottom: 13px;
+
+      background: rgba(0, 229, 255, 0.09);
       border-radius: 20px;
+
+      color: #00eaff;
       font-size: 12px;
-      font-weight: bold;
+      font-weight: 700;
+      letter-spacing: 0.4px;
     }
 
     .meal {
       display: inline-block;
-      padding: 6px 12px;
-      background: #123a30;
-      color: #c5f7e4;
+
+      padding: 7px 13px;
+      margin-top: 3px;
+
+      background: rgba(37, 211, 102, 0.10);
+
+      border:
+        1px solid
+        rgba(37, 211, 102, 0.18);
+
       border-radius: 20px;
+
+      color: #a9f5cb;
       font-size: 12px;
     }
+
+    /* =====================================================
+       HOTELS
+    ===================================================== */
 
     .hotels {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 15px;
+      gap: 16px;
     }
 
     .hotel {
-      padding: 20px;
-      background: #0b1325;
-      border: 1px solid #33415c;
-      border-radius: 15px;
+      position: relative;
+      padding: 22px;
+
+      background: rgba(5, 8, 22, 0.58);
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+      border-radius: 17px;
+
+      transition: 0.35s ease;
+    }
+
+    .hotel:hover {
+      transform: translateY(-6px);
+
+      border-color:
+        rgba(0, 229, 255, 0.30);
     }
 
     .hotel small {
-      color: #70edff;
-      font-weight: bold;
+      color: #00eaff;
+      font-weight: 700;
+      letter-spacing: 1px;
     }
 
     .hotel h3 {
       margin-top: 10px;
-      font-size: 16px;
+      font-size: 17px;
+    }
+
+    /* =====================================================
+       SIDEBAR
+    ===================================================== */
+
+    aside {
+      position: sticky;
+      top: 115px;
+    }
+
+    aside .panel:hover {
+      transform: none;
+    }
+
+    .sidebar-eyebrow {
+      color: #00eaff;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
     }
 
     .price {
-      margin: 12px 0;
-      font-size: 29px;
-      font-weight: bold;
-      color: #ffffff;
+      margin: 10px 0 15px;
+
+      font-size: 31px;
+      font-weight: 800;
+
+      background:
+        linear-gradient(
+          90deg,
+          #00eaff,
+          #8c6cff
+        );
+
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
 
     .fact {
       display: flex;
       justify-content: space-between;
       gap: 12px;
-      padding: 11px 0;
-      border-bottom: 1px solid #33415c;
+
+      padding: 12px 0;
+
+      border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+      color: #9da7bc;
       font-size: 13px;
+    }
+
+    .fact strong {
+      color: #ffffff;
+      text-align: right;
     }
 
     .booking-buttons {
       display: grid;
       gap: 12px;
-      margin-top: 22px;
+      margin-top: 24px;
+    }
+
+    .booking-buttons .button {
+      width: 100%;
+    }
+
+    .explore-link {
+      display: block;
+      padding: 11px 0;
+
+      border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.07);
+
+      color: #aeb7ce;
+      font-size: 14px;
+
+      transition: 0.3s ease;
+    }
+
+    .explore-link:hover {
+      color: #00eaff;
+      transform: translateX(4px);
     }
 
     .policy-heading {
-      margin-top: 25px;
-      color: #70edff;
+      margin-top: 27px;
+      color: #00eaff !important;
     }
 
-    footer {
-      padding: 30px 0;
-      margin-top: 25px;
-      background: #10182c;
-      border-top: 1px solid #33415c;
+    /* =====================================================
+       CTA
+    ===================================================== */
+
+    .cta {
+      width: min(1150px, 92%);
+      margin: 20px auto 80px;
+      padding: 90px 30px;
+
       text-align: center;
-      font-size: 13px;
-      color: #cbd8ed;
+      position: relative;
+      overflow: hidden;
+
+      border-radius: 35px;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(0, 229, 255, 0.10),
+          rgba(100, 50, 255, 0.10)
+        );
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.10);
+    }
+
+    .cta::before {
+      content: "";
+      position: absolute;
+
+      width: 400px;
+      height: 400px;
+      left: 50%;
+      top: 50%;
+
+      transform: translate(-50%, -50%);
+
+      border-radius: 50%;
+      background: #00eaff;
+      opacity: 0.05;
+      filter: blur(50px);
+    }
+
+    .cta h2 {
+      position: relative;
+
+      margin-bottom: 18px;
+
+      font-size: clamp(35px, 5vw, 62px);
+      line-height: 1.1;
+    }
+
+    .cta p {
+      position: relative;
+
+      max-width: 620px;
+      margin: 0 auto 30px;
+
+      color: #a3adc3;
+    }
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    footer {
+      padding: 50px 20px;
+      text-align: center;
+
+      border-top:
+        1px solid
+        rgba(255, 255, 255, 0.06);
+
+      color: #687289;
+      font-size: 14px;
     }
 
     footer p {
-      margin: 8px 0;
+      margin: 5px 0;
+      color: #687289;
     }
 
-    :focus-visible {
-      outline: 3px solid #70edff;
-      outline-offset: 4px;
+    footer strong {
+      color: #00eaff;
     }
 
-    @media (max-width: 850px) {
+    /* =====================================================
+       SCROLL REVEAL
+    ===================================================== */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(45px);
+
+      transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* =====================================================
+       ANIMATIONS
+    ===================================================== */
+
+    @keyframes heroReveal {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes navDrop {
+      from {
+        opacity: 0;
+        transform: translate(-50%, -30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+      }
+    }
+
+    @keyframes gradientMove {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    @keyframes floatOrb {
+      0%,
+      100% {
+        transform: translate(0, 0) scale(1);
+      }
+
+      50% {
+        transform: translate(40px, -50px) scale(1.1);
+      }
+    }
+
+    @keyframes blink {
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0.3;
+      }
+    }
+
+    /* =====================================================
+       TABLET
+    ===================================================== */
+
+    @media (max-width: 900px) {
       .layout {
         grid-template-columns: 1fr;
+      }
+
+      aside {
+        position: static;
       }
 
       .features {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
+
+      .section-links {
+        position: relative;
+        top: 0;
+      }
     }
 
-    @media (max-width: 500px) {
-      nav {
-        gap: 10px 16px;
+    @media (max-width: 800px) {
+      .navbar {
+        padding: 8px 15px;
       }
 
-      nav a {
+      .logo {
+        width: 150px;
+      }
+
+      .logo img {
+        width: 140px;
+        max-height: 72px;
+      }
+
+      .nav-links {
+        gap: 0;
+      }
+
+      .nav-links a {
+        padding: 8px 9px;
         font-size: 11px;
       }
 
-      .hero {
-        padding: 35px 0;
+      .hero h1 {
+        letter-spacing: -3px;
+      }
+    }
+
+    /* =====================================================
+       MOBILE
+    ===================================================== */
+
+    @media (max-width: 500px) {
+      .navbar {
+        width: 96%;
+        min-height: 65px;
+        padding: 6px 10px;
       }
 
-      .hero p {
+      .logo {
+        width: 78px;
+        height: 55px;
+      }
+
+      .logo img {
+        width: 78px;
+        max-height: 45px;
+      }
+
+      .nav-links {
+        flex: 1;
+        justify-content: flex-end;
+      }
+
+      .nav-links a {
+        padding: 8px 5px;
+        font-size: 8px;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 145px 15px 110px;
+      }
+
+      .hero h1 {
+        font-size: clamp(49px, 15vw, 70px);
+        letter-spacing: -3px;
+      }
+
+      .hero-description {
         font-size: 15px;
       }
 
+      .eyebrow {
+        font-size: 10px;
+        letter-spacing: 1.5px;
+      }
+
+      .orb {
+        width: 190px;
+        height: 190px;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+        margin-top: -60px;
+      }
+
+      .section-links {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+      }
+
+      .section-links a {
+        flex-shrink: 0;
+      }
+
       .panel {
-        padding: 20px 16px;
+        padding: 24px 18px;
       }
 
       .day {
-        padding: 18px 15px;
+        padding: 19px 16px;
       }
 
       .hotels {
         grid-template-columns: 1fr;
       }
 
-      .feature {
-        padding: 15px;
+      .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
       }
 
-      .buttons {
-        flex-direction: column;
+      .button {
+        width: 100%;
+      }
+
+      .cta {
+        padding: 65px 20px;
+      }
+    }
+
+    /* =====================================================
+       REDUCED MOTION
+    ===================================================== */
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
       }
     }
   </style>
@@ -384,105 +1242,271 @@
 
 <body>
 
-  
+  <!-- =====================================================
+       NAVIGATION
+  ===================================================== -->
+
+  <nav class="navbar">
+
+    ./index.html
+      <img
+        src="ohom.png"
+        alt="Travspro Holidays Logo"
+      >
+    </a>
+
+    <ul class="nav-links">
+
+      <li>
+        ./index.html
+          HOME
+        </a>
+      </li>
+
+      <li>
+        ./tourPackage.html
+          TOURS
+        </a>
+      </li>
+
+      <li>
+        ./OurServices.html
+          SERVICES
+        </a>
+      </li>
+
+      <li>
+        ./about.html
+          ABOUT
+        </a>
+      </li>
+
+      <li>
+        ./contactus.html
+          CONTACT
+        </a>
+      </li>
+
+    </ul>
+  </nav>
+
+  <!-- =====================================================
+       HERO
+  ===================================================== -->
 
   <section class="hero">
-    <div class="container">
-      <div class="eyebrow">Himachal Pradesh • Volvo Holiday</div>
+
+    <div class="orb one"></div>
+    <div class="orb two"></div>
+
+    <div class="hero-content">
+
+      <div class="eyebrow">
+        Himachal Pradesh • Volvo Holiday
+      </div>
 
       <h1>
-        Mountains Calling.<br>
+        Mountains Calling.
         <span>Manali Awaits.</span>
       </h1>
 
-      <p>
-        Discover Manali, Solang Valley and Kullu–Naggar with comfortable
-        hotel stays, local sightseeing and round-trip overnight Volvo
-        travel from Delhi.
+      <p class="hero-description">
+        Discover Manali, Solang Valley, Kullu and Naggar with
+        comfortable hotel stays, memorable sightseeing and
+        round-trip overnight Volvo travel from Delhi.
       </p>
 
       <div class="tags">
-        <span class="tag">5-day itinerary</span>
-        <span class="tag">3 hotel nights</span>
-        <span class="tag">2 overnight coach journeys</span>
-        <span class="tag">Delhi → Manali → Delhi</span>
+
+        <span class="tag">
+          5-Day Itinerary
+        </span>
+
+        <span class="tag">
+          3 Hotel Nights
+        </span>
+
+        <span class="tag">
+          2 Overnight Coach Journeys
+        </span>
+
+        <span class="tag">
+          Delhi → Manali → Delhi
+        </span>
+
       </div>
 
-      
+      <div class="hero-buttons">
+
+        #itinerary
+          View Itinerary →
+        </a>
+
+        ./contactus.html
+          Request a Quote
+        </a>
+
+      </div>
+
+    </div>
   </section>
+
+  <!-- =====================================================
+       MAIN CONTENT
+  ===================================================== -->
 
   <main class="container">
 
-    <section class="features" aria-label="Tour includes">
+    <!-- FEATURES -->
+
+    <section
+      class="features reveal"
+      aria-label="Tour package includes"
+    >
+
       <div class="feature">
+        <div class="feature-icon">🍽</div>
         <strong>Meals</strong>
-        <small>Breakfast & dinner</small>
+        <small>Breakfast and dinner</small>
       </div>
 
       <div class="feature">
+        <div class="feature-icon">🚌</div>
         <strong>Transfers</strong>
-        <small>Volvo & local vehicle</small>
+        <small>Volvo and local vehicle</small>
       </div>
 
       <div class="feature">
+        <div class="feature-icon">🏔</div>
         <strong>Sightseeing</strong>
         <small>As per itinerary</small>
       </div>
 
       <div class="feature">
+        <div class="feature-icon">🏨</div>
         <strong>Hotel</strong>
         <small>3 nights in Manali</small>
       </div>
+
     </section>
 
-   
+    <!-- SECTION LINKS -->
+
+    <nav
+      class="section-links"
+      aria-label="Package page navigation"
+    >
+
+      #overviewOverview</a>
+      #highlightsHighlights</a>
+      #itineraryItinerary</a>
+      #inclusionsInclusions</a>
+      #exclusionsExclusions</a>
+      #hotelsHotels</a>
+      #policiesBooking Information</a>
+
+    </nav>
 
     <div class="layout">
+
       <div class="content">
 
-        <section class="panel" id="overview">
-          <h2>Manali Mountain Holiday by Volvo</h2>
+        <!-- OVERVIEW -->
+
+        <section
+          class="panel reveal"
+          id="overview"
+        >
+
+          <h2>
+            Manali Mountain Holiday by Volvo
+          </h2>
 
           <p>
-            Enjoy a well-planned blend of mountain scenery, sightseeing
-            and leisure time. Your holiday begins with an overnight
-            Volvo journey from Delhi, followed by three hotel nights
-            in Manali and an overnight return journey.
+            Enjoy a well-planned combination of mountain scenery,
+            sightseeing and leisure time. Your holiday begins with
+            an overnight Volvo journey from Delhi, followed by three
+            hotel nights in Manali and an overnight return journey.
           </p>
 
           <p>
-            Explore Manali’s local landmarks, enjoy Solang Valley and
-            discover the culture and heritage of Kullu and Naggar.
-            Optional adventure activities are available at additional
-            cost, subject to weather and applicable regulations.
+            Explore Manali’s local landmarks, enjoy the landscapes
+            of Solang Valley and discover the culture and heritage
+            of Kullu and Naggar.
+          </p>
+
+          <p>
+            Optional adventure activities may be available at an
+            additional cost, subject to weather, availability and
+            applicable local regulations.
           </p>
 
           <div class="note">
-            The return coach departs Manali on Day 5. Delhi arrival is
-            normally the following morning, subject to the coach schedule
-            and road conditions.
+            The return coach departs from Manali on Day 5.
+            Arrival in Delhi is normally the following morning,
+            subject to the coach schedule, weather and road conditions.
           </div>
+
         </section>
 
-        <section class="panel" id="highlights">
+        <!-- HIGHLIGHTS -->
+
+        <section
+          class="panel reveal"
+          id="highlights"
+        >
+
           <h2>Tour Highlights</h2>
 
           <ul>
-            <li>Round-trip overnight Volvo journeys between Delhi and Manali.</li>
-            <li>Manali temples, Tibetan Monastery, Vashisht hot springs and Mall Road.</li>
-            <li>Solang Valley sightseeing and optional adventure activities.</li>
-            <li>Kullu culture, handicrafts and shawl showrooms.</li>
-            <li>Naggar Castle and Himalayan landscapes.</li>
-            <li>Nicholas Roerich Art Gallery and Tripura Sundari Temple.</li>
-            <li>Optional paragliding, rafting, zorbing, ATV rides and horse riding.</li>
+            <li>
+              Round-trip overnight Volvo journeys between Delhi and Manali.
+            </li>
+
+            <li>
+              Manali temples, Tibetan Monastery, Vashisht hot springs
+              and Mall Road.
+            </li>
+
+            <li>
+              Solang Valley sightseeing and optional adventure activities.
+            </li>
+
+            <li>
+              Kullu culture, handicrafts and traditional shawl showrooms.
+            </li>
+
+            <li>
+              Naggar Castle and beautiful Himalayan landscapes.
+            </li>
+
+            <li>
+              Nicholas Roerich Art Gallery and Tripura Sundari Temple.
+            </li>
+
+            <li>
+              Optional paragliding, rafting, zorbing, ATV rides
+              and horse riding.
+            </li>
           </ul>
+
         </section>
 
-        <section class="panel" id="itinerary">
+        <!-- ITINERARY -->
+
+        <section
+          class="panel reveal"
+          id="itinerary"
+        >
+
           <h2>Day-Wise Itinerary</h2>
 
           <article class="day">
-            <span class="day-label">DAY 1 • DELHI</span>
+
+            <span class="day-label">
+              DAY 1 • DELHI
+            </span>
+
             <h3>Delhi → Manali</h3>
 
             <p>
@@ -492,239 +1516,466 @@
             </p>
 
             <p>
-              Enjoy the journey as the landscape changes from the
-              plains towards the Himalayan foothills.
+              Relax during the journey as the landscape changes from
+              the plains towards the Himalayan foothills.
             </p>
 
-            <span class="meal">Overnight coach journey • No hotel stay</span>
+            <span class="meal">
+              Overnight coach journey • No hotel stay
+            </span>
+
           </article>
 
           <article class="day">
-            <span class="day-label">DAY 2 • MANALI</span>
-            <h3>Arrival & Local City Sightseeing</h3>
+
+            <span class="day-label">
+              DAY 2 • MANALI
+            </span>
+
+            <h3>Arrival and Local City Sightseeing</h3>
 
             <p>
               Arrive at the Manali Volvo stop and transfer to your hotel.
-              Standard check-in is 12:00 noon. Early check-in is subject
-              to availability and may involve additional charges.
+              Standard check-in is at 12:00 noon. Early check-in is
+              subject to hotel availability and may involve an
+              additional charge.
             </p>
 
             <p>
               Visit Hadimba Devi Temple, Ghatotkacha Temple, Club House,
               Tibetan Monastery, Vashisht Village and its hot springs.
-              Explore the surrounding temples and enjoy evening leisure
-              time at Mall Road.
+              Explore the surrounding temples and enjoy leisure time
+              at Mall Road in the evening.
             </p>
 
-            <span class="meal">Hotel night 1 • Dinner</span>
+            <span class="meal">
+              Hotel night 1 • Dinner
+            </span>
 
             <div class="note">
               Arrival-day breakfast is subject to the confirmed meal
-              schedule and is not assumed to be included.
+              schedule and should not be considered included unless
+              mentioned in your final booking confirmation.
             </div>
+
           </article>
 
           <article class="day">
-            <span class="day-label">DAY 3 • SOLANG VALLEY</span>
+
+            <span class="day-label">
+              DAY 3 • SOLANG VALLEY
+            </span>
+
             <h3>Manali → Solang Valley → Manali</h3>
 
             <p>
-              After breakfast, proceed to Solang Valley and enjoy its
-              mountain landscapes.
+              After breakfast, proceed to Solang Valley and enjoy
+              its spectacular mountain landscapes.
             </p>
 
             <p>
               Optional paragliding, zorbing, ATV rides, horse riding
-              and trail rides are available at your own expense,
+              and trail rides may be available at your own expense,
               subject to weather and applicable regulations.
             </p>
 
-            <p>Return to Manali for dinner and your overnight hotel stay.</p>
+            <p>
+              Return to Manali for dinner and your overnight hotel stay.
+            </p>
 
-            <span class="meal">Hotel night 2 • Breakfast & dinner</span>
+            <span class="meal">
+              Hotel night 2 • Breakfast and dinner
+            </span>
+
           </article>
 
           <article class="day">
-            <span class="day-label">DAY 4 • KULLU & NAGGAR</span>
+
+            <span class="day-label">
+              DAY 4 • KULLU AND NAGGAR
+            </span>
+
             <h3>Kullu → Naggar → Manali</h3>
 
             <p>
-              After breakfast, depart for Kullu and Naggar. En route,
-              visit Devlok Cultural Theme Park and local shawl and
-              handicraft showrooms.
+              After breakfast, depart for Kullu and Naggar. Along
+              the way, visit Devlok Cultural Theme Park and local
+              shawl and handicraft showrooms.
             </p>
 
             <p>
-              Optional rafting and paragliding are available at additional
-              cost. Continue to Naggar Castle and the Nicholas Roerich
-              Art Gallery. Admire Tripura Sundari Temple en route and
-              return to Manali in the evening.
+              Optional rafting and paragliding may be available at
+              an additional cost. Continue to Naggar Castle and the
+              Nicholas Roerich Art Gallery.
             </p>
 
-            <span class="meal">Hotel night 3 • Breakfast & dinner</span>
+            <p>
+              Admire Tripura Sundari Temple along the route and return
+              to Manali in the evening.
+            </p>
+
+            <span class="meal">
+              Hotel night 3 • Breakfast and dinner
+            </span>
 
             <div class="note">
-              The supplied itinerary lists the art gallery as closed
-              on Mondays. Visits depend on its operating schedule.
-              Kullu–Manikaran may replace Kullu–Naggar if selected
-              and confirmed.
+              The art gallery may be closed on Mondays. All visits
+              remain subject to the attraction's current operating
+              schedule. Kullu–Manikaran may replace Kullu–Naggar
+              if selected and confirmed.
             </div>
+
           </article>
 
           <article class="day">
-            <span class="day-label">DAY 5 • DEPARTURE</span>
+
+            <span class="day-label">
+              DAY 5 • DEPARTURE
+            </span>
+
             <h3>Manali → Delhi</h3>
 
             <p>
-              After breakfast, check out according to hotel policy.
-              Proceed towards the Mall Road area for leisure time.
-              Cloakroom luggage storage is subject to availability
-              and applicable terms.
+              After breakfast, check out according to the hotel’s
+              policy. Proceed towards the Mall Road area and enjoy
+              leisure time.
             </p>
 
             <p>
-              A visit to Van Vihar may be possible depending on time.
+              Cloakroom luggage storage is subject to availability
+              and applicable local terms. A visit to Van Vihar may
+              be possible depending on the available time.
+            </p>
+
+            <p>
               Collect your luggage and proceed to the Volvo boarding
               point for your overnight return journey to Delhi.
             </p>
 
-            <span class="meal">Breakfast • Check-out • Overnight coach</span>
+            <span class="meal">
+              Breakfast • Check-out • Overnight coach
+            </span>
 
             <div class="note">
-              No hotel night is included on Day 5. Delhi arrival is
-              normally the following morning.
+              No hotel night is included on Day 5. Arrival in Delhi
+              is normally the following morning.
             </div>
+
           </article>
+
         </section>
 
-        <section class="panel" id="inclusions">
+        <!-- INCLUSIONS -->
+
+        <section
+          class="panel reveal"
+          id="inclusions"
+        >
+
           <h2>Package Inclusions</h2>
 
           <ul>
-            <li>Round-trip AC Volvo tickets between Delhi and Manali.</li>
-            <li>Arrival pickup from Manali Volvo stop to the hotel.</li>
-            <li>Departure transfer to the Manali Volvo boarding point.</li>
-            <li>Three hotel nights on double occupancy for two adults.</li>
-            <li>MAP meals: breakfast and dinner as confirmed in the itinerary.</li>
-            <li>Breakfast on the final day and dinner on applicable hotel nights.</li>
-            <li>Private AC/non-AC sedan for included transfers and sightseeing, subject to local/NGT regulations.</li>
-            <li>Manali local sightseeing.</li>
-            <li>Solang Valley excursion.</li>
-            <li>Kullu–Naggar OR Kullu–Manikaran excursion, as confirmed.</li>
-            <li>Driver allowance, fuel, parking and applicable road taxes for included vehicle services.</li>
+            <li>
+              Round-trip AC Volvo tickets between Delhi and Manali.
+            </li>
+
+            <li>
+              Arrival pickup from the Manali Volvo stop to the hotel.
+            </li>
+
+            <li>
+              Departure transfer to the Manali Volvo boarding point.
+            </li>
+
+            <li>
+              Three hotel nights on double occupancy for two adults.
+            </li>
+
+            <li>
+              MAP meals consisting of breakfast and dinner as
+              confirmed in the itinerary.
+            </li>
+
+            <li>
+              Breakfast on the final day and dinner on the applicable
+              hotel nights.
+            </li>
+
+            <li>
+              Private AC or non-AC sedan for included transfers and
+              sightseeing, subject to local and NGT regulations.
+            </li>
+
+            <li>
+              Manali local sightseeing.
+            </li>
+
+            <li>
+              Solang Valley excursion.
+            </li>
+
+            <li>
+              Kullu–Naggar or Kullu–Manikaran excursion,
+              as confirmed.
+            </li>
+
+            <li>
+              Driver allowance, fuel, parking and applicable road
+              taxes for the included vehicle services.
+            </li>
           </ul>
+
         </section>
 
-        <section class="panel" id="exclusions">
+        <!-- EXCLUSIONS -->
+
+        <section
+          class="panel reveal"
+          id="exclusions"
+        >
+
           <h2>Package Exclusions</h2>
 
           <ul>
-            <li>Transport not specifically included.</li>
-            <li>Monument, museum, park and attraction entrance fees.</li>
-            <li>Camera/video charges.</li>
-            <li>Personal expenses, laundry, calls, shopping, tips and beverages.</li>
-            <li>Adventure activities, including rafting, paragliding, ATV rides, horse riding and zorbing.</li>
-            <li>Optional Atal Tunnel excursion.</li>
-            <li>4×4 jeep charges during snowfall or difficult road conditions.</li>
-            <li>Volvo luggage charges and hotel heater charges, where applicable.</li>
-            <li>Meals outside the confirmed meal plan.</li>
-            <li>Extra sightseeing or vehicle usage.</li>
-            <li>Additional costs caused by road closures, weather, natural calamities or transport restrictions.</li>
-            <li>Travel insurance.</li>
-            <li>Services not specifically included.</li>
-            <li>Applicable taxes unless included in the quotation.</li>
+            <li>
+              Transportation not specifically mentioned as included.
+            </li>
+
+            <li>
+              Monument, museum, park and attraction entrance fees.
+            </li>
+
+            <li>
+              Camera and video charges.
+            </li>
+
+            <li>
+              Personal expenses, laundry, calls, shopping, tips
+              and beverages.
+            </li>
+
+            <li>
+              Adventure activities including rafting, paragliding,
+              ATV rides, horse riding and zorbing.
+            </li>
+
+            <li>
+              Optional Atal Tunnel excursion.
+            </li>
+
+            <li>
+              4×4 jeep charges during snowfall or difficult
+              road conditions.
+            </li>
+
+            <li>
+              Volvo luggage charges and hotel heater charges,
+              where applicable.
+            </li>
+
+            <li>
+              Meals outside the confirmed meal plan.
+            </li>
+
+            <li>
+              Extra sightseeing or vehicle usage.
+            </li>
+
+            <li>
+              Additional costs caused by road closures, weather,
+              natural calamities or transport restrictions.
+            </li>
+
+            <li>
+              Travel insurance.
+            </li>
+
+            <li>
+              Services not specifically mentioned as included.
+            </li>
+
+            <li>
+              Applicable taxes unless included in the final quotation.
+            </li>
           </ul>
+
         </section>
 
-        <section class="panel" id="hotels">
+        <!-- HOTELS -->
+
+        <section
+          class="panel reveal"
+          id="hotels"
+        >
+
           <h2>Accommodation Options</h2>
 
           <div class="hotels">
+
             <article class="hotel">
               <small>DELUXE</small>
               <h3>Hotel Niyati Cottage</h3>
-              <p>Or similar, subject to confirmation.</p>
+              <p>
+                Or a similar hotel, subject to availability
+                and confirmation.
+              </p>
             </article>
 
             <article class="hotel">
               <small>SUPER DELUXE</small>
               <h3>Hotel Kullu Manali Inn</h3>
-              <p>Or similar, subject to confirmation.</p>
+              <p>
+                Or a similar hotel, subject to availability
+                and confirmation.
+              </p>
             </article>
 
             <article class="hotel">
               <small>LUXURY</small>
               <h3>Hotel Tanwar Villas</h3>
-              <p>Or similar, subject to confirmation.</p>
+              <p>
+                Or a similar hotel, subject to availability
+                and confirmation.
+              </p>
             </article>
 
             <article class="hotel">
               <small>LUXURY PLUS</small>
               <h3>Hotel Details on Request</h3>
-              <p>Selection and pricing shared with your quotation.</p>
+              <p>
+                Hotel selection and pricing will be shared
+                with your quotation.
+              </p>
             </article>
+
           </div>
 
           <div class="note">
-            Categories are package labels, not verified star ratings.
-            Exact hotels, rooms and meal plans require written confirmation.
+            The categories shown are package labels and not independently
+            verified star ratings. The exact hotel, room type and meal
+            plan require written confirmation.
           </div>
+
         </section>
 
-        <section class="panel" id="policies">
+        <!-- BOOKING POLICIES -->
+
+        <section
+          class="panel reveal"
+          id="policies"
+        >
+
           <h2>Booking Information</h2>
 
           <div class="note">
-            The supplied policies name Travspro Holidays.
-            Confirm the applicable provider and final written terms
-            before payment. These supplier details are not presented
-            as confirmed Travspro Holidays policies.
+            Final prices, hotels, inclusions, payment conditions and
+            cancellation terms will be confirmed in writing before
+            payment. Always review your final booking voucher carefully.
           </div>
 
-          <h3 class="policy-heading">Payment</h3>
+          <h3 class="policy-heading">
+            Payment
+          </h3>
+
           <p>
-            The supplied Himachal policy states 50% advance and 50%
-            on arrival. Obtain the final payment schedule and verified
-            company payment details before paying.
+            The standard package policy may require a 50% advance
+            payment and the remaining 50% on arrival. The exact
+            payment schedule and verified company payment details
+            will be shared with the final quotation.
           </p>
 
-          <h3 class="policy-heading">Cancellation</h3>
+          <h3 class="policy-heading">
+            Cancellation
+          </h3>
+
           <p>
-            Cancellation requests must be submitted in writing.
-            The supplied policy describes the token amount as
-            non-refundable and lists cancellation charges of 25%–50%,
-            with 100% retention within 15 days or for no-shows.
-            Confirm exact date bands and charges before booking.
+            All cancellation requests must be submitted in writing.
+            The booking token may be non-refundable. Cancellation
+            charges may range from 25% to 50%, with up to 100%
+            retention for late cancellations or no-shows.
           </p>
 
-          <h3 class="policy-heading">General Conditions</h3>
+          <p>
+            The applicable date bands and final charges will be
+            confirmed before booking.
+          </p>
+
+          <h3 class="policy-heading">
+            General Conditions
+          </h3>
+
           <ul>
-            <li>Services follow the confirmed booking voucher.</li>
-            <li>Changes must be requested in writing.</li>
-            <li>Hotel check-in/check-out follow individual hotel policies.</li>
-            <li>Base-category rooms apply unless upgrades are confirmed.</li>
-            <li>Activities depend on weather and operational feasibility.</li>
-            <li>Obtain the complete applicable terms for unused services, complaints and amendments.</li>
+            <li>
+              Services will be provided according to the confirmed
+              booking voucher.
+            </li>
+
+            <li>
+              Changes must be requested in writing.
+            </li>
+
+            <li>
+              Hotel check-in and check-out follow the individual
+              hotel policies.
+            </li>
+
+            <li>
+              Base-category rooms apply unless an upgrade is
+              confirmed in writing.
+            </li>
+
+            <li>
+              Activities depend on weather, availability and
+              operational feasibility.
+            </li>
+
+            <li>
+              Obtain complete terms for amendments, unused services,
+              complaints and cancellations before payment.
+            </li>
           </ul>
 
-          <h3 class="policy-heading">Documents</h3>
+          <h3 class="policy-heading">
+            Documents
+          </h3>
+
           <ul>
-            <li>Valid government-issued photo identity card.</li>
-            <li>Booking confirmation voucher.</li>
-            <li>Tickets and permits where applicable.</li>
+            <li>
+              Valid government-issued photo identity card.
+            </li>
+
+            <li>
+              Booking confirmation voucher.
+            </li>
+
+            <li>
+              Tickets and permits where applicable.
+            </li>
           </ul>
+
         </section>
 
       </div>
 
+      <!-- =====================================================
+           SIDEBAR
+      ===================================================== -->
+
       <aside aria-label="Booking enquiry">
-        <section class="panel">
-          <div class="eyebrow">Plan your holiday</div>
-          <div class="price">Price on Request</div>
+
+        <section class="panel reveal">
+
+          <div class="sidebar-eyebrow">
+            Plan Your Holiday
+          </div>
+
+          <div class="price">
+            Price on Request
+          </div>
 
           <p>
-            Per person on twin sharing. Final price depends on dates,
-            hotel category and availability.
+            The final price depends on the travel dates, number of
+            travellers, hotel category and availability.
           </p>
 
           <div class="fact">
@@ -752,30 +2003,165 @@
             <strong>MAP</strong>
           </div>
 
-         
+          <div class="booking-buttons">
+
+            ./contactus.html
+              Request a Quote
+            </a>
+
+            <!-- Replace the number below with your WhatsApp number.
+                 Use country code without +, spaces or hyphens. -->
+
+            https://wa.me/919999999999?text=Hello%20Travspro%20Holidays%2C%20I%20would%20like%20a%20quotation%20for%20the%20Manali%20tour%20package.
+              WhatsApp Enquiry
+            </a>
+
+          </div>
+
         </section>
 
-        <section class="panel">
+        <section class="panel reveal">
+
           <h3>Explore More</h3>
-          <p>
-            <a href="./tourPackage.html">Browse other tour packages →</a>
-/p>
-          <p>
-            <a hrefctus.htmlContact Travspro Holidays →</a>
-          </p>
+
+          ./tourPackage.html
+            Browse other tour packages →
+          </a>
+
+          ./OurServices.html
+            Explore our services →
+          </a>
+
+          ./about.html
+            About Travspro Holidays →
+          </a>
+
+          ./contactus.html
+            Contact Travspro Holidays →
+          </a>
+
         </section>
+
       </aside>
 
     </div>
   </main>
 
+  <!-- =====================================================
+       CALL TO ACTION
+  ===================================================== -->
+
+  <section class="cta reveal">
+
+    <h2>
+      Ready for your<br>
+      Manali adventure?
+    </h2>
+
+    <p>
+      Share your preferred travel dates and hotel category.
+      Travspro Holidays will help you create a comfortable
+      and memorable Manali holiday.
+    </p>
+
+    ./contactus.html
+      Start Your Journey →
+    </a>
+
+  </section>
+
+  <!-- =====================================================
+       FOOTER
+  ===================================================== -->
+
   <footer>
-    <div class="container">
-      <p><strong>Travspro Holidays</strong></p>
-      <p>Travel Beyond Ordinary</p>
-      <p>© 2026 Travspro Holidays</p>
-    </div>
+
+    <p>
+      © 2026
+      <strong>Travspro Holidays</strong>
+      — Travel Solution Provider
+    </p>
+
+    <p>
+      Travel Beyond Ordinary
+    </p>
+
   </footer>
+
+  <!-- =====================================================
+       JAVASCRIPT
+  ===================================================== -->
+
+  <script>
+    /*
+      Scroll reveal animation
+    */
+
+    const revealElements =
+      document.querySelectorAll(".reveal");
+
+    if ("IntersectionObserver" in window) {
+      const observer =
+        new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.10
+          }
+        );
+
+      revealElements.forEach((element) => {
+        observer.observe(element);
+      });
+    } else {
+      revealElements.forEach((element) => {
+        element.classList.add("active");
+      });
+    }
+
+    /*
+      Subtle mouse movement for hero orbs
+    */
+
+    const heroOrbs =
+      document.querySelectorAll(".orb");
+
+    document.addEventListener(
+      "mousemove",
+      (event) => {
+        const x =
+          (
+            event.clientX /
+            window.innerWidth -
+            0.5
+          ) * 10;
+
+        const y =
+          (
+            event.clientY /
+            window.innerHeight -
+            0.5
+          ) * 10;
+
+        heroOrbs.forEach((orb, index) => {
+          const multiplier =
+            index === 0 ? 1 : -1;
+
+          orb.style.marginLeft =
+            `${x * multiplier}px`;
+
+          orb.style.marginTop =
+            `${y * multiplier}px`;
+        });
+      }
+    );
+  </script>
 
 </body>
 </html>
