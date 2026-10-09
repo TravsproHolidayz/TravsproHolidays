@@ -1,0 +1,2471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Explore domestic and international holiday packages with Travspro Holidays. Discover Manali, Kashmir, Rajasthan, Kerala, Goa, Ladakh, Singapore, Malaysia, Bali, Thailand and the Philippines."
+  >
+
+  <title>
+    Tour Packages | Travspro Holidays
+  </title>
+
+  <style>
+    /* =====================================================
+       GLOBAL
+    ===================================================== */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background: #050816;
+    }
+
+    body {
+      min-height: 100vh;
+
+      font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+      background:
+        radial-gradient(
+          circle at 12% 10%,
+          rgba(0, 229, 255, 0.09),
+          transparent 28%
+        ),
+        radial-gradient(
+          circle at 88% 20%,
+          rgba(128, 79, 255, 0.10),
+          transparent 28%
+        ),
+        radial-gradient(
+          circle at 50% 90%,
+          rgba(0, 255, 170, 0.04),
+          transparent 30%
+        ),
+        #050816;
+
+      color: #ffffff;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /*
+      No body::before or body::after overlays are used.
+      This prevents shadows from hiding page content.
+    */
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: 0 auto;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    :focus-visible {
+      outline: 3px solid #00eaff;
+      outline-offset: 4px;
+    }
+
+    /* =====================================================
+       NAVBAR
+    ===================================================== */
+
+    .navbar {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      z-index: 1000;
+
+      transform: translateX(-50%);
+
+      width: min(1150px, 94%);
+      min-height: 76px;
+
+      padding: 8px 20px 8px 25px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      background: rgba(10, 15, 35, 0.97);
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.12);
+
+      border-radius: 50px;
+
+      box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+
+      animation:
+        navbarEntry
+        0.8s ease;
+    }
+
+    /* =====================================================
+       LOGO
+    ===================================================== */
+
+    .logo {
+      width: 180px;
+      height: 80px;
+      flex-shrink: 0;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo img {
+      width: 250px;
+      max-width: 200%;
+      max-height: 120px;
+
+      object-fit: contain;
+
+      filter:
+        drop-shadow(
+          0 0 7px
+          rgba(0, 229, 255, 0.18)
+        );
+
+      transition:
+        transform 0.35s ease,
+        filter 0.35s ease;
+    }
+
+    .logo img:hover {
+      transform: scale(1.05);
+
+      filter:
+        drop-shadow(
+          0 0 14px
+          rgba(0, 229, 255, 0.45)
+        );
+    }
+
+    /* =====================================================
+       NAVIGATION LINKS
+    ===================================================== */
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      padding: 0;
+      list-style: none;
+    }
+
+    .nav-links li {
+      margin: 0;
+    }
+
+    .nav-links a {
+      display: block;
+
+      padding: 10px 17px;
+
+      border:
+        1px solid
+        transparent;
+
+      border-radius: 30px;
+
+      color: #cdd4e8;
+
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+
+      transition:
+        color 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #ffffff;
+
+      background:
+        rgba(0, 229, 255, 0.10);
+
+      border-color:
+        rgba(0, 229, 255, 0.12);
+    }
+
+    .nav-links a.active {
+      color: #ffffff;
+
+      background:
+        rgba(0, 229, 255, 0.12);
+
+      border-color:
+        rgba(0, 229, 255, 0.20);
+    }
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .hero {
+      position: relative;
+
+      min-height: 88vh;
+
+      padding:
+        175px 20px
+        100px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .hero-decoration {
+      position: absolute;
+      z-index: 0;
+      pointer-events: none;
+
+      width: 270px;
+      height: 270px;
+
+      border-radius: 50%;
+
+      background:
+        radial-gradient(
+          circle at 30% 30%,
+          rgba(143, 255, 255, 0.78),
+          rgba(0, 119, 255, 0.55) 35%,
+          rgba(53, 0, 168, 0.30) 67%,
+          transparent 72%
+        );
+
+      opacity: 0.16;
+      filter: blur(2px);
+
+      animation:
+        floatDecoration
+        8s ease-in-out infinite;
+    }
+
+    .hero-decoration.one {
+      left: -130px;
+      top: 28%;
+    }
+
+    .hero-decoration.two {
+      right: -120px;
+      bottom: 7%;
+
+      animation-delay: -4s;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+
+      width: 100%;
+      max-width: 1000px;
+
+      margin: 0 auto;
+
+      animation:
+        heroEntry
+        1s ease;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+
+      padding: 8px 18px;
+      margin-bottom: 25px;
+
+      background:
+        rgba(0, 229, 255, 0.07);
+
+      border:
+        1px solid
+        rgba(0, 229, 255, 0.30);
+
+      border-radius: 50px;
+
+      color: #00eaff;
+
+      font-size: 13px;
+      font-weight: 700;
+
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+
+      width: 7px;
+      height: 7px;
+
+      background: #00eaff;
+      border-radius: 50%;
+
+      box-shadow:
+        0 0 10px
+        #00eaff;
+
+      animation:
+        blink
+        1.5s infinite;
+    }
+
+    .hero h1 {
+      font-size:
+        clamp(50px, 8vw, 105px);
+
+      line-height: 0.98;
+      font-weight: 900;
+      letter-spacing: -5px;
+
+      background:
+        linear-gradient(
+          120deg,
+          #ffffff,
+          #8befff,
+          #8f72ff,
+          #ffffff
+        );
+
+      background-size:
+        300% 300%;
+
+      -webkit-background-clip: text;
+      background-clip: text;
+
+      color: transparent;
+
+      animation:
+        gradientMove
+        7s ease infinite;
+    }
+
+    .hero h1 span {
+      display: block;
+      color: #00eaff;
+    }
+
+    .hero-description {
+      max-width: 780px;
+
+      margin:
+        30px auto;
+
+      color: #c0c9dc;
+
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+
+      margin-top: 32px;
+    }
+
+    /* =====================================================
+       BUTTONS
+    ===================================================== */
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+
+      min-height: 48px;
+
+      padding:
+        13px 24px;
+
+      background:
+        linear-gradient(
+          90deg,
+          #00c9ed,
+          #6d4aff
+        );
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.10);
+
+      border-radius: 40px;
+
+      color: #ffffff;
+
+      font-size: 14px;
+      font-weight: 700;
+      text-align: center;
+
+      box-shadow:
+        0 8px 24px
+        rgba(0, 117, 255, 0.20);
+
+      transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-4px);
+
+      box-shadow:
+        0 12px 32px
+        rgba(0, 217, 255, 0.32);
+    }
+
+    .button.whatsapp {
+      background:
+        linear-gradient(
+          90deg,
+          #058956,
+          #21bd60
+        );
+
+      box-shadow:
+        0 8px 24px
+        rgba(37, 211, 102, 0.18);
+    }
+
+    .button.whatsapp:hover {
+      box-shadow:
+        0 12px 32px
+        rgba(37, 211, 102, 0.30);
+    }
+
+    .button.outline {
+      background: #11182d;
+
+      border-color:
+        rgba(255, 255, 255, 0.16);
+
+      box-shadow: none;
+    }
+
+    /* =====================================================
+       PACKAGES SECTION
+    ===================================================== */
+
+    .packages-section {
+      position: relative;
+      z-index: 1;
+
+      padding:
+        80px 0 100px;
+    }
+
+    .section-heading {
+      margin-bottom: 35px;
+    }
+
+    .section-heading small {
+      color: #00eaff;
+
+      font-size: 13px;
+      font-weight: 700;
+
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .section-heading h2 {
+      margin-top: 12px;
+
+      font-size:
+        clamp(35px, 5vw, 62px);
+
+      line-height: 1.08;
+    }
+
+    .section-heading p {
+      max-width: 680px;
+
+      margin-top: 18px;
+
+      color: #aeb8cc;
+    }
+
+    /* =====================================================
+       FILTER AND SEARCH
+    ===================================================== */
+
+    .package-tools {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 18px;
+
+      margin-bottom: 35px;
+      padding: 18px;
+
+      background: #0b1125;
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.10);
+
+      border-radius: 20px;
+
+      box-shadow:
+        0 12px 35px
+        rgba(0, 0, 0, 0.16);
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
+
+    .filter-button {
+      padding:
+        9px 16px;
+
+      background: #11182d;
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.12);
+
+      border-radius: 30px;
+
+      color: #b9c3d8;
+
+      font-size: 13px;
+      font-weight: 650;
+
+      transition:
+        color 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease;
+    }
+
+    .filter-button:hover,
+    .filter-button.active {
+      color: #ffffff;
+
+      background:
+        rgba(0, 229, 255, 0.12);
+
+      border-color:
+        rgba(0, 229, 255, 0.28);
+    }
+
+    .search-wrapper {
+      flex: 1;
+      min-width: 220px;
+      max-width: 330px;
+    }
+
+    .search-wrapper input {
+      width: 100%;
+
+      padding:
+        11px 16px;
+
+      background: #080e20;
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.12);
+
+      border-radius: 30px;
+
+      color: #ffffff;
+
+      outline: none;
+
+      transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+    }
+
+    .search-wrapper input::placeholder {
+      color: #79849c;
+    }
+
+    .search-wrapper input:focus {
+      border-color:
+        rgba(0, 229, 255, 0.45);
+
+      box-shadow:
+        0 0 0 4px
+        rgba(0, 229, 255, 0.06);
+    }
+
+    /* =====================================================
+       PACKAGE GRID
+    ===================================================== */
+
+    .package-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+      gap: 25px;
+    }
+
+    .package-card {
+      min-width: 0;
+
+      display: flex;
+      flex-direction: column;
+
+      background: #0d1429;
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.10);
+
+      border-radius: 24px;
+
+      overflow: hidden;
+
+      box-shadow:
+        0 15px 42px
+        rgba(0, 0, 0, 0.18);
+
+      transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+    }
+
+    .package-card:hover {
+      transform:
+        translateY(-8px);
+
+      border-color:
+        rgba(0, 229, 255, 0.28);
+
+      box-shadow:
+        0 22px 50px
+        rgba(0, 0, 0, 0.26);
+    }
+
+    .package-image-link {
+      display: block;
+    }
+
+    .package-image {
+      position: relative;
+
+      height: 230px;
+
+      background: #11182d;
+
+      overflow: hidden;
+    }
+
+    .package-image img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      transition:
+        transform 0.6s ease;
+    }
+
+    .package-card:hover .package-image img {
+      transform: scale(1.06);
+    }
+
+    .package-type {
+      position: absolute;
+      left: 16px;
+      top: 16px;
+
+      padding:
+        6px 12px;
+
+      background:
+        rgba(5, 8, 22, 0.92);
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.15);
+
+      border-radius: 20px;
+
+      color: #ffffff;
+
+      font-size: 11px;
+      font-weight: 700;
+
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .package-type.international {
+      color: #ffe196;
+
+      border-color:
+        rgba(255, 199, 87, 0.28);
+    }
+
+    .package-body {
+      flex: 1;
+
+      display: flex;
+      flex-direction: column;
+
+      padding: 25px;
+    }
+
+    .destination-name {
+      margin-bottom: 7px;
+
+      color: #00eaff;
+
+      font-size: 12px;
+      font-weight: 700;
+
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .package-body h3 {
+      margin-bottom: 12px;
+
+      color: #ffffff;
+
+      font-size: 25px;
+      line-height: 1.25;
+    }
+
+    .package-body h3 a {
+      transition: color 0.3s ease;
+    }
+
+    .package-body h3 a:hover {
+      color: #00eaff;
+    }
+
+    .package-description {
+      margin-bottom: 18px;
+
+      color: #b9c3d8;
+
+      font-size: 14px;
+    }
+
+    .package-facts {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      gap: 10px;
+
+      margin-bottom: 18px;
+    }
+
+    .package-fact {
+      padding: 11px;
+
+      background: #080e20;
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.07);
+
+      border-radius: 13px;
+    }
+
+    .package-fact span {
+      display: block;
+
+      color: #7f8aa1;
+
+      font-size: 11px;
+      text-transform: uppercase;
+    }
+
+    .package-fact strong {
+      display: block;
+
+      margin-top: 3px;
+
+      color: #ffffff;
+
+      font-size: 13px;
+    }
+
+    .package-highlights {
+      margin:
+        0 0 20px;
+
+      padding-left: 20px;
+
+      color: #b8c2d6;
+
+      font-size: 14px;
+    }
+
+    .package-highlights li {
+      margin-bottom: 6px;
+    }
+
+    .package-rate {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 12px;
+
+      margin-top: auto;
+      margin-bottom: 17px;
+      padding-top: 16px;
+
+      border-top:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+    }
+
+    .package-rate span {
+      color: #8590a7;
+      font-size: 12px;
+    }
+
+    .package-rate strong {
+      color: #ffffff;
+      font-size: 15px;
+    }
+
+    .card-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .card-actions.single-action {
+      grid-template-columns: 1fr;
+    }
+
+    .card-button {
+      min-height: 43px;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      padding:
+        9px 12px;
+
+      background: #11182d;
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.13);
+
+      border-radius: 30px;
+
+      color: #ffffff;
+
+      font-size: 12px;
+      font-weight: 700;
+      text-align: center;
+
+      transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease;
+    }
+
+    .card-button:hover {
+      transform: translateY(-2px);
+
+      background:
+        rgba(0, 229, 255, 0.10);
+
+      border-color:
+        rgba(0, 229, 255, 0.28);
+    }
+
+    .card-button.whatsapp {
+      background: #0d764d;
+
+      border-color:
+        rgba(37, 211, 102, 0.25);
+    }
+
+    .card-button.whatsapp:hover {
+      background: #11905f;
+
+      border-color:
+        rgba(37, 211, 102, 0.45);
+    }
+
+    /* =====================================================
+       NO RESULTS
+    ===================================================== */
+
+    .no-results {
+      display: none;
+
+      margin-top: 28px;
+      padding: 35px;
+
+      background: #0d1429;
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.10);
+
+      border-radius: 22px;
+
+      color: #bec8dc;
+
+      text-align: center;
+    }
+
+    .no-results.show {
+      display: block;
+    }
+
+    /* =====================================================
+       DESTINATION STRIP
+    ===================================================== */
+
+    .destination-section {
+      padding:
+        20px 0 100px;
+    }
+
+    .destination-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+      gap: 17px;
+
+      margin-top: 38px;
+    }
+
+    .destination-card {
+      min-height: 165px;
+
+      padding: 25px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      background:
+        linear-gradient(
+          145deg,
+          #111a32,
+          #0b1022
+        );
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.09);
+
+      border-radius: 20px;
+
+      transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+    }
+
+    .destination-card:hover {
+      transform: translateY(-6px);
+
+      border-color:
+        rgba(0, 229, 255, 0.28);
+    }
+
+    .destination-card small {
+      color: #00eaff;
+
+      font-size: 11px;
+      font-weight: 700;
+
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .destination-card strong {
+      margin-top: 7px;
+
+      color: #ffffff;
+
+      font-size: 22px;
+    }
+
+    .destination-card span {
+      margin-top: 5px;
+
+      color: #909bb2;
+
+      font-size: 13px;
+    }
+
+    /* =====================================================
+       CUSTOM TOUR CTA
+    ===================================================== */
+
+    .custom-tour-section {
+      width: min(1180px, 92%);
+
+      margin:
+        0 auto 90px;
+
+      padding:
+        85px 30px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #10243a,
+          #191638
+        );
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.10);
+
+      border-radius: 35px;
+
+      box-shadow:
+        0 18px 50px
+        rgba(0, 0, 0, 0.20);
+
+      text-align: center;
+    }
+
+    .custom-tour-section small {
+      color: #00eaff;
+
+      font-size: 13px;
+      font-weight: 700;
+
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .custom-tour-section h2 {
+      margin-top: 12px;
+
+      font-size:
+        clamp(35px, 5vw, 62px);
+
+      line-height: 1.1;
+    }
+
+    .custom-tour-section p {
+      max-width: 680px;
+
+      margin:
+        20px auto 30px;
+
+      color: #c0c9dc;
+    }
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    footer {
+      padding:
+        50px 20px;
+
+      background: #070b18;
+
+      border-top:
+        1px solid
+        rgba(255, 255, 255, 0.07);
+
+      color: #8791a8;
+
+      font-size: 14px;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    footer strong {
+      color: #00eaff;
+    }
+
+    /* =====================================================
+       WHATSAPP FLOATING BUTTON
+    ===================================================== */
+
+    .floating-whatsapp {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 900;
+
+      width: 58px;
+      height: 58px;
+
+      display: grid;
+      place-items: center;
+
+      background: #1ebd63;
+
+      border:
+        2px solid
+        rgba(255, 255, 255, 0.20);
+
+      border-radius: 50%;
+
+      color: #ffffff;
+
+      font-size: 24px;
+      font-weight: 800;
+
+      box-shadow:
+        0 12px 32px
+        rgba(0, 0, 0, 0.30);
+
+      transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+    }
+
+    .floating-whatsapp:hover {
+      transform:
+        translateY(-5px)
+        scale(1.04);
+
+      background: #24d36c;
+    }
+
+    /* =====================================================
+       REVEAL ANIMATION
+    ===================================================== */
+
+    .reveal {
+      opacity: 0;
+
+      transform:
+        translateY(30px);
+
+      transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+
+      transform:
+        translateY(0);
+    }
+
+    /* =====================================================
+       ANIMATIONS
+    ===================================================== */
+
+    @keyframes navbarEntry {
+      from {
+        opacity: 0;
+
+        transform:
+          translate(-50%, -25px);
+      }
+
+      to {
+        opacity: 1;
+
+        transform:
+          translate(-50%, 0);
+      }
+    }
+
+    @keyframes heroEntry {
+      from {
+        opacity: 0;
+
+        transform:
+          translateY(35px);
+      }
+
+      to {
+        opacity: 1;
+
+        transform:
+          translateY(0);
+      }
+    }
+
+    @keyframes gradientMove {
+      0% {
+        background-position:
+          0% 50%;
+      }
+
+      50% {
+        background-position:
+          100% 50%;
+      }
+
+      100% {
+        background-position:
+          0% 50%;
+      }
+    }
+
+    @keyframes floatDecoration {
+      0%,
+      100% {
+        transform:
+          translate(0, 0)
+          scale(1);
+      }
+
+      50% {
+        transform:
+          translate(35px, -40px)
+          scale(1.08);
+      }
+    }
+
+    @keyframes blink {
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0.35;
+      }
+    }
+
+    /* =====================================================
+       TABLET
+    ===================================================== */
+
+    @media (max-width: 980px) {
+      .package-grid {
+        grid-template-columns:
+          repeat(2, minmax(0, 1fr));
+      }
+
+      .destination-grid {
+        grid-template-columns:
+          repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 800px) {
+      .navbar {
+        padding:
+          8px 15px;
+      }
+
+      .logo {
+        width: 140px;
+      }
+
+      .logo img {
+        width: 140px;
+        max-height: 72px;
+      }
+
+      .nav-links {
+        gap: 0;
+      }
+
+      .nav-links a {
+        padding:
+          8px 9px;
+
+        font-size: 11px;
+      }
+
+      .hero h1 {
+        letter-spacing: -3px;
+      }
+
+      .package-tools {
+        align-items: stretch;
+      }
+
+      .search-wrapper {
+        width: 100%;
+        max-width: none;
+      }
+    }
+
+    /* =====================================================
+       MOBILE
+    ===================================================== */
+
+    @media (max-width: 620px) {
+      .navbar {
+        width: 96%;
+        min-height: 65px;
+
+        padding:
+          6px 10px;
+      }
+
+      .logo {
+        width: 78px;
+        height: 55px;
+      }
+
+      .logo img {
+        width: 78px;
+        max-height: 45px;
+      }
+
+      .nav-links {
+        flex: 1;
+        justify-content: flex-end;
+      }
+
+      .nav-links a {
+        padding:
+          8px 5px;
+
+        font-size: 8px;
+      }
+
+      .hero {
+        min-height: auto;
+
+        padding:
+          145px 15px
+          90px;
+      }
+
+      .hero h1 {
+        font-size:
+          clamp(48px, 15vw, 70px);
+
+        letter-spacing: -3px;
+      }
+
+      .hero-description {
+        font-size: 15px;
+      }
+
+      .eyebrow {
+        padding:
+          7px 12px;
+
+        font-size: 10px;
+        letter-spacing: 1.4px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .hero-actions .button {
+        width: 100%;
+      }
+
+      .hero-decoration {
+        width: 180px;
+        height: 180px;
+      }
+
+      .package-tools {
+        padding: 14px;
+      }
+
+      .filters {
+        flex-wrap: nowrap;
+
+        width: 100%;
+
+        overflow-x: auto;
+
+        padding-bottom: 4px;
+      }
+
+      .filter-button {
+        flex-shrink: 0;
+      }
+
+      .package-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .package-image {
+        height: 220px;
+      }
+
+      .destination-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .card-actions {
+        grid-template-columns: 1fr;
+      }
+
+      .custom-tour-section {
+        padding:
+          65px 20px;
+      }
+
+      .floating-whatsapp {
+        right: 16px;
+        bottom: 16px;
+
+        width: 52px;
+        height: 52px;
+
+        font-size: 21px;
+      }
+    }
+
+    /* =====================================================
+       REDUCED MOTION
+    ===================================================== */
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration:
+          0.01ms !important;
+
+        animation-iteration-count:
+          1 !important;
+
+        transition-duration:
+          0.01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =====================================================
+       NAVIGATION
+  ===================================================== -->
+
+  <nav class="navbar">
+
+    ./index.html
+      <img
+        src="ohom.png"
+        alt="Travspro Holidays Logo"
+      >
+    </a>
+
+    <ul class="nav-links">
+
+      <li>
+        ./index.html
+          HOME
+        </a>
+      </li>
+
+      <li>
+        ./tourPackage.html
+          TOURS
+        </a>
+      </li>
+
+      <li>
+        ./OurServices.html
+          SERVICES
+        </a>
+      </li>
+
+      <li>
+        ./about.html
+          ABOUT
+        </a>
+      </li>
+
+      <li>
+        ./contactus.html
+          CONTACT
+        </a>
+      </li>
+
+    </ul>
+
+  </nav>
+
+  <!-- =====================================================
+       HERO
+  ===================================================== -->
+
+  <header class="hero">
+
+    <div class="hero-decoration one"></div>
+    <div class="hero-decoration two"></div>
+
+    <div class="hero-content">
+
+      <div class="eyebrow">
+        Discover • Explore • Experience
+      </div>
+
+      <h1>
+        Handpicked
+        <span>Holiday Packages</span>
+      </h1>
+
+      <p class="hero-description">
+        Explore breathtaking destinations, carefully designed holiday
+        packages and unforgettable experiences with Travspro Holidays.
+        Choose from memorable Indian escapes and exciting international
+        adventures.
+      </p>
+
+      <div class="hero-actions">
+
+        #packages
+          Explore Packages →
+        </a>
+
+        https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20would%20like%20to%20plan%20a%20custom%20tour.
+          ☎ Plan My Trip
+        </a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <!-- =====================================================
+       PACKAGE SECTION
+  ===================================================== -->
+
+  <main
+    class="packages-section"
+    id="packages"
+  >
+
+    <div class="container">
+
+      <div class="section-heading reveal">
+
+        <small>
+          Holiday Collection
+        </small>
+
+        <h2>
+          Find your next unforgettable journey.
+        </h2>
+
+        <p>
+          Explore our domestic and international holiday packages.
+          Select a package for more information or contact our team
+          to receive a personalised quotation.
+        </p>
+
+      </div>
+
+      <!-- FILTER AND SEARCH -->
+
+      <div class="package-tools reveal">
+
+        <div
+          class="filters"
+          aria-label="Filter tour packages"
+        >
+
+          <button
+            type="button"
+            class="filter-button active"
+            data-filter="all"
+          >
+            All Packages
+          </button>
+
+          <button
+            type="button"
+            class="filter-button"
+            data-filter="domestic"
+          >
+            India
+          </button>
+
+          <button
+            type="button"
+            class="filter-button"
+            data-filter="international"
+          >
+            International
+          </button>
+
+          <button
+            type="button"
+            class="filter-button"
+            data-filter="mountain"
+          >
+            Mountains
+          </button>
+
+          <button
+            type="button"
+            class="filter-button"
+            data-filter="beach"
+          >
+            Beaches
+          </button>
+
+          <button
+            type="button"
+            class="filter-button"
+            data-filter="heritage"
+          >
+            Heritage
+          </button>
+
+        </div>
+
+        <div class="search-wrapper">
+
+          <input
+            type="search"
+            id="packageSearch"
+            placeholder="Search destinations..."
+            aria-label="Search tour packages"
+          >
+
+        </div>
+
+      </div>
+
+      <!-- =====================================================
+           PACKAGE CARDS
+      ===================================================== -->
+
+      <div
+        class="package-grid"
+        id="packageGrid"
+      >
+
+        <!-- MANALI -->
+
+        <article
+          class="package-card reveal"
+          data-category="domestic mountain"
+          data-name="manali himachal snow solang valley"
+          id="himachal"
+        >
+
+          ./mnl.html
+            <div class="package-image">
+
+              https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=1200&q=80
+
+              <span class="package-type">
+                India
+              </span>
+
+            </div>
+          </a>
+
+          <div class="package-body">
+
+            <div class="destination-name">
+              Himachal Pradesh
+            </div>
+
+            <h3>
+              ./mnl.html
+                Manali Escape
+              </a>
+            </h3>
+
+            <p class="package-description">
+              Experience snow-capped mountains, scenic valleys,
+              adventure activities and the peaceful beauty of Manali.
+            </p>
+
+            <div class="package-facts">
+
+              <div class="package-fact">
+                <span>Duration</span>
+                <strong>4 Nights / 5 Days</strong>
+              </div>
+
+              <div class="package-fact">
+                <span>Best For</span>
+                <strong>Couples & Families</strong>
+              </div>
+
+            </div>
+
+            <ul class="package-highlights">
+              <li>Solang Valley</li>
+              <li>Rohtang or Snow Point</li>
+              <li>Local sightseeing</li>
+              <li>Hotel and transport assistance</li>
+            </ul>
+
+            <div class="package-rate">
+              <span>Package Rate</span>
+              <strong>Request Rates</strong>
+            </div>
+
+            <div class="card-actions">
+
+              ./mnl.html
+                View Package
+              </a>
+
+              https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20would%20like%20to%20request%20rates%20for%20the%20Manali%20Escape%20package.
+                ☎ Request Rates
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+        <!-- KASHMIR -->
+
+        <article
+          class="package-card reveal"
+          data-category="domestic mountain"
+          data-name="kashmir srinagar gulmarg pahalgam dal lake"
+          id="kashmir"
+        >
+
+          ./ksh.html
+            <div class="package-image">
+
+              https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&w=1200&q=80
+
+              <span class="package-type">
+                India
+              </span>
+
+            </div>
+          </a>
+
+          <div class="package-body">
+
+            <div class="destination-name">
+              Kashmir
+            </div>
+
+            <h3>
+              ./ksh.html
+                Kashmir Paradise
+              </a>
+            </h3>
+
+            <p class="package-description">
+              Discover Srinagar, beautiful valleys, peaceful lakes
+              and the breathtaking landscapes of Kashmir.
+            </p>
+
+            <div class="package-facts">
+
+              <div class="package-fact">
+                <span>Duration</span>
+                <strong>5 Nights / 6 Days</strong>
+              </div>
+
+              <div class="package-fact">
+                <span>Best For</span>
+                <strong>Families & Couples</strong>
+              </div>
+
+            </div>
+
+            <ul class="package-highlights">
+              <li>Srinagar sightseeing</li>
+              <li>Gulmarg</li>
+              <li>Pahalgam</li>
+              <li>Dal Lake experience</li>
+            </ul>
+
+            <div class="package-rate">
+              <span>Package Rate</span>
+              <strong>Request Rates</strong>
+            </div>
+
+            <div class="card-actions">
+
+              ./ksh.html
+                View Package
+              </a>
+
+              https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20would%20like%20to%20request%20rates%20for%20the%20Kashmir%20Paradise%20package.
+                ☎ Request Rates
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+        <!-- RAJASTHAN -->
+
+        <article
+          class="package-card reveal"
+          data-category="domestic heritage"
+          data-name="rajasthan jaipur jodhpur jaisalmer forts palaces desert"
+          id="rajasthan"
+        >
+
+          ./rjs.html
+            <div class="package-image">
+
+              https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1200&q=80
+
+              <span class="package-type">
+                India
+              </span>
+
+            </div>
+          </a>
+
+          <div class="package-body">
+
+            <div class="destination-name">
+              Rajasthan
+            </div>
+
+            <h3>
+              ./rjs.html
+                Royal Rajasthan
+              </a>
+            </h3>
+
+            <p class="package-description">
+              Step into India's royal heritage with magnificent forts,
+              palaces, colourful markets and desert landscapes.
+            </p>
+
+            <div class="package-facts">
+
+              <div class="package-fact">
+                <span>Duration</span>
+                <strong>5 Nights / 6 Days</strong>
+              </div>
+
+              <div class="package-fact">
+                <span>Best For</span>
+                <strong>Culture Lovers</strong>
+              </div>
+
+            </div>
+
+            <ul class="package-highlights">
+              <li>Jaipur</li>
+              <li>Jodhpur</li>
+              <li>Jaisalmer</li>
+              <li>Forts and desert experience</li>
+            </ul>
+
+            <div class="package-rate">
+              <span>Package Rate</span>
+              <strong>Request Rates</strong>
+            </div>
+
+            <div class="card-actions">
+
+              ./rjs.html
+                View Package
+              </a>
+
+              https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20would%20like%20to%20request%20rates%20for%20the%20Royal%20Rajasthan%20package.
+                ☎ Request Rates
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+        <!-- KERALA -->
+
+        <article
+          class="package-card reveal"
+          data-category="domestic nature"
+          data-name="kerala munnar alleppey thekkady backwaters"
+          id="kerala"
+        >
+
+          <div class="package-image">
+
+            https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=1200&q=80
+
+            <span class="package-type">
+              India
+            </span>
+
+          </div>
+
+          <div class="package-body">
+
+            <div class="destination-name">
+              Kerala
+            </div>
+
+            <h3>
+              Kerala Escape
+            </h3>
+
+            <p class="package-description">
+              Explore peaceful backwaters, lush landscapes, beaches
+              and the unique culture of God's Own Country.
+            </p>
+
+            <div class="package-facts">
+
+              <div class="package-fact">
+                <span>Duration</span>
+                <strong>5 Nights / 6 Days</strong>
+              </div>
+
+              <div class="package-fact">
+                <span>Best For</span>
+                <strong>Families & Couples</strong>
+              </div>
+
+            </div>
+
+            <ul class="package-highlights">
+              <li>Munnar</li>
+              <li>Alleppey</li>
+              <li>Thekkady</li>
+              <li>Backwater experience</li>
+            </ul>
+
+            <div class="package-rate">
+              <span>Package Rate</span>
+              <strong>Request Rates</strong>
+            </div>
+
+            <div class="card-actions single-action">
+
+              https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20would%20like%20to%20request%20rates%20for%20the%20Kerala%20Escape%20package.
+                ☎ Request Kerala Rates
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+        <!-- GOA -->
+
+        <article
+          class="package-card reveal"
+          data-category="domestic beach"
+          data-name="goa beaches north south nightlife coastal"
+          id="goa"
+        >
+
+          <div class="package-image">
+
+            https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1200&q=80
+
+            <span class="package-type">
+              India
+            </span>
+
+          </div>
+
+          <div class="package-body">
+
+            <div class="destination-name">
+              Goa
+            </div>
+
+            <h3>
+              Goa Getaway
+            </h3>
+
+            <p class="package-description">
+              Relax on beautiful beaches, discover vibrant nightlife
+              and enjoy the laid-back coastal lifestyle of Goa.
+            </p>
+
+            <div class="package-facts">
+
+              <div class="package-fact">
+                <span>Duration</span>
+                <strong>3 Nights / 4 Days</strong>
+              </div>
+
+              <div class="package-fact">
+                <span>Best For</span>
+                <strong>Friends & Couples</strong>
+              </div>
+
+            </div>
+
+            <ul class="package-highlights">
+              <li>North Goa beaches</li>
+              <li>South Goa</li>
+              <li>Local sightseeing</li>
+              <li>Beach leisure</li>
+            </ul>
+
+            <div class="package-rate">
+              <span>Package Rate</span>
+              <strong>Request Rates</strong>
+            </div>
+
+            <div class="card-actions single-action">
+
+              https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20would%20like%20to%20request%20rates%20for%20the%20Goa%20Getaway%20package.
+                ☎ Request Goa Rates
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+        <!-- LADAKH -->
+
+        <article
+          class="package-card reveal"
+          data-category="domestic mountain adventure"
+          data-name="ladakh leh nubra pangong himalayan adventure"
+          id="ladakh"
+        >
+
+          <div class="package-image">
+
+            https://images.unsplash.com/photo-1536295243470-d7cba4efab7b?auto=format&fit=crop&w=1200&q=80
+
+            <span class="package-type">
+              India
+            </span>
+
+          </div>
+
+          <div class="package-body">
+
+            <div class="destination-name">
+              Ladakh
+            </div>
+
+            <h3>
+              Ladakh Expedition
+            </h3>
+
+            <p class="package-description">
+              Journey through dramatic Himalayan landscapes, high
+              mountain passes, monasteries and unforgettable roads.
+            </p>
+
+            <div class="package-facts">
+
+              <div class="package-fact">
+                <span>Duration</span>
+                <strong>6 Nights / 7 Days</strong>
+              </div>
+
+              <div class="package-fact">
+                <span>Best For</span>
+                <strong>Adventure Seekers</strong>
+              </div>
+
+            </div>
+
+            <ul class="package-highlights">
+              <li>Leh</li>
+              <li>Nubra Valley</li>
+              <li>Pangong Lake</li>
+              <li>Himalayan sightseeing</li>
+            </ul>
+
+            <div class="package-rate">
+              <span>Package Rate</span>
+              <strong>Request Rates</strong>
+            </div>
+
+            <div class="card-actions single-action">
+
+              https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20would%20like%20to%20request%20rates%20for%20the%20Ladakh%20Expedition%20package.
+                ☎ Request Ladakh Rates
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+        <!-- SINGAPORE -->
+
+        <article
+          class="package-card reveal"
+          data-category="international city"
+          data-name="singapore sentosa marina bay gardens city international"
+          id="singapore"
+        >
+
+          <div class="package-image">
+
+            https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=1200&q=80
+
+            <span class="package-type international">
+              International
+            </span>
+
+          </div>
+
+          <div class="package-body">
+
+            <div class="destination-name">
+              Singapore
+            </div>
+
+            <h3>
+              Singapore City Escape
+            </h3>
+
+            <p class="package-description">
+              Experience futuristic attractions, vibrant neighbourhoods,
+              world-class entertainment and unforgettable city views.
+            </p>
+
+            <div class="package-facts">
+
+              <div class="package-fact">
+                <span>Duration</span>
+                <strong>4 Nights / 5 Days</strong>
+              </div>
+
+              <div class="package-fact">
+                <span>Best For</span>
+                <strong>Families & Couples</strong>
+              </div>
+
+            </div>
+
+            <ul class="package-highlights">
+              <li>Singapore city tour</li>
+              <li>Sentosa Island</li>
+              <li>Gardens by the Bay</li>
+              <li>Marina Bay experience</li>
+            </ul>
+
+            <div class="package-rate">
+              <span>Package Rate</span>
+              <strong>Request Rates</strong>
+            </div>
+
+            <div class="card-actions single-action">
+
+              https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20would%20like%20to%20request%20rates%20for%20the%20Singapore%20City%20Escape%20package.
+                ☎ Request Singapore Rates
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+        <!-- MALAYSIA -->
+
+        <article
+          class="package-card reveal"
+          data-category="international city nature"
+          data-name="malaysia kuala lumpur genting highlands batu caves"
+          id="malaysia"
+        >
+
+          <div class="package-image">
+
+            https://images.unsplash.com/photo-1596422846543-75c6fc197f07?auto=format&fit=crop&w=1200&q=80
+
+            <span class="package-type international">
+              International
+            </span>
+
+          </div>
+
+          <div class="package-body">
+
+            <div class="destination-name">
+              Malaysia
+            </div>
+
+            <h3>
+              Malaysian Discovery
+            </h3>
+
+            <p class="package-description">
+              Explore Kuala Lumpur's modern skyline, cultural attractions
+              and the refreshing landscapes of Genting Highlands.
+            </p>
+
+            <div class="package-facts">
+
+              <div class="package-fact">
+                <span>Duration</span>
+                <strong>4 Nights / 5 Days</strong>
+              </div>
+
+              <div class="package-fact">
+                <span>Best For</span>
+                <strong>Families & Groups</strong>
+              </div>
+
+            </div>
+
+            <ul class="package-highlights">
+              <li>Kuala Lumpur city tour</li>
+              <li>Petronas Towers area</li>
+              <li>Genting Highlands</li>
+              <li>Batu Caves</li>
+            </ul>
+
+            <div class="package-rate">
+              <span>Package Rate</span>
+              <strong>Request Rates</strong>
+            </div>
+
+            <div class="card-actions single-action">
+
+              https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20would%20like%20to%20request%20rates%20for%20the%20Malaysian%20Discovery%20package.
+                ☎ Request Malaysia Rates
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+        <!-- BALI -->
+
+        <article
+          class="package-card reveal"
+          data-category="international beach nature"
+          data-name="bali indonesia ubud temples beaches waterfalls"
+          id="bali"
+        >
+
+          <div class="package-image">
+
+            https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1200&q=80
+
+            <span class="package-type international">
+              International
+            </span>
+
+          </div>
+
+          <div class="package-body">
+
+            <div class="destination-name">
+              Bali
+            </div>
+
+            <h3>
+              Beautiful Bali
+            </h3>
+
+            <p class="package-description">
+              Discover peaceful temples, tropical landscapes, beautiful
+              beaches and the unique culture of the Island of the Gods.
+            </p>
+
+            <div class="package-facts">
+
+              <div class="package-fact">
+                <span>Duration</span>
+                <strong>5 Nights / 6 Days</strong>
+              </div>
+
+              <div class="package-fact">
+                <span>Best For</span>
+                <strong>Couples & Families</strong>
+              </div>
+
+            </div>
+
+            <ul class="package-highlights">
+              <li>Ubud</li>
+              <li>Bali temples</li>
+              <li>Waterfalls and rice terraces</li>
+              <li>Beach leisure</li>
+            </ul>
+
+            <div class="package-rate">
+              <span>Package Rate</span>
+              <strong>Request Rates</strong>
+            </div>
+
+            <div class="card-actions single-action">
+
+              https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20would%20like%20to%20request%20rates%20for%20the%20Beautiful%20Bali%20package.
+                ☎ Request Bali Rates
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+        <!-- THAILAND -->
+
+        <article
+          class="package-card reveal"
+          data-category="international beach city"
+          data-name="thailand bangkok pattaya phuket islands temples"
+          id="thailand"
+        >
+
+          <div class="package-image">
+
+            https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=1200&q=80
+
+            <span class="package-type international">
+              International
+            </span>
+
+          </div>
+
+          <div class="package-body">
+
+            <div class="destination-name">
+              Thailand
+            </div>
+
+            <h3>
+              Thailand Highlights
+            </h3>
+
+            <p class="package-description">
+              Experience colourful cities, tropical beaches, island
+              adventures, cultural attractions and exciting nightlife.
+            </p>
+
+            <div class="package-facts">
+
+              <div class="package-fact">
+                <span>Duration</span>
+                <strong>5 Nights / 6 Days</strong>
+              </div>
+
+              <div class="package-fact">
+                <span>Best For</span>
+                <strong>Couples & Friends</strong>
+              </div>
+
+            </div>
+
+            <ul class="package-highlights">
+              <li>Bangkok</li>
+              <li>Pattaya or Phuket</li>
+              <li>Island excursion</li>
+              <li>City and temple sightseeing</li>
+            </ul>
+
+            <div class="package-rate">
+              <span>Package Rate</span>
+              <strong>Request Rates</strong>
+            </div>
+
+            <div class="card-actions single-action">
+
+              https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20would%20like%20to%20request%20rates%20for%20the%20Thailand%20Highlights%20package.
+                ☎ Request Thailand Rates
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+        <!-- PHILIPPINES -->
+
+        <article
+          class="package-card reveal"
+          data-category="international beach nature"
+          data-name="philippines manila cebu palawan islands beaches"
+          id="philippines"
+        >
+
+          <div class="package-image">
+
+            <img
+              src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=1200&q=80"
+              alt="Tropical island and clear water in the Philippines"
+              loading="lazy"
+           
