@@ -4,9 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Kashmir Tour Package 5 Nights 6 Days | Travspro Holidays</title>
+  <title>Rajasthan Tour Package 5 Nights 6 Days | Travspro Holidays</title>
 
   <style>
+
     /* =====================================================
        GLOBAL
     ===================================================== */
@@ -25,20 +26,21 @@
     body {
       min-height: 100vh;
       font-family: "Segoe UI", Arial, sans-serif;
+
       background:
         radial-gradient(
           circle at 15% 15%,
-          rgba(0, 229, 255, 0.11),
+          rgba(255, 162, 0, 0.10),
           transparent 28%
         ),
         radial-gradient(
           circle at 85% 25%,
-          rgba(128, 79, 255, 0.12),
+          rgba(128, 79, 255, 0.11),
           transparent 28%
         ),
         radial-gradient(
           circle at 50% 85%,
-          rgba(0, 255, 170, 0.06),
+          rgba(0, 229, 255, 0.05),
           transparent 30%
         ),
         #050816;
@@ -49,8 +51,9 @@
     }
 
     /*
-      No body::before or body::after overlays are used.
-      This prevents any full-page shadow from covering content.
+      IMPORTANT:
+      No body::before or body::after overlays.
+      This prevents the shadow/overlay problem.
     */
 
     a {
@@ -123,9 +126,11 @@
 
     .logo img {
       display: block;
+
       width: 250px;
       max-width: 200%;
       max-height: 120px;
+
       object-fit: contain;
 
       filter:
@@ -168,12 +173,14 @@
 
     .nav-links a {
       display: block;
+
       padding: 10px 17px;
 
       border: 1px solid transparent;
       border-radius: 30px;
 
       color: #cdd4e8;
+
       font-size: 13px;
       font-weight: 600;
       letter-spacing: 0.5px;
@@ -186,14 +193,21 @@
 
     .nav-links a:hover {
       color: #ffffff;
+
       background: rgba(0, 229, 255, 0.10);
-      border-color: rgba(0, 229, 255, 0.12);
+
+      border-color:
+        rgba(0, 229, 255, 0.12);
     }
 
     .nav-links a.active {
       color: #ffffff;
-      background: rgba(0, 229, 255, 0.12);
-      border-color: rgba(0, 229, 255, 0.20);
+
+      background:
+        rgba(0, 229, 255, 0.12);
+
+      border-color:
+        rgba(0, 229, 255, 0.20);
     }
 
     /* =====================================================
@@ -202,14 +216,19 @@
 
     .hero {
       position: relative;
+
       min-height: 100vh;
-      padding: 170px 20px 105px;
+
+      padding:
+        170px 20px
+        105px;
 
       display: flex;
       align-items: center;
       justify-content: center;
 
       text-align: center;
+
       overflow: hidden;
     }
 
@@ -219,9 +238,11 @@
 
       width: 100%;
       max-width: 1000px;
+
       margin: 0 auto;
 
-      animation: heroReveal 1.1s ease;
+      animation:
+        heroReveal 1.1s ease;
     }
 
     .eyebrow {
@@ -232,11 +253,17 @@
       padding: 8px 18px;
       margin-bottom: 25px;
 
-      background: rgba(0, 229, 255, 0.07);
-      border: 1px solid rgba(0, 229, 255, 0.30);
+      background:
+        rgba(255, 177, 0, 0.08);
+
+      border:
+        1px solid
+        rgba(255, 183, 0, 0.32);
+
       border-radius: 50px;
 
-      color: #00eaff;
+      color: #ffc857;
+
       font-size: 13px;
       font-weight: 700;
       letter-spacing: 3px;
@@ -249,34 +276,46 @@
       width: 7px;
       height: 7px;
 
-      background: #00eaff;
+      background: #ffc857;
       border-radius: 50%;
-      box-shadow: 0 0 10px #00eaff;
 
-      animation: blink 1.5s infinite;
+      box-shadow:
+        0 0 10px #ffc857;
+
+      animation:
+        blink 1.5s infinite;
     }
 
     .hero h1 {
-      font-size: clamp(54px, 8vw, 105px);
+      font-size:
+        clamp(54px, 8vw, 105px);
+
       line-height: 0.98;
+
       font-weight: 900;
+
       letter-spacing: -5px;
 
       background:
         linear-gradient(
           120deg,
           #ffffff,
-          #8befff,
-          #8f72ff,
+          #ffd98a,
+          #ff9f43,
+          #a88bff,
           #ffffff
         );
 
-      background-size: 300% 300%;
+      background-size:
+        300% 300%;
+
       -webkit-background-clip: text;
       background-clip: text;
+
       color: transparent;
 
-      animation: gradientMove 7s ease infinite;
+      animation:
+        gradientMove 7s ease infinite;
     }
 
     .hero h1 span {
@@ -285,10 +324,14 @@
 
     .hero-description {
       max-width: 760px;
-      margin: 30px auto;
+
+      margin:
+        30px auto;
 
       color: #c0c9dc;
+
       font-size: 18px;
+
       line-height: 1.8;
     }
 
@@ -296,43 +339,55 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+
       gap: 12px;
 
       margin-top: 28px;
     }
 
     .tag {
-      padding: 8px 15px;
+      padding:
+        8px 15px;
 
-      background: rgba(15, 23, 49, 0.96);
-      border: 1px solid rgba(0, 229, 255, 0.18);
+      background:
+        rgba(15, 23, 49, 0.96);
+
+      border:
+        1px solid
+        rgba(255, 190, 80, 0.20);
+
       border-radius: 30px;
 
-      color: #dce8fa;
+      color: #f8e7ca;
+
       font-size: 13px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 14px;
-
-      margin-top: 34px;
     }
 
     /* =====================================================
        BUTTONS
     ===================================================== */
 
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      gap: 14px;
+
+      margin-top: 34px;
+    }
+
     .button {
       display: inline-flex;
       align-items: center;
       justify-content: center;
+
       gap: 9px;
 
       min-height: 48px;
-      padding: 13px 25px;
+
+      padding:
+        13px 25px;
 
       background:
         linear-gradient(
@@ -341,10 +396,14 @@
           #6d4aff
         );
 
-      border: 1px solid rgba(255, 255, 255, 0.10);
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.10);
+
       border-radius: 40px;
 
       color: #ffffff;
+
       font-size: 14px;
       font-weight: 700;
 
@@ -358,7 +417,8 @@
     }
 
     .button:hover {
-      transform: translateY(-4px);
+      transform:
+        translateY(-4px);
 
       box-shadow:
         0 12px 32px
@@ -391,7 +451,7 @@
     }
 
     /* =====================================================
-       HERO DECORATION
+       HERO ORBS
     ===================================================== */
 
     .orb {
@@ -401,21 +461,25 @@
 
       width: 270px;
       height: 270px;
+
       border-radius: 50%;
 
       background:
         radial-gradient(
           circle at 30% 30%,
-          rgba(143, 255, 255, 0.82),
-          rgba(0, 119, 255, 0.65) 35%,
-          rgba(53, 0, 168, 0.40) 67%,
+          rgba(255, 224, 157, 0.90),
+          rgba(255, 157, 0, 0.55) 35%,
+          rgba(104, 52, 190, 0.35) 67%,
           transparent 72%
         );
 
-      opacity: 0.20;
+      opacity: 0.17;
+
       filter: blur(2px);
 
-      animation: floatOrb 8s ease-in-out infinite;
+      animation:
+        floatOrb
+        8s ease-in-out infinite;
     }
 
     .orb.one {
@@ -426,11 +490,12 @@
     .orb.two {
       right: -110px;
       bottom: 8%;
+
       animation-delay: -4s;
     }
 
     /* =====================================================
-       FEATURE CARDS
+       FEATURES
     ===================================================== */
 
     .features {
@@ -438,19 +503,31 @@
       z-index: 10;
 
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+
+      grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
       gap: 18px;
 
-      margin: -55px auto 30px;
+      margin:
+        -55px auto 30px;
     }
 
     .feature {
-      padding: 25px 20px;
+      padding:
+        25px 20px;
+
       text-align: center;
 
-      background: #0d1429;
-      border: 1px solid rgba(255, 255, 255, 0.09);
-      border-radius: 20px;
+      background:
+        #0d1429;
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.09);
+
+      border-radius:
+        20px;
 
       box-shadow:
         0 12px 35px
@@ -462,21 +539,32 @@
     }
 
     .feature:hover {
-      transform: translateY(-7px);
-      border-color: rgba(0, 229, 255, 0.35);
+      transform:
+        translateY(-7px);
+
+      border-color:
+        rgba(255, 183, 71, 0.35);
     }
 
     .feature-icon {
       width: 48px;
       height: 48px;
-      margin: 0 auto 14px;
+
+      margin:
+        0 auto 14px;
 
       display: grid;
       place-items: center;
 
-      background: rgba(0, 229, 255, 0.10);
-      border: 1px solid rgba(0, 229, 255, 0.12);
-      border-radius: 14px;
+      background:
+        rgba(255, 181, 59, 0.10);
+
+      border:
+        1px solid
+        rgba(255, 181, 59, 0.14);
+
+      border-radius:
+        14px;
 
       font-size: 23px;
     }
@@ -485,6 +573,7 @@
       display: block;
 
       color: #ffffff;
+
       font-size: 17px;
     }
 
@@ -493,7 +582,7 @@
     }
 
     /* =====================================================
-       SECTION LINKS
+       QUICK NAVIGATION
     ===================================================== */
 
     .section-links {
@@ -504,13 +593,21 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+
       gap: 10px;
 
-      margin: 35px 0;
+      margin:
+        35px 0;
+
       padding: 18px;
 
-      background: #0b1125;
-      border: 1px solid rgba(255, 255, 255, 0.10);
+      background:
+        #0b1125;
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.10);
+
       border-radius: 18px;
 
       box-shadow:
@@ -519,13 +616,20 @@
     }
 
     .section-links a {
-      padding: 7px 13px;
+      padding:
+        7px 13px;
 
-      border-radius: 20px;
+      border-radius:
+        20px;
 
-      color: #b7c1d6;
-      font-size: 12px;
-      font-weight: 600;
+      color:
+        #b7c1d6;
+
+      font-size:
+        12px;
+
+      font-weight:
+        600;
 
       transition:
         color 0.3s ease,
@@ -534,7 +638,9 @@
 
     .section-links a:hover {
       color: #ffffff;
-      background: rgba(0, 229, 255, 0.11);
+
+      background:
+        rgba(255, 178, 66, 0.12);
     }
 
     /* =====================================================
@@ -544,13 +650,20 @@
     main {
       position: relative;
       z-index: 1;
-      padding-bottom: 80px;
+
+      padding-bottom:
+        80px;
     }
 
     .layout {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 320px;
+
+      grid-template-columns:
+        minmax(0, 1fr)
+        320px;
+
       gap: 28px;
+
       align-items: start;
     }
 
@@ -567,11 +680,18 @@
       z-index: 1;
 
       padding: 32px;
+
       margin-bottom: 28px;
 
-      background: #0d1429;
-      border: 1px solid rgba(255, 255, 255, 0.09);
-      border-radius: 24px;
+      background:
+        #0d1429;
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.09);
+
+      border-radius:
+        24px;
 
       box-shadow:
         0 15px 42px
@@ -585,25 +705,29 @@
     }
 
     /*
-      Small decorative glow only.
-      It stays in the top-right corner and cannot cover the text.
+      Decorative glow stays BEHIND the card.
+      It cannot cover text.
     */
 
     .panel::after {
       content: "";
+
       position: absolute;
+
       z-index: -1;
+
       pointer-events: none;
 
       width: 170px;
       height: 170px;
+
       top: -110px;
       right: -110px;
 
       background:
         radial-gradient(
           circle,
-          rgba(0, 229, 255, 0.15),
+          rgba(255, 183, 70, 0.17),
           transparent 68%
         );
 
@@ -611,34 +735,51 @@
     }
 
     .panel:hover {
-      transform: translateY(-4px);
-      border-color: rgba(0, 229, 255, 0.24);
+      transform:
+        translateY(-4px);
+
+      border-color:
+        rgba(255, 183, 70, 0.24);
     }
 
     .panel h2 {
-      margin-bottom: 22px;
+      margin-bottom:
+        22px;
 
-      color: #ffffff;
-      font-size: clamp(27px, 4vw, 38px);
-      line-height: 1.25;
+      color:
+        #ffffff;
+
+      font-size:
+        clamp(27px, 4vw, 38px);
+
+      line-height:
+        1.25;
     }
 
     .panel h3 {
-      margin-bottom: 12px;
+      margin-bottom:
+        12px;
 
       color: #ffffff;
-      font-size: 19px;
+
+      font-size:
+        19px;
     }
 
     .panel p,
     .panel li {
-      color: #c0c9dc;
-      font-size: 14px;
+      color:
+        #c0c9dc;
+
+      font-size:
+        14px;
+
       opacity: 1;
     }
 
     .panel p {
-      margin-bottom: 15px;
+      margin-bottom:
+        15px;
     }
 
     /* =====================================================
@@ -646,29 +787,53 @@
     ===================================================== */
 
     .note {
-      padding: 16px 18px;
-      margin-top: 18px;
+      padding:
+        16px 18px;
 
-      background: #132941;
-      border: 1px solid rgba(0, 229, 255, 0.10);
-      border-left: 3px solid #00eaff;
-      border-radius: 10px;
+      margin-top:
+        18px;
 
-      color: #e1eafa;
-      font-size: 13px;
+      background:
+        #242238;
+
+      border:
+        1px solid
+        rgba(255, 183, 70, 0.12);
+
+      border-left:
+        3px solid
+        #ffc857;
+
+      border-radius:
+        10px;
+
+      color:
+        #f0e7d8;
+
+      font-size:
+        13px;
     }
 
     /* =====================================================
-       ITINERARY
+       ITINERARY DAYS
     ===================================================== */
 
     .day {
-      padding: 24px;
-      margin-bottom: 18px;
+      padding:
+        24px;
 
-      background: #080e20;
-      border: 1px solid rgba(255, 255, 255, 0.09);
-      border-radius: 18px;
+      margin-bottom:
+        18px;
+
+      background:
+        #080e20;
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.09);
+
+      border-radius:
+        18px;
 
       transition:
         transform 0.3s ease,
@@ -680,54 +845,99 @@
     }
 
     .day:hover {
-      transform: translateX(5px);
-      border-color: rgba(0, 229, 255, 0.28);
+      transform:
+        translateX(5px);
+
+      border-color:
+        rgba(255, 183, 70, 0.30);
     }
 
     .day-label {
-      display: inline-block;
-      padding: 5px 13px;
-      margin-bottom: 13px;
+      display:
+        inline-block;
 
-      background: #113149;
-      border: 1px solid rgba(0, 229, 255, 0.12);
-      border-radius: 20px;
+      padding:
+        5px 13px;
 
-      color: #00eaff;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.4px;
+      margin-bottom:
+        13px;
+
+      background:
+        #342817;
+
+      border:
+        1px solid
+        rgba(255, 183, 70, 0.16);
+
+      border-radius:
+        20px;
+
+      color:
+        #ffc857;
+
+      font-size:
+        12px;
+
+      font-weight:
+        700;
+
+      letter-spacing:
+        0.4px;
     }
 
     .meal {
-      display: inline-block;
-      padding: 7px 13px;
-      margin-top: 3px;
+      display:
+        inline-block;
 
-      background: #123329;
-      border: 1px solid rgba(37, 211, 102, 0.18);
-      border-radius: 20px;
+      padding:
+        7px 13px;
 
-      color: #b7f6d2;
-      font-size: 12px;
+      margin-top:
+        3px;
+
+      background:
+        #123329;
+
+      border:
+        1px solid
+        rgba(37, 211, 102, 0.18);
+
+      border-radius:
+        20px;
+
+      color:
+        #b7f6d2;
+
+      font-size:
+        12px;
     }
 
     /* =====================================================
-       HOTEL CARDS
+       ACCOMMODATION CARDS
     ===================================================== */
 
     .hotels {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+
+      grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
       gap: 16px;
     }
 
     .hotel {
-      padding: 22px;
+      padding:
+        22px;
 
-      background: #080e20;
-      border: 1px solid rgba(255, 255, 255, 0.09);
-      border-radius: 17px;
+      background:
+        #080e20;
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.09);
+
+      border-radius:
+        17px;
 
       transition:
         transform 0.3s ease,
@@ -735,19 +945,30 @@
     }
 
     .hotel:hover {
-      transform: translateY(-5px);
-      border-color: rgba(0, 229, 255, 0.28);
+      transform:
+        translateY(-5px);
+
+      border-color:
+        rgba(255, 183, 70, 0.30);
     }
 
     .hotel small {
-      color: #00eaff;
-      font-weight: 700;
-      letter-spacing: 1px;
+      color:
+        #ffc857;
+
+      font-weight:
+        700;
+
+      letter-spacing:
+        1px;
     }
 
     .hotel h3 {
-      margin-top: 10px;
-      font-size: 17px;
+      margin-top:
+        10px;
+
+      font-size:
+        17px;
     }
 
     /* =====================================================
@@ -764,45 +985,76 @@
     }
 
     .sidebar-eyebrow {
-      color: #00eaff;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
+      color:
+        #ffc857;
+
+      font-size:
+        12px;
+
+      font-weight:
+        700;
+
+      letter-spacing:
+        2px;
+
+      text-transform:
+        uppercase;
     }
 
     .price {
-      margin: 10px 0 15px;
+      margin:
+        10px 0 15px;
 
-      color: #ffffff;
-      font-size: 31px;
-      font-weight: 800;
-      line-height: 1.25;
+      color:
+        #ffffff;
+
+      font-size:
+        31px;
+
+      font-weight:
+        800;
+
+      line-height:
+        1.25;
     }
 
     .fact {
       display: flex;
-      justify-content: space-between;
+
+      justify-content:
+        space-between;
+
       gap: 12px;
 
-      padding: 12px 0;
+      padding:
+        12px 0;
 
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.08);
 
-      color: #aeb7ca;
-      font-size: 13px;
+      color:
+        #aeb7ca;
+
+      font-size:
+        13px;
     }
 
     .fact strong {
-      color: #ffffff;
-      text-align: right;
+      color:
+        #ffffff;
+
+      text-align:
+        right;
     }
 
     .booking-buttons {
       display: grid;
+
       gap: 12px;
 
-      margin-top: 24px;
+      margin-top:
+        24px;
     }
 
     .booking-buttons .button {
@@ -811,12 +1063,19 @@
 
     .explore-link {
       display: block;
-      padding: 11px 0;
 
-      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+      padding:
+        11px 0;
 
-      color: #b8c2d5;
-      font-size: 14px;
+      border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.07);
+
+      color:
+        #b8c2d5;
+
+      font-size:
+        14px;
 
       transition:
         color 0.3s ease,
@@ -828,13 +1087,19 @@
     }
 
     .explore-link:hover {
-      color: #00eaff;
-      transform: translateX(4px);
+      color:
+        #ffc857;
+
+      transform:
+        translateX(4px);
     }
 
     .policy-heading {
-      margin-top: 27px;
-      color: #00eaff !important;
+      margin-top:
+        27px;
+
+      color:
+        #ffc857 !important;
     }
 
     /* =====================================================
@@ -845,21 +1110,31 @@
       position: relative;
       z-index: 1;
 
-      width: min(1150px, 92%);
-      margin: 20px auto 80px;
-      padding: 90px 30px;
+      width:
+        min(1150px, 92%);
+
+      margin:
+        20px auto 80px;
+
+      padding:
+        90px 30px;
 
       background:
         linear-gradient(
           135deg,
-          #10243a,
-          #17163b
+          #2a1f18,
+          #191638
         );
 
-      border: 1px solid rgba(255, 255, 255, 0.10);
-      border-radius: 35px;
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.10);
+
+      border-radius:
+        35px;
 
       text-align: center;
+
       overflow: hidden;
 
       box-shadow:
@@ -867,42 +1142,27 @@
         rgba(0, 0, 0, 0.20);
     }
 
-    .cta::after {
-      content: "";
-      position: absolute;
-      z-index: -1;
-      pointer-events: none;
-
-      width: 300px;
-      height: 300px;
-      left: 50%;
-      top: 50%;
-
-      transform: translate(-50%, -50%);
-
-      background:
-        radial-gradient(
-          circle,
-          rgba(0, 229, 255, 0.12),
-          transparent 68%
-        );
-
-      border-radius: 50%;
-    }
-
     .cta h2 {
       margin-bottom: 18px;
 
       color: #ffffff;
-      font-size: clamp(35px, 5vw, 62px);
-      line-height: 1.1;
+
+      font-size:
+        clamp(35px, 5vw, 62px);
+
+      line-height:
+        1.1;
     }
 
     .cta p {
-      max-width: 620px;
-      margin: 0 auto 30px;
+      max-width:
+        620px;
 
-      color: #c0c9dc;
+      margin:
+        0 auto 30px;
+
+      color:
+        #c0c9dc;
     }
 
     /* =====================================================
@@ -913,31 +1173,45 @@
       position: relative;
       z-index: 1;
 
-      padding: 50px 20px;
+      padding:
+        50px 20px;
 
-      background: #070b18;
-      border-top: 1px solid rgba(255, 255, 255, 0.07);
+      background:
+        #070b18;
 
-      color: #8791a8;
-      font-size: 14px;
-      text-align: center;
+      border-top:
+        1px solid
+        rgba(255, 255, 255, 0.07);
+
+      color:
+        #8791a8;
+
+      font-size:
+        14px;
+
+      text-align:
+        center;
     }
 
     footer p {
-      margin: 5px 0;
+      margin:
+        5px 0;
     }
 
     footer strong {
-      color: #00eaff;
+      color:
+        #00eaff;
     }
 
     /* =====================================================
-       SCROLL REVEAL
+       REVEAL
     ===================================================== */
 
     .reveal {
       opacity: 0;
-      transform: translateY(35px);
+
+      transform:
+        translateY(35px);
 
       transition:
         opacity 0.7s ease,
@@ -946,7 +1220,9 @@
 
     .reveal.active {
       opacity: 1;
-      transform: translateY(0);
+
+      transform:
+        translateY(0);
     }
 
     /* =====================================================
@@ -954,55 +1230,79 @@
     ===================================================== */
 
     @keyframes heroReveal {
+
       from {
         opacity: 0;
-        transform: translateY(35px);
+
+        transform:
+          translateY(35px);
       }
 
       to {
         opacity: 1;
-        transform: translateY(0);
+
+        transform:
+          translateY(0);
       }
+
     }
 
     @keyframes navDrop {
+
       from {
         opacity: 0;
-        transform: translate(-50%, -25px);
+
+        transform:
+          translate(-50%, -25px);
       }
 
       to {
         opacity: 1;
-        transform: translate(-50%, 0);
+
+        transform:
+          translate(-50%, 0);
       }
+
     }
 
     @keyframes gradientMove {
+
       0% {
-        background-position: 0% 50%;
+        background-position:
+          0% 50%;
       }
 
       50% {
-        background-position: 100% 50%;
+        background-position:
+          100% 50%;
       }
 
       100% {
-        background-position: 0% 50%;
+        background-position:
+          0% 50%;
       }
+
     }
 
     @keyframes floatOrb {
+
       0%,
       100% {
-        transform: translate(0, 0) scale(1);
+        transform:
+          translate(0, 0)
+          scale(1);
       }
 
       50% {
-        transform: translate(35px, -40px) scale(1.08);
+        transform:
+          translate(35px, -40px)
+          scale(1.08);
       }
+
     }
 
     @keyframes blink {
+
       0%,
       100% {
         opacity: 1;
@@ -1011,6 +1311,7 @@
       50% {
         opacity: 0.35;
       }
+
     }
 
     /* =====================================================
@@ -1018,8 +1319,10 @@
     ===================================================== */
 
     @media (max-width: 900px) {
+
       .layout {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+          1fr;
       }
 
       aside {
@@ -1027,27 +1330,35 @@
       }
 
       .features {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns:
+          repeat(2, minmax(0, 1fr));
       }
 
       .section-links {
         position: relative;
         top: 0;
       }
+
     }
 
     @media (max-width: 800px) {
+
       .navbar {
-        padding: 8px 15px;
+        padding:
+          8px 15px;
       }
 
       .logo {
-        width: 140px;
+        width:
+          140px;
       }
 
       .logo img {
-        width: 140px;
-        max-height: 72px;
+        width:
+          140px;
+
+        max-height:
+          72px;
       }
 
       .nav-links {
@@ -1055,13 +1366,18 @@
       }
 
       .nav-links a {
-        padding: 8px 9px;
-        font-size: 11px;
+        padding:
+          8px 9px;
+
+        font-size:
+          11px;
       }
 
       .hero h1 {
-        letter-spacing: -3px;
+        letter-spacing:
+          -3px;
       }
+
     }
 
     /* =====================================================
@@ -1069,98 +1385,147 @@
     ===================================================== */
 
     @media (max-width: 500px) {
+
       .navbar {
-        width: 96%;
-        min-height: 65px;
-        padding: 6px 10px;
+        width:
+          96%;
+
+        min-height:
+          65px;
+
+        padding:
+          6px 10px;
       }
 
       .logo {
-        width: 78px;
-        height: 55px;
+        width:
+          78px;
+
+        height:
+          55px;
       }
 
       .logo img {
-        width: 78px;
-        max-height: 45px;
+        width:
+          78px;
+
+        max-height:
+          45px;
       }
 
       .nav-links {
         flex: 1;
-        justify-content: flex-end;
+
+        justify-content:
+          flex-end;
       }
 
       .nav-links a {
-        padding: 8px 5px;
-        font-size: 8px;
+        padding:
+          8px 5px;
+
+        font-size:
+          8px;
       }
 
       .hero {
-        min-height: auto;
-        padding: 145px 15px 110px;
+        min-height:
+          auto;
+
+        padding:
+          145px 15px
+          110px;
       }
 
       .hero h1 {
-        font-size: clamp(48px, 15vw, 70px);
-        letter-spacing: -3px;
+        font-size:
+          clamp(48px, 15vw, 70px);
+
+        letter-spacing:
+          -3px;
       }
 
       .hero-description {
-        font-size: 15px;
+        font-size:
+          15px;
       }
 
       .eyebrow {
-        padding: 7px 12px;
-        font-size: 10px;
-        letter-spacing: 1.4px;
+        padding:
+          7px 12px;
+
+        font-size:
+          10px;
+
+        letter-spacing:
+          1.4px;
       }
 
       .orb {
-        width: 180px;
-        height: 180px;
+        width:
+          180px;
+
+        height:
+          180px;
       }
 
       .features {
-        grid-template-columns: 1fr;
-        margin-top: -60px;
+        grid-template-columns:
+          1fr;
+
+        margin-top:
+          -60px;
       }
 
       .section-links {
-        justify-content: flex-start;
-        flex-wrap: nowrap;
-        overflow-x: auto;
+        justify-content:
+          flex-start;
 
-        scrollbar-width: thin;
+        flex-wrap:
+          nowrap;
+
+        overflow-x:
+          auto;
       }
 
       .section-links a {
-        flex-shrink: 0;
+        flex-shrink:
+          0;
       }
 
       .panel {
-        padding: 24px 18px;
+        padding:
+          24px 18px;
       }
 
       .day {
-        padding: 19px 16px;
+        padding:
+          19px 16px;
       }
 
       .hotels {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+          1fr;
       }
 
       .hero-buttons {
-        flex-direction: column;
-        align-items: stretch;
+        flex-direction:
+          column;
+
+        align-items:
+          stretch;
       }
 
       .button {
-        width: 100%;
+        width:
+          100%;
       }
 
       .cta {
-        padding: 65px 20px;
+        padding:
+          65px 20px;
       }
+
     }
 
     /* =====================================================
@@ -1168,6 +1533,7 @@
     ===================================================== */
 
     @media (prefers-reduced-motion: reduce) {
+
       html {
         scroll-behavior: auto;
       }
@@ -1175,16 +1541,23 @@
       *,
       *::before,
       *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
+        animation-duration:
+          0.01ms !important;
+
+        animation-iteration-count:
+          1 !important;
+
+        transition-duration:
+          0.01ms !important;
       }
 
       .reveal {
         opacity: 1;
         transform: none;
       }
+
     }
+
   </style>
 </head>
 
@@ -1197,10 +1570,12 @@
   <nav class="navbar">
 
     ./index.html
+
       <img
         src="ohom.png"
         alt="Travspro Holidays Logo"
       >
+
     </a>
 
     <ul class="nav-links">
@@ -1246,23 +1621,29 @@
   <section class="hero">
 
     <div class="orb one"></div>
+
     <div class="orb two"></div>
 
     <div class="hero-content">
 
       <div class="eyebrow">
-        Kashmir • 5 Nights / 6 Days
+        Rajasthan • 5 Nights / 6 Days
       </div>
 
       <h1>
-        Paradise
-        <span>Awaits.</span>
+        Royal Rajasthan.
+        <span>
+          Timeless India.
+        </span>
       </h1>
 
       <p class="hero-description">
-        Discover the timeless beauty of Kashmir with Travspro Holidays.
-        Experience Srinagar, Gulmarg and Pahalgam through a carefully
-        planned 5-night, 6-day Himalayan holiday.
+
+        Journey through Rajasthan with Travspro Holidays.
+        Explore Jaipur's royal heritage, discover the historic
+        charm of Jodhpur and experience the golden desert of
+        Jaisalmer on an unforgettable 5-night, 6-day holiday.
+
       </p>
 
       <div class="tags">
@@ -1272,15 +1653,15 @@
         </span>
 
         <span class="tag">
-          Srinagar
+          Jaipur
         </span>
 
         <span class="tag">
-          Gulmarg
+          Jodhpur
         </span>
 
         <span class="tag">
-          Pahalgam
+          Jaisalmer
         </span>
 
       </div>
@@ -1302,7 +1683,7 @@
   </section>
 
   <!-- =====================================================
-       MAIN CONTENT
+       MAIN
   ===================================================== -->
 
   <main class="container">
@@ -1311,31 +1692,71 @@
 
     <section
       class="features reveal"
-      aria-label="Kashmir tour package highlights"
+      aria-label="Rajasthan package highlights"
     >
 
       <div class="feature">
-        <div class="feature-icon">🍽</div>
-        <strong>Meals</strong>
-        <small>Breakfast and dinner</small>
+
+        <div class="feature-icon">
+          🍽
+        </div>
+
+        <strong>
+          Meals
+        </strong>
+
+        <small>
+          Breakfast included
+        </small>
+
       </div>
 
       <div class="feature">
-        <div class="feature-icon">🚗</div>
-        <strong>Transfers</strong>
-        <small>Private vehicle</small>
+
+        <div class="feature-icon">
+          🚗
+        </div>
+
+        <strong>
+          Transfers
+        </strong>
+
+        <small>
+          Private vehicle
+        </small>
+
       </div>
 
       <div class="feature">
-        <div class="feature-icon">🏔</div>
-        <strong>Sightseeing</strong>
-        <small>Kashmir highlights</small>
+
+        <div class="feature-icon">
+          🏰
+        </div>
+
+        <strong>
+          Sightseeing
+        </strong>
+
+        <small>
+          Forts & palaces
+        </small>
+
       </div>
 
       <div class="feature">
-        <div class="feature-icon">🏨</div>
-        <strong>Stay</strong>
-        <small>5 comfortable nights</small>
+
+        <div class="feature-icon">
+          🐪
+        </div>
+
+        <strong>
+          Desert
+        </strong>
+
+        <small>
+          Jaisalmer experience
+        </small>
+
       </div>
 
     </section>
@@ -1347,13 +1768,33 @@
       aria-label="Package page navigation"
     >
 
-      #overviewOverview</a>
-      #highlightsHighlights</a>
-      #itineraryItinerary</a>
-      #inclusionsInclusions</a>
-      #exclusionsExclusions</a>
-      #hotelsHotels</a>
-      #policiesBooking Information</a>
+      #overview
+        Overview
+      </a>
+
+      #highlights
+        Highlights
+      </a>
+
+      #itinerary
+        Itinerary
+      </a>
+
+      #inclusions
+        Inclusions
+      </a>
+
+      #exclusions
+        Exclusions
+      </a>
+
+      #hotels
+        Hotels
+      </a>
+
+      #policies
+        Booking Information
+      </a>
 
     </nav>
 
@@ -1361,113 +1802,169 @@
 
       <div class="content">
 
-        <!-- OVERVIEW -->
+        <!-- =====================================================
+             OVERVIEW
+        ===================================================== -->
 
-        <section class="panel reveal" id="overview">
+        <section
+          class="panel reveal"
+          id="overview"
+        >
 
-          <h2>Kashmir Paradise Holiday</h2>
+          <h2>
+            Royal Rajasthan Discovery
+          </h2>
 
           <p>
-            Escape into the breathtaking landscapes of Kashmir on this
-            thoughtfully planned 5-night, 6-day holiday.
+
+            Experience the colours, history and remarkable
+            landscapes of Rajasthan on this 5-night,
+            6-day journey through Jaipur, Jodhpur
+            and Jaisalmer.
+
           </p>
 
           <p>
-            From the lakes and Mughal gardens of Srinagar to the
-            spectacular mountain scenery of Gulmarg and the peaceful
-            valleys of Pahalgam, this package brings together some of
-            Kashmir's most memorable experiences.
+
+            Walk through magnificent forts and palaces,
+            discover bustling traditional markets and
+            travel across changing landscapes towards
+            Rajasthan's famous Thar Desert.
+
           </p>
 
           <p>
-            Enjoy comfortable accommodation, scenic road journeys,
-            sightseeing and plenty of opportunities to experience the
-            natural beauty of the region.
+
+            From the royal architecture of Jaipur to
+            Jodhpur's historic landmarks and the golden
+            surroundings of Jaisalmer, every destination
+            reveals another side of Rajasthan.
+
           </p>
 
           <div class="note">
-            Sightseeing and excursions are subject to weather, road
-            conditions, local authority regulations and operational
-            conditions.
+
+            Sightseeing schedules may change depending on
+            monument operating hours, weather, road
+            conditions and local operational requirements.
+
           </div>
 
         </section>
 
-        <!-- HIGHLIGHTS -->
+        <!-- =====================================================
+             HIGHLIGHTS
+        ===================================================== -->
 
-        <section class="panel reveal" id="highlights">
+        <section
+          class="panel reveal"
+          id="highlights"
+        >
 
-          <h2>Tour Highlights</h2>
+          <h2>
+            Tour Highlights
+          </h2>
 
           <ul>
+
             <li>
-              Explore Srinagar and its famous Mughal gardens.
+              Explore Jaipur, Rajasthan's famous Pink City.
             </li>
 
             <li>
-              Enjoy the beauty and mountain landscapes of Gulmarg.
+              Visit the magnificent Amber Fort.
             </li>
 
             <li>
-              Discover the picturesque valleys around Pahalgam.
+              Discover Jaipur's City Palace and historic landmarks.
             </li>
 
             <li>
-              Experience the atmosphere around Dal Lake.
+              See the iconic Hawa Mahal.
             </li>
 
             <li>
-              Enjoy scenic drives through Kashmir's countryside.
+              Journey through Rajasthan's changing desert landscapes.
             </li>
 
             <li>
-              Opportunity to experience a traditional Shikara ride.
+              Explore the historic city of Jodhpur.
             </li>
 
             <li>
-              Explore local markets and Kashmiri handicrafts.
+              Visit the impressive Mehrangarh Fort.
             </li>
 
             <li>
-              Enjoy leisure time surrounded by Himalayan scenery.
+              Discover Jaisalmer Fort and the Golden City.
             </li>
+
+            <li>
+              Experience the atmosphere of the Thar Desert.
+            </li>
+
+            <li>
+              Opportunity to enjoy a camel ride at the sand dunes.
+            </li>
+
+            <li>
+              Experience traditional Rajasthani culture.
+            </li>
+
           </ul>
 
         </section>
 
-        <!-- ITINERARY -->
+        <!-- =====================================================
+             ITINERARY
+        ===================================================== -->
 
-        <section class="panel reveal" id="itinerary">
+        <section
+          class="panel reveal"
+          id="itinerary"
+        >
 
-          <h2>Day-Wise Itinerary</h2>
+          <h2>
+            Day-Wise Itinerary
+          </h2>
 
           <!-- DAY 1 -->
 
           <article class="day">
 
             <span class="day-label">
-              DAY 1 • SRINAGAR
+              DAY 1 • JAIPUR
             </span>
 
-            <h3>Arrival in Srinagar</h3>
+            <h3>
+              Arrival in Jaipur
+            </h3>
 
             <p>
-              Welcome to Kashmir. On arrival at Srinagar Airport,
-              meet your representative and proceed to your hotel.
+
+              Welcome to Rajasthan. On arrival in Jaipur,
+              meet your representative and proceed to your
+              hotel.
+
             </p>
 
             <p>
-              After check-in, relax and enjoy the beautiful
-              surroundings of Srinagar.
+
+              Complete the check-in formalities and take
+              some time to relax after your journey.
+
             </p>
 
             <p>
-              Depending on your arrival time, you can explore the
-              local market or enjoy leisure time around Dal Lake.
+
+              Depending on your arrival time, enjoy an
+              evening exploring Jaipur's colourful local
+              markets and traditional handicraft shops.
+
             </p>
 
             <span class="meal">
-              Srinagar stay • Dinner
+              Jaipur stay • Overnight
             </span>
 
           </article>
@@ -1477,33 +1974,46 @@
           <article class="day">
 
             <span class="day-label">
-              DAY 2 • SRINAGAR
+              DAY 2 • JAIPUR
             </span>
 
-            <h3>Srinagar Local Sightseeing</h3>
+            <h3>
+              Jaipur Royal Sightseeing
+            </h3>
 
             <p>
-              After breakfast, begin your sightseeing tour of Srinagar.
+
+              After breakfast, begin your full-day
+              exploration of Jaipur.
+
             </p>
 
             <p>
-              Explore the beautiful Mughal gardens, including Nishat
-              Garden and Shalimar Garden, and enjoy panoramic views
-              around Dal Lake.
+
+              Visit the magnificent Amber Fort and enjoy
+              the impressive architecture and views from
+              this historic complex.
+
             </p>
 
             <p>
-              Depending on the final itinerary, additional local
-              attractions may also be included.
+
+              Continue towards City Palace and explore
+              Jaipur's royal heritage. See the iconic
+              Hawa Mahal and visit other attractions
+              included in your confirmed sightseeing plan.
+
             </p>
 
             <p>
-              In the evening, you may enjoy a Shikara ride on Dal Lake
-              if it is included in your confirmed package.
+
+              In the evening, enjoy leisure time for local
+              shopping before returning to your hotel.
+
             </p>
 
             <span class="meal">
-              Srinagar stay • Breakfast and dinner
+              Jaipur stay • Breakfast
             </span>
 
           </article>
@@ -1513,41 +2023,38 @@
           <article class="day">
 
             <span class="day-label">
-              DAY 3 • GULMARG
+              DAY 3 • JODHPUR
             </span>
 
-            <h3>Srinagar → Gulmarg → Srinagar</h3>
+            <h3>
+              Jaipur → Jodhpur
+            </h3>
 
             <p>
-              After breakfast, proceed towards Gulmarg for a memorable
-              day surrounded by spectacular mountain scenery.
+
+              After breakfast, check out from your hotel
+              and begin your drive towards Jodhpur.
+
             </p>
 
             <p>
-              Enjoy leisure time in Gulmarg and explore the beautiful
-              surroundings.
+
+              Enjoy the changing Rajasthan landscape as
+              you travel towards the famous Blue City.
+
             </p>
 
             <p>
-              Guests may choose optional activities such as the Gondola
-              ride, pony rides, skiing or other seasonal activities at
-              an additional cost.
-            </p>
 
-            <p>
-              After sightseeing, return to Srinagar for dinner and
-              your overnight stay.
+              On arrival, check into your hotel and relax.
+              Depending on arrival time, enjoy leisure
+              time to explore the surrounding market area.
+
             </p>
 
             <span class="meal">
-              Srinagar stay • Breakfast and dinner
+              Jodhpur stay • Breakfast
             </span>
-
-            <div class="note">
-              Gondola tickets and optional activities should only be
-              considered included when specifically stated in your
-              final quotation.
-            </div>
 
           </article>
 
@@ -1556,28 +2063,39 @@
           <article class="day">
 
             <span class="day-label">
-              DAY 4 • PAHALGAM
+              DAY 4 • JODHPUR / JAISALMER
             </span>
 
-            <h3>Srinagar → Pahalgam</h3>
+            <h3>
+              Jodhpur Sightseeing → Jaisalmer
+            </h3>
 
             <p>
-              After breakfast, check out and begin your scenic journey
-              towards Pahalgam.
+
+              After breakfast, visit the magnificent
+              Mehrangarh Fort and explore its impressive
+              courtyards and historic surroundings.
+
             </p>
 
             <p>
-              Travel through the beautiful Kashmir countryside and
-              enjoy views of mountains, rivers and valleys along the way.
+
+              Continue with other included Jodhpur
+              attractions before beginning your journey
+              towards Jaisalmer.
+
             </p>
 
             <p>
-              On arrival in Pahalgam, check into your hotel and enjoy
-              leisure time exploring the surroundings.
+
+              Arrive in the Golden City and check into
+              your hotel. Relax for the evening and
+              prepare for the next day's desert experience.
+
             </p>
 
             <span class="meal">
-              Pahalgam stay • Breakfast and dinner
+              Jaisalmer stay • Breakfast
             </span>
 
           </article>
@@ -1587,35 +2105,62 @@
           <article class="day">
 
             <span class="day-label">
-              DAY 5 • PAHALGAM
+              DAY 5 • JAISALMER
             </span>
 
-            <h3>Pahalgam Valley Experience</h3>
+            <h3>
+              Jaisalmer City & Desert Experience
+            </h3>
 
             <p>
-              After breakfast, spend the day experiencing the natural
-              beauty of Pahalgam.
+
+              After breakfast, begin your sightseeing
+              tour of Jaisalmer.
+
             </p>
 
             <p>
-              Depending on your selected package and local transport
-              regulations, you may explore popular nearby areas such
-              as Betaab Valley, Aru Valley and Chandanwari.
+
+              Explore Jaisalmer Fort and discover the
+              historic streets, architecture and heritage
+              of the Golden City.
+
             </p>
 
             <p>
-              Spend the remaining time enjoying the peaceful landscapes
-              and mountain surroundings.
+
+              Visit selected traditional havelis and other
+              attractions included in your confirmed
+              sightseeing programme.
+
+            </p>
+
+            <p>
+
+              Later, proceed towards the desert area to
+              enjoy the spectacular sand-dune landscape.
+
+            </p>
+
+            <p>
+
+              Depending on your selected package, enjoy
+              a camel ride, sunset views and a traditional
+              Rajasthani cultural programme.
+
             </p>
 
             <span class="meal">
-              Pahalgam stay • Breakfast and dinner
+              Jaisalmer / Desert stay • Breakfast
             </span>
 
             <div class="note">
-              Local sightseeing vehicles for certain Pahalgam attractions
-              may need to be hired separately due to local transport
-              regulations. Confirm the exact inclusions before booking.
+
+              Camel rides, jeep safari, cultural programmes,
+              desert-camp meals and other activities are
+              included only when specifically mentioned
+              in your final quotation.
+
             </div>
 
           </article>
@@ -1628,77 +2173,104 @@
               DAY 6 • DEPARTURE
             </span>
 
-            <h3>Pahalgam → Srinagar Airport</h3>
+            <h3>
+              Jaisalmer Departure
+            </h3>
 
             <p>
-              Enjoy breakfast at your hotel before checking out.
+
+              Enjoy breakfast before completing your
+              hotel or desert-camp check-out.
+
             </p>
 
             <p>
-              At the scheduled time, proceed towards Srinagar Airport
-              for your onward journey.
+
+              At the appropriate time, transfer to the
+              designated railway station, airport or
+              departure point according to your confirmed
+              travel arrangements.
+
             </p>
 
             <p>
-              Leave Kashmir with unforgettable memories of its mountains,
-              valleys, lakes and beautiful landscapes.
+
+              Your Rajasthan journey concludes with
+              unforgettable memories of royal palaces,
+              magnificent forts, colourful cities and
+              the golden Thar Desert.
+
             </p>
 
             <span class="meal">
-              Breakfast • Check-out • Airport transfer
+              Breakfast • Check-out • Departure
             </span>
-
-            <div class="note">
-              Departure transfer timing will be planned according to
-              your flight schedule, traffic and road conditions.
-            </div>
 
           </article>
 
         </section>
 
-        <!-- INCLUSIONS -->
+        <!-- =====================================================
+             INCLUSIONS
+        ===================================================== -->
 
-        <section class="panel reveal" id="inclusions">
+        <section
+          class="panel reveal"
+          id="inclusions"
+        >
 
-          <h2>Package Inclusions</h2>
+          <h2>
+            Package Inclusions
+          </h2>
 
           <ul>
+
             <li>
-              Five nights of accommodation.
+              5 nights accommodation as per confirmed itinerary.
             </li>
 
             <li>
-              Daily breakfast and dinner according to the
-              confirmed meal plan.
+              Daily breakfast according to the confirmed meal plan.
             </li>
 
             <li>
-              Pickup from Srinagar Airport.
+              Arrival pickup as mentioned in the final booking.
             </li>
 
             <li>
-              Departure transfer to Srinagar Airport.
+              Departure transfer as mentioned in the final booking.
             </li>
 
             <li>
-              Private vehicle for included transfers and sightseeing.
+              Private vehicle for included intercity transfers.
             </li>
 
             <li>
-              Srinagar local sightseeing.
+              Private vehicle for included sightseeing.
             </li>
 
             <li>
-              Gulmarg excursion.
+              Jaipur local sightseeing.
             </li>
 
             <li>
-              Srinagar to Pahalgam transfer.
+              Jaipur to Jodhpur transfer.
             </li>
 
             <li>
-              Pahalgam to Srinagar Airport transfer.
+              Jodhpur sightseeing.
+            </li>
+
+            <li>
+              Jodhpur to Jaisalmer transfer.
+            </li>
+
+            <li>
+              Jaisalmer local sightseeing.
+            </li>
+
+            <li>
+              Desert excursion as per confirmed itinerary.
             </li>
 
             <li>
@@ -1708,61 +2280,73 @@
             <li>
               Parking and applicable road charges for included services.
             </li>
+
           </ul>
 
           <div class="note">
-            Hotel category, exact room type, vehicle type, meal plan
-            and sightseeing inclusions will be confirmed in your
-            final quotation.
+
+            Exact accommodation, vehicle category,
+            desert-camp inclusions, meals and sightseeing
+            arrangements will be listed in your final
+            quotation and booking confirmation.
+
           </div>
 
         </section>
 
-        <!-- EXCLUSIONS -->
+        <!-- =====================================================
+             EXCLUSIONS
+        ===================================================== -->
 
-        <section class="panel reveal" id="exclusions">
+        <section
+          class="panel reveal"
+          id="exclusions"
+        >
 
-          <h2>Package Exclusions</h2>
+          <h2>
+            Package Exclusions
+          </h2>
 
           <ul>
+
             <li>
-              Airfare or train tickets unless specifically included.
+              Airfare or railway tickets unless specifically included.
             </li>
 
             <li>
-              Gondola tickets in Gulmarg unless specifically included.
+              Monument and attraction entrance fees unless included.
             </li>
 
             <li>
-              Pony rides and horse riding.
+              Guide charges unless specifically included.
             </li>
 
             <li>
-              Skiing and snow activities.
+              Camera and video charges.
             </li>
 
             <li>
-              Shikara ride unless specifically included.
+              Camel rides unless mentioned as included.
             </li>
 
             <li>
-              Entry fees to monuments, gardens and attractions.
+              Desert jeep safari unless specifically included.
             </li>
 
             <li>
-              Local union vehicles where required.
+              Optional adventure and desert activities.
             </li>
 
             <li>
-              Pahalgam local sightseeing vehicle unless included.
+              Lunch and dinner unless specifically mentioned.
             </li>
 
             <li>
-              Personal expenses, including shopping, tips and beverages.
+              Personal shopping and expenses.
             </li>
 
             <li>
-              Lunch unless specifically mentioned.
+              Laundry, beverages and tips.
             </li>
 
             <li>
@@ -1770,12 +2354,12 @@
             </li>
 
             <li>
-              Extra sightseeing or additional vehicle usage.
+              Additional sightseeing or vehicle usage.
             </li>
 
             <li>
-              Expenses caused by flight delays, weather, road closures
-              or other unforeseen circumstances.
+              Expenses caused by weather, transport delays,
+              road closures or unforeseen circumstances.
             </li>
 
             <li>
@@ -1785,78 +2369,137 @@
             <li>
               Applicable taxes unless included in the quotation.
             </li>
+
           </ul>
 
         </section>
 
-        <!-- HOTELS -->
+        <!-- =====================================================
+             ACCOMMODATION
+        ===================================================== -->
 
-        <section class="panel reveal" id="hotels">
+        <section
+          class="panel reveal"
+          id="hotels"
+        >
 
-          <h2>Accommodation Options</h2>
+          <h2>
+            Accommodation Options
+          </h2>
 
           <div class="hotels">
 
             <article class="hotel">
-              <small>STANDARD</small>
 
-              <h3>Comfortable Stay</h3>
+              <small>
+                STANDARD
+              </small>
+
+              <h3>
+                Comfortable Stay
+              </h3>
 
               <p>
-                Standard hotel options in Srinagar and Pahalgam.
+
+                Value-focused hotel accommodation
+                across Jaipur, Jodhpur and Jaisalmer.
+
               </p>
+
             </article>
 
             <article class="hotel">
-              <small>DELUXE</small>
 
-              <h3>Deluxe Stay</h3>
+              <small>
+                DELUXE
+              </small>
+
+              <h3>
+                Deluxe Rajasthan
+              </h3>
 
               <p>
-                Upgraded hotel options offering additional comfort.
+
+                Comfortable upgraded hotel options
+                with additional facilities.
+
               </p>
+
             </article>
 
             <article class="hotel">
-              <small>PREMIUM</small>
 
-              <h3>Premium Stay</h3>
+              <small>
+                PREMIUM
+              </small>
+
+              <h3>
+                Heritage & Premium
+              </h3>
 
               <p>
-                Premium accommodation options subject to availability.
+
+                Selected premium or heritage-style
+                hotels subject to availability.
+
               </p>
+
             </article>
 
             <article class="hotel">
-              <small>LUXURY</small>
 
-              <h3>Luxury Kashmir Experience</h3>
+              <small>
+                DESERT EXPERIENCE
+              </small>
+
+              <h3>
+                Jaisalmer Desert Camp
+              </h3>
 
               <p>
-                Luxury hotel and resort options available on request.
+
+                Desert-camp accommodation can be
+                included based on your selected
+                package.
+
               </p>
+
             </article>
 
           </div>
 
           <div class="note">
-            Exact hotels, room categories and meal plans depend on the
-            selected package, travel dates and availability. All details
-            will be confirmed in writing before booking.
+
+            The exact hotel and desert camp will
+            depend on your travel dates, preferred
+            category and availability. Final names
+            and room categories will be confirmed
+            before booking.
+
           </div>
 
         </section>
 
-        <!-- BOOKING INFORMATION -->
+        <!-- =====================================================
+             BOOKING INFORMATION
+        ===================================================== -->
 
-        <section class="panel reveal" id="policies">
+        <section
+          class="panel reveal"
+          id="policies"
+        >
 
-          <h2>Booking Information</h2>
+          <h2>
+            Booking Information
+          </h2>
 
           <div class="note">
-            Final prices, hotels, vehicle arrangements, inclusions,
-            payment terms and cancellation conditions will be
-            confirmed in writing before payment.
+
+            Final prices, accommodation, transfers,
+            desert activities, sightseeing inclusions,
+            payment terms and cancellation conditions
+            will be confirmed in writing before payment.
+
           </div>
 
           <h3 class="policy-heading">
@@ -1864,9 +2507,12 @@
           </h3>
 
           <p>
-            An advance payment may be required to confirm hotels and
-            transportation. Your exact payment schedule and verified
-            payment details will be shared with your final quotation.
+
+            An advance payment may be required to
+            confirm hotels, transportation and desert
+            accommodation. The exact payment schedule
+            will be provided with your quotation.
+
           </p>
 
           <h3 class="policy-heading">
@@ -1874,9 +2520,12 @@
           </h3>
 
           <p>
-            Cancellation charges depend on the travel dates, hotel
-            policies and services booked. All cancellation requests
-            should be submitted in writing.
+
+            Cancellation charges depend on travel dates,
+            hotel and desert-camp policies and the services
+            booked. All cancellation requests should be
+            submitted in writing.
+
           </p>
 
           <h3 class="policy-heading">
@@ -1884,34 +2533,31 @@
           </h3>
 
           <ul>
+
             <li>
-              Services are provided according to the confirmed
-              booking voucher.
+              Services follow the confirmed booking voucher.
             </li>
 
             <li>
-              Hotel check-in and check-out follow individual
-              hotel policies.
+              Hotel check-in and check-out follow individual hotel policies.
             </li>
 
             <li>
-              Sightseeing depends on weather and local
-              operating conditions.
+              Sightseeing is subject to attraction operating hours.
             </li>
 
             <li>
-              Vehicle movement is subject to local
-              transportation regulations.
+              Desert activities depend on weather and operational conditions.
             </li>
 
             <li>
-              Optional activities are subject to availability
-              and weather conditions.
+              Vehicle services follow the confirmed itinerary.
             </li>
 
             <li>
               All amendments should be requested in writing.
             </li>
+
           </ul>
 
           <h3 class="policy-heading">
@@ -1919,6 +2565,7 @@
           </h3>
 
           <ul>
+
             <li>
               Valid government-issued photo identification.
             </li>
@@ -1928,12 +2575,13 @@
             </li>
 
             <li>
-              Flight or transportation tickets.
+              Flight or railway tickets where applicable.
             </li>
 
             <li>
-              Other identification or permits where applicable.
+              Other documentation where required.
             </li>
+
           </ul>
 
         </section>
@@ -1949,7 +2597,7 @@
         <section class="panel reveal">
 
           <div class="sidebar-eyebrow">
-            Kashmir Holiday
+            Rajasthan Holiday
           </div>
 
           <div class="price">
@@ -1957,38 +2605,83 @@
           </div>
 
           <p>
-            Final package price depends on travel dates, hotel category,
-            number of travellers and availability.
+
+            Final package price depends on travel
+            dates, hotel category, desert experience,
+            vehicle type and number of travellers.
+
           </p>
 
           <div class="fact">
-            <span>Duration</span>
-            <strong>6 days</strong>
+
+            <span>
+              Duration
+            </span>
+
+            <strong>
+              6 Days
+            </strong>
+
           </div>
 
           <div class="fact">
-            <span>Stay</span>
-            <strong>5 nights</strong>
+
+            <span>
+              Stay
+            </span>
+
+            <strong>
+              5 Nights
+            </strong>
+
           </div>
 
           <div class="fact">
-            <span>Destinations</span>
-            <strong>3</strong>
+
+            <span>
+              Cities
+            </span>
+
+            <strong>
+              3
+            </strong>
+
           </div>
 
           <div class="fact">
-            <span>Arrival</span>
-            <strong>Srinagar</strong>
+
+            <span>
+              Start
+            </span>
+
+            <strong>
+              Jaipur
+            </strong>
+
           </div>
 
           <div class="fact">
-            <span>Departure</span>
-            <strong>Srinagar</strong>
+
+            <span>
+              Finish
+            </span>
+
+            <strong>
+              Jaisalmer
+            </strong>
+
           </div>
 
           <div class="fact">
-            <span>Meal plan</span>
-            <strong>MAP</strong>
+
+            <span>
+              Transport
+            </span>
+
+            <strong>
+              Private
+            </strong>
+
           </div>
 
           <div class="booking-buttons">
@@ -1998,11 +2691,12 @@
             </a>
 
             <!--
-              Replace 919999999999 with your actual WhatsApp number.
-              Use the country code without +, spaces or hyphens.
+              IMPORTANT:
+              Replace 919999999999 with your actual
+              Travspro Holidays WhatsApp number.
             -->
 
-            https://wa.me/919999999999?text=Hello%20Travspro%20Holidays%2C%20I%20would%20like%20a%20quotation%20for%20the%205%20Nights%206%20Days%20Kashmir%20Tour%20Package.
+            https://wa.me/919999999999?text=Hello%20Travspro%20Holidays%2C%20I%20would%20like%20a%20quotation%20for%20the%205%20Nights%206%20Days%20Rajasthan%20Tour%20Package.
               WhatsApp Enquiry
             </a>
 
@@ -2010,9 +2704,13 @@
 
         </section>
 
+        <!-- EXPLORE MORE -->
+
         <section class="panel reveal">
 
-          <h3>Explore More</h3>
+          <h3>
+            Explore More
+          </h3>
 
           ./tourPackage.html
             Browse all tour packages →
@@ -2045,14 +2743,17 @@
   <section class="cta reveal">
 
     <h2>
-      Ready to discover<br>
-      Kashmir?
+      Ready for a<br>
+      Royal Adventure?
     </h2>
 
     <p>
-      Tell us your preferred travel dates, number of travellers and
-      hotel category. Let Travspro Holidays create your unforgettable
-      Kashmir journey.
+
+      Tell us your preferred travel dates,
+      number of travellers and hotel category.
+      Let Travspro Holidays create your
+      unforgettable Rajasthan journey.
+
     </p>
 
     ./contactus.html
@@ -2068,9 +2769,15 @@
   <footer>
 
     <p>
+
       © 2026
-      <strong>Travspro Holidays</strong>
+
+      <strong>
+        Travspro Holidays
+      </strong>
+
       — Travel Solution Provider
+
     </p>
 
     <p>
@@ -2084,79 +2791,135 @@
   ===================================================== -->
 
   <script>
+
     /*
-      Scroll reveal animation
+      Scroll Reveal
     */
 
     const revealElements =
       document.querySelectorAll(".reveal");
 
-    if ("IntersectionObserver" in window) {
+    if (
+      "IntersectionObserver" in window
+    ) {
+
       const observer =
         new IntersectionObserver(
+
           (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("active");
-                observer.unobserve(entry.target);
+
+            entries.forEach(
+              (entry) => {
+
+                if (
+                  entry.isIntersecting
+                ) {
+
+                  entry.target
+                    .classList
+                    .add("active");
+
+                  observer
+                    .unobserve(
+                      entry.target
+                    );
+
+                }
+
               }
-            });
+            );
+
           },
+
           {
             threshold: 0.08
           }
+
         );
 
-      revealElements.forEach((element) => {
-        observer.observe(element);
-      });
+      revealElements
+        .forEach(
+          (element) => {
+
+            observer
+              .observe(
+                element
+              );
+
+          }
+        );
+
     } else {
-      revealElements.forEach((element) => {
-        element.classList.add("active");
-      });
+
+      revealElements
+        .forEach(
+          (element) => {
+
+            element
+              .classList
+              .add("active");
+
+          }
+        );
+
     }
 
+
     /*
-      Very subtle hero decoration movement.
-      This affects only the two hero orbs.
+      Subtle Hero Orb Movement
     */
 
     const heroOrbs =
-      document.querySelectorAll(".orb");
+      document
+        .querySelectorAll(".orb");
 
-    document.addEventListener(
-      "mousemove",
-      (event) => {
-        if (window.innerWidth <= 800) {
-          return;
+    document
+      .addEventListener(
+        "mousemove",
+
+        (event) => {
+
+          if (
+            window.innerWidth <= 800
+          ) {
+            return;
+          }
+
+          const x =
+            (
+              event.clientX /
+              window.innerWidth -
+              0.5
+            ) * 8;
+
+          const y =
+            (
+              event.clientY /
+              window.innerHeight -
+              0.5
+            ) * 8;
+
+          heroOrbs
+            .forEach(
+              (orb, index) => {
+
+                const multiplier =
+                  index === 0
+                  ? 1
+                  : -1;
+
+                orb.style.marginLeft =
+                  `${x * multiplier}px`;
+
+                orb.style.marginTop =
+                  `${y * multiplier}px`;
+
+              }
+            );
+
         }
+      );
 
-        const x =
-          (
-            event.clientX /
-            window.innerWidth -
-            0.5
-          ) * 8;
-
-        const y =
-          (
-            event.clientY /
-            window.innerHeight -
-            0.5
-          ) * 8;
-
-        heroOrbs.forEach((orb, index) => {
-          const multiplier =
-            index === 0 ? 1 : -1;
-
-          orb.style.marginLeft =
-            `${x * multiplier}px`;
-
-          orb.style.marginTop =
-            `${y * multiplier}px`;
-        });
-      }
-    );
   </script>
 
 </body>
