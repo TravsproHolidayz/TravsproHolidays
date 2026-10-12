@@ -1,124 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Column Layout Methods</title>
-  <style>
- 
+import React from "react";
 
-    li {
-      list-style: none;
-    }
+const whatsapp = "https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20want%20to%20enquire%20about%20the%20Manali%20Tour%20Package.%0A%0APreferred%20travel%20dates%3A%20%0ANumber%20of%20travellers%3A%20%0ADuration%3A%20%0ADeparture%20city%3A%20%0ABudget%3A%20";
 
-    .container {
-      padding: 10px;
-      background-color: gold;
-      display: flex;
-      gap: 10px;
-    }
-  </style>
-</head>
+const days = [
+  { n: "DAY 01 / ARRIVAL", icon: "🚌", title: "Welcome to Manali", text: "Arrive in Manali and transfer to your hotel. After check-in, unwind amid the mountain views. In the evening, take a relaxed walk along Mall Road and explore local cafés and shops.", tags: ["Hotel Check-in", "Mall Road", "Leisure Time"] },
+  { n: "DAY 02 / LOCAL SIGHTSEEING", icon: "🌲", title: "Manali Heritage & Culture", text: "Visit Hadimba Devi Temple amid a peaceful deodar forest, explore the lanes of Old Manali and continue to Vashisht village. Later, enjoy free time for local shopping and cafés.", tags: ["Hadimba Temple", "Old Manali", "Vashisht"] },
+  { n: "DAY 03 / VALLEY ADVENTURE", icon: "🏔️", title: "Solang Valley Experience", text: "Head to Solang Valley for sweeping Himalayan scenery. Seasonal activities may include ropeway rides, paragliding, skiing or snow play, depending on weather and local operations.", tags: ["Solang Valley", "Mountain Views", "Seasonal Activities"] },
+  { n: "DAY 04 / LAHAUL EXCURSION", icon: "🚙", title: "Atal Tunnel & Sissu", text: "Travel through the spectacular mountain corridor towards Atal Tunnel and Sissu. Enjoy dramatic landscapes, riverside views and photo stops, subject to road and weather conditions.", tags: ["Atal Tunnel", "Sissu", "Scenic Drive"] },
+  { n: "DAY 05 / KULLU & NAGGAR", icon: "🏰", title: "Valleys, Art & Traditions", text: "Take a scenic excursion towards Naggar and Kullu. Explore heritage architecture, local handicrafts and valley landscapes. Sightseeing can be adjusted to your pace and interests.", tags: ["Naggar", "Kullu Valley", "Local Crafts"] },
+  { n: "DAY 06 / DEPARTURE", icon: "✨", title: "Farewell to the Mountains", text: "Enjoy breakfast and a final glimpse of the Himalayas before checking out. Transfer to the bus stand or your onward transport point with wonderful memories of Manali.", tags: ["Breakfast", "Check-out", "Onward Transfer"] }
+];
 
+const places = [
+  { name: "Solang Valley", icon: "🏔️", img: "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=1000&q=85", text: "A scenic mountain valley known for panoramic views and seasonal adventure activities." },
+  { name: "Atal Tunnel & Sissu", icon: "🚙", img: "https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&w=1000&q=85", text: "A memorable high-mountain drive connecting Manali with the striking landscapes of Lahaul." },
+  { name: "Naggar", icon: "🏰", img: "https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=1000&q=85", text: "A peaceful heritage village with traditional architecture, art and beautiful valley views." },
+  { name: "Hadimba Temple", icon: "🌲", img: "https://images.unsplash.com/photo-1609920658906-8223bd289001?auto=format&fit=crop&w=1000&q=85", text: "A distinctive wooden temple surrounded by tall deodar trees in Manali's Dhungri forest." },
+  { name: "Old Manali", icon: "☕", img: "https://images.unsplash.com/photo-1521354719423-661a3204204f?auto=format&fit=crop&w=1000&q=85", text: "Riverside lanes, orchards, mountain cafés and a relaxed village atmosphere." },
+  { name: "Rohtang Pass", icon: "❄️", img: "https://images.unsplash.com/photo-1486911278844-a81c5267e227?auto=format&fit=crop&w=1000&q=85", text: "A spectacular seasonal mountain pass. Access depends on permits, weather and road opening." }
+];
 
-  <div class="container">
+export default function ManaliTourPackage() {
+  return <main>
+    <style>{`
+      *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;scroll-padding-top:110px}body{font-family:"Segoe UI",Arial,sans-serif;background:#050816;color:#fff;overflow-x:hidden}a{text-decoration:none;color:inherit}body:before{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(circle at 15% 20%,rgba(0,229,255,.14),transparent 30%),radial-gradient(circle at 85% 30%,rgba(124,77,255,.17),transparent 30%),radial-gradient(circle at 50% 90%,rgba(0,255,170,.08),transparent 30%),#050816}body:after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:50px 50px;mask-image:linear-gradient(to bottom,#000,transparent)}
+      .nav{position:sticky;top:15px;z-index:20;width:min(1150px,94%);margin:15px auto 0;padding:12px 22px;display:flex;justify-content:space-between;align-items:center;background:rgba(8,14,35,.72);border:1px solid rgba(255,255,255,.1);border-radius:50px;backdrop-filter:blur(18px);box-shadow:0 10px 40px rgba(0,0,0,.3)}.logo{font-weight:900;letter-spacing:1px;font-size:21px}.logo span{color:#00eaff}.links{display:flex;gap:5px;list-style:none}.links a{display:block;padding:10px 16px;border-radius:30px;color:#cbd3e6;font-size:12px;font-weight:700}.links a:hover,.links .active{color:#00eaff;background:rgba(0,229,255,.08)}
+      .hero{width:min(1100px,92%);margin:auto;padding:75px 0 45px;text-align:center;animation:up .9s ease}.eyebrow{display:inline-block;margin-bottom:18px;padding:8px 18px;border:1px solid rgba(0,229,255,.25);border-radius:30px;color:#00eaff;background:rgba(0,229,255,.05);font-size:12px;letter-spacing:4px;font-weight:700}.hero h1{font-size:clamp(48px,7vw,85px);line-height:.98;letter-spacing:-4px;margin-bottom:25px;background:linear-gradient(120deg,#fff,#8befff,#8d72ff,#fff);background-size:300% 300%;background-clip:text;color:transparent;animation:gradient 7s ease infinite}.hero h1 span{display:block;color:#00eaff}.hero p,.sectionHead p{max-width:720px;margin:auto;color:#9da7bd;font-size:16px;line-height:1.8}
+      .heroImg{width:min(1150px,92%);height:470px;margin:0 auto 65px;position:relative;overflow:hidden;border-radius:28px;border:1px solid rgba(255,255,255,.15);box-shadow:0 25px 80px rgba(0,0,0,.35)}.heroImg img{width:100%;height:100%;object-fit:cover}.heroImg:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(5,8,22,.96),rgba(5,8,22,.06) 68%)}.caption{position:absolute;z-index:2;left:35px;right:35px;bottom:30px;display:flex;align-items:end;justify-content:space-between;gap:20px}.caption h2{font-size:clamp(24px,4vw,40px);margin-bottom:5px}.caption p{color:#c0cbe0}.pill{padding:9px 16px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.09);backdrop-filter:blur(15px);border-radius:30px;font-size:11px;white-space:nowrap}
+      .highlights{width:min(1100px,92%);margin:0 auto 90px;display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.glass,.day,.place,.feature{background:linear-gradient(145deg,rgba(255,255,255,.065),rgba(255,255,255,.018));border:1px solid rgba(255,255,255,.08);backdrop-filter:blur(15px);transition:.35s ease}.glass{padding:22px 15px;text-align:center;border-radius:20px}.glass:hover,.day:hover,.place:hover,.feature:hover{transform:translateY(-7px);border-color:rgba(0,229,255,.35);box-shadow:0 20px 50px rgba(0,0,0,.28)}.glass b{display:block;color:#00eaff;font-size:17px;margin:8px 0 4px}.glass small{color:#929db3}
+      .section{width:min(1150px,92%);margin:auto;padding-bottom:100px}.sectionHead{margin-bottom:35px}.sectionHead h2{font-size:clamp(35px,5vw,58px);line-height:1.05;letter-spacing:-2px;margin-bottom:18px;background:linear-gradient(120deg,#fff,#8befff,#a18bff);background-clip:text;color:transparent}.sectionHead p{margin:0}.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}.day{padding:30px;border-radius:25px;position:relative;overflow:hidden}.dayTop{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}.dayNo{color:#00eaff;font-size:12px;font-weight:700;letter-spacing:2px}.icon{width:55px;height:55px;display:grid;place-items:center;border-radius:17px;background:rgba(0,229,255,.08);border:1px solid rgba(0,229,255,.15);font-size:27px}.day h3,.place h3,.feature h3{font-size:22px;margin-bottom:12px}.day p,.place p,.feature p{color:#929db3;font-size:14px;line-height:1.8;margin-bottom:20px}.tags{display:flex;flex-wrap:wrap;gap:8px}.tags span{padding:6px 11px;border-radius:20px;background:rgba(0,229,255,.06);border:1px solid rgba(0,229,255,.12);color:#b7eaff;font-size:11px}
+      .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.place{overflow:hidden;border-radius:24px}.place img{width:100%;height:220px;object-fit:cover;transition:.5s}.place:hover img{transform:scale(1.05)}.placeContent{padding:23px}.place p{margin:0}.feature{padding:28px;border-radius:23px}.feature .icon{margin-bottom:20px}.feature p{margin:0}.note{margin-top:24px;padding:18px 22px;border-left:3px solid #00eaff;background:rgba(0,229,255,.05);border-radius:12px;color:#aab5ca;font-size:13px;line-height:1.7}
+      .cta{width:min(1100px,92%);margin:0 auto 100px;padding:70px 30px;text-align:center;border-radius:30px;background:linear-gradient(135deg,rgba(0,229,255,.08),rgba(105,70,255,.1));border:1px solid rgba(255,255,255,.08)}.cta h2{font-size:clamp(35px,5vw,60px);line-height:1.1;margin-bottom:20px}.cta p{max-width:650px;margin:0 auto 28px;color:#9da7bd;line-height:1.8}.wa{display:inline-flex;padding:15px 28px;border-radius:30px;background:linear-gradient(90deg,#16c96b,#25d366);font-weight:700;font-size:13px;transition:.3s}.wa:hover{transform:translateY(-4px);box-shadow:0 0 25px rgba(37,211,102,.4)}footer{padding:40px 20px;text-align:center;border-top:1px solid rgba(255,255,255,.06);color:#687289;font-size:14px}footer strong{color:#00eaff}.float{position:fixed;right:22px;bottom:22px;z-index:30;padding:14px 20px;border-radius:40px;background:linear-gradient(90deg,#16c96b,#25d366);font-size:13px;font-weight:700;box-shadow:0 10px 35px rgba(0,0,0,.35)}
+      @keyframes up{from{opacity:0;transform:translateY(35px)}to{opacity:1;transform:none}}@keyframes gradient{50%{background-position:100% 50%}}@media(max-width:850px){.grid3{grid-template-columns:repeat(2,1fr)}.heroImg{height:380px}.links a{padding:8px 9px;font-size:10px}}@media(max-width:600px){.nav{border-radius:20px;flex-direction:column;gap:8px;padding:12px}.links{flex-wrap:wrap;justify-content:center}.hero{padding:60px 0 35px}.hero h1{letter-spacing:-2px}.heroImg{height:320px;border-radius:20px}.caption{left:18px;right:18px;bottom:20px;flex-direction:column;align-items:flex-start}.highlights{grid-template-columns:repeat(2,1fr);margin-bottom:60px}.grid2,.grid3{grid-template-columns:1fr}.day{padding:25px}.cta{padding:55px 20px;margin-bottom:60px}.float{right:12px;bottom:12px;padding:12px 16px}}
+    `}</style>
 
-    <li><a href="./index.html">HOME</a></li>
-    <li><a href="./tourPackage.html">Tour Packages</a></li>
-    <li><a href="./contactus.html">Contact Us</a></li>
-    <li><a href="./about.html">About Us</a></li>
-  </div>
-<h1>Manali tour Package </h1>
-<h2> Itinerary</h2>
-<p><h4>Day 1 / ( New Delhi )
-  Delhi to Manali Overnight Journey</h4></p>
-<br/>
-<p>We will receive you in New-Delhi at Volvo pick-up point. Your journey into the sparkling land of Himachal Pradesh starts from here. The overnight journey takes you through cities and your morning with be greeted with the fresh air of Manali. Manali offers something special for everyone. It gives peace to meditators, inspiration to artists, daring Activities for adventure Seekers and this list just goes on. As soon as you will enter into the terrains of Manali, you will feel cool breeze already taking all your stress away and surprising you from its jaw- dropping landscapes.</p>
-<br/>
-<h4>Day 2 / ( Manali )
-  Arrive & Local City Tour</h4>
-<br/>
-<p>Upon arrival, you will be escorted to your pre-booked hotel. Relax and freshen-up for the day which includes your local sightseeing. Places to visit will be Hadimba Mata Temple & Ghatotkacha Temple. Later a short visit to Club House and then further to Tibetan Monastery. Later you are free to roam on the famed Mall Road and indulge in local shopping and also try some of the native cuisines. Return to the hotel for dinner and overnight stay.</p>
-<br/>
-<h4>Day 3 / ( Manali )
-  Solang Valley / Rohtang or Atal Tunnel</h4>
-<br/>
-<p>Wake up to the sweet sound of nature and after breakfast head towards Solang Valley. This valley is famous for its adventure activities and you can try your hand at Paragliding, Zorbing, ATV Rides, Horse-riding, Trail-rides and so much more. Before indulging in these activities make sure to understand all safety protocols and measures. Option 1. You can also visit Rohtang Pass – this will be solely on the discretion of the local & NGT governing authorities and at extra cost. Option 2. You can also visit and drive – through the newly built Atal Tunnel, one of the highest Tunnels in the World. This tunnel acts as a gateway to the Lahaul & Spiti Valley. You can make a stop at the North-Portal of the tunnel for an amazing photo-shoot. This option will be at extra cost. Afterwards return to hotel for dinner and a comfortable stay. NOTE : Kindly inform us to add these options at the time of booking. Note: Rohtang pass is closed on every Tuesday and during snowfall months/days. NGT (National Green Tribunal) has also limited the number of vehicles visiting Rohtang pass in a day. Thus, this sightseeing will be subject to permit obtained on the spot and extra cost (Permit + Vehicle charges). Please Note: Adventure activities will be at your own risk and cost.</p>
-<br/>
-<h4>Day 4 / ( Manali )
-  Departure</h4>
-<br/>
-<p>Today after breakfast, check-out from the hotel. You can leave your luggage at our Manali Hotel and roam the Mall Road, do buy some souvenirs for yourself and your family & friends or indulge in last moment shopping. If you feel like, you can spend some time at the Van Vihar, which is quite near the Mall Road. Around 4 PM you will be picked-up along with your luggage and dropped at the Volvo Bus stand for your journey. Morning arrival in Delhi and dropping at Delhi Volvo Stand or as per specified. Filled with beautiful moments and memories, your Manali 3 Nights 4 Days Holiday Package comes to an end here. We wish to see you once again on another journey.</p>
+    <nav className="nav" aria-label="Main navigation">
+      <a href="index.html" className="logo">TRAVSPRO <span>HOLIDAYS</span></a>
+      <ul className="links"><li><a href="index.html">HOME</a></li><li><a href="tourPackage.html" className="active">TOURS</a></li><li><a href="ourservice.html">SERVICES</a></li><li><a href="about.html">ABOUT</a></li><li><a href="contactus.html">CONTACT</a></li></ul>
+    </nav>
 
-<br/>
-<h2> Tour Inclusions</h2>
-<br/>
-<p><ul>
-  <li>All applicable taxes except GST.</li>
-   <li>Pick up & drop services from Manali Volvo Stop to Hotel & return</li>
-   <li>Roundtrip Volvo Tickets ( Delhi )</li>
-   <li>NGT Terms will apply for all vehicles at Himachal.</li>
-   <li>Individual Cab according to the itinerary.</li>
-   <li>Free pick up & drop services from Bus Stop to Hotel & return.</li>
-   <li>Accommodation on Double Sharing Basis.</li>
-</ul> <p/>
-<h2> Tour Exclusions</h2>
-<br/>
-<p><ol>
-  <li>Any Extra services - Permits, Volvo Luggage Charges, Heater, Meals etc</li>
-<li>Charges for early check-in & late check-out</li>
-<li>Airfare/Train fare</li>
-<li>Anything not mentioned in inclusions</li>
-<li>Any cost arising due to natural calamities like, landslides, road blockage, political disturbances (strikes), etc (to be borne by the client, which is directly payable on the spot).</li>
-<li>Anything else not listed in above details.</li>
-<li>Personal Expenses - Laundry, Shopping, Telephone bills, tips etc.</li>
-<li>Any Adventure activities.</li>
-  <br/></ol> <p/>
-<h2> Package Policy & Terms </h2>
-<br/>
-<p><ul>
-  <li>All our packages are customizable except Fixed Departures.</li>
-  <li>Guests are requested to have every discussion in written as verbal communications will not be entertained.</li>
-  <li>The packages offered by Travspro Holidays can be customized according to guest’s wish.</li>
-  <li>To ensure smooth services, Company can also make alternations in the tour. The reasons for such changes can
-be acts of god, technical problems, sudden service issues, government policies or any other similar situation.</li>
-  <li>Package will not be considered booked until advance amount have not been received by us.</li>
-  <li>Travel dates of DND (Date not decided) packages should be affirmed within 3 Months of invoice issuance date.</li>
-  <li>Delays may lead to certain inconveniences.</li>
-  <li>To give better experiences to our guests, our company also rolls out special offers. This includes upgraded</li>
-  <li>Hotels, Room Category, and Vehicle Type. No additional cost will be levied for such upgrades and this exciting
-news will be shared with you either before or during the trip.</li>
+    <header className="hero"><div className="eyebrow">TRAVSPRO HOLIDAYS</div><h1>Discover <span>Manali.</span></h1><p>Escape to the Himalayas, where pine forests, snow-capped peaks, the flowing Beas River and timeless mountain villages create the perfect setting for adventure, romance and relaxation.</p></header>
 
+    <section className="heroImg"><img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=1800&q=88" alt="Snow-covered Himalayan mountains near Manali" fetchPriority="high"/><div className="caption"><div><h2>Your Himalayan Escape</h2><p>Mountain air. Valley adventures. Extraordinary memories.</p></div><span className="pill">EXPLORE HIMACHAL PRADESH</span></div></section>
 
-  <br/></ul>
-  <h2> Cancellation Policy </h2>
-<br/>
-<p></ul>
-  <li>All our packages are customizable except Fixed Departures.</li>
-  <li>Guests are requested to have every discussion in written as verbal communications will not be entertained.</li>
-  <li>The packages offered by Travspro Holidays can be customized according to guest’s wish.</li>
-  <li>To ensure smooth services, Company can also make alternations in the tour. The reasons for such changes can be acts of god, technical problems, sudden service issues, government policies or any other similar situation. </li>
-  <li>Package will not be considered booked until advance amount have not been received by us.</li>
-  <li>Travel dates of DND (Date not decided) packages should be affirmed within 3 Months of invoice issuance date.</li>
- <li>Delays may lead to certain inconveniences.</li>
-   <li>To give better experiences to our guests, our company also rolls out special offers. This includes upgraded
+    <section className="highlights">{[["❄️","Snowy Escapes","Seasonal mountain experiences"],["🏔️","Valley Views","Himalayan landscapes"],["🪂","Adventure","Activities for every pace"],["🌲","Nature & Culture","Forests, villages and temples"]].map(x=><div className="glass" key={x[1]}><div style={{fontSize:26}}>{x[0]}</div><b>{x[1]}</b><small>{x[2]}</small></div>)}</section>
 
-Hotels, Room Category, and Vehicle Type. No additional cost will be levied for such upgrades and this exciting
+    <section className="section" id="itinerary"><div className="sectionHead"><div className="eyebrow">YOUR JOURNEY</div><h2>Manali, Day by Day.</h2><p>A balanced 6-day itinerary combining Manali's heritage, nearby valleys, scenic drives and leisure time. Every detail can be customised around your dates, group and interests.</p></div><div className="grid2">{days.map(d=><article className="day" key={d.n}><div className="dayTop"><span className="dayNo">{d.n}</span><div className="icon">{d.icon}</div></div><h3>{d.title}</h3><p>{d.text}</p><div className="tags">{d.tags.map(t=><span key={t}>{t}</span>)}</div></article>)}</div></section>
 
-news will be shared with you either before or during the trip.</li>
-   <li>All the cancellations must be communicated in written.</li>
-   <li>Token amount is non refundable in any cases.</li>
-   <li>Cancellations made 15 Days prior to travel date will attract cancellation charges.</li>
-   <li>Cancellations charges will vary from 25 % - 50% of the total tour package cost.</li>
-   <li>100 % Retention charges will be levied for bookings cancelled within 15 days of travel date or
-No show scenarios.</li>
-   <li>No refunds will be given in case of missed or unused services. This includes Flights, Trains Hotel stays, meals, sightseeing, transfers, entry ticket, permits or any other BBH services.</li>
-   <li>Travspro Holidays have the right to cancel your Invoice due to insufficient Advance Amount i.e. 50% of the total tour Package Cost.</li>
-     <li>In case, clients are suspected to indulge in any kind of illegal activity or violent behaviour, Travspro holidays will immediately stop the services while holding all the refunds.</li>
-</ul><p/>
-  <b/>
-    <br/>
-    <a href="./index.html"><img src="Logo.png"/></a>
-</body>
-  </html>
+    <section className="section" id="destinations"><div className="sectionHead"><div className="eyebrow">EXPLORE NEARBY</div><h2>Beyond Manali Town.</h2><p>Discover mountain valleys, heritage villages, forest temples and dramatic high-altitude landscapes around Manali.</p></div><div className="grid3">{places.map(p=><article className="place" key={p.name}><img src={p.img} alt={`${p.name} near Manali`} loading="lazy"/><div className="placeContent"><h3>{p.icon} {p.name}</h3><p>{p.text}</p></div></article>)}</div><div className="note"><strong>Travel note:</strong> Rohtang Pass, snow activities and some high-altitude routes are seasonal. Access, permits and operations depend on weather, road conditions and local authority guidance on your travel date.</div></section>
+
+    <section className="section"><div className="sectionHead"><div className="eyebrow">TRAVEL YOUR WAY</div><h2>A Holiday Designed Around You.</h2><p>Choose your preferred travel dates, hotel category, transfers and experiences. Travspro Holidays will help shape a Manali plan that fits your style and budget.</p></div><div className="grid3">{[["🏨","Handpicked Stays","Accommodation options for couples, families and groups, subject to your preferences and availability."],["🚐","Transfers & Sightseeing","Ask about arrival transfers, local sightseeing and private vehicle options for nearby excursions."],["💎","Customised Packages","Adjust the duration, hotel category and sightseeing plan for a personalised Himalayan holiday."]].map(f=><article className="feature" key={f[1]}><div className="icon">{f[0]}</div><h3>{f[1]}</h3><p>{f[2]}</p></article>)}</div></section>
+
+    <section className="cta" id="booking"><div className="eyebrow">YOUR MANALI STORY STARTS HERE</div><h2>Ready for the<br/>Mountains?</h2><p>Share your preferred dates, number of travellers, departure city and approximate budget. Contact Travspro Holidays on WhatsApp to start planning your customised Manali tour package.</p><a className="wa" href={whatsapp} target="_blank" rel="noopener noreferrer">💬 Enquire on WhatsApp →</a></section>
+
+    <footer><div className="logo" style={{marginBottom:12}}>TRAVSPRO <span>HOLIDAYS</span></div><p>Your Trusted Travel Partner</p><br/><p>© 2026 <strong>Travspro Holidays</strong>. All rights reserved.</p></footer>
+    <a className="float" href={whatsapp} target="_blank" rel="noopener noreferrer" aria-label="Enquire about Manali tour packages on WhatsApp">💬 WhatsApp Us</a>
+  </main>;
+}
