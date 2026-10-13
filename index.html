@@ -38,7 +38,7 @@ body::after{
 /* NAVIGATION */
 .navbar{
  position:fixed;top:15px;left:50%;transform:translateX(-50%);
- z-index:1000;width:min(1180px,94%);
+ z-index:1000;width:min(1150px,94%);
  padding:12px 22px;display:flex;align-items:center;
  justify-content:space-between;gap:20px;
  background:rgba(7,13,32,.78);
@@ -49,7 +49,7 @@ body::after{
  animation:navDrop .7s ease
 }
 .logo{display:flex;align-items:center;flex-shrink:0}
-.logo img{width:155px;height:auto;display:block;transition:.3s}
+.logo img{width:155px;height:76px;display:block;transition:.3s}
 .logo img:hover{transform:scale(1.04);filter:drop-shadow(0 0 12px #00eaff)}
 .nav-links{display:flex;align-items:center;gap:4px;list-style:none}
 .nav-links a{
@@ -352,13 +352,13 @@ footer strong{color:#00eaff}
 /* MOBILE */
 @media(max-width:600px){
  .navbar{
-  top:6px;width:94%;padding:6px 10px;
+  top:6px;width:96%;padding:6px 10px;
   flex-direction:column;gap:8px;border-radius:21px
  }
  .logo img{width:90px}
  .nav-links{width:100%;justify-content:center;flex-wrap:wrap;gap:1px}
  .nav-links a{padding:5px 4px;font-size:9px}
- .hero{min-height:auto;padding:150px 17px 85px}
+ .hero{min-height:auto;padding:130px 17px 45px}
  .hero h1{font-size:clamp(45px,13vw,70px);letter-spacing:-2.5px}
  .hero p{font-size:14px;line-height:1.8;margin:22px auto}
  .eyebrow{font-size:9px;letter-spacing:1.8px}
