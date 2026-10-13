@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#050816">
+<title>Barot Valley Tour | Travspro Holidays</title>
+<meta name="description" content="Plan a customised 2-night, 3-day Barot Valley escape with Travspro Holidays. Request a quote for your travel dates, stay and transport requirements.">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:110px}
+body{
+  font-family:"Segoe UI",Arial,sans-serif;
+  background:#050816;
+  color:#f4f7ff;
+  line-height:1.7;
+}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit}
+button,a,input,select,textarea{-webkit-tap-highlight-color:transparent}
+a:focus-visible,button:focus-visible{
+  outline:3px solid #00eaff;
+  outline-offset:5px;
+}
+img{display:block;max-width:100%}
+.container{width:min(1150px,92%);margin:auto}
+.muted{color:#aab7ce}
+.small{font-size:13px}
+.accent{color:#00eaff}
+
+/* NAVIGATION */
+.navbar{
+  position:sticky;top:0;z-index:100;
+  background:#091022;
+  border-bottom:1px solid #25314a;
+}
+.nav-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:20px;min-height:78px;padding:12px 0;
+}
+.brand{
+  font-size:19px;font-weight:850;
+  letter-spacing:.3px;white-space:nowrap;
+}
+.brand span{color:#00eaff}
+.nav-links{
+  display:flex;flex-wrap:wrap;gap:6px;
+  list-style:none;
+}
+.nav-links a{
+  display:block;padding:8px 12px;border-radius:24px;
+  font-size:12px;font-weight:750;color:#c7d2e7;
+}
+.nav-links a:hover,.nav-links .active{
+  background:#14283c;color:#00eaff;
+}
+
+/* HERO */
+.hero{
+  padding:65px 0 55px;
+  background:
+    radial-gradient(ellipse at top left,rgba(0,207,255,.12),transparent 60%),
+    radial-gradient(ellipse at bottom right,rgba(104,72,255,.15),transparent 60%);
+}
+.breadcrumb{
+  font-size:12px;color:#aab7ce;margin-bottom:25px;
+}
+.breadcrumb a:hover{color:#00eaff}
+.hero-grid{
+  display:grid;grid-template-columns:1.05fr .95fr;
+  gap:42px;align-items:center;
+}
+.eyebrow{
+  display:inline-block;padding:7px 14px;
+  border:1px solid #245168;border-radius:30px;
+  color:#70eaff;background:#0c2233;
+  font-size:11px;font-weight:800;letter-spacing:2px;
+}
+h1{
+  margin:20px 0;font-size:clamp(44px,6vw,76px);
+  line-height:1.08;letter-spacing:-2px;
+}
+h1 span{color:#69e5ff}
+.hero-description{
+  max-width:590px;color:#b8c4d9;font-size:16px;
+}
+.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.btn{
+  display:inline-flex;justify-content:center;align-items:center;
+  padding:13px 21px;border-radius:30px;
+  border:1px solid transparent;
+  font-weight:800;font-size:13px;cursor:pointer;
+  transition:transform .2s,background .2s;
+}
+.btn:hover{transform:translateY(-3px)}
+.btn-primary{
+  background:linear-gradient(110deg,#007caa,#6441dc);
+  color:#fff;
+}
+.btn-outline{background:#111b30;border-color:#34445f;color:#e9f1ff}
+.btn-whatsapp{background:#087b48;color:#fff}
+.hero-photo{
+  overflow:hidden;border-radius:28px;
+  border:1px solid #34445f;background:#111b30;
+}
+.hero-photo img{
+  width:100%;height:430px;object-fit:cover;
+}
+.photo-caption{
+  padding:11px 16px;font-size:11px;color:#aab7ce;
+}
+.facts{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:14px;margin-top:42px;
+}
+.fact{
+  padding:20px;background:#0e172b;
+  border:1px solid #27344c;border-radius:18px;
+}
+.fact small{display:block;color:#94a5c1;font-size:11px;margin-bottom:6px}
+.fact strong{font-size:15px;color:#e9f3ff}
+
+/* SECTIONS */
+.section{padding:65px 0}
+.section-title{margin-bottom:28px}
+.section-title small{
+  color:#69e5ff;font-weight:800;font-size:11px;
+  letter-spacing:2px;text-transform:uppercase;
+}
+.section-title h2{
+  font-size:clamp(29px,4vw,43px);
+  line-height:1.2;margin-top:9px;
+}
+.section-title p{color:#aab7ce;margin-top:12px;max-width:740px}
+.panel{
+  background:#0e172b;border:1px solid #27344c;
+  border-radius:22px;padding:28px;
+}
+.overview-grid{
+  display:grid;grid-template-columns:1.25fr .75fr;
+  gap:22px;
+}
+.panel h3{font-size:22px;margin-bottom:14px}
+.panel p{color:#b2bfd5}
+.quote-panel{
+  background:linear-gradient(140deg,#10273a,#1c1737);
+}
+.quote-panel .price{
+  color:#70eaff;font-size:29px;font-weight:850;
+  margin:15px 0;
+}
+.quote-panel .btn{width:100%;margin-top:18px}
+.highlights{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+.highlight{
+  background:#0e172b;border:1px solid #27344c;
+  border-radius:20px;padding:25px;
+}
+.highlight .icon{font-size:28px;margin-bottom:10px}
+.highlight h3{font-size:18px;margin-bottom:8px}
+.highlight p{color:#aab7ce;font-size:14px}
+
+/* ITINERARY */
+.itinerary{display:grid;gap:18px}
+.day{
+  display:grid;grid-template-columns:90px 1fr;
+  gap:22px;padding:27px;
+  background:#0e172b;border:1px solid #27344c;
+  border-radius:22px;
+}
+.day-number{
+  align-self:start;text-align:center;
+  background:#102d40;border:1px solid #245168;
+  border-radius:16px;padding:12px;color:#70eaff;
+  font-size:13px;font-weight:800;
+}
+.day-number strong{display:block;font-size:30px;line-height:1.2}
+.day h3{font-size:21px;margin-bottom:12px}
+.list{padding-left:20px;color:#b2bfd5}
+.list li{margin-bottom:9px}
+.day-note{margin-top:12px;color:#78dff5;font-size:13px}
+.notice{
+  padding:17px 20px;margin-top:22px;
+  background:#152238;border-left:3px solid #69e5ff;
+  border-radius:10px;color:#b8c7de;font-size:13px;
+}
+.two-columns{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+
+/* ENQUIRY */
+.enquiry-grid{
+  display:grid;grid-template-columns:.85fr 1.15fr;
+  gap:28px;align-items:start;
+}
+.enquiry-copy h2{font-size:38px;line-height:1.2;margin-bottom:18px}
+.enquiry-copy p{color:#b2bfd5;margin-bottom:18px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:17px}
+.field{display:flex;flex-direction:column;gap:7px}
+.field.full{grid-column:1/-1}
+label{font-size:13px;font-weight:750;color:#e1ebfc}
+input,select,textarea{
+  width:100%;padding:12px 14px;
+  background:#071021;border:1px solid #34445f;
+  border-radius:11px;color:#fff;
+}
+input:focus,select:focus,textarea:focus{
+  outline:2px solid #00a9d0;outline-offset:2px;
+}
+input::placeholder,textarea::placeholder{color:#899bb7}
+input[type="date"]{color-scheme:dark}
+textarea{min-height:100px;resize:vertical}
+.form-submit{width:100%;margin-top:20px}
+.form-note{font-size:12px;color:#94a5c1;margin-top:12px}
+
+/* FAQ */
+.faq{display:grid;gap:12px}
+details{
+  padding:19px 23px;background:#0e172b;
+  border:1px solid #27344c;border-radius:16px;
+}
+summary{cursor:pointer;font-weight:750}
+details p{margin-top:12px;color:#b2bfd5;font-size:14px}
+
+/* RELATED TOURS */
+.related{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+.related a{
+  padding:24px;border-radius:18px;background:#0e172b;
+  border:1px solid #27344c;transition:border-color .2s;
+}
+.related a:hover{border-color:#00eaff}
+.related h3{font-size:20px;margin-bottom:7px}
+.related p{font-size:13px;color:#aab7ce}
+.related span{display:block;color:#70eaff;margin-top:15px;font-size:13px}
+
+/* FOOTER */
+footer{
+  padding:35px 0;border-top:1px solid #27344c;
+  background:#080e1c;text-align:center;
+}
+.footer-links{
+  display:flex;justify-content:center;gap:20px;
+  flex-wrap:wrap;margin:18px 0;font-size:13px;
+}
+.footer-links a:hover{color:#00eaff}
+footer p{color:#94a5c1;font-size:12px}
+
+/* MOBILE */
+@media(max-width:900px){
+  .hero-grid,.overview-grid,.enquiry-grid{grid-template-columns:1fr}
+  .hero-photo img{height:350px}
+  .facts{grid-template-columns:repeat(2,1fr)}
+  .highlights{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:600px){
+  html{scroll-padding-top:135px}
+  .nav-inner{flex-direction:column;gap:7px;padding:10px 0}
+  .brand{font-size:17px}
+  .nav-links{justify-content:center;gap:2px}
+  .nav-links a{font-size:10px;padding:6px 8px}
+  .hero{padding:32px 0}
+  h1{font-size:46px}
+  .hero-grid{gap:27px}
+  .hero-photo img{height:270px}
+  .facts{gap:10px;margin-top:25px}
+  .fact{padding:15px}
+  .fact strong{font-size:13px}
+  .section{padding:43px 0}
+  .highlights,.two-columns,.related,.form-grid{grid-template-columns:1fr}
+  .panel{padding:22px}
+  .day{grid-template-columns:1fr;gap:15px;padding:22px}
+  .day-number{width:80px}
+  .buttons .btn{width:100%}
+  .enquiry-copy h2{font-size:32px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important}
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav class="navbar" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand">TRAVSPRO <span>HOLIDAYS</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="tourPackage.html" class="active">TOURS</a></li>
+      <li><a href="OurServices.html">SERVICES</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="contactus.html">CONTACT</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a> /
+      <a href="tourPackage.html">Tour Packages</a> /
+      Barot Valley
+    </div>
+
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">HIMACHAL · NATURE ESCAPE</span>
+        <h1>Slow Down.<br><span>Discover Barot.</span></h1>
+        <p class="hero-description">
+          Swap busy schedules for valley views, forest walks and
+          peaceful moments beside the Uhl River. Plan a refreshing
+          Barot Valley escape around your travel dates and preferences.
+        </p>
+
+        <div class="buttons">
+          <a href="#enquiry" class="btn btn-primary">Request My Quote →</a>
+          <a href="#itinerary" class="btn btn-outline">View Itinerary ↓</a>
+        </div>
+      </div>
+
+      <figure class="hero-photo">
+        <img
+          src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1000&q=80"
+          alt="Illustrative forest landscape for a nature holiday"
+          fetchpriority="high"
+        >
+        <figcaption class="photo-caption">
+          Illustrative nature image. Actual destination and accommodation may differ.
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="facts">
+      <div class="fact">
+        <small>SUGGESTED DURATION</small>
+        <strong>2 Nights / 3 Days</strong>
+      </div>
+      <div class="fact">
+        <small>DESTINATION</small>
+        <strong>Barot Valley, Himachal</strong>
+      </div>
+      <div class="fact">
+        <small>TRAVEL STYLE</small>
+        <strong>Nature & Relaxation</strong>
+      </div>
+      <div class="fact">
+        <small>PACKAGE RATE</small>
+        <strong>Quote on Request</strong>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- OVERVIEW -->
+<section class="section">
+  <div class="container">
+    <div class="section-title">
+      <small>Your mountain break</small>
+      <h2>A Little Less Rush. A Lot More Nature.</h2>
+      <p>
+        A suggested short holiday for travellers who enjoy scenic
+        surroundings, gentle exploration and time to unwind.
+      </p>
+    </div>
+
+    <div class="overview-grid">
+      <div class="panel">
+        <h3>Your Barot Valley Escape</h3>
+        <p>
+          Spend two nights exploring Barot at a relaxed pace.
+          Enjoy valley scenery, discover local surroundings and
+          leave room for quiet moments during your stay.
+        </p>
+        <br>
+        <p>
+          Travspro Holidays can help you explore stay and transport
+          options. Your pickup point, accommodation, meals and
+          sightseeing arrangements will be agreed in your final quotation.
+        </p>
+      </div>
+
+      <aside class="panel quote-panel">
+        <h3>Make It Your Kind of Holiday</h3>
+        <p>Share your dates, group size and preferred pickup location.</p>
+        <div class="price">Request Rates</div>
+        <p class="small">
+          No fixed price is advertised. Rates depend on your selected
+          services, travel dates and availability.
+        </p>
+        <a href="#enquiry" class="btn btn-primary">Customise My Trip →</a>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- HIGHLIGHTS -->
+<section class="section">
+  <div class="container">
+    <div class="section-title">
+      <small>Holiday highlights</small>
+      <h2>Take the Scenic Route.</h2>
+    </div>
+
+    <div class="highlights">
+      <article class="highlight">
+        <div class="icon" aria-hidden="true">🏞️</div>
+        <h3
