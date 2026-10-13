@@ -261,13 +261,39 @@ footer p{color:#94a5c1;font-size:12px}
  *{transition:none!important}
 }
 </style>
+ .brand{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+}
+
+.brand img{
+  width:145px;
+  height:60px;
+  object-fit:contain;
+}
+
+footer .brand img{
+  width:160px;
+  height:auto;
+}
+
+@media(max-width:600px){
+  .brand img{
+    width:110px;
+    height:45px;
+  }
+}
 </head>
 
 <body>
 
 <nav class="navbar" aria-label="Main navigation">
  <div class="container nav-inner">
-  <a href="index.html" class="brand">TRAVSPRO <span>HOLIDAYS</span></a>
+  <a href="index.html" class="brand">
+  <img src="ohom.png" alt="Travspro Holidays Logo">
+</a>>
   <ul class="nav-links">
    <li><a href="index.html">HOME</a></li>
    <li><a href="tourPackage.html" class="active">TOURS</a></li>
