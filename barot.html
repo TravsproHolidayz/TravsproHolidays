@@ -4,726 +4,815 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#050816">
-
-<title>Bir & Barot Valley Tour | Travspro Holidays</title>
-<meta name="description" content="Explore a suggested 2-night, 3-day Bir and Barot Valley itinerary via Chehna Pass and Rajgundha, ending in Joginder Nagar. Request your personalised quote.">
+<title>Bir & Barot Valley Escape | Travspro Holidays</title>
+<meta name="description" content="A suggested 2-night, 3-day Bir and Barot Valley holiday. Explore the itinerary and request a personalised quote from Travspro Holidays.">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:110px}
+html{scroll-behavior:smooth;scroll-padding-top:130px}
 body{
  font-family:"Segoe UI",Arial,sans-serif;
- background:#050816;color:#f4f7ff;line-height:1.75;
- overflow-x:hidden;
+ background:#050816;color:#fff;overflow-x:hidden;
 }
 a{text-decoration:none;color:inherit}
-button,input,textarea{font:inherit}
-img{display:block;width:100%}
-.container{width:min(1150px,92%);margin:auto}
+button,input,textarea,select{font:inherit}
+img{display:block;max-width:100%}
+button{cursor:pointer}
 a:focus-visible,button:focus-visible{
  outline:3px solid #00eaff;outline-offset:4px;
 }
 
+/* ORIGINAL DARK THEME */
+body::before{
+ content:"";position:fixed;inset:0;z-index:-2;
+ pointer-events:none;
+ background:
+ radial-gradient(circle at 12% 18%,rgba(0,229,255,.15),transparent 32%),
+ radial-gradient(circle at 88% 28%,rgba(124,77,255,.18),transparent 32%),
+ radial-gradient(circle at 50% 90%,rgba(0,255,170,.07),transparent 30%),
+ #050816;
+}
+body::after{
+ content:"";position:fixed;inset:0;z-index:-1;
+ pointer-events:none;
+ background-image:
+ linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
+ linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+ background-size:50px 50px;
+}
+
 /* NAVIGATION */
 .navbar{
- position:sticky;top:0;z-index:100;
- background:#091022;border-bottom:1px solid #26334c;
+ position:fixed;top:15px;left:50%;
+ transform:translateX(-50%);z-index:1000;
+ width:min(1150px,94%);padding:10px 22px;
+ display:flex;align-items:center;justify-content:space-between;
+ gap:20px;background:rgba(7,13,32,.92);
+ border:1px solid rgba(255,255,255,.12);
+ border-radius:50px;
+ backdrop-filter:blur(22px);
+ -webkit-backdrop-filter:blur(22px);
+ box-shadow:0 12px 45px rgba(0,0,0,.35);
 }
-.nav-inner{
- min-height:78px;display:flex;align-items:center;
- justify-content:space-between;gap:20px;padding:12px 0;
+.logo{display:flex;align-items:center;flex-shrink:0}
+.logo img{
+ width:155px;height:70px;object-fit:contain;transition:.3s;
 }
-.brand{font-size:19px;font-weight:900;letter-spacing:.5px}
-.brand span{color:#00eaff}
-.nav-links{display:flex;gap:5px;list-style:none;flex-wrap:wrap}
+.logo img:hover{
+ transform:scale(1.04);filter:drop-shadow(0 0 12px #00eaff);
+}
+.nav-links{
+ display:flex;align-items:center;gap:4px;list-style:none;
+}
 .nav-links a{
- display:block;padding:8px 13px;border-radius:25px;
- color:#c7d2e7;font-size:12px;font-weight:750;
+ display:block;padding:10px 13px;border-radius:30px;
+ color:#cbd3e6;font-size:12px;font-weight:700;
+ white-space:nowrap;transition:.3s;
 }
 .nav-links a:hover,.nav-links .active{
- background:#14283c;color:#00eaff;
+ color:#00eaff;background:rgba(0,229,255,.09);
 }
 
 /* HERO */
 .hero{
- padding:55px 0;
- background:
- radial-gradient(ellipse at top left,rgba(0,207,255,.13),transparent 65%),
- radial-gradient(ellipse at bottom right,rgba(104,72,255,.16),transparent 65%);
+ min-height:720px;position:relative;
+ display:flex;align-items:center;justify-content:center;
+ text-align:center;padding:180px 20px 85px;overflow:hidden;
 }
-.breadcrumb{color:#9eafca;font-size:12px;margin-bottom:28px}
-.breadcrumb a:hover{color:#00eaff}
-.hero-grid{
- display:grid;grid-template-columns:1.05fr .95fr;
- align-items:center;gap:40px;
+.orb{
+ position:absolute;width:300px;height:300px;border-radius:50%;
+ background:radial-gradient(circle at 30% 30%,#9fffff,
+ #0077ff 35%,#3500a8 70%,transparent 72%);
+ opacity:.18;filter:blur(3px);pointer-events:none;
+ animation:floatOrb 8s ease-in-out infinite;
 }
+.orb-one{left:-150px;top:25%}
+.orb-two{right:-130px;bottom:10%;animation-delay:-4s}
+.hero-content{position:relative;z-index:2;width:min(980px,100%)}
 .eyebrow{
- display:inline-block;padding:7px 14px;
- background:#0c2233;border:1px solid #245168;
- border-radius:30px;color:#70eaff;
- font-size:11px;font-weight:800;letter-spacing:2px;
+ display:inline-block;padding:9px 17px;margin-bottom:24px;
+ border:1px solid rgba(0,229,255,.28);border-radius:50px;
+ background:rgba(0,229,255,.06);color:#00eaff;
+ font-size:11px;font-weight:800;letter-spacing:3px;
 }
-h1{
- font-size:clamp(43px,6vw,76px);
- line-height:1.08;letter-spacing:-2px;margin:20px 0;
+.hero h1{
+ font-size:clamp(48px,8vw,94px);line-height:1.05;
+ letter-spacing:-4px;font-weight:900;
+ background:linear-gradient(120deg,#fff,#8befff,#a18aff,#fff);
+ background-size:300% 300%;
+ -webkit-background-clip:text;background-clip:text;
+ color:transparent;animation:gradientMove 7s ease infinite;
 }
-h1 span{color:#69e5ff}
-.hero-description{color:#b8c4d9;font-size:16px}
-.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
-.btn{
+.hero h1 span{display:block;color:#00eaff}
+.hero p{
+ max-width:720px;margin:25px auto;color:#b2bdd2;
+ font-size:17px;line-height:1.85;
+}
+.button-row{
+ display:flex;justify-content:center;align-items:center;
+ gap:12px;flex-wrap:wrap;margin-top:27px;
+}
+.primary-btn,.secondary-btn,.whatsapp-btn{
  display:inline-flex;align-items:center;justify-content:center;
- padding:13px 22px;border-radius:30px;
- font-size:13px;font-weight:800;border:1px solid transparent;
- cursor:pointer;transition:transform .2s,filter .2s;
+ gap:9px;padding:14px 24px;border-radius:40px;
+ font-weight:750;font-size:14px;transition:.3s;
 }
-.btn:hover{transform:translateY(-3px);filter:brightness(1.12)}
-.btn-primary{background:linear-gradient(110deg,#007caa,#6441dc);color:#fff}
-.btn-outline{background:#111b30;border-color:#34445f;color:#e9f1ff}
-.btn-whatsapp{background:#087b48;color:#fff}
-.hero-photo{
- overflow:hidden;border:1px solid #34445f;
- border-radius:26px;background:#111b30;
+.primary-btn{
+ border:0;color:#fff;
+ background:linear-gradient(90deg,#00a8d4,#6848ff);
+ box-shadow:0 0 28px rgba(0,217,255,.17);
 }
-.hero-photo img{height:400px;object-fit:cover}
-.photo-caption{padding:10px 15px;font-size:11px;color:#aab7ce}
-.facts{
- display:grid;grid-template-columns:repeat(4,1fr);
- gap:14px;margin-top:35px;
+.primary-btn:hover{
+ transform:translateY(-4px);
+ box-shadow:0 0 35px rgba(0,217,255,.35);
 }
-.fact{
- padding:19px;background:#0e172b;
- border:1px solid #27344c;border-radius:18px;
+.secondary-btn{
+ border:1px solid rgba(255,255,255,.18);
+ background:rgba(255,255,255,.05);color:#e1e8f6;
 }
-.fact small{display:block;color:#94a5c1;font-size:10px;margin-bottom:7px}
-.fact strong{font-size:14px;color:#e9f3ff}
+.secondary-btn:hover{
+ border-color:#00eaff;background:rgba(0,229,255,.08);
+}
+.whatsapp-btn{
+ border:0;background:linear-gradient(90deg,#087b48,#09633f);
+ color:#fff;
+}
+.whatsapp-btn:hover{transform:translateY(-3px)}
 
-/* CONTENT */
-.section{padding:60px 0}
-.section-title{margin-bottom:28px}
-.section-title small{
- color:#69e5ff;font-weight:800;font-size:11px;
- letter-spacing:2px;text-transform:uppercase;
+/* TOUR INFORMATION */
+.quick-services{
+ width:min(1100px,92%);margin:auto;
+ display:grid;grid-template-columns:repeat(4,1fr);gap:14px;
 }
-.section-title h2{
- font-size:clamp(29px,4vw,43px);
- line-height:1.2;margin-top:10px;
+.quick-card{
+ padding:23px 15px;text-align:center;
+ background:rgba(255,255,255,.045);
+ border:1px solid rgba(255,255,255,.09);
+ border-radius:20px;transition:.3s;
 }
-.section-title p{color:#aab7ce;margin-top:13px;max-width:760px}
-.panel{
- padding:28px;background:#0e172b;
- border:1px solid #27344c;border-radius:22px;
+.quick-card:hover{
+ transform:translateY(-6px);border-color:rgba(0,229,255,.3);
 }
-.panel h3{font-size:22px;margin-bottom:13px}
-.panel p{color:#b2bfd5}
+.quick-icon{font-size:27px;margin-bottom:10px}
+.quick-card h3{font-size:14px;margin-bottom:6px}
+.quick-card p{color:#a1aec4;font-size:12px;line-height:1.6}
+
+/* SECTIONS */
+.section{width:min(1150px,92%);margin:auto;padding:75px 0}
+.section-heading{margin-bottom:35px}
+.section-heading small{
+ color:#00eaff;text-transform:uppercase;letter-spacing:3px;
+ font-size:11px;font-weight:800;
+}
+.section-heading h2{
+ margin-top:13px;font-size:clamp(36px,5vw,58px);
+ line-height:1.08;letter-spacing:-2px;
+}
+.section-heading p{
+ max-width:760px;margin-top:16px;color:#a8b5cb;
+ font-size:15px;line-height:1.85;
+}
+.glass-card{
+ padding:32px;border-radius:25px;
+ background:rgba(255,255,255,.04);
+ border:1px solid rgba(255,255,255,.09);
+}
+.glass-card h3{font-size:24px;margin-bottom:17px}
+.glass-card p{color:#b2bdd2;line-height:1.9;font-size:14px}
 .overview-grid{
  display:grid;grid-template-columns:1.2fr .8fr;gap:22px;
 }
-.quote-panel{background:linear-gradient(140deg,#10273a,#1c1737)}
-.price{font-size:29px;color:#70eaff;font-weight:850;margin:14px 0}
-.quote-panel .btn{width:100%;margin-top:20px}
-.small{font-size:13px}
-
-/* ROUTE */
-.route{
- display:flex;align-items:center;justify-content:center;
- flex-wrap:wrap;gap:12px;padding:25px;
- background:#0e172b;border:1px solid #27344c;
- border-radius:20px;margin-top:25px;
+.tour-photo{
+ overflow:hidden;border-radius:25px;
+ border:1px solid rgba(255,255,255,.12);background:#101525;
+}
+.tour-photo img{width:100%;height:330px;object-fit:cover}
+.tour-photo figcaption{
+ padding:12px 16px;color:#a1aec4;font-size:11px;line-height:1.6;
+}
+.route-box{
+ display:flex;justify-content:center;align-items:center;
+ flex-wrap:wrap;gap:12px;margin-top:25px;padding:25px;
+ border:1px solid rgba(0,229,255,.18);border-radius:20px;
+ background:rgba(0,229,255,.035);
 }
 .route-stop{
- padding:9px 16px;border-radius:30px;
- background:#13283b;color:#e4f6ff;
- border:1px solid #28516a;font-size:13px;font-weight:750;
+ padding:9px 15px;border:1px solid rgba(255,255,255,.12);
+ border-radius:30px;color:#e1e8f6;background:#101c32;
+ font-size:12px;font-weight:700;
 }
-.route-arrow{color:#69e5ff;font-size:20px}
+.route-arrow{color:#00eaff;font-size:20px}
 
 /* ITINERARY */
-.itinerary{display:grid;gap:20px}
-.day{
- display:grid;grid-template-columns:85px 1fr;
- gap:23px;padding:28px;
- background:#0e172b;border:1px solid #27344c;
- border-radius:23px;
+.itinerary{display:grid;gap:22px}
+.day-card{
+ display:grid;grid-template-columns:90px 1fr;
+ gap:25px;padding:30px;border-radius:25px;
+ background:rgba(255,255,255,.04);
+ border:1px solid rgba(255,255,255,.10);
 }
-.day-number{
- align-self:start;text-align:center;padding:12px;
- background:#102d40;border:1px solid #245168;
- border-radius:16px;color:#70eaff;
- font-size:12px;font-weight:800;
+.day-badge{
+ align-self:start;padding:14px 10px;text-align:center;
+ border-radius:18px;background:rgba(0,229,255,.07);
+ border:1px solid rgba(0,229,255,.25);color:#00eaff;
+ font-size:11px;font-weight:800;letter-spacing:1px;
 }
-.day-number strong{display:block;font-size:31px;line-height:1.2}
-.day h3{font-size:23px;line-height:1.35;margin-bottom:12px}
+.day-badge strong{display:block;font-size:34px;line-height:1.3}
+.day-content h3{font-size:25px;line-height:1.3;margin-bottom:12px}
 .day-route{
- display:inline-block;padding:6px 12px;
- background:#17223a;border-radius:10px;
- color:#91e8ff;font-size:12px;margin-bottom:17px;
+ display:inline-block;padding:8px 13px;margin-bottom:18px;
+ border-radius:12px;background:rgba(104,72,255,.12);
+ color:#bcefff;font-size:12px;line-height:1.7;
 }
-.list{padding-left:20px;color:#b2bfd5}
-.list li{margin-bottom:9px}
+.list{padding-left:20px;color:#b2bdd2}
+.list li{margin-bottom:11px;font-size:14px;line-height:1.8}
 .stay{
- margin-top:18px;padding:11px 15px;
- border-radius:12px;background:#102638;
- color:#a5edff;font-size:13px;font-weight:700;
+ display:inline-block;margin-top:14px;padding:10px 15px;
+ border-radius:12px;background:rgba(0,229,255,.06);
+ color:#8befff;font-size:13px;font-weight:700;
 }
 .notice{
- margin-top:23px;padding:18px 21px;
- background:#152238;border-left:3px solid #69e5ff;
- border-radius:10px;color:#bdcbe0;font-size:13px;
+ margin-top:24px;padding:20px;border-left:3px solid #00eaff;
+ border-radius:12px;background:#101b30;
+ color:#b8c5da;font-size:13px;line-height:1.85;
 }
 .two-columns{display:grid;grid-template-columns:1fr 1fr;gap:22px}
 
 /* ENQUIRY */
 .enquiry-grid{
  display:grid;grid-template-columns:.85fr 1.15fr;
- gap:30px;align-items:start;
+ gap:28px;align-items:start;
 }
-.enquiry-copy h2{font-size:38px;line-height:1.2;margin:20px 0}
-.enquiry-copy p{color:#b2bfd5;margin-bottom:20px}
-.accent{color:#69e5ff}
+.enquiry-copy h3{font-size:32px;line-height:1.25;margin-bottom:18px}
+.enquiry-copy p{margin-bottom:20px}
 .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:17px}
-.field{display:flex;flex-direction:column;gap:7px}
+.field{display:flex;flex-direction:column;gap:8px}
 .field.full{grid-column:1/-1}
-label{font-size:13px;font-weight:750;color:#e1ebfc}
-input,textarea{
- width:100%;padding:12px 14px;background:#071021;
- border:1px solid #34445f;border-radius:11px;color:#fff;
+label{color:#dfe8f9;font-size:13px;font-weight:700}
+input,textarea,select{
+ width:100%;min-width:0;padding:14px;
+ border:1px solid rgba(255,255,255,.18);
+ border-radius:12px;background:#091225;color:#fff;
 }
-input:focus,textarea:focus{
- outline:2px solid #00a9d0;outline-offset:2px;
+input:focus,textarea:focus,select:focus{
+ outline:2px solid #00eaff;outline-offset:2px;
 }
-input::placeholder,textarea::placeholder{color:#899bb7}
+input::placeholder,textarea::placeholder{color:#91a1bb}
 input[type="date"]{color-scheme:dark}
-textarea{min-height:100px;resize:vertical}
+textarea{min-height:110px;resize:vertical}
 .form-submit{width:100%;margin-top:20px}
-.form-note{font-size:12px;color:#94a5c1;margin-top:12px}
+.form-note{color:#9baac1;font-size:12px;line-height:1.7;margin-top:13px}
 
-/* FAQ AND RELATED */
-.faq{display:grid;gap:12px}
+/* FAQ AND RELATED TOURS */
+.faq{display:grid;gap:13px}
 details{
- padding:19px 23px;background:#0e172b;
- border:1px solid #27344c;border-radius:16px;
+ padding:21px 24px;border-radius:18px;
+ background:rgba(255,255,255,.04);
+ border:1px solid rgba(255,255,255,.10);
 }
-summary{cursor:pointer;font-weight:750}
-details p{margin-top:12px;color:#b2bfd5;font-size:14px}
-.related{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
-.related a{
- padding:24px;border-radius:18px;background:#0e172b;
- border:1px solid #27344c;
+summary{cursor:pointer;font-weight:700;font-size:15px;line-height:1.6}
+details p{color:#b2bdd2;font-size:14px;line-height:1.85;margin-top:14px}
+.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.related-card{
+ display:block;padding:28px;border-radius:22px;
+ background:rgba(255,255,255,.04);
+ border:1px solid rgba(255,255,255,.1);transition:.3s;
 }
-.related a:hover{border-color:#00eaff}
-.related h3{font-size:20px;margin-bottom:7px}
-.related p{font-size:13px;color:#aab7ce}
-.related span{display:block;color:#70eaff;margin-top:15px;font-size:13px}
+.related-card:hover{transform:translateY(-5px);border-color:#00eaff}
+.related-card h3{font-size:23px;margin-bottom:12px}
+.related-card p{color:#a8b5cb;font-size:14px;line-height:1.7}
+.related-card span{display:block;color:#00eaff;margin-top:20px;font-size:13px}
 
-/* FOOTER */
-footer{
- padding:35px 0;border-top:1px solid #27344c;
- background:#080e1c;text-align:center;
+/* CTA AND FOOTER */
+.cta{
+ width:min(1100px,92%);margin:0 auto 75px;
+ padding:60px 25px;text-align:center;
+ border:1px solid rgba(255,255,255,.1);border-radius:32px;
+ background:linear-gradient(135deg,rgba(0,229,255,.08),rgba(100,60,255,.12));
 }
+.cta h2{font-size:clamp(34px,5vw,55px);line-height:1.15;margin-bottom:18px}
+.cta p{max-width:620px;margin:0 auto 25px;color:#b2bdd2;line-height:1.85}
+footer{
+ padding:40px 20px;text-align:center;
+ border-top:1px solid rgba(255,255,255,.07);
+ color:#9baac1;font-size:13px;line-height:1.8;
+}
+.footer-logo{display:inline-flex;justify-content:center;margin-bottom:15px}
+.footer-logo img{width:145px;height:75px;object-fit:contain}
+footer strong{color:#00eaff}
 .footer-links{
  display:flex;justify-content:center;gap:20px;
- flex-wrap:wrap;margin:18px 0;font-size:13px;
+ flex-wrap:wrap;margin:17px 0;
 }
 .footer-links a:hover{color:#00eaff}
-footer p{color:#94a5c1;font-size:12px}
 
+/* ANIMATIONS */
+@keyframes gradientMove{
+ 0%,100%{background-position:0% 50%}
+ 50%{background-position:100% 50%}
+}
+@keyframes floatOrb{
+ 0%,100%{transform:translate(0,0)}
+ 50%{transform:translate(30px,-35px)}
+}
+
+/* RESPONSIVE */
 @media(max-width:900px){
- .hero-grid,.overview-grid,.enquiry-grid{grid-template-columns:1fr}
- .hero-photo img{height:330px}
- .facts{grid-template-columns:repeat(2,1fr)}
+ .navbar{width:95%;padding:10px 15px}
+ .logo img{width:125px;height:60px}
+ .nav-links a{padding:9px 8px;font-size:10px}
+ .quick-services{grid-template-columns:repeat(2,1fr)}
+ .overview-grid,.enquiry-grid{grid-template-columns:1fr}
+ .hero h1{letter-spacing:-3px}
 }
 @media(max-width:600px){
- html{scroll-padding-top:135px}
- .nav-inner{flex-direction:column;gap:7px;padding:10px 0}
- .brand{font-size:17px}
- .nav-links{justify-content:center;gap:2px}
- .nav-links a{font-size:10px;padding:6px 8px}
- .hero{padding:30px 0}
- h1{font-size:45px}
- .hero-grid{gap:27px}
- .hero-photo img{height:250px}
- .facts{gap:10px;margin-top:25px}
- .fact{padding:15px}
- .fact strong{font-size:12px}
- .section{padding:42px 0}
- .panel{padding:22px}
- .two-columns,.related,.form-grid{grid-template-columns:1fr}
- .day{grid-template-columns:1fr;gap:15px;padding:22px}
- .day-number{width:80px}
- .day h3{font-size:21px}
- .buttons .btn{width:100%}
- .enquiry-copy h2{font-size:32px}
- .route{gap:8px;padding:18px}
+ html{scroll-padding-top:145px}
+ .navbar{
+  top:6px;width:96%;padding:6px 10px;
+  flex-direction:column;gap:5px;border-radius:21px;
+ }
+ .logo img{width:105px;height:50px}
+ .nav-links{width:100%;justify-content:center;flex-wrap:wrap;gap:1px}
+ .nav-links a{padding:6px 7px;font-size:9px}
+ .hero{min-height:auto;padding:165px 17px 45px}
+ .hero h1{font-size:clamp(43px,12vw,66px);letter-spacing:-2px}
+ .hero p{font-size:14px;line-height:1.8}
+ .eyebrow{font-size:9px;letter-spacing:1.6px}
+ .button-row{flex-direction:column}
+ .button-row a{width:100%;max-width:300px}
+ .quick-services{gap:10px}
+ .quick-card{padding:18px 10px}
+ .quick-card h3{font-size:12px}
+ .quick-card p{font-size:11px}
+ .section{padding:50px 0}
+ .section-heading h2{font-size:37px;letter-spacing:-1px}
+ .section-heading p{font-size:14px}
+ .glass-card{padding:23px}
+ .tour-photo img{height:250px}
+ .day-card{grid-template-columns:1fr;gap:18px;padding:23px}
+ .day-badge{width:85px}
+ .day-content h3{font-size:22px}
+ .two-columns,.form-grid,.related-grid{grid-template-columns:1fr}
+ .route-box{padding:18px;gap:8px}
  .route-stop{font-size:11px;padding:7px 11px}
+ .cta{padding:45px 20px;margin-bottom:50px}
 }
 @media(prefers-reduced-motion:reduce){
  html{scroll-behavior:auto}
- *{transition:none!important}
+ *,*::before,*::after{animation:none!important;transition:none!important}
 }
 </style>
- .brand{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  flex-shrink:0;
-}
-
-.brand img{
-  width:145px;
-  height:60px;
-  object-fit:contain;
-}
-
-footer .brand img{
-  width:160px;
-  height:auto;
-}
-
-@media(max-width:600px){
-  .brand img{
-    width:110px;
-    height:45px;
-  }
-}
 </head>
 
 <body>
 
+<!-- NAVIGATION -->
 <nav class="navbar" aria-label="Main navigation">
- <div class="container nav-inner">
-  <a href="index.html" class="brand">
+ <a href="index.html" class="logo">
   <img src="ohom.png" alt="Travspro Holidays Logo">
-</a>>
-  <ul class="nav-links">
-   <li><a href="index.html">HOME</a></li>
-   <li><a href="tourPackage.html" class="active">TOURS</a></li>
-   <li><a href="OurServices.html">SERVICES</a></li>
-   <li><a href="about.html">ABOUT</a></li>
-   <li><a href="contactus.html">CONTACT</a></li>
-  </ul>
- </div>
+ </a>
+ <ul class="nav-links">
+  <li><a href="index.html">HOME</a></li>
+  <li><a href="tourPackage.html" class="active">TOURS</a></li>
+  <li><a href="OurServices.html">SERVICES</a></li>
+  <li><a href="about.html">ABOUT</a></li>
+  <li><a href="contactus.html">CONTACT</a></li>
+ </ul>
 </nav>
 
+<!-- HERO -->
 <header class="hero">
- <div class="container">
-  <div class="breadcrumb">
-   <a href="index.html">Home</a> /
-   <a href="tourPackage.html">Tour Packages</a> /
-   Bir & Barot Valley
-  </div>
-
-  <div class="hero-grid">
-   <div>
-    <span class="eyebrow">HIMACHAL · 2 NIGHTS / 3 DAYS</span>
-    <h1>Bir to Barot.<br><span>A Scenic Escape.</span></h1>
-    <p class="hero-description">
-     Begin your holiday in Bir, continue towards Barot via
-     Chehna Pass and Rajgundha, and finish your journey in
-     Joginder Nagar via Tikken, Jhatingri and Ghatasni.
-    </p>
-    <div class="buttons">
-     <a href="#enquiry" class="btn btn-primary">Request My Quote →</a>
-     <a href="#itinerary" class="btn btn-outline">View Itinerary ↓</a>
-    </div>
-   </div>
-
-   <figure class="hero-photo">
-    <img
-     src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1000&q=80"
-     alt="Illustrative forest landscape for a mountain holiday"
-     fetchpriority="high"
-    >
-    <figcaption class="photo-caption">
-     Illustrative nature photograph, not a verified photograph of this route.
-    </figcaption>
-   </figure>
-  </div>
-
-  <div class="facts">
-   <div class="fact">
-    <small>DURATION</small>
-    <strong>2 Nights / 3 Days</strong>
-   </div>
-   <div class="fact">
-    <small>START / FINISH</small>
-    <strong>Bir / Joginder Nagar</strong>
-   </div>
-   <div class="fact">
-    <small>OVERNIGHT STAYS</small>
-    <strong>Bir: 1 Night · Barot: 1 Night</strong>
-   </div>
-   <div class="fact">
-    <small>PACKAGE RATE</small>
-    <strong>Quote on Request</strong>
-   </div>
+ <div class="orb orb-one" aria-hidden="true"></div>
+ <div class="orb orb-two" aria-hidden="true"></div>
+ <div class="hero-content">
+  <div class="eyebrow">TRAVSPRO HOLIDAYS · 2 NIGHTS / 3 DAYS</div>
+  <h1>Bir & Barot.<span>Your Next Escape.</span></h1>
+  <p>
+   Arrive in Bir, enjoy local sightseeing and optional paragliding,
+   continue towards Barot via Chehna Pass and Rajgundha,
+   then finish your journey in Joginder Nagar.
+  </p>
+  <div class="button-row">
+   #itineraryExplore Itinerary →</a>
+   #enquiryRequest My Quote →</a>
   </div>
  </div>
 </header>
 
+<!-- TOUR FACTS -->
+<section class="quick-services" aria-label="Tour information">
+ <div class="quick-card">
+  <div class="quick-icon" aria-hidden="true">📅</div>
+  <h3>2 Nights / 3 Days</h3>
+  <p>Suggested holiday duration</p>
+ </div>
+ <div class="quick-card">
+  <div class="quick-icon" aria-hidden="true">📍</div>
+  <h3>Bir to Joginder Nagar</h3>
+  <p>Via Rajgundha & Barot</p>
+ </div>
+ <div class="quick-card">
+  <div class="quick-icon" aria-hidden="true">🏨</div>
+  <h3>Bir & Barot Stays</h3>
+  <p>One night at each destination</p>
+ </div>
+ <div class="quick-card">
+  <div class="quick-icon" aria-hidden="true">💬</div>
+  <h3>Request Rates</h3>
+  <p>Personalised quotation</p>
+ </div>
+</section>
+
 <main>
 
+<!-- OVERVIEW -->
 <section class="section">
- <div class="container">
-  <div class="section-title">
-   <small>Your mountain holiday</small>
-   <h2>Three Days. One Memorable Journey.</h2>
+ <div class="section-heading">
+  <small>YOUR NEXT ADVENTURE</small>
+  <h2>Take A Break.<br>Take The Scenic Route.</h2>
+  <p>
+   A suggested short holiday combining Bir sightseeing,
+   optional paragliding and your chosen route towards Barot.
+  </p>
+ </div>
+
+ <div class="overview-grid">
+  <div class="glass-card">
+   <h3>Bir & Barot Valley Escape</h3>
    <p>
-    Local sightseeing in Bir, optional paragliding and a
-    journey through your chosen mountain route to Barot.
+    Begin your holiday in Bir with local sightseeing and leisure
+    time. Optional paragliding can be requested separately.
+   </p>
+   <br>
+   <p>
+    On Day 2, continue towards Barot via the proposed Chehna Pass
+    and Rajgundha route. Spend the night in Barot before departing
+    for Joginder Nagar via Tikken, Jhatingri and Ghatasni on Day 3.
+   </p>
+   <br>
+   <p>
+    Accommodation, meals, transport and any guided sections
+    will be specified in your final quotation.
    </p>
   </div>
 
-  <div class="overview-grid">
-   <div class="panel">
-    <h3>Bir & Barot Valley Escape</h3>
-    <p>
-     Enjoy your first day in Bir with local sightseeing and
-     free time. Add optional paragliding if you wish, then
-     continue to Barot on Day 2 via Chehna Pass and Rajgundha.
-    </p>
-    <br>
-    <p>
-     On Day 3, depart from Barot for Joginder Nagar via
-     Tikken, Jhatingri and Ghatasni. Accommodation, meals,
-     transport and any guided sections will be specified
-     in your personalised quotation.
-    </p>
-   </div>
+  <figure class="tour-photo">
+   <img
+    src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1000&q=80"
+    alt="Illustrative woodland scenery for a nature holiday"
+    loading="lazy">
+   <figcaption>
+    Illustrative nature photograph, not a verified photograph
+    of Barot or the proposed route.
+   </figcaption>
+  </figure>
+ </div>
 
-   <aside class="panel quote-panel">
-    <h3>Plan It Your Way</h3>
-    <p>Share your travel dates, group size and preferred arrangements.</p>
-    <div class="price">Request Rates</div>
-    <p class="small">
-     Pricing depends on your dates, accommodation,
-     transport and selected activities.
-    </p>
-    <a href="#enquiry" class="btn btn-primary">Get My Quote →</a>
-   </aside>
-  </div>
-
-  <div class="route" aria-label="Main tour route">
-   <span class="route-stop">Bir</span>
-   <span class="route-arrow" aria-hidden="true">→</span>
-   <span class="route-stop">Chehna Pass</span>
-   <span class="route-arrow" aria-hidden="true">→</span>
-   <span class="route-stop">Rajgundha</span>
-   <span class="route-arrow" aria-hidden="true">→</span>
-   <span class="route-stop">Barot</span>
-   <span class="route-arrow" aria-hidden="true">→</span>
-   <span class="route-stop">Joginder Nagar</span>
-  </div>
-
-  <div class="notice">
-   <strong>Route confirmation required:</strong>
-   The Day 2 route is proposed as requested. Road access,
-   transport suitability and any walking or trekking sections
-   must be confirmed locally before booking. It is not advertised
-   here as a guaranteed all-road vehicle transfer.
-  </div>
+ <div class="route-box" aria-label="Proposed main route">
+  <span class="route-stop">Bir</span>
+  <span class="route-arrow" aria-hidden="true">→</span>
+  <span class="route-stop">Chehna Pass</span>
+  <span class="route-arrow" aria-hidden="true">→</span>
+  <span class="route-stop">Rajgundha</span>
+  <span class="route-arrow" aria-hidden="true">→</span>
+  <span class="route-stop">Barot</span>
+  <span class="route-arrow" aria-hidden="true">→</span>
+  <span class="route-stop">Joginder Nagar</span>
  </div>
 </section>
 
+<!-- ITINERARY -->
 <section class="section" id="itinerary">
- <div class="container">
-  <div class="section-title">
-   <small>Day-by-day itinerary</small>
-   <h2>Your Bir & Barot Travel Plan.</h2>
-   <p>
-    A suggested 2-night itinerary with one overnight stay in
-    Bir and one in Barot. Final arrangements are subject to confirmation.
-   </p>
-  </div>
+ <div class="section-heading">
+  <small>YOUR DAY-BY-DAY JOURNEY</small>
+  <h2>Three Days.<br>A Refreshing Escape.</h2>
+  <p>
+   One overnight stay in Bir and one in Barot.
+   Final arrangements are subject to confirmation.
+  </p>
+ </div>
 
-  <div class="itinerary">
-
-   <article class="day">
-    <div class="day-number">DAY <strong>01</strong></div>
-    <div>
-     <h3>Arrive in Bir & Enjoy Local Sightseeing</h3>
-     <div class="day-route">Arrival in Bir · Local sightseeing</div>
-     <ul class="list">
-      <li>Arrive in Bir and check in at your selected accommodation.</li>
-      <li>Enjoy local sightseeing according to your arrival time.</li>
-      <li>Spend some free time exploring the local surroundings.</li>
-      <li>
-       Choose optional paragliding at an additional cost,
-       subject to weather, operator availability and eligibility.
-      </li>
-      <li>Return to your accommodation for the evening.</li>
-     </ul>
-     <div class="stay">Overnight stay: Bir</div>
+ <div class="itinerary">
+  <article class="day-card">
+   <div class="day-badge">DAY<strong>01</strong></div>
+   <div class="day-content">
+    <h3>Arrive In Bir & Enjoy Local Sightseeing</h3>
+    <div class="day-route">
+     Arrival in Bir · Local sightseeing · Optional paragliding
     </div>
-   </article>
+    <ul class="list">
+     <li>Arrive in Bir and check in at your accommodation's scheduled check-in time.</li>
+     <li>Enjoy local sightseeing according to your arrival time and confirmed arrangements.</li>
+     <li>Spend some leisure time exploring the local surroundings.</li>
+     <li>Optional paragliding is available on request at an additional cost, subject to weather, operator availability and eligibility.</li>
+     <li>Return to your accommodation for the evening.</li>
+    </ul>
+    <div class="stay">🏨 Overnight stay in Bir</div>
+   </div>
+  </article>
 
-   <article class="day">
-    <div class="day-number">DAY <strong>02</strong></div>
-    <div>
-     <h3>Bir to Barot via Chehna Pass & Rajgundha</h3>
-     <div class="day-route">Bir → Chehna Pass → Rajgundha → Barot</div>
-     <ul class="list">
-      <li>Check out from your accommodation in Bir.</li>
-      <li>
-       Begin your journey towards Barot via the proposed
-       Chehna Pass and Rajgundha route.
-      </li>
-      <li>
-       Enjoy scenic stops along the way where access,
-       conditions and the day's schedule permit.
-      </li>
-      <li>
-       Any required walking, trekking or guide arrangements
-       will be agreed before the trip.
-      </li>
-      <li>Arrive in Barot and check in to your selected accommodation.</li>
-      <li>Spend the evening at leisure.</li>
-     </ul>
-     <div class="stay">Overnight stay: Barot</div>
+  <article class="day-card">
+   <div class="day-badge">DAY<strong>02</strong></div>
+   <div class="day-content">
+    <h3>Bir To Barot Via Chehna Pass & Rajgundha</h3>
+    <div class="day-route">
+     Bir → Chehna Pass → Rajgundha → Barot
     </div>
-   </article>
+    <ul class="list">
+     <li>Check out from your accommodation in Bir.</li>
+     <li>Begin your journey towards Barot via the proposed Chehna Pass and Rajgundha route.</li>
+     <li>Enjoy suitable scenic stops where access, conditions and the day's schedule permit.</li>
+     <li>Any walking, trekking, guide or transport arrangements must be confirmed before the trip.</li>
+     <li>Arrive in Barot and check in to your selected accommodation.</li>
+     <li>Spend the evening at leisure.</li>
+    </ul>
+    <div class="stay">🏨 Overnight stay in Barot</div>
+   </div>
+  </article>
 
-   <article class="day">
-    <div class="day-number">DAY <strong>03</strong></div>
-    <div>
-     <h3>Barot to Joginder Nagar</h3>
-     <div class="day-route">
-      Barot → Tikken → Jhatingri → Ghatasni → Joginder Nagar
-     </div>
-     <ul class="list">
-      <li>Check out from your accommodation in Barot.</li>
-      <li>Depart towards Joginder Nagar via Tikken, Jhatingri and Ghatasni.</li>
-      <li>
-       Enjoy suitable sightseeing or photo stops en route,
-       depending on road conditions and your onward travel schedule.
-      </li>
-      <li>Arrive in Joginder Nagar at your agreed drop-off point.</li>
-      <li>Continue with your onward journey.</li>
-     </ul>
-     <div class="stay">Tour ends: Joginder Nagar</div>
+  <article class="day-card">
+   <div class="day-badge">DAY<strong>03</strong></div>
+   <div class="day-content">
+    <h3>Barot To Joginder Nagar</h3>
+    <div class="day-route">
+     Barot → Tikken → Jhatingri → Ghatasni → Joginder Nagar
     </div>
-   </article>
+    <ul class="list">
+     <li>Check out from your accommodation in Barot.</li>
+     <li>Depart towards Joginder Nagar via Tikken, Jhatingri and Ghatasni.</li>
+     <li>Enjoy suitable sightseeing or photo stops en route, depending on conditions and your onward travel schedule.</li>
+     <li>Arrive at your agreed drop-off point in Joginder Nagar.</li>
+     <li>Continue with your onward journey.</li>
+    </ul>
+    <div class="stay">📍 Tour ends in Joginder Nagar</div>
+   </div>
+  </article>
+ </div>
 
-  </div>
-
-  <div class="notice">
-   Sightseeing order, route and activities may change due to
-   weather, road conditions, local restrictions and availability.
-   Travel to Bir before Day 1 and onward travel after Day 3
-   are included only if stated in your quotation.
-  </div>
+ <div class="notice">
+  <strong>Important route note:</strong>
+  The Day 2 route is proposed as requested. Local access,
+  transport suitability and any walking or trekking sections
+  must be confirmed before booking. This itinerary does not
+  guarantee an entirely vehicle-based transfer via Chehna Pass
+  and Rajgundha. Routes and activities may change due to
+  weather, access restrictions and availability.
  </div>
 </section>
 
+<!-- PACKAGE DETAILS -->
 <section class="section">
- <div class="container">
-  <div class="section-title">
-   <small>Package arrangements</small>
-   <h2>Know What You Are Booking.</h2>
+ <div class="section-heading">
+  <small>PLAN WITH CLARITY</small>
+  <h2>Your Holiday.<br>Your Arrangements.</h2>
+  <p>Confirm all services and costs in writing before booking.</p>
+ </div>
+
+ <div class="two-columns">
+  <div class="glass-card">
+   <h3>Services You Can Request</h3>
+   <ul class="list">
+    <li>One night of accommodation in Bir.</li>
+    <li>One night of accommodation in Barot.</li>
+    <li>Meals according to your selected meal plan.</li>
+    <li>Local sightseeing arrangements in Bir.</li>
+    <li>Route-specific transport and guide arrangements.</li>
+    <li>Drop-off at an agreed point in Joginder Nagar.</li>
+   </ul>
+   <p>Only services explicitly listed in your final quotation are included.</p>
   </div>
 
-  <div class="two-columns">
-   <div class="panel">
-    <h3>Services You Can Request</h3>
-    <ul class="list">
-     <li>One night of accommodation in Bir.</li>
-     <li>One night of accommodation in Barot.</li>
-     <li>Meals according to your selected meal plan.</li>
-     <li>Local sightseeing arrangements in Bir.</li>
-     <li>Route-specific transport and guide arrangements.</li>
-     <li>Drop-off at an agreed point in Joginder Nagar.</li>
-    </ul>
-    <p class="small">
-     Only services explicitly listed in your final quotation are included.
-    </p>
-   </div>
-
-   <div class="panel">
-    <h3>Not Included Unless Quoted</h3>
-    <ul class="list">
-     <li>Paragliding and other optional activities.</li>
-     <li>Travel to Bir and onward travel from Joginder Nagar.</li>
-     <li>Meals outside the confirmed meal plan.</li>
-     <li>Permits, entry fees and guide charges.</li>
-     <li>Personal expenses and travel insurance.</li>
-     <li>Extra nights or changes to the confirmed itinerary.</li>
-    </ul>
-    <p class="small">
-     Request a full cost breakdown before confirming your booking.
-    </p>
-   </div>
+  <div class="glass-card">
+   <h3>Not Included Unless Quoted</h3>
+   <ul class="list">
+    <li>Paragliding and other optional activities.</li>
+    <li>Travel to Bir and onward travel from Joginder Nagar.</li>
+    <li>Meals outside the confirmed meal plan.</li>
+    <li>Permits, entry fees and guide charges.</li>
+    <li>Personal expenses and travel insurance.</li>
+    <li>Extra nights or changes to the confirmed itinerary.</li>
+   </ul>
+   <p>Ask for a complete cost breakdown with your quotation.</p>
   </div>
  </div>
 </section>
 
+<!-- ENQUIRY -->
 <section class="section" id="enquiry">
- <div class="container enquiry-grid">
-  <div class="enquiry-copy">
-   <span class="eyebrow">LET'S PLAN YOUR ESCAPE</span>
-   <h2>Your Next Journey.<br><span class="accent">Your Way.</span></h2>
+ <div class="section-heading">
+  <small>LET'S PLAN YOUR TRIP</small>
+  <h2>Your Journey<br>Starts Here.</h2>
+  <p>Share your travel dates and requirements for a personalised quote.</p>
+ </div>
+
+ <div class="enquiry-grid">
+  <div class="glass-card enquiry-copy">
+   <h3>Bir & Barot.<br>Made For You.</h3>
    <p>
-    Send your travel dates and requirements to Travspro Holidays.
-    Ask for a personalised quote for the Bir and Barot Valley itinerary.
+    Tell us your preferred arrival date, group size and
+    accommodation requirements. Ask about optional paragliding
+    and the proposed Day 2 route.
    </p>
-   <p class="small">
-    An enquiry is not a confirmed booking. Route feasibility,
-    services, prices and booking terms must be agreed separately.
+   <p>
+    An enquiry does not confirm a booking. Route feasibility,
+    prices, services and booking terms must be agreed separately.
    </p>
-   <a
-    href="https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20would%20like%20a%20quote%20for%20the%20Bir%20and%20Barot%20Valley%202%20Nights%20%2F%203%20Days%20tour"
-    target="_blank" rel="noopener noreferrer"
-    class="btn btn-whatsapp"
-   >💬 Chat on WhatsApp ↗</a>
+   https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20would%20like%20a%20quote%20for%20the%20Bir%20and%20Barot%20Valley%202%20Nights%20%2F%203%20Days%20tour
+    💬 Chat On WhatsApp ↗
+   </a>
   </div>
 
-  <form class="panel" id="tourEnquiry">
-   <h3>Request a Personalised Quote</h3>
+  <form class="glass-card" id="tourEnquiry">
+   <h3>Request A Personalised Quote</h3>
 
    <div class="form-grid">
     <div class="field">
      <label for="guestName">Your name *</label>
-     <input id="guestName" type="text" autocomplete="name"
-      placeholder="Enter your name" maxlength="100" required>
+     <input id="guestName" name="name" type="text"
+      autocomplete="name" placeholder="Enter your name"
+      maxlength="100" required>
     </div>
 
     <div class="field">
      <label for="travelDate">Arrival date in Bir *</label>
-     <input id="travelDate" type="date" required>
+     <input id="travelDate" name="date" type="date" required>
     </div>
 
     <div class="field">
      <label for="adults">Adults *</label>
-     <input id="adults" type="number"
+     <input id="adults" name="adults" type="number"
       min="1" max="100" step="1" value="2" required>
     </div>
 
     <div class="field">
      <label for="children">Children</label>
-     <input id="children" type="number"
+     <input id="children" name="children" type="number"
       min="0" max="100" step="1" value="0">
     </div>
 
     <div class="field full">
      <label for="pickup">Preferred pickup location *</label>
-     <input id="pickup" type="text" maxlength="150"
-      placeholder="Bir or your preferred arrival point" required>
+     <input id="pickup" name="pickup" type="text"
+      placeholder="Bir or your preferred arrival point"
+      maxlength="150" required>
+    </div>
+
+    <div class="field full">
+     <label for="paragliding">Optional paragliding</label>
+     <select id="paragliding" name="paragliding">
+      <option value="Please share details">Please share details</option>
+      <option value="Interested, subject to eligibility and conditions">Interested</option>
+      <option value="Not required">Not required</option>
+     </select>
     </div>
 
     <div class="field full">
      <label for="requirements">Additional requirements</label>
-     <textarea id="requirements" maxlength="1500"
-      placeholder="Paragliding interest, stay preference, meals, children's ages or other requests"></textarea>
+     <textarea id="requirements" name="requirements"
+      maxlength="1500"
+      placeholder="Stay preference, meals, children's ages or other requests"></textarea>
     </div>
    </div>
 
-   <button type="submit" class="btn btn-whatsapp form-submit">
-    Send Enquiry on WhatsApp →
+   <button type="submit" class="whatsapp-btn form-submit">
+    Send Enquiry On WhatsApp →
    </button>
 
-   <p class="form-note">
+   <div class="form-note">
     Opens WhatsApp with your enquiry ready to send.
     This form does not store your details on this website.
-   </p>
+   </div>
   </form>
  </div>
 </section>
 
+<!-- FAQ -->
 <section class="section">
- <div class="container">
-  <div class="section-title">
-   <small>Frequently asked questions</small>
-   <h2>Before You Travel.</h2>
-  </div>
+ <div class="section-heading">
+  <small>BEFORE YOU GO</small>
+  <h2>A Few Helpful<br>Details.</h2>
+ </div>
 
-  <div class="faq">
-   <details>
-    <summary>Where does the tour start and finish?</summary>
-    <p>
-     The proposed itinerary starts in Bir on Day 1 and finishes
-     in Joginder Nagar on Day 3. Exact pickup and drop-off
-     arrangements are confirmed in your quotation.
-    </p>
-   </details>
+ <div class="faq">
+  <details>
+   <summary>Where does the tour start and finish?</summary>
+   <p>
+    The proposed tour starts in Bir on Day 1 and finishes in
+    Joginder Nagar on Day 3. Exact pickup and drop-off points
+    will be confirmed in your quotation.
+   </p>
+  </details>
 
-   <details>
-    <summary>Is paragliding included?</summary>
-    <p>
-     No. Paragliding is optional and costs extra unless explicitly
-     included in your quotation. Participation is subject to
-     operator requirements, weather and availability.
-    </p>
-   </details>
+  <details>
+   <summary>Is paragliding included?</summary>
+   <p>
+    Paragliding is optional and costs extra unless explicitly
+    included in your quotation. It is subject to weather,
+    operator availability and participation requirements.
+   </p>
+  </details>
 
-   <details>
-    <summary>Is Day 2 entirely a vehicle journey?</summary>
-    <p>
-     This has not been confirmed. The proposed route via
-     Chehna Pass and Rajgundha requires local verification.
-     Any walking, trekking, transport or guide requirements
-     must be explained and agreed before booking.
-    </p>
-   </details>
+  <details>
+   <summary>Is Day 2 entirely a vehicle journey?</summary>
+   <p>
+    This has not been confirmed. The proposed route via
+    Chehna Pass and Rajgundha requires local verification.
+    Any walking, trekking, guide or transport requirements
+    must be agreed before booking.
+   </p>
+  </details>
 
-   <details>
-    <summary>Can I customise the itinerary?</summary>
-    <p>
-     You can request different accommodation, additional nights
-     or revised travel arrangements. Changes are subject to
-     feasibility, availability and a revised quotation.
-    </p>
-   </details>
+  <details>
+   <summary>Can I customise this holiday?</summary>
+   <p>
+    You can request additional nights, different accommodation
+    or revised arrangements. Changes are subject to feasibility,
+    availability and a revised quotation.
+   </p>
+  </details>
 
-   <details>
-    <summary>What are the payment and cancellation terms?</summary>
-    <p>
-     Request the applicable payment schedule, cancellation charges
-     and refund conditions in writing before confirming your booking.
-    </p>
-   </details>
-  </div>
+  <details>
+   <summary>What are the payment and cancellation terms?</summary>
+   <p>
+    Request the applicable payment schedule, cancellation charges
+    and refund conditions in writing before confirming your booking.
+   </p>
+  </details>
  </div>
 </section>
 
+<!-- RELATED TOURS -->
 <section class="section">
- <div class="container">
-  <div class="section-title">
-   <small>More holiday options</small>
-   <h2>Keep Exploring.</h2>
-  </div>
-
-  <div class="related">
-   <a href="bir.html">
-    <h3>Bir Billing</h3>
-    <p>Explore your Bir holiday options.</p>
-    <span>View Tour →</span>
-   </a>
-   <a href="mnl.html">
-    <h3>Manali Escape</h3>
-    <p>Plan another mountain getaway.</p>
-    <span>View Tour →</span>
-   </a>
-   <a href="shimla.html">
-    <h3>Shimla Escape</h3>
-    <p>Discover your next holiday itinerary.</p>
-    <span>View Tour →</span>
-   </a>
-  </div>
+ <div class="section-heading">
+  <small>KEEP EXPLORING</small>
+  <h2>More Mountain<br>Escapes.</h2>
  </div>
+
+ <div class="related-grid">
+  <a href="bir.html" class="related-card">
+   <h3>Bir Billing</h3>
+   <p>Explore your Bir holiday options.</p>
+   <span>View Tour →</span>
+  </a>
+  <a href="mnl.html" class="related-card">
+   <h3>Manali Escape</h3>
+   <p>Plan your next mountain getaway.</p>
+   <span>View Tour →</span>
+  </a>
+  <a href="shimla.html" class="related-card">
+   <h3>Shimla Escape</h3>
+   <p>Discover another holiday itinerary.</p>
+   <span>View Tour →</span>
+  </a>
+ </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+ <h2>Ready For Your<br>Next Escape?</h2>
+ <p>
+  Share your dates and requirements with Travspro Holidays
+  and explore your Bir and Barot holiday options.
+ </p>
+ https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20am%20interested%20in%20the%20Bir%20and%20Barot%20Valley%20tour
+  Plan My Trip On WhatsApp →
+ </a>
 </section>
 
 </main>
 
+<!-- FOOTER -->
 <footer>
- <div class="container">
-  <a href="index.html" class="brand">TRAVSPRO <span>HOLIDAYS</span></a>
+ <a href="index.html" class="footer-logo">
+  <img src="ohom.png" alt="Travspro Holidays Logo">
+ </a>
 
-  <div class="footer-links">
-   <a href="index.html">Home</a>
-   <a href="tourPackage.html">All Tours</a>
-   <a href="OurServices.html">Services</a>
-   <a href="contactus.html">Contact Us</a>
-   <a
-    href="https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20am%20interested%20in%20the%20Bir%20and%20Barot%20Valley%20tour"
-    targetdocument.getElementById("travelDate");
+ <p>Your Trusted Travel Partner</p>
+
+ <div class="footer-links">
+  <a href="index.html">Home</a>
+  <a href="tourPackage.html">Tours</a>
+  <a href="OurServices.html">Services</a>
+  <a href="about.html">About</a>
+  <a href="contactus.html">Contact</a>
+ </div>
+
+ <div class="footer-links">
+  https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20would%20like%20help%20planning%20a%20trip
+   💬 Chat On WhatsApp →
+  </a>
+ </div>
+
+ <p>© 2026 <strong>Travspro Holidays</strong>. All rights reserved.</p>
+</footer>
+
+<!-- ENQUIRY FORM JAVASCRIPT -->
+<script>
+(function () {
+ "use strict";
+
+ const form = document.getElementById("tourEnquiry");
+ const dateInput = document.getElementById("travelDate");
 
  const today = new Date();
  const year = today.getFullYear();
@@ -747,6 +836,7 @@ footer .brand img{
 
   const adults = document.getElementById("adults").value;
   const children = document.getElementById("children").value || "0";
+  const paragliding = document.getElementById("paragliding").value;
   const requirements =
    document.getElementById("requirements").value.trim();
 
@@ -769,6 +859,7 @@ footer .brand img{
    "Adults: " + adults,
    "Children: " + children,
    "Preferred pickup: " + pickup,
+   "Paragliding: " + paragliding,
    "Additional requirements: " + (requirements || "None specified"),
    "",
    "Please confirm route feasibility, any walking or trekking sections,",
