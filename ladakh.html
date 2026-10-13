@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#050816">
+<title>Ladakh Escape | Travspro Holidays</title>
+<meta name="description" content="Explore a suggested 5-night, 6-day Ladakh holiday with Leh, Nubra Valley and Pangong Lake. Request a personalised quotation from Travspro Holidays.">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:135px}
+body{
+ font-family:"Segoe UI",Arial,sans-serif;
+ background:#050816;color:#fff;overflow-x:hidden;
+}
+a{text-decoration:none;color:inherit}
+button,input,textarea,select{font:inherit}
+img{display:block;max-width:100%}
+button{cursor:pointer}
+a:focus-visible,button:focus-visible{
+ outline:3px solid #00eaff;outline-offset:4px;
+}
+
+/* ORIGINAL DARK THEME */
+body::before{
+ content:"";position:fixed;inset:0;z-index:-2;
+ pointer-events:none;
+ background:
+ radial-gradient(circle at 12% 18%,rgba(0,229,255,.15),transparent 32%),
+ radial-gradient(circle at 88% 28%,rgba(124,77,255,.18),transparent 32%),
+ radial-gradient(circle at 50% 90%,rgba(0,255,170,.07),transparent 30%),
+ #050816;
+}
+body::after{
+ content:"";position:fixed;inset:0;z-index:-1;
+ pointer-events:none;
+ background-image:
+ linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
+ linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+ background-size:50px 50px;
+}
+
+/* NAVIGATION */
+.navbar{
+ position:fixed;top:15px;left:50%;
+ transform:translateX(-50%);z-index:1000;
+ width:min(1150px,94%);padding:10px 22px;
+ display:flex;align-items:center;justify-content:space-between;
+ gap:20px;background:rgba(7,13,32,.92);
+ border:1px solid rgba(255,255,255,.12);
+ border-radius:50px;
+ backdrop-filter:blur(22px);
+ -webkit-backdrop-filter:blur(22px);
+ box-shadow:0 12px 45px rgba(0,0,0,.35);
+}
+.logo{display:flex;align-items:center;flex-shrink:0}
+.logo img{width:155px;height:70px;object-fit:contain}
+.nav-links{
+ display:flex;align-items:center;gap:4px;list-style:none;
+}
+.nav-links a{
+ display:block;padding:10px 13px;border-radius:30px;
+ color:#cbd3e6;font-size:12px;font-weight:700;
+ white-space:nowrap;transition:.3s;
+}
+.nav-links a:hover,.nav-links .active{
+ color:#00eaff;background:rgba(0,229,255,.09);
+}
+
+/* HERO */
+.hero{
+ min-height:700px;position:relative;
+ display:flex;align-items:center;justify-content:center;
+ text-align:center;padding:180px 20px 85px;overflow:hidden;
+}
+.orb{
+ position:absolute;width:300px;height:300px;border-radius:50%;
+ background:radial-gradient(circle at 30% 30%,#9fffff,
+ #0077ff 35%,#3500a8 70%,transparent 72%);
+ opacity:.18;filter:blur(3px);pointer-events:none;
+ animation:floatOrb 8s ease-in-out infinite;
+}
+.orb-one{left:-150px;top:25%}
+.orb-two{right:-130px;bottom:10%;animation-delay:-4s}
+.hero-content{position:relative;z-index:2;width:min(980px,100%)}
+.eyebrow{
+ display:inline-block;padding:9px 17px;margin-bottom:24px;
+ border:1px solid rgba(0,229,255,.28);border-radius:50px;
+ background:rgba(0,229,255,.06);color:#00eaff;
+ font-size:11px;font-weight:800;letter-spacing:3px;
+}
+.hero h1{
+ font-size:clamp(48px,8vw,94px);line-height:1.05;
+ letter-spacing:-4px;font-weight:900;
+ background:linear-gradient(120deg,#fff,#8befff,#a18aff,#fff);
+ background-size:300% 300%;
+ -webkit-background-clip:text;background-clip:text;
+ color:transparent;animation:gradientMove 7s ease infinite;
+}
+.hero h1 span{display:block;color:#00eaff}
+.hero p{
+ max-width:720px;margin:25px auto;color:#b2bdd2;
+ font-size:17px;line-height:1.85;
+}
+.button-row{
+ display:flex;justify-content:center;align-items:center;
+ gap:12px;flex-wrap:wrap;margin-top:27px;
+}
+.primary-btn,.secondary-btn,.whatsapp-btn{
+ display:inline-flex;align-items:center;justify-content:center;
+ gap:9px;padding:14px 24px;border-radius:40px;
+ font-weight:750;font-size:14px;transition:.3s;
+}
+.primary-btn{
+ border:0;color:#fff;
+ background:linear-gradient(90deg,#00a8d4,#6848ff);
+ box-shadow:0 0 28px rgba(0,217,255,.17);
+}
+.primary-btn:hover{transform:translateY(-4px)}
+.secondary-btn{
+ border:1px solid rgba(255,255,255,.18);
+ background:rgba(255,255,255,.05);color:#e1e8f6;
+}
+.secondary-btn:hover{border-color:#00eaff}
+.whatsapp-btn{
+ border:0;background:linear-gradient(90deg,#087b48,#09633f);
+ color:#fff;
+}
+.whatsapp-btn:hover{transform:translateY(-3px)}
+
+/* TOUR INFORMATION */
+.quick-services{
+ width:min(1100px,92%);margin:auto;
+ display:grid;grid-template-columns:repeat(4,1fr);gap:14px;
+}
+.quick-card{
+ padding:23px 15px;text-align:center;
+ background:rgba(255,255,255,.045);
+ border:1px solid rgba(255,255,255,.09);
+ border-radius:20px;
+}
+.quick-icon{font-size:27px;margin-bottom:10px}
+.quick-card h3{font-size:14px;margin-bottom:6px}
+.quick-card p{color:#a1aec4;font-size:12px;line-height:1.6}
+
+/* SECTIONS */
+.section{width:min(1150px,92%);margin:auto;padding:70px 0}
+.section-heading{margin-bottom:35px}
+.section-heading small{
+ color:#00eaff;text-transform:uppercase;letter-spacing:3px;
+ font-size:11px;font-weight:800;
+}
+.section-heading h2{
+ margin-top:13px;font-size:clamp(36px,5vw,58px);
+ line-height:1.08;letter-spacing:-2px;
+}
+.section-heading p{
+ max-width:760px;margin-top:16px;color:#a8b5cb;
+ font-size:15px;line-height:1.85;
+}
+.glass-card{
+ padding:30px;border-radius:25px;
+ background:rgba(255,255,255,.04);
+ border:1px solid rgba(255,255,255,.09);
+}
+.glass-card h3{font-size:24px;margin-bottom:17px}
+.glass-card p{color:#b2bdd2;line-height:1.9;font-size:14px}
+.overview-grid{
+ display:grid;grid-template-columns:1.2fr .8fr;gap:22px;
+}
+.quote-card{
+ background:linear-gradient(135deg,rgba(0,229,255,.08),rgba(104,72,255,.12));
+}
+.price{color:#00eaff;font-size:30px;font-weight:800;margin:18px 0}
+.quote-card .primary-btn{margin-top:22px;width:100%}
+.route-box{
+ display:flex;justify-content:center;align-items:center;
+ flex-wrap:wrap;gap:12px;margin-top:25px;padding:25px;
+ border:1px solid rgba(0,229,255,.18);border-radius:20px;
+ background:rgba(0,229,255,.035);
+}
+.route-stop{
+ padding:9px 15px;border:1px solid rgba(255,255,255,.12);
+ border-radius:30px;color:#e1e8f6;background:#101c32;
+ font-size:12px;font-weight:700;
+}
+.route-arrow{color:#00eaff;font-size:20px}
+
+/* ITINERARY */
+.itinerary{display:grid;gap:20px}
+.day-card{
+ display:grid;grid-template-columns:85px 1fr;
+ gap:25px;padding:28px;border-radius:25px;
+ background:rgba(255,255,255,.04);
+ border:1px solid rgba(255,255,255,.10);
+}
+.day-badge{
+ align-self:start;padding:14px 10px;text-align:center;
+ border-radius:18px;background:rgba(0,229,255,.07);
+ border:1px solid rgba(0,229,255,.25);color:#00eaff;
+ font-size:11px;font-weight:800;letter-spacing:1px;
+}
+.day-badge strong{display:block;font-size:34px;line-height:1.3}
+.day-content h3{font-size:24px;line-height:1.3;margin-bottom:12px}
+.day-route{
+ display:inline-block;padding:8px 13px;margin-bottom:16px;
+ border-radius:12px;background:rgba(104,72,255,.12);
+ color:#bcefff;font-size:12px;line-height:1.7;
+}
+.list{padding-left:20px;color:#b2bdd2}
+.list li{margin-bottom:10px;font-size:14px;line-height:1.8}
+.stay{
+ display:inline-block;margin-top:12px;padding:10px 15px;
+ border-radius:12px;background:rgba(0,229,255,.06);
+ color:#8befff;font-size:13px;font-weight:700;
+}
+.notice{
+ margin-top:24px;padding:20px;border-left:3px solid #00eaff;
+ border-radius:12px;background:#101b30;
+ color:#b8c5da;font-size:13px;line-height:1.85;
+}
+.notice a{color:#00eaff;text-decoration:underline}
+.two-columns{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+
+/* ENQUIRY */
+.enquiry-grid{
+ display:grid;grid-template-columns:.85fr 1.15fr;
+ gap:28px;align-items:start;
+}
+.enquiry-copy p{margin-bottom:20px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:17px}
+.field{display:flex;flex-direction:column;gap:8px}
+.field.full{grid-column:1/-1}
+label{color:#dfe8f9;font-size:13px;font-weight:700}
+input,textarea,select{
+ width:100%;min-width:0;padding:14px;
+ border:1px solid rgba(255,255,255,.18);
+ border-radius:12px;background:#091225;color:#fff;
+}
+input:focus,textarea:focus,select:focus{
+ outline:2px solid #00eaff;outline-offset:2px;
+}
+input::placeholder,textarea::placeholder{color:#91a1bb}
+input[type="date"]{color-scheme:dark}
+textarea{min-height:110px;resize:vertical}
+.form-submit{width:100%;margin-top:20px}
+.form-note{color:#9baac1;font-size:12px;line-height:1.7;margin-top:13px}
+
+/* FAQ */
+.faq{display:grid;gap:13px}
+details{
+ padding:21px 24px;border-radius:18px;
+ background:rgba(255,255,255,.04);
+ border:1px solid rgba(255,255,255,.10);
+}
+summary{cursor:pointer;font-weight:700;font-size:15px;line-height:1.6}
+details p{color:#b2bdd2;font-size:14px;line-height:1.85;margin-top:14px}
+
+/* CTA AND FOOTER */
+.cta{
+ width:min(1100px,92%);margin:0 auto 70px;
+ padding:55px 25px;text-align:center;
+ border:1px solid rgba(255,255,255,.1);border-radius:32px;
+ background:linear-gradient(135deg,rgba(0,229,255,.08),rgba(100,60,255,.12));
+}
+.cta h2{font-size:clamp(34px,5vw,55px);line-height:1.15;margin-bottom:18px}
+.cta p{max-width:620px;margin:0 auto 25px;color:#b2bdd2;line-height:1.85}
+footer{
+ padding:40px 20px;text-align:center;
+ border-top:1px solid rgba(255,255,255,.07);
+ color:#9baac1;font-size:13px;line-height:1.8;
+}
+.footer-logo{display:inline-flex;justify-content:center;margin-bottom:15px}
+.footer-logo img{width:145px;height:75px;object-fit:contain}
+footer strong{color:#00eaff}
+.footer-links{
+ display:flex;justify-content:center;gap:20px;
+ flex-wrap:wrap;margin:17px 0;
+}
+.footer-links a:hover{color:#00eaff}
+
+@keyframes gradientMove{
+ 0%,100%{background-position:0% 50%}
+ 50%{background-position:100% 50%}
+}
+@keyframes floatOrb{
+ 0%,100%{transform:translate(0,0)}
+ 50%{transform:translate(30px,-35px)}
+}
+@media(max-width:900px){
+ .navbar{width:95%;padding:10px 15px}
+ .logo img{width:125px;height:60px}
+ .nav-links a{padding:9px 8px;font-size:10px}
+ .quick-services{grid-template-columns:repeat(2,1fr)}
+ .overview-grid,.enquiry-grid{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+ html{scroll-padding-top:145px}
+ .navbar{
+  top:6px;width:96%;padding:6px 10px;
+  flex-direction:column;gap:5px;border-radius:21px;
+ }
+ .logo img{width:105px;height:50px}
+ .nav-links{width:100%;justify-content:center;flex-wrap:wrap;gap:1px}
+ .nav-links a{padding:6px 7px;font-size:9px}
+ .hero{min-height:auto;padding:165px 17px 45px}
+ .hero h1{font-size:clamp(43px,12vw,66px);letter-spacing:-2px}
+ .hero p{font-size:14px}
+ .eyebrow{font-size:9px;letter-spacing:1.6px}
+ .button-row{flex-direction:column}
+ .button-row a{width:100%;max-width:300px}
+ .quick-services{gap:10px}
+ .quick-card{padding:18px 10px}
+ .quick-card h3{font-size:12px}
+ .quick-card p{font-size:11px}
+ .section{padding:48px 0}
+ .section-heading h2{font-size:37px;letter-spacing:-1px}
+ .glass-card{padding:23px}
+ .day-card{grid-template-columns:1fr;gap:18px;padding:23px}
+ .day-badge{width:85px}
+ .day-content h3{font-size:22px}
+ .two-columns,.form-grid{grid-template-columns:1fr}
+ .route-box{padding:18px;gap:8px}
+ .cta{padding:45px 20px;margin-bottom:50px}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav class="navbar" aria-label="Main navigation">
+ <a href="index.html" class="logo">
+  <img src="ohom.png" alt="Travspro Holidays Logo">
+ </a>
+ <ul class="nav-links">
+  <li><a href="index.html">HOME</a></li>
+  <li><a href="tourPackage.html" class="active">TOURS</a></li>
+  <li><a href="OurServices.html">SERVICES</a></li>
+  <li><a href="about.html">ABOUT</a></li>
+  <li><a href="contactus.html">CONTACT</a></li>
+ </ul>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+ <div class="orb orb-one" aria-hidden="true"></div>
+ <div class="orb orb-two" aria-hidden="true"></div>
+ <div class="hero-content">
+  <div class="eyebrow">TRAVSPRO HOLIDAYS · 5 NIGHTS / 6 DAYS</div>
+  <h1>Discover Ladakh.<span>Travel Beyond.</span></h1>
+  <p>
+   Plan your escape through Leh, Nubra Valley and Pangong Lake.
+   A suggested six-day journey with time to acclimatise
+   before heading towards the mountain passes.
+  </p>
+  <div class="button-row">
+   <a href="#itinerary" class="primary-btn">Explore Itinerary →</a>
+   <a href="#enquiry" class="secondary-btn">Request My Quote →</a>
+  </div>
+ </div>
+</header>
+
+<!-- TOUR FACTS -->
+<section class="quick-services" aria-label="Tour information">
+ <div class="quick-card">
+  <div class="quick-icon" aria-hidden="true">📅</div>
+  <h3>5 Nights / 6 Days</h3>
+  <p>Suggested holiday duration</p>
+ </div>
+ <div class="quick-card">
+  <div class="quick-icon" aria-hidden="true">📍</div>
+  <h3>Leh To Leh</h3>
+  <p>Arrival and departure in Leh</p>
+ </div>
+ <div class="quick-card">
+  <div class="quick-icon" aria-hidden="true">🏨</div>
+  <h3>Leh & Nubra Stays</h3>
+  <p>3 nights Leh · 2 nights Nubra</p>
+ </div>
+ <div class="quick-card">
+  <div class="quick-icon" aria-hidden="true">💬</div>
+  <h3>Request Rates</h3>
+  <p>Personalised quotation</p>
+ </div>
+</section>
+
+<main>
+
+<!-- OVERVIEW -->
+<section class="section">
+ <div class="section-heading">
+  <small>YOUR NEXT ADVENTURE</small>
+  <h2>A Different View.<br>A Memorable Journey.</h2>
+  <p>
+   A proposed itinerary combining acclimatisation in Leh,
+   two nights in Nubra Valley and a Pangong Lake visit
+   before returning to Leh.
+  </p>
+ </div>
+
+ <div class="overview-grid">
+  <div class="glass-card">
+   <h3>Your Ladakh Escape</h3>
+   <p>
+    Begin with two nights in Leh and allow at least 48 hours
+    after arrival before travelling towards higher-altitude areas.
+   </p>
+   <br>
+   <p>
+    Continue to Nubra Valley, enjoy a flexible sightseeing day,
+    then visit Pangong Lake en route back to Leh if road
+    conditions and the confirmed schedule permit.
+   </p>
+   <br>
+   <p>
+    This is a suggested itinerary, not a confirmed booking.
+    Accommodation, transport, meals and sightseeing services
+    will be agreed in your final quotation.
+   </p>
+  </div>
+
+  <aside class="glass-card quote-card">
+   <h3>Your Trip. Your Preferences.</h3>
+   <p>Share your dates, group size and preferred stay arrangements.</p>
+   <div class="price">Request Rates</div>
+   <p>
+    Pricing depends on dates, availability and selected services.
+    No fixed package price is advertised.
+   </p>
+   <a href="#enquiry" class="primary-btn">Get My Quote →</a>
+  </aside>
+ </div>
+
+ <div class="route-box" aria-label="Proposed main route">
+  <span class="route-stop">Leh</span>
+  <span class="route-arrow" aria-hidden="true">→</span>
+  <span class="route-stop">Khardung La</span>
+  <span class="route-arrow" aria-hidden="true">→</span>
+  <span class="route-stop">Nubra Valley</span>
+  <span class="route-arrow" aria-hidden="true">→</span>
+  <span class="route-stop">Pangong Lake</span>
+  <span class="route-arrow" aria-hidden="true">→</span>
+  <span class="route-stop">Leh</span>
+ </div>
+
+ <div class="notice">
+  <strong>Acclimatisation first:</strong>
+  Allow at least 48 hours after arrival in Leh before
+  travelling to higher-altitude areas. The Day 3 departure
+  must be scheduled after this full period, not simply
+  on the third calendar day. Consult a doctor promptly
+  if you feel unwell.
+  <br>
+  <a href="https://leh.nic.in/48-hours-acclimatization-for-tourists-arriving-in-leh/"
+     target="_blank" rel="noopener noreferrer">
+   Read the official Leh acclimatisation advisory ↗
+  </a>
+ </div>
+</section>
+
+<!-- SIX-DAY ITINERARY -->
+<section class="section" id="itinerary">
+ <div class="section-heading">
+  <small>YOUR DAY-BY-DAY JOURNEY</small>
+  <h2>Six Days.<br>Your Ladakh Story.</h2>
+  <p>
+   Suggested overnight stays: Leh on Days 1, 2 and 5;
+   Nubra Valley on Days 3 and 4.
+  </p>
+ </div>
+
+ <div class="itinerary">
+
+  <article class="day-card">
+   <div class="day-badge">DAY<strong>01</strong></div>
+   <div class="day-content">
+    <h3>Arrival In Leh & Rest</h3>
+    <div class="day-route">Arrival · Hotel check-in · Acclimatisation</div>
+    <ul class="list">
+     <li>Arrive in Leh and transfer to your accommodation if included in your quotation.</li>
+     <li>Check in according to the hotel's scheduled check-in time.</li>
+     <li>Keep the day free for rest and acclimatisation.</li>
+     <li>No mountain-pass excursions or strenuous sightseeing are planned.</li>
+    </ul>
+    <div class="stay">🏨 Overnight stay in Leh</div>
+   </div>
+  </article>
+
+  <article class="day-card">
+   <div class="day-badge">DAY<strong>02</strong></div>
+   <div class="day-content">
+    <h3>Leh Acclimatisation Day</h3>
+    <div class="day-route">Leh · Rest · Flexible leisure time</div>
+    <ul class="list">
+     <li>Continue your acclimatisation period in Leh.</li>
+     <li>Keep the schedule relaxed and avoid strenuous activity.</li>
+     <li>Any gentle nearby outing should depend on how you feel and local advice.</li>
+     <li>Confirm onward arrangements and applicable visitor documentation with your operator.</li>
+    </ul>
+    <div class="stay">🏨 Overnight stay in Leh</div>
+   </div>
+  </article>
+
+  <article class="day-card">
+   <div class="day-badge">DAY<strong>03</strong></div>
+   <div class="day-content">
+    <h3>Leh To Nubra Valley</h3>
+    <div class="day-route">Leh → Khardung La → Nubra Valley</div>
+    <ul class="list">
+     <li>Depart only after completing at least 48 hours in Leh and if well enough to continue.</li>
+     <li>Follow the proposed route towards Nubra Valley via Khardung La, subject to road access.</li>
+     <li>Include suitable scenic stops according to conditions and the driver's advice.</li>
+     <li>Check in to your selected Nubra accommodation.</li>
+     <li>Keep the evening relaxed.</li>
+    </ul>
+    <div class="stay">🏨 Overnight stay in Nubra Valley</div>
+   </div>
+  </article>
+
+  <article class="day-card">
+   <div class="day-badge">DAY<strong>04</strong></div>
+   <div class="day-content">
+    <h3>Nubra Valley Sightseeing</h3>
+    <div class="day-route">Suggested stops: Diskit · Hunder</div>
+    <ul class="list">
+     <li>Enjoy a flexible local sightseeing day based on your confirmed itinerary.</li>
+     <li>Request visits around Diskit and Hunder, subject to access and opening conditions.</li>
+     <li>Allow time for photographs and leisure.</li>
+     <li>Optional activities, entry fees and guide services are extra unless quoted.</li>
+     <li>Return to your accommodation for the evening.</li>
+    </ul>
+    <div class="stay">🏨 Overnight stay in Nubra Valley</div>
+   </div>
+  </article>
+
+  <article class="day-card">
+   <div class="day-badge">DAY<strong>05</strong></div>
+   <div class="day-content">
+    <h3>Pangong Lake Visit & Return To Leh</h3>
+    <div class="day-route">Nubra Valley → Pangong Lake → Leh</div>
+    <ul class="list">
+     <li>Check out and start early according to your operator's confirmed schedule.</li>
+     <li>Travel towards Pangong Lake only if the route is open and the day's journey is feasible.</li>
+     <li>Enjoy a brief lake visit before continuing to Leh.</li>
+     <li>This is a long travel day. Stops and timing depend on road and weather conditions.</li>
+     <li>If the route is unsuitable, return to Leh using the operator's agreed alternative plan.</li>
+    </ul>
+    <div class="stay">🏨 Overnight stay in Leh</div>
+   </div>
+  </article>
+
+  <article class="day-card">
+   <div class="day-badge">DAY<strong>06</strong></div>
+   <div class="day-content">
+    <h3>Departure From Leh</h3>
+    <div class="day-route">Hotel check-out · Onward journey</div>
+    <ul class="list">
+     <li>Check out according to your accommodation's policy.</li>
+     <li>Transfer to your agreed departure point if included.</li>
+     <li>Continue with your onward journey.</li>
+     <li>Ask about an extra buffer night if you prefer more flexibility.</li>
+    </ul>
+    <div class="stay">📍 Tour ends in Leh</div>
+   </div>
+  </article>
+
+ </div>
+
+ <div class="notice">
+  <strong>Before confirming:</strong>
+  Your operator must verify route feasibility, seasonal
+  accommodation, road access and applicable permits or
+  visitor requirements for your nationality and travel dates.
+  No pass, lake visit or activity is guaranteed.
+  Additional nights may be needed if conditions change.
+ </div>
+</section>
+
+<!-- PACKAGE DETAILS -->
+<section class="section">
+ <div class="section-heading">
+  <small>PLAN WITH CLARITY</small>
+  <h2>Your Holiday.<br>Your Arrangements.</h2>
+  <p>Only services listed in your final quotation are included.</p>
+ </div>
+
+ <div class="two-columns">
+  <div class="glass-card">
+   <h3>Services You Can Request</h3>
+   <ul class="list">
+    <li>Three nights of accommodation in Leh.</li>
+    <li>Two nights of accommodation in Nubra Valley.</li>
+    <li>Meals according to your selected meal plan.</li>
+    <li>Arrival and departure transfers in Leh.</li>
+    <li>Transport for the confirmed itinerary.</li>
+    <li>Assistance with applicable visitor requirements.</li>
+   </ul>
+  </div>
+
+  <div class="glass-card">
+   <h3>Not Included Unless Quoted</h3>
+   <ul class="list">
+    <li>Flights and travel to or from Leh.</li>
+    <li>Entry fees, permits and visitor charges.</li>
+    <li>Optional activities and guide services.</li>
+    <li>Meals outside the agreed meal plan.</li>
+    <li>Personal expenses and travel insurance.</li>
+    <li>Extra nights, medical costs or itinerary changes.</li>
+   </ul>
+  </div>
+ </div>
+</section>
+
+<!-- WHATSAPP ENQUIRY -->
+<section class="section" id="enquiry">
+ <div class="section-heading">
+  <small>LET'S PLAN YOUR TRIP</small>
+  <h2>Your </div>
+
+ <div class="enquiry-grid">
+  <div class="glass-card enquiry-copy">
+   <h3>Ladakh.<br>Planned Around You.</h3>
+   <p>
+    Share your arrival date, group size and accommodation
+    preferences for a personalised 5-night, 6-day quotation.
+   </p>
+   <p>
+    An enquiry does not confirm a booking. Availability,
+    route arrangements, prices and terms must be agreed separately.
+   </p>
+   https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20please%20share%20a%20quote%20for%20the%20Ladakh%205%20Nights%20%2F%206%20Days%20tour
+    💬 Chat On WhatsApp ↗
+   </a>
+  </div>
+
+  <form class="glass-card" id="ladakhEnquiry">
+   <h3>Request A Personalised Quote</h3>
+
+   <div class="form-grid">
+    <div class="field">
+     <label for="guestName">Your name *</label>
+     <input id="guestName" name="guestName" type="text"
+      autocomplete="name" maxlength="100"
+      placeholder="Enter your name" required>
+    </div>
+
+    <div class="field">
+     <label for="travelDate">Arrival date in Leh *</label>
+     <input id="travelDate" name="travelDate" type="date" required>
+    </div>
+
+    <div class="field">
+     <label for="adults">Adults *</label>
+     <input id="adults" name="adults" type="number"
+      min="1" max="100" step="1" value="2" required>
+    </div>
+
+    <div class="field">
+     <label for="children">Children</label>
+     <input id="children" name="children" type="number"
+      min="0" max="100" step="1" value="0">
+    </div>
+
+    <div class="field full">
+     <label for="arrival">Arrival arrangements *</label>
+     <input id="arrival" name="arrival" type="text"
+      maxlength="150"
+      placeholder="Flight arrival time or planned arrival point"
+      required>
+    </div>
+
+    <div class="field full">
+     <label for="stay">Stay preference</label>
+     <select id="stay" name="stay">
+      <option>Please suggest suitable options</option>
+      <option>Budget accommodation</option>
+      <option>Comfort-focused accommodation</option>
+      <option>Premium accommodation</option>
+     </select>
+    </div>
+
+    <div class="field full">
+     <label for="requirements">Additional requirements</label>
+     <textarea id="requirements" name="requirements"
+      maxlength="1500"
+      placeholder="Meals, children's ages, extra nights or other preferences"></textarea>
+    </div>
+   </div>
+
+   <button type="submit" class="whatsapp-btn form-submit">
+    💬 Send Enquiry On WhatsApp →
+   </button>
+
+   <p class="form-note">
+    WhatsApp opens with your message ready. Press Send there
+    to submit your enquiry. This form does not store your
+    details on this website.
+   </p>
+  </form>
+ </div>
+</section>
+
+<!-- FAQ -->
+<section class="section">
+ <div class="section-heading">
+  <small>BEFORE YOU GO</small>
+  <h2>A Few Helpful<br>Details.</h2>
+ </div>
+
+ <div class="faq">
+  <details>
+   <summary>Why are the first two days reserved for acclimatisation?</summary>
+   <p>
+    The official Leh advisory requires at least 48 hours
+    of acclimatisation before travelling to higher-altitude
+    areas. Departure timing must allow the full 48 hours.
+   </p>
+  </details>
+
+  <details>
+   <summary>Is an overnight stay at Pangong included?</summary>
+   <p>
+    No. This suggested itinerary proposes a Day 5 lake visit
+    followed by a return to Leh. Request a longer itinerary
+    if you want a different pace or an additional overnight stay.
+   </p>
+  </details>
+
+  <details>
+   <summary>Are all sightseeing visits guaranteed?</summary>
+   <p>
+    No. Roads, weather, access restrictions and your wellbeing
+    may require changes. Your operator must confirm the route
+    and alternatives before booking.
+   </p>
+  </details>
+
+  <details>
+   <summary>Are flights, meals and permits included?</summary>
+   <p>
+    Only if explicitly stated in your final quotation.
+    Ask for a full breakdown of included and excluded services.
+   </p>
+  </details>
+
+  <details>
+   <summary>What are the cancellation terms?</summary>
+   <p>
+    Request the payment schedule, cancellation charges and
+    refund conditions in writing before confirming your booking.
+   </p>
+  </details>
+ </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+ <h2>Where Will Your<br>Next Journey Begin?</h2>
+ <p>Share your dates and explore your Ladakh holiday options.</p>
+ https://wa.me/918278735460?text=Hello%20Travspro%20Holidays%2C%20I%20want%20to%20plan%20a%20Ladakh%20holiday
+  Plan My Trip On WhatsApp →
+ </a>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+ <a href="index.html" class="footer-logo">
+  <img src="ohom.png" alt="Travspro Holidays Logo">
+ </a>
+ <p>Your Trusted Travel Partner</p>
+
+ <div class="footer-links">
+  <a href="index.html">Home</a>
+  <a href="tourPackage.html">Tours</a>
+  <a href="OurServices.html">Services</a>
+  <a href="about.html">About</a>
+  <a href="contactus.html">Contact</a>
+ </div>
+
+ <div class="footer-links">
+  https://wa.me/918278735460
+   💬 Chat On WhatsApp →
+  </a>
+ </div>
+
+ <p>© 2026 <strong>Travspro Holidays</strong>. All rights reserved.</p>
+</footer>
+
+<!-- ENQUIRY FORM SCRIPT -->
+<script>
+(function () {
+ "use strict";
+
+ const form = document.getElementById("ladakhEnquiry");
+ const dateInput = document.getElementById("travelDate");
+ const today = new Date();
+
+ dateInput.min =
+  today.getFullYear() + "-" +
+  String(today.getMonth() + 1).padStart(2, "0") + "-" +
+  String(today.getDate()).padStart(2, "0");
+
+ form.addEventListener("submit", function (event) {
+  event.preventDefault();
+  if (!form.reportValidity()) return;
+
+  function value(name) {
+   return form.elements.namedItem(name).value.trim();
+  }
+
+  if (!value("guestName") || !value("arrival")) {
+   alert("Please enter your name and arrival arrangements.");
+   return;
+  }
+
+  const parts = value("travelDate").split("-");
+  const readableDate = parts[2] + "/" + parts[1] + "/" + parts[0];
+
+  const message = [
+   "Hello Travspro Holidays,",
+   "",
+   "Please send a personalised quotation for:",
+   "Ladakh Escape: 5 Nights / 6 Days",
+   "",
+   "Proposed itinerary:",
+   "Day 1: Arrival in Leh and rest.",
+   "Day 2: Acclimatisation in Leh.",
+   "Day 3: Leh to Nubra after completing 48 hours.",
+   "Day 4: Nubra sightseeing.",
+   "Day 5: Pangong visit and return to Leh, subject to feasibility.",
+   "Day 6: Departure from Leh.",
+   "",
+   "Name: " + value("guestName"),
+   "Arrival date: " + readableDate,
+   "Adults: " + value("adults"),
+   "Children: " + (value("children") || "0"),
+   "Arrival arrangements: " + value("arrival"),
+   "Stay preference: " + value("stay"),
+   "Additional requirements: " +
+    (value("requirements") || "None specified"),
+   "",
+   "Please confirm availability, route feasibility,",
+   "visitor requirements, inclusions, total pricing",
+   "and payment and cancellation terms."
+  ].join("\n");
+
+  window.location.assign(
+   "https://wa.me/918278735460?text=" + encodeURIComponent(message)
+  );
+ });
+})();
+</script>
+
+</body>
+</html>
