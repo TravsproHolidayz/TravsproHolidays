@@ -3418,6 +3418,268 @@
     );
 
   </script>
+<!-- REUSABLE WHATSAPP ENQUIRY FORM -->
+<style>
+.tp-enquiry{
+  width:min(750px,92%);
+  margin:50px auto;
+  padding:30px;
+  box-sizing:border-box;
+  font-family:"Segoe UI",Arial,sans-serif;
+  color:#ffffff;
+  background:linear-gradient(135deg,#0b1930,#17132d);
+  border:1px solid rgba(0,229,255,.25);
+  border-radius:25px;
+  box-shadow:0 15px 45px rgba(0,0,0,.25);
+}
+.tp-enquiry *{box-sizing:border-box}
+.tp-enquiry h2{
+  margin:0 0 12px;
+  color:#00eaff;
+  font-size:28px;
+  line-height:1.3;
+}
+.tp-enquiry .tp-intro{
+  margin:0 0 25px;
+  color:#b2bdd2;
+  font-size:14px;
+  line-height:1.8;
+}
+.tp-enquiry .tp-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
+.tp-enquiry .tp-field{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+.tp-enquiry .tp-full{grid-column:1/-1}
+.tp-enquiry label{
+  color:#e1e8f6;
+  font-size:13px;
+  font-weight:700;
+}
+.tp-enquiry input,
+.tp-enquiry textarea{
+  width:100%;
+  min-width:0;
+  padding:14px;
+  font:inherit;
+  font-size:14px;
+  color:#ffffff;
+  background:#071021;
+  border:1px solid #34445f;
+  border-radius:12px;
+}
+.tp-enquiry input:focus,
+.tp-enquiry textarea:focus{
+  outline:2px solid #00eaff;
+  outline-offset:2px;
+}
+.tp-enquiry input::placeholder,
+.tp-enquiry textarea::placeholder{
+  color:#91a1bb;
+}
+.tp-enquiry input[type="date"]{color-scheme:dark}
+.tp-enquiry textarea{
+  min-height:110px;
+  resize:vertical;
+}
+.tp-enquiry button{
+  width:100%;
+  margin-top:23px;
+  padding:15px 20px;
+  border:0;
+  border-radius:30px;
+  background:linear-gradient(90deg,#087b48,#09633f);
+  color:#ffffff;
+  font:inherit;
+  font-size:15px;
+  font-weight:800;
+  cursor:pointer;
+  transition:transform .2s;
+}
+.tp-enquiry button:hover{transform:translateY(-2px)}
+.tp-enquiry button:focus-visible{
+  outline:3px solid #00eaff;
+  outline-offset:4px;
+}
+.tp-enquiry .tp-note{
+  margin:14px 0 0;
+  color:#a1aec4;
+  font-size:12px;
+  line-height:1.7;
+}
+@media(max-width:600px){
+  .tp-enquiry{padding:23px}
+  .tp-enquiry h2{font-size:24px}
+  .tp-enquiry .tp-grid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  .tp-enquiry button{transition:none}
+}
+</style>
+
+<!-- CHANGE THE PACKAGE NAME BELOW FOR EACH TOUR PAGE -->
+<form
+  class="tp-enquiry"
+  data-package="Bir & Barot Valley Escape"
+  data-phone="918278735460"
+>
+  <h2>Request Your Holiday Quote</h2>
+  <p class="tp-intro">
+    Share your travel details and send your enquiry directly
+    to Travspro Holidays on WhatsApp.
+  </p>
+
+  <div class="tp-grid">
+
+    <label class="tp-field">
+      Your name *
+      <input
+        name="guestName"
+        type="text"
+        autocomplete="name"
+        placeholder="Enter your name"
+        maxlength="100"
+        required
+      >
+    </label>
+
+    <label class="tp-field">
+      Preferred travel date *
+      <input name="travelDate" type="date" required>
+    </label>
+
+    <label class="tp-field">
+      Adults *
+      <input
+        name="adults"
+        type="number"
+        min="1"
+        max="100"
+        step="1"
+        value="2"
+        required
+      >
+    </label>
+
+    <label class="tp-field">
+      Children
+      <input
+        name="children"
+        type="number"
+        min="0"
+        max="100"
+        step="1"
+        value="0"
+      >
+    </label>
+
+    <label class="tp-field tp-full">
+      Preferred pickup location *
+      <input
+        name="pickup"
+        type="text"
+        placeholder="Enter your city or pickup point"
+        maxlength="150"
+        required
+      >
+    </label>
+
+    <label class="tp-field tp-full">
+      Additional requirements
+      <textarea
+        name="requirements"
+        maxlength="1500"
+        placeholder="Stay preference, meals, children's ages or optional activities"
+      ></textarea>
+    </label>
+
+  </div>
+
+  <button type="submit">💬 Send Enquiry on WhatsApp →</button>
+
+  <p class="tp-note">
+    WhatsApp opens with your message ready. Press Send there
+    to submit your enquiry. This form does not store your details
+    on this website or confirm a booking.
+  </p>
+</form>
+
+<script>
+(function () {
+  "use strict";
+
+  document.querySelectorAll(".tp-enquiry").forEach(function (form) {
+    // Prevent duplicate handlers if this block is pasted more than once.
+    if (form.dataset.ready === "true") return;
+    form.dataset.ready = "true";
+
+    const dateInput = form.elements.namedItem("travelDate");
+    const today = new Date();
+
+    dateInput.min =
+      today.getFullYear() + "-" +
+      String(today.getMonth() + 1).padStart(2, "0") + "-" +
+      String(today.getDate()).padStart(2, "0");
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      if (!form.reportValidity()) return;
+
+      function getValue(name) {
+        return form.elements.namedItem(name).value.trim();
+      }
+
+      const name = getValue("guestName");
+      const pickup = getValue("pickup");
+
+      if (!name || !pickup) {
+        alert("Please enter your name and pickup location.");
+        return;
+      }
+
+      const phone = form.dataset.phone;
+      if (!/^[1-9]\d{6,14}$/.test(phone || "")) {
+        alert("Please check the WhatsApp number in this form's code.");
+        return;
+      }
+
+      const dateParts = getValue("travelDate").split("-");
+      const readableDate =
+        dateParts[2] + "/" + dateParts[1] + "/" + dateParts[0];
+
+      const message = [
+        "Hello Travspro Holidays,",
+        "",
+        "Please send me a personalised quotation.",
+        "",
+        "Tour: " + form.dataset.package,
+        "Name: " + name,
+        "Travel date: " + readableDate,
+        "Adults: " + getValue("adults"),
+        "Children: " + (getValue("children") || "0"),
+        "Pickup location: " + pickup,
+        "Additional requirements: " +
+          (getValue("requirements") || "None specified"),
+        "",
+        "Please share availability, total pricing, inclusions",
+        "and payment and cancellation terms."
+      ].join("\n");
+
+      window.location.assign(
+        "https://wa.me/" + phone + "?text=" +
+        encodeURIComponent(message)
+      );
+    });
+  });
+})();
+</script>
+<!-- END OF WHATSAPP ENQUIRY FORM -->
 
 
 </body>
